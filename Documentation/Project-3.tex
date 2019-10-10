@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{placeins}   % Use /FloatBarrier for limiting figure float
+\usepackage{graphicx}
+\usepackage{hyperref}   % Nice referencing with clickable links
+\usepackage{amsmath}    % Math
+\usepackage{dirtytalk}  % Use /say{} to get nice quotes around "stuff"
+
+\title{Project 3}
+\author{Anna Stray Rongve\\ Knut Magnus Aasrud\\ Amund Midtgard Raniseth}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{abstract}
+This is a nice abstract yo
+\end{abstract}
+
+\section{Introduction} \label{sec:intro} %We can call this label with \ref{sec:intro} anywhere in the project.
+
+\section{taskA}
+See the introduction, section \ref{sec:intro}
+
+\input{Gauss-Legendre_Quad}
+
+\section{anothersection}
+we can even reference the other file by \ref{sec:GL_quad}
+\end{document}
