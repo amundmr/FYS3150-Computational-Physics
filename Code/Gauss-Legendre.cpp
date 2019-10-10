@@ -10,6 +10,16 @@
 
 using namespace std;
 
+/*
+double alpha = 2.0;
+double epsilon = 1e-10;
+*/
+double findLambda(double alpha, double epsilon) { //Finds the integration limit used with epsilon as tolerance
+  double Lambda;
+  Lambda = -log(epsilon)/alpha
+  return Lambda;
+}
+
 
 double f(double r1, double r2){
   double f;
