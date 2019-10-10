@@ -1,5 +1,16 @@
 \documentclass[../main.tex]{subfiles}
 
 \begin{document}
+\section{Theory} \label{sec:theory}
+
+\subsection{Improved Gauss-Quadrature} \label{sec:improved_GQ}
+While the Gauss-Legendre quadrature gets the job done, its not a pretty sight. What can be improved is to replace the Legendre polynomials with the Laguerre polynomials. These polynomials are defined for $x \in [0, \infty)$.
+\\
+We will change our original integral from cartesian coordinates to spherical, thus the following relations:
+\[ d\vec{r}_1 d\vec{r}_2 = r_1^2 dr_1 r_2^2 dr_2 dcos(\theta_1) dcos(\theta_2) d\phi_1 d\phi_2\]
+
+\[\frac{1}{r_{12}} = \frac{1}{\sqrt{r_1^2 + r_2^2 - 2r_1r_2cos(\beta)}} \]
+
+\[cos(\beta) = cos(\theta_1)cos(\theta_2) + sin(\theta_1)sin(\theta_2)cos(\phi_1 - \phi_2)\]
 
 \end{document}
