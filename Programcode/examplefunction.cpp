@@ -19,7 +19,7 @@ using namespace std;
 
 //     Here we define various functions called by the main program
 
-double int_function(double x);
+double int_function(double x1, double y1, double z1, double x2, double y2, double z2);
 void gauss_laguerre(double *, double *, int, double);
 double trapezoidal_rule ( double, double, int, double (*func)(double) );
 double simpson ( double, double, int, double (*func)(double) );
@@ -29,27 +29,49 @@ double gammln(double);
 //   Main function begins here
 int main()
 {
-     int n;
-     double a, b;
-     cout << "Read in the number of integration points" << endl;
-     cin >> n;
-     cout << "Read in integration limits" << endl;
-     cin >> a >> b;
+     int N = 31; //odd in order to find the roots
+     double a = -2.90, b = 2.90;
+     double      const  pi = 3.14159265359;
+     //cout << "Read in the number of integration points" << endl;
+     //cin >> n;
+     //cout << "Read in integration limits" << endl;
+     //cin >> a >> b;
 //   reserve space in memory for vectors containing the mesh points
 //   weights and function values for the use of the gauss-legendre
 //   method
-     double *x = new double [n];
-     double *w = new double [n];
+     double *x = new double [N];
+     double *w = new double [N];
      // Gauss-Laguerre is old-fashioned translation of F77 --> C++
      // arrays start at 1 and end at n
-     double *xgl = new double [n+1];
-     double *wgl = new double [n+1];
+     double *xgl = new double [N+1];
+     double *wgl = new double [N+1];
      // These arrays are used for improved Gauss-Legendre, mapping of
      // x \in [-1,1] to x \in [0, infinity)
-     double *r = new double [n];
-     double *s = new double [n];
+     double *r = new double [N];
+     double *s = new double [N];
 //   set up the mesh points and weights
-     gauleg(a, b,x,w, n);
+     gauleg(a, b,x,w, N);
+
+     //double *x = new double [n];
+     //double *w = new double [n];
+     // set up the mesh points and weights
+     // evaluate the integral with the Gauss-Legendre method
+     // Note that we initialize the sum
+
+
+     double int_gauss = 0.;
+     // six-double loops
+     for (int i=0;i<N;i++){
+       for (int j = 0;j<N;j++){
+         for (int k = 0;k<N;k++){
+           for (int l = 0;l<N;l++){
+             for (int m = 0;m<N;m++){
+               for (int n = 0;n<N;n++){
+                 int_gauss += w[i]*w[j]*w[k]*w[l]*w[m]*w[n]
+                 *int_function(x[i],x[j],x[k],x[l],x[m],x[n]);
+      }}}}}
+     }
+     /*
 //   set up the mesh points and weights and the power of x^alf
      double alf = 1.0;
      gauss_laguerre(xgl,wgl, n, alf);
@@ -79,15 +101,18 @@ int main()
      for ( int i = 0;  i < n; i++){
        int_gausslegimproved += s[i]*int_function(r[i]);
      }
+     */
 //    final output
       cout  << setiosflags(ios::showpoint | ios::uppercase);
-      cout  << "Trapez-rule = " << setw(20) << setprecision(15) << trapezoidal_rule(a, b,n, &int_function)
-           << endl;
-      cout << "Simpson's rule = " << setw(20) << setprecision(15) << simpson(a, b,n, &int_function)
-           << endl;
+      //cout  << "Trapez-rule = " << setw(20) << setprecision(15) << trapezoidal_rule(a, b,n, &int_function)
+           //<< endl;
+    //  cout << "Simpson's rule = " << setw(20) << setprecision(15) << simpson(a, b,n, &int_function)
+          // << endl;
       cout << "Gaussian-Legendre quad = "<< setw(20) << setprecision(15)  << int_gauss << endl;
-      cout << "Gaussian-Laguerre quad = " << setw(20) << setprecision(15) << int_gausslag << endl;
-      cout << "Gaussian-Legendre improved quad = " << setw(20) << setprecision(15) << int_gausslegimproved << endl;
+      cout << "Exact = " << 5*pi*pi/(16.0*16.0) << endl;
+
+      //cout << "Gaussian-Laguerre quad = " << setw(20) << setprecision(15) << int_gausslag << endl;
+      //cout << "Gaussian-Legendre improved quad = " << setw(20) << setprecision(15) << int_gausslegimproved << endl;
       delete [] x;
       delete [] w;
       delete [] xgl;
@@ -97,12 +122,21 @@ int main()
       return 0;
 }  // end of main program
 //  this function defines the function to integrate
-double int_function(double x)
+double int_function(double x1, double y1, double z1, double x2, double y2, double z2)
 {
-  double value = x*exp(-x);
-  return value;
-} // end of function to evaluate
+  double alpha = 2.0;
+  double exp1 = -2*alpha*sqrt(x1*x1 + y1*y1 + z1*z1);
+  double exp2 = -2*alpha*sqrt(x2*x2 + y2*y2 + z2*z2);
+  double deno = sqrt(pow((x1-x2),2)+pow((y1-y2),2)+pow((z1-z2),2));
+  if (abs(deno) < 1E-8){
+    return 0;
+  }
+  else{
+    return exp(exp1 + exp2) / deno;
+  }
 
+
+} // end of function to evaluate
 
 
        /*
