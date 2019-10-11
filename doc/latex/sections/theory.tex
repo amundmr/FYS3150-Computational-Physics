@@ -1,5 +1,63 @@
 \documentclass[../main.tex]{subfiles}
 
 \begin{document}
+\section{Theory} \label{sec:theory}
+\subsection{The Quantum Mechanical Problem} \label{sec:QMProb}
+The problem in question is a quantum mechanical one with two electrons in a system.
+
+The single-particle wave function of an electron $i$ in the $1s$ state is given in terms of a dimensionless variable (the wave function is not normalized)
+
+\[\vec{r}_i = x_i \vec{e}_x + y_i \vec{e}_y + z_i \vec{e}_z\]
+as
+\[\psi_{1s}(\vec{r}_i) = e^{-\alpha r_i}\]
+Where $\alpha$ is a parameter and the length $r_i$ is defined by
+\[r_i = \sqrt{x_i^2 + y_i^2 + z_i^2}\]
+
+In this paper we will fix $\alpha = 2$, which corresponds to the helium atom Z = 2.\\
+
+Four our system with two electrons, we have the product of the two $1s$ wave functions defined as
+\[\Psi(\vec{r}_1, \vec{r}_2) = e^{-\alpha(r_1 + r_2)}\]
+
+This leads us to the integral that needs solving, namely the quantum mechanical expectation value of the energy between two electrons which repel each other via the classical Coulomb interaction.
+\[\langle \frac{1}{|\vec{r}_1 - \vec{r}_2|} \rangle = \int_{\infty}^\infty d\vec{r}_1 d\vec{r}_2 e^{-2\alpha(r_1 + r_2)} \frac{1}{\vec{r_1} - \vec{r_2}}\]
+
+
+
+\subsection{Gauss-Legendre Quadrature} \label{sec:GLQ}
+To compute this integral we will first be utilizing the Gauss-Legendre quadrature. Step one is to change the integration limits to something a little more suitable for a computer. We will therefore change the limits $-\infty$ and $\infty$ to $-\lambda$ and $\lambda$. The values of $\lambda$ can be found by inserting it for $r_i$ in the formula $e^{-\alpha r_i}$ and getting it sufficiently close to zero.  We will also check that this approximation is satisfactory by plotting the function.
+
+
+
+
+
+\subsection{Improved Gauss-Quadrature} \label{sec:improved_GQ}
+
+
+While the Gauss-Legendre quadrature gets the job done, its not a pretty sight. What can be improved is to replace the Legendre polynomials with the Laguerre polynomials. These polynomials are defined for $x \in [0, \infty)$.
+\\
+We will change our original integral from cartesian coordinates to spherical, thus the following relations:
+\[ d\vec{r}_1 d\vec{r}_2 = r_1^2 dr_1 r_2^2 dr_2 dcos(\theta_1) dcos(\theta_2) d\phi_1 d\phi_2\]
+
+\[\frac{1}{r_{12}} = \frac{1}{\sqrt{r_1^2 + r_2^2 - 2r_1r_2cos(\beta)}} \]
+
+\[cos(\beta) = cos(\theta_1)cos(\theta_2) + sin(\theta_1)sin(\theta_2)cos(\phi_1 - \phi_2)\]
+
+As previousley described, our integral is:
+\[\int_{\infty}^\infty d\vec{r}_1 d\vec{r}_2 e^{-2\alpha(r_1 + r_2)} \frac{1}{\vec{r_1} - \vec{r_2}}\]
+
+For numerical integration, the deployment of the following relation is nessecary:
+
+\[\int_0^\infty e^{-x}f(x)dx \approx \sum_{i=1}^n w_i f(x_i)\]
+where $x_i$ is the $i$-th root of the Laguerre polynomial $L_n(x)$ and the weight $w_i$ is given by
+\[w_i = \frac{x_i}{(n+1)^2 [L_{n+1}(x_i)]^2}\]
+The Laguerre polynomials are defined by Rodrigues formula:
+\[L_n(x) = \frac{e^x}{n!}\frac{d^n}{dx^n}\left(e^{-x} x^n\right) = \frac{1}{n!}\left(\frac{d}{dx}-1\right)^n x^n\]
+or recursively relations:
+\begin{align*}
+  L_0(x) &= 1\\
+  L_1(x) &= 1 - x\\
+  L_{n+1}(x) &= \frac{(2n + 1 - x)L_n(x) - nL_{n-1}(x)}{n+1}
+\end{align*}
+\ref{ref:GL-quad_wiki}
 
 \end{document}
