@@ -1,4 +1,9 @@
-//   This is a simple program which tests the Gaussian quadrature using Legendre and Laguerre polynomials
+//   This is a simple program which tests the trapezoidal rule, Simpsons' rule,
+//   and Gaussian quadrature using Legendre and Laguerre polynomials
+//   It integrates the simple function x* exp(-x) for the interval
+//   x \in [0,infty). The exact result is 1. For Legendre based quadrature a
+//   tangent mapping is also used.
+
 #include <cmath>
 #include <iostream>
 #include <fstream>
@@ -14,8 +19,10 @@ using namespace std;
 
 //     Here we define various functions called by the main program
 
-double int_function(double x1, double y1, double z1, double x2, double y2, double z2);
+double int_function(double x);
 void gauss_laguerre(double *, double *, int, double);
+double trapezoidal_rule ( double, double, int, double (*func)(double) );
+double simpson ( double, double, int, double (*func)(double) );
 void gauleg(double, double, double *, double *, int);
 double gammln(double);
 
@@ -44,7 +51,7 @@ int main()
 //   set up the mesh points and weights
      gauleg(a, b,x,w, n);
 //   set up the mesh points and weights and the power of x^alf
-     double alf = 2.0;
+     double alf = 1.0;
      gauss_laguerre(xgl,wgl, n, alf);
 //   evaluate the integral with the Gauss-Legendre method
 //   Note that we initialize the sum. Here brute force gauleg
@@ -74,6 +81,10 @@ int main()
      }
 //    final output
       cout  << setiosflags(ios::showpoint | ios::uppercase);
+      cout  << "Trapez-rule = " << setw(20) << setprecision(15) << trapezoidal_rule(a, b,n, &int_function)
+           << endl;
+      cout << "Simpson's rule = " << setw(20) << setprecision(15) << simpson(a, b,n, &int_function)
+           << endl;
       cout << "Gaussian-Legendre quad = "<< setw(20) << setprecision(15)  << int_gauss << endl;
       cout << "Gaussian-Laguerre quad = " << setw(20) << setprecision(15) << int_gausslag << endl;
       cout << "Gaussian-Legendre improved quad = " << setw(20) << setprecision(15) << int_gausslegimproved << endl;
@@ -86,16 +97,13 @@ int main()
       return 0;
 }  // end of main program
 //  this function defines the function to integrate
-double int_function(double x1, double y1, double z1, double x2, double y2, double z2)
+double int_function(double x)
 {
-  double alpha = 2;
-  double exp1 = -2*alpha*sqrt(x1*x1 + y1*y1 + z1*z1);
-  double exp2 = -2*alpha*sqrt(x2*x2 + y2*y2 + z2*z2);
-  double deno = sqrt(pow((x1-x2),2)+pow((y1-y2),2)+pow((z1-z2),2));
-
-  return exp(exp1 + exp2)/deno;
-
+  double value = x*exp(-x);
+  return value;
 } // end of function to evaluate
+
+
 
        /*
        ** The function
@@ -116,12 +124,12 @@ void gauleg(double x1, double x2, double x[], double w[], int n)
    xm = 0.5 * (x2 + x1);
    xl = 0.5 * (x2 - x1);
 
-   x_low  = x;                                  // pointer initialization
+   x_low  = x;                                       // pointer initialization
    x_high = x + n - 1;
    w_low  = w;
    w_high = w + n - 1;
 
-   for(i = 1; i <= m; i++) {                    // loops over desired roots
+   for(i = 1; i <= m; i++) {                             // loops over desired roots
       z = cos(pi * (i - 0.25)/(n + 0.5));
 
            /*
@@ -166,6 +174,69 @@ void gauleg(double x1, double x2, double x[], double w[], int n)
       *(w_high--) = *(w_low++);
    }
 } // End_ function gauleg()
+
+
+/*     function to integrate a function func over the                   */
+/*     interval [a,b] with input a, b, and the number of steps          */
+/*     n.  it returns the sum as the variable trapez_sum                */
+/*     the trapezoidal rule is used                                     */
+
+
+double trapezoidal_rule(double a, double b, int n, double (*func)(double))
+{
+
+      double trapez_sum;
+      double fa, fb, x, step;
+      int    j;
+
+      step=(b-a)/((double) n);
+      fa=(*func)(a)/2. ;
+      fb=(*func)(b)/2. ;
+      trapez_sum=0.;
+
+      for (j=1; j <= n-1; j++){
+         x=j*step+a;
+         trapez_sum+=(*func)(x);
+      }
+
+      trapez_sum=(trapez_sum+fb+fa)*step;
+      return trapez_sum;
+
+}  /* end trapezoidal_rule  */
+
+/*     function to integrate a function func over the          */
+/*     interval [a,b] with input a, b, and the number of steps */
+/*     n.  it returns the sum as the variable simpson_sum      */
+/*     simpson's method is used                                */
+
+
+double simpson(double a, double b, int n, double (*func)(double))
+{
+      double simpson_sum;
+      double fa, fb, x, step, fac;
+      int    j;
+
+      step = (b-a)/((double) n);
+      fa=(*func)(a) ;
+      fb=(*func)(b) ;
+      simpson_sum=fa ;
+      fac=2.;
+
+      for (j=1; j <= n-1 ; j++){
+           if ( fac == 2.){
+               fac = 4.;
+           }
+           else{
+               fac = 2.;
+           }  /* end of if test */
+          x=j*step+a;
+          simpson_sum+=(*func)(x)*fac;
+      }  /* end of for loop */
+
+      simpson_sum=(simpson_sum+fb)*step/3.;
+      return simpson_sum;
+
+}  /*    end function simpson   */
 
 
 void gauss_laguerre(double *x, double *w, int n, double alf)
@@ -219,3 +290,7 @@ double gammln( double xx)
 	for (j=0;j<=5;j++) ser += cof[j]/++y;
 	return -tmp+log(2.5066282746310005*ser/x);
 }
+
+// end function gammln
+//#undef EPS
+//#undef MAXIT
