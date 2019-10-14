@@ -1,8 +1,4 @@
-//   This is a simple program which tests the trapezoidal rule, Simpsons' rule,
-//   and Gaussian quadrature using Legendre and Laguerre polynomials
-//   It integrates the simple function x* exp(-x) for the interval
-//   x \in [0,infty). The exact result is 1. For Legendre based quadrature a
-//   tangent mapping is also used.
+//Run as g++ examplefunction.cpp -o -exfunc.exe -O3
 
 #include <cmath>
 #include <iostream>
@@ -35,19 +31,14 @@ int main()
      double a = -2.90, b = 2.90;
      double      const  pi = 3.14159265359;
 
-//   reserve space in memory for vectors containing the mesh points
-//   weights and function values for the use of the gauss-legendre
-//   method
-     double *x = new double [N];
-     double *w = new double [N];
-     // Gauss-Laguerre is old-fashioned translation of F77 --> C++
-     // arrays start at 1 and end at n
-     double *xgl = new double [N+1];
-     double *wgl = new double [N+1];
-     double *t   = new double [N];
-     double *p   = new double [N];
-     double *wg_t   = new double [N];
-     double *wg_p   = new double [N];
+     double *x = new double [N];          //Mesh points for brute force Legandre
+     double *w = new double [N];          //Weights Legandre
+     double *xgl = new double [N+1];      //mesh points [0,inf] from Laguerre
+     double *wgl = new double [N+1];      //Weights Laguerre
+     double *t   = new double [N];        //mesh points theta angle [0,pi]
+     double *p   = new double [N];        //mesh points phi angle [0,2pi]
+     double *wg_t   = new double [N];     //weight theta
+     double *wg_p   = new double [N];     //weight phi
 
      // These arrays are used for improved Gauss-Legendre, mapping of
      // x \in [-1,1] to x \in [0, infinity)
@@ -60,46 +51,36 @@ int main()
     gauleg(0,2*pi, p,wg_p, N);
     gauleg(a, b, x, w, N);
 
+//Legandre:
+    double int_gauss = 0.;
+    for (int i = 0; i<N;i++){
+    for (int j = 0;j<N;j++){
+    for (int k = 0;k<N;k++){
+    for (int l = 0;l<N;l++){
+    for (int m = 0;m<N;m++){
+    for (int n = 0;n<N;n++){
+      int_gauss += w[i]*w[j]*w[k]*w[l]*w[m]*w[n]
+                   *int_function(x[i],x[j],x[k],x[l],x[m],x[n]);
 
-     // set up the mesh points and weights
-     // evaluate the integral with the Gauss-Legendre method
-     // Note that we initialize the sum
+      }}}}}} //end Legandre
 
-     double int_gauss = 0.;
-     // six-double loops
-     for (int i=0;i<N;i++){
-       for (int j = 0;j<N;j++){
-         for (int k = 0;k<N;k++){
-           for (int l = 0;l<N;l++){
-             for (int m = 0;m<N;m++){
-               for (int n = 0;n<N;n++){
-                 int_gauss += w[i]*w[j]*w[k]*w[l]*w[m]*w[n]
-                 *int_function(x[i],x[j],x[k],x[l],x[m],x[n]);
 
-      }}}}}
-     }
+//Gauss-Laguerre method
+    double int_gausslag = 0.;
+    for (int i = 1;i<=N;i++){
+    for (int j = 1;j<=N;j++){
+    for (int k = 0;k < N;k++){
+    for (int l = 0;l < N;l++){
+    for (int m = 0;m < N;m++){
+    for (int n = 0;n < N;n++){
+    int_gausslag += wgl[i]*wgl[j]*wg_t[k]*wg_t[l]*wg_p[m]*wg_p[n]
+                  *func_polar_laguerre(xgl[i],xgl[j],t[k],t[l],p[m],p[n]);
+    }}}}}} //end Laguerre
 
-//
-//   evaluate the integral with the Gauss-Laguerre method
-//   Note that we initialize the sum
-     double int_gausslag = 0.;
-     for (int i=1;i<=N;i++){
-       for (int j = 1;j<=N;j++){
-
-         for (int k = 0;k < N;k++){
-           for (int l = 0;l<N;l++){
-             for (int m = 0;m<N;m++){
-               for (int n = 0;n<N;n++){
-                 int_gausslag += wgl[i]*wgl[j]*wg_t[k]*wg_t[l]*wg_p[m]*wg_p[n]
-                 *func_polar_laguerre(x[i],x[j],t[k],t[l],p[m],p[n]);
-                // *sin(xgl[i])*sin(xgl[j])*sin(xgl[k])*sin(xgl[l])*sin(xgl[m])*sin(xgl[n]);
-
-      }}}}}
-     }
-     //int_gausslag *= 1.0/1024;
 //   evaluate the integral with the Gauss-Laguerre method
 //   Here we change the mesh points with a tangent mapping.
 //   Need to call gauleg from -1 to + 1
+/*
      gauleg(-1.0, 1.0,x,w, N);
      double pi_4 = acos(-1.0)*0.25;
      for ( int i = 0;  i < N; i++){
@@ -107,7 +88,7 @@ int main()
        r[i]= tan(xx);
        s[i]=pi_4/(cos(xx)*cos(xx))*w[i];
      }
-     /*
+
      double int_gausslegimproved = 0.;
      for ( int i = 0;  i < N; i++){
        int_gausslegimproved += s[i]*int_function(r[i]);
@@ -116,14 +97,13 @@ int main()
 
 //    final output
       cout  << setiosflags(ios::showpoint | ios::uppercase);
-      //cout  << "Trapez-rule = " << setw(20) << setprecision(15) << trapezoidal_rule(a, b,N, &int_function)
-           //<< endl;
-    //cout << "Simpson's rule = " << setw(20) << setprecision(15) << simpson(a, b,N, &int_function)
-          //<< endl;
+    //cout  << "Trapez-rule = " << setw(20) << setprecision(15) << trapezoidal_rule(a, b,N, &int_function) << endl;
+    //cout << "Simpson's rule = " << setw(20) << setprecision(15) << simpson(a, b,N, &int_function)<< endl;
       cout << "Gaussian-Legendre quad = "<< setw(20) << setprecision(15)  << int_gauss << endl;
       cout << "Gaussian-Laguerre quad = "<< setw(20) << setprecision(15)  <<  int_gausslag << endl;
       //cout << "Gaussian-Legendre improved quad = " << setw(20) << setprecision(15) << int_gausslegimproved << endl;
       cout << "Exact = "<< setw(20) << setprecision(15) << 5*pi*pi/(16.0*16.0) << endl;
+
       delete [] x;
       delete [] w;
       delete [] xgl;
