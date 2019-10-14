@@ -14,7 +14,8 @@
 using namespace std;
 
 double gammln(double);
-
+double func_polar_lag(double r1, double t1, double p1, double r2, double t2, double p2);
+void gauss_laguerre(double *x, double *w, int n, double alf);
 //  Note that you need to call it with a given value of alpha,
 // called alf here. This comes from x^{alpha} exp(-x)
 
@@ -70,6 +71,20 @@ double gammln( double xx)
 	return -tmp+log(2.5066282746310005*ser/x);
 }
 
+
+double func_polar_lag(double r1, double t1, double p1, double r2, double t2, double p2){
+	double cosb = cos(t1)*cos(t2) + sin(t1)*sin(t2)*cos(p1-p2);
+	double f = exp(-3*(r1 + r2))*r1*r1*r2*r2*sin(t1)*sin(t2)/sqrt(r1*r1+r2*r2-2*r1*r2*cosb);
+	if (r1*r1+r2*r2-2*r1*r2*cosb > 0.0)
+		return f;
+	else
+	return 0;
+}
+
+int main(){
+
+
+}
 // end function gammln
 #undef EPS
 #undef MAXIT
