@@ -1,5 +1,4 @@
-#include "mcarlo.h"
+#include "mclib.h"
 
 int main{
-    
-}
+};

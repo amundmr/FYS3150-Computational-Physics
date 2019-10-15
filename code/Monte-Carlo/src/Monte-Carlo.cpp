@@ -1,4 +1,4 @@
-#include "mcarlo.h"
+#include "mclib.h"
 
 double MonteCarlo(double a,double b,int MCsamples){
     double mc;
