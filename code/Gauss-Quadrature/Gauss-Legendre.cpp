@@ -9,6 +9,7 @@
 #include <armadillo>
 
 using namespace std;
+using namespace arma;
 
 /*
 double alpha = 2.0;
@@ -16,7 +17,7 @@ double epsilon = 1e-10;
 */
 double findLambda(double alpha, double epsilon) { //Finds the integration limit used with epsilon as tolerance
   double Lambda;
-  Lambda = -log(epsilon)/alpha
+  Lambda = -log(epsilon)/alpha;
   return Lambda;
 }
 
@@ -31,7 +32,7 @@ double f(double r1, double r2){
 vec Laguerre(int n, double x) {
   vec L(n+1);
   L(0) = 1.0;
-  L(1) = 1-x
+  L(1) = 1-x;
   for (i=1 ; i<n ; i++){
     L(i+1) = ( (2*i + 1 - x) * L(i) - i * L(i-1) ) / ( n+1 );
 
@@ -42,8 +43,8 @@ vec Laguerre(int n, double x) {
 void GaussLaguerre(int n,double *x, double *w){
   double integralSolution;
   vec w(n);
-  for (i=1 ; i<n ; i++){
-    w[i] = xi / (pow(n+1,2) * pow(L(n+1, xi), 2))
+  for (int i=1 ; i<n ; i++){
+    w[i] = xi / (pow(n+1,2) * pow(L(n+1, xi), 2));
     integralSolution += w[i] * f(r1, r2);
 
   }
