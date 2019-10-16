@@ -26,9 +26,9 @@ double func_polar_laguerre(double r1, double t1, double p1, double r2, double t2
 int main()
 {
 
-     int N = 10; //odd in order to find the roots
-     double a = -4.0, b = 4.0;
-     double alf = 1.0;
+     int N = 27; //odd in order to find the roots
+     double a = -5.0, b = 5.0;
+     double alf = 0.0;
 
 
      double *x = new double [N];          //Mesh points for brute force Legandre
@@ -50,7 +50,7 @@ int main()
 //   set up the mesh points and weights
 
 
-    gauleg(-2.90 , 2.90, x, w, N);
+    gauleg(a, b, x, w, N);
     gauss_laguerre(xgl,wgl, N, alf);
     gauleg(0,M_PI,t,wg_t,N);
     gauleg(0,2*M_PI, p,wg_p, N);
@@ -87,8 +87,8 @@ int main()
 
 //  final output
     cout  << setiosflags(ios::showpoint | ios::uppercase);
-    cout << "Gaussian-Legendre quad = "<< setw(20) << setprecision(15)  << int_gauss <<"  Relative error  " <<fabs(int_gauss-exact)/exact<< endl;
-    cout << "Gaussian-Laguerre quad = "<< setw(20) << setprecision(15)  <<  int_gausslag <<"  Relative error  " <<fabs( int_gausslag -exact)/exact<< endl;
+    cout << "Gaussian-Legendre quad = "<< setw(20) << setprecision(15)  << int_gauss <<"  Relative error  " <<fabs(int_gauss-exact)<< endl;
+    cout << "Gaussian-Laguerre quad = "<< setw(20) << setprecision(15)  <<  int_gausslag <<"  Relative error  " <<fabs(int_gausslag -exact)<< endl;
 
       delete [] x;
       delete [] w;
