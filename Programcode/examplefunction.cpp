@@ -26,8 +26,8 @@ double func_polar_laguerre(double r1, double t1, double p1, double r2, double t2
 int main()
 {
 
-     int N = 27; //odd in order to find the roots
-     double a = -2.90, b = 2.90;
+     int N = 10; //odd in order to find the roots
+     double a = -4.0, b = 4.0;
      double alf = 1.0;
 
 
@@ -51,6 +51,9 @@ int main()
 
 
     gauleg(-2.90 , 2.90, x, w, N);
+    gauss_laguerre(xgl,wgl, N, alf);
+    gauleg(0,M_PI,t,wg_t,N);
+    gauleg(0,2*M_PI, p,wg_p, N);
 
 //Legandre-loop:
     double int_gauss = 0.;
@@ -60,14 +63,12 @@ int main()
     for (int l = 0;l<N;l++){
     for (int m = 0;m<N;m++){
     for (int n = 0;n<N;n++){
+
       int_gauss += w[i]*w[j]*w[k]*w[l]*w[m]*w[n]
                    *int_function(x[i],x[j],x[k],x[l],x[m],x[n]);
 
       }}}}}} //end Legandre
 
-    gauss_laguerre(xgl,wgl, N, alf);
-    gauleg(0,M_PI,t,wg_t,N);
-    gauleg(0,2*M_PI, p,wg_p, N);
 
 //Gauss-Laguerre method
     double int_gausslag = 0.;
@@ -77,6 +78,7 @@ int main()
     for (int l = 0;l < N;l++){
     for (int m = 0;m < N;m++){
     for (int n = 0;n < N;n++){
+      //  cout <<"laguerre"<<func_polar_laguerre(xgl[i],xgl[j],t[k],t[l],p[m],p[n])<< endl;
     int_gausslag += wgl[i]*wgl[j]*wg_t[k]*wg_t[l]*wg_p[m]*wg_p[n]
                   *func_polar_laguerre(xgl[i],xgl[j],t[k],t[l],p[m],p[n]);
     }}}}}} //end Laguerre
