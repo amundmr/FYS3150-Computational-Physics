@@ -8,7 +8,7 @@ COUNTER = 1
 
 main: $(OBJ) $(DEPS)
 	@$(CC) $(wildcard ./obj/*.o) main.cpp $(CCFLAGS) -o main.exe
-	@if [ -f "main.exe" ]; then echo "Binary main.exe built \033[0;32msuccesfully\033[0m!"; fi
+	@if [ -f "main.exe" ]; then echo "Binary main.exe built \033[0;32msuccessfully\033[0m!"; fi
 
 ./obj/%.o: ./src/%.cpp obj_dir $(DEPS)
 	@$(CC) $(CCFLAGS) $< -c; \
