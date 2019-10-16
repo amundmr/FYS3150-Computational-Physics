@@ -1,0 +1,8 @@
+//Timetaker
+clock_t t0, t1;
+t0 = clock();
+
+t1 = clock();
+double timeSpent = (double (t1 - t0))/CLOCKS_PER_SEC;
+
+cout << setprecision(4) << "Time spent: " << timeSpent << "s" << endl;
