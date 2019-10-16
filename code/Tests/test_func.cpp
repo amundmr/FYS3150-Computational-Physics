@@ -7,47 +7,39 @@
 using namespace std;
 using namespace arma;
 
-mat Jacobi_rotate(mat A, int k, int l, int n);
-double off(mat A, int &k, int &l, int n);
-vec arma_eig(mat A);
-vec Jacobi_method(mat A, int n);
+double int_function(double x1, double y1, double z1, double x2, double y2, double z2);
+void gauss_laguerre(double *, double *, int, double);
+void gauleg(double, double, double *, double *, int);
+double gammln(double);
+double func_polar_laguerre(double r1, double t1, double p1, double r2, double t2, double p2);
 
-TEST_CASE("Test max a(i,j)"){
-  //Initializing matrix A with 2 on diag. Max elem is on A(0,0)
-  int n = 5;
-  mat A(n,n, fill::zeros);
-  A.diag() += 2;
-  A.diag(-1) -= 1;
-  A.diag(1) -= 1;
+TEST_CASE("Test int_function return correct exponential function"){
+  //Initializing points
+  double x1, y1, z1, x2, y2, z2;
+  x1 = 0.2, y1 = 0.2, z1 = 0.2;
+  x2 = -0.2, y2 = -0.2, z2 = -0.2;
 
-  //Declaring k and l in memory for off() to return max indexes to
-  int k = 0;
-  int l = 0;
+  //Analytical solution definition
+  double analSol = 0.09032900125;
 
-  //Finding max indices, returning value
-  double max = off(A, k, l, n);
+  //Getting calculated solution
+  double calcSol = int_function(x1, y1, z1, x2, y2, z2);
 
-  //Require that both indexes are 0 since the largest element is for 0
-  REQUIRE(k==0);
-  REQUIRE(l==1);
-  REQUIRE(max == Approx(1));
+  //Require that the calculation is close to the analytical
+  REQUIRE(calcSol == Approx(analSol).epsilon(1e-9));
 
 }
 
 
-TEST_CASE("Testing eigenvalues"){
-  //Initializing matrix A with 2 on diag. Max elem is on A(0,0)
-  int n = 5;
-  mat A(n,n, fill::zeros);
-  A.diag() += 2;
-  A.diag(-1) -= 1;
-  A.diag(1) -= 1;
+TEST_CASE("Test gauleg return correct mesk points and weights"){
+  double x1 = -5.0, x2 = 5.0;
 
-  //Getting a vector with eigenvalues
-  vec eigvec = Jacobi_method(A,n);
+  double *x = new double [N];          //Mesh points for brute force Legandre
+  double *w = new double [N];          //Weights Legandre
 
-  //sorting the values
-  eigvec = sort(eigvec);
+  int n = 2;
+
+  double calcSol = gauleg(x1, x2, x, w, n)
 
   double eps = 0.00001;
 
