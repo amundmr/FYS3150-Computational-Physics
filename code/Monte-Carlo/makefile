@@ -1,18 +1,10 @@
-define colorecho
-      @tput setaf 6
-      @echo $1
-      @tput sgr0
-endef
-
 CC = g++
 CCFLAGS = -larmadillo -lblas -llapack -std=c++11 -O3
 DEPS = ./include/mclib.h
-OBJ = ./obj/input-func.o ./obj/Monte-Carlo.o
+OBJ = ./obj/input-func.o ./obj/naiveMC.o
 
 NO_OF_FILES := $(words $(OBJ))
 COUNTER = 1
-GREEN=\x1b[32;01m
-NO_COLOR=\x1b[0m
 
 main: $(OBJ) $(DEPS)
 	@$(CC) $(wildcard ./obj/*.o) main.cpp $(CCFLAGS) -o main.exe
