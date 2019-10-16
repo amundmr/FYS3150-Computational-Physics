@@ -13,23 +13,23 @@
 using namespace std;
 
 
-//     Here we define various functions called by the main program
+//Defenition of function used througout the program.
 
 double int_function(double x1, double y1, double z1, double x2, double y2, double z2);
 void gauss_laguerre(double *, double *, int, double);
-double trapezoidal_rule ( double, double, int, double (*func)(double) );
-double simpson ( double, double, int, double (*func)(double) );
 void gauleg(double, double, double *, double *, int);
 double gammln(double);
 double func_polar_laguerre(double r1, double t1, double p1, double r2, double t2, double p2);
 
 
-//   Main function begins here
+//   Main function beginning
 int main()
 {
+
      int N = 27; //odd in order to find the roots
      double a = -2.90, b = 2.90;
-     double      const  pi = 3.14159265359;
+     double alf = 1.0;
+
 
      double *x = new double [N];          //Mesh points for brute force Legandre
      double *w = new double [N];          //Weights Legandre
@@ -40,18 +40,19 @@ int main()
      double *wg_t   = new double [N];     //weight theta
      double *wg_p   = new double [N];     //weight phi
 
+     double exact = 5*M_PI*M_PI/(16.0*16.0);
+
+
      // These arrays are used for improved Gauss-Legendre, mapping of
      // x \in [-1,1] to x \in [0, infinity)
-     double *r = new double [N];
-     double *s = new double [N];
-//   set up the mesh points and weights
-    double alf = 1.0;
-    gauss_laguerre(xgl,wgl, N, alf);
-    gauleg(0,pi,t,wg_t,N);
-    gauleg(0,2*pi, p,wg_p, N);
-    gauleg(a, b, x, w, N);
 
-//Legandre:
+
+//   set up the mesh points and weights
+
+
+    gauleg(-2.90 , 2.90, x, w, N);
+
+//Legandre-loop:
     double int_gauss = 0.;
     for (int i = 0; i<N;i++){
     for (int j = 0;j<N;j++){
@@ -64,6 +65,9 @@ int main()
 
       }}}}}} //end Legandre
 
+    gauss_laguerre(xgl,wgl, N, alf);
+    gauleg(0,M_PI,t,wg_t,N);
+    gauleg(0,2*M_PI, p,wg_p, N);
 
 //Gauss-Laguerre method
     double int_gausslag = 0.;
@@ -77,40 +81,20 @@ int main()
                   *func_polar_laguerre(xgl[i],xgl[j],t[k],t[l],p[m],p[n]);
     }}}}}} //end Laguerre
 
-//   evaluate the integral with the Gauss-Laguerre method
-//   Here we change the mesh points with a tangent mapping.
-//   Need to call gauleg from -1 to + 1
-/*
-     gauleg(-1.0, 1.0,x,w, N);
-     double pi_4 = acos(-1.0)*0.25;
-     for ( int i = 0;  i < N; i++){
-       double xx=pi_4*(x[i]+1.0);
-       r[i]= tan(xx);
-       s[i]=pi_4/(cos(xx)*cos(xx))*w[i];
-     }
 
-     double int_gausslegimproved = 0.;
-     for ( int i = 0;  i < N; i++){
-       int_gausslegimproved += s[i]*int_function(r[i]);
-     }
-*/
 
-//    final output
-      cout  << setiosflags(ios::showpoint | ios::uppercase);
-    //cout  << "Trapez-rule = " << setw(20) << setprecision(15) << trapezoidal_rule(a, b,N, &int_function) << endl;
-    //cout << "Simpson's rule = " << setw(20) << setprecision(15) << simpson(a, b,N, &int_function)<< endl;
-      cout << "Gaussian-Legendre quad = "<< setw(20) << setprecision(15)  << int_gauss << endl;
-      cout << "Gaussian-Laguerre quad = "<< setw(20) << setprecision(15)  <<  int_gausslag << endl;
-      //cout << "Gaussian-Legendre improved quad = " << setw(20) << setprecision(15) << int_gausslegimproved << endl;
-      cout << "Exact = "<< setw(20) << setprecision(15) << 5*pi*pi/(16.0*16.0) << endl;
+//  final output
+    cout  << setiosflags(ios::showpoint | ios::uppercase);
+    cout << "Gaussian-Legendre quad = "<< setw(20) << setprecision(15)  << int_gauss <<"  Relative error  " <<fabs(int_gauss-exact)/exact<< endl;
+    cout << "Gaussian-Laguerre quad = "<< setw(20) << setprecision(15)  <<  int_gausslag <<"  Relative error  " <<fabs( int_gausslag -exact)/exact<< endl;
 
       delete [] x;
       delete [] w;
       delete [] xgl;
       delete [] wgl;
-      delete [] s;
-      delete [] r;
+
       return 0;
+
 }  // end of main program
 
 
@@ -131,13 +115,17 @@ double int_function(double x1, double y1, double z1, double x2, double y2, doubl
   }
 } // end of function to evaluate
 
-double func_polar_laguerre(double r1, double t1, double p1, double r2, double t2, double p2){
+//Integrand function in polar coordinates for Gaussian Laguerre
+double func_polar_laguerre(double r1,double r2, double t1, double t2,  double p1, double p2){
+
         double cosb = cos(t1)*cos(t2) + sin(t1)*sin(t2)*cos(p1-p2);
         double deno = r1*r1+r2*r2-2*r1*r2*cosb;
         double f = exp(-3*(r1+r2))*r1*r1*r2*r2*sin(t1)*sin(t2)/sqrt(deno);
 
-        if(deno > ZERO) return f;
-        else return 0;
+        if(deno > ZERO)
+          return f;
+        else
+          return 0;
 } // end of function func_polar_laguerre
 
        /*
@@ -152,7 +140,7 @@ void gauleg(double x1, double x2, double x[], double w[], int n)
 {
    int         m,j,i;
    double      z1,z,xm,xl,pp,p3,p2,p1;
-   double      const  pi = 3.14159265359;
+
    double      *x_low, *x_high, *w_low, *w_high;
 
    m  = (n + 1)/2;                             // roots are symmetric in the interval
@@ -165,7 +153,7 @@ void gauleg(double x1, double x2, double x[], double w[], int n)
    w_high = w + n - 1;
 
    for(i = 1; i <= m; i++) {                             // loops over desired roots
-      z = cos(pi * (i - 0.25)/(n + 0.5));
+      z = cos(M_PI * (i - 0.25)/(n + 0.5));
 
            /*
 	   ** Starting with the above approximation to the ith root
@@ -267,66 +255,3 @@ double gammln( double xx)
 // end function gammln
 //#undef EPS
 //#undef MAXIT
-
-/*     function to integrate a function func over the          */
-/*     interval [a,b] with input a, b, and the number of steps */
-/*     n.  it returns the sum as the variable simpson_sum      */
-/*     simpson's method is used                                */
-
-
-double simpson(double a, double b, int n, double (*func)(double))
-{
-      double simpson_sum;
-      double fa, fb, x, step, fac;
-      int    j;
-
-      step = (b-a)/((double) n);
-      fa=(*func)(a) ;
-      fb=(*func)(b) ;
-      simpson_sum=fa ;
-      fac=2.;
-
-      for (j=1; j <= n-1 ; j++){
-           if ( fac == 2.){
-               fac = 4.;
-           }
-           else{
-               fac = 2.;
-           }  /* end of if test */
-          x=j*step+a;
-          simpson_sum+=(*func)(x)*fac;
-      }  /* end of for loop */
-
-      simpson_sum=(simpson_sum+fb)*step/3.;
-      return simpson_sum;
-
-}  /*    end function simpson   */
-
-
-/*     function to integrate a function func over the                   */
-/*     interval [a,b] with input a, b, and the number of steps          */
-/*     n.  it returns the sum as the variable trapez_sum                */
-/*     the trapezoidal rule is used                                     */
-
-
-double trapezoidal_rule(double a, double b, int n, double (*func)(double))
-{
-
-      double trapez_sum;
-      double fa, fb, x, step;
-      int    j;
-
-      step=(b-a)/((double) n);
-      fa=(*func)(a)/2. ;
-      fb=(*func)(b)/2. ;
-      trapez_sum=0.;
-
-      for (j=1; j <= n-1; j++){
-         x=j*step+a;
-         trapez_sum+=(*func)(x);
-      }
-
-      trapez_sum=(trapez_sum+fb+fa)*step;
-      return trapez_sum;
-
-}  /* end trapezoidal_rule  */
