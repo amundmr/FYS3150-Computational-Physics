@@ -1,4 +1,4 @@
-#include "mclib.h"
+#include "../include/mclib.h"
 
 // Function to intagrate over
 double f(vec r1, vec r2, double alpha){
