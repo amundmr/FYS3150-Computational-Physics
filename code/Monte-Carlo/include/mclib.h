@@ -7,5 +7,5 @@
 using namespace std;
 using namespace arma;
 
-double f(vec, vec, double);
-double naiveMC(double a,double b,int MCsamples);
+double f(vec, vec);
+double naiveMC(double,double,int);

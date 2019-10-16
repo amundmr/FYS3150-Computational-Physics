@@ -32,21 +32,30 @@ TEST_CASE("Test int_function return correct exponential function"){
 
 
 TEST_CASE("Test gauleg return correct mesk points and weights"){
-  double x1 = -5.0, x2 = 5.0;
+  //Analytical solutions:
+  int N = 5;
+  double *xAnalSol = new double[N];   //Defining space in mem for analytical mesh points (which is the roots of the n'th legendre pol)
+  double *wAnalSol = new double[N];   //space in mem for analytical weights
+  xAnalSol[0] =	0.0, xAnalSol[1] =	-0.5384693101056831, xAnalSol[2] =	0.5384693101056831, xAnalSol[3] =	-0.9061798459386640, xAnalSol[4] =	0.9061798459386640;
+  wAnalSol[0] = 0.5688888888888889 , wAnalSol[1] = 0.4786286704993665 , wAnalSol[2] = 0.4786286704993665 , wAnalSol[3] = 0.2369268850561891 , wAnalSol[4] = 0.2369268850561891;
+                                      //Analytical solutions found at https://pomax.github.io/bezierinfo/legendre-gauss.html
 
-  double *x = new double [N];          //Mesh points for brute force Legandre
-  double *w = new double [N];          //Weights Legandre
+  double x1 = -1.0, x2 = 1.0;          //Defining interval
 
-  int n = 2;
+  double *x = new double [N];          //Mesh points for brute force Legendre
+  double *w = new double [N];          //Weights Legendre
 
-  double calcSol = gauleg(x1, x2, x, w, n)
+  gauleg(x1, x2, x, w, N); //Getting the mesh points and weights from gauleg func
 
-  double eps = 0.00001;
+  double eps = 0.00000000001;
 
-  REQUIRE( eigvec(0) == Approx( 0.26795  ).epsilon(eps));
-  REQUIRE( eigvec(1) == Approx( 1.0      ).epsilon(eps));
-  REQUIRE( eigvec(2) == Approx( 2.0      ).epsilon(eps));
-  REQUIRE( eigvec(3) == Approx( 3.0      ).epsilon(eps));
-  REQUIRE( eigvec(4) == Approx( 3.73205  ).epsilon(eps));
+
+  for (int i = 0 ; i < N ; i++){
+    REQUIRE( x[i] == Approx( xAnalSol[i] ).epsilon(eps));
+  }
+
+  for (int i = 0 ; i < N ; i++ ){
+    REQUIRE(w[i] == Approx( wAnalSol[i] ).epsilon(eps));
+  }
 
 }
