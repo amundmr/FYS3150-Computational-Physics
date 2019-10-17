@@ -36,20 +36,23 @@ TEST_CASE("Test gauleg return correct mesk points and weights"){
   int N = 5;
   double *xAnalSol = new double[N];   //Defining space in mem for analytical mesh points (which is the roots of the n'th legendre pol)
   double *wAnalSol = new double[N];   //space in mem for analytical weights
-  xAnalSol[0] =	0.0, xAnalSol[1] =	-0.5384693101056831, xAnalSol[2] =	0.5384693101056831, xAnalSol[3] =	-0.9061798459386640, xAnalSol[4] =	0.9061798459386640;
-  wAnalSol[0] = 0.5688888888888889 , wAnalSol[1] = 0.4786286704993665 , wAnalSol[2] = 0.4786286704993665 , wAnalSol[3] = 0.2369268850561891 , wAnalSol[4] = 0.2369268850561891;
+  xAnalSol[2] =	0.0, xAnalSol[1] =	-0.5384693101056831, xAnalSol[3] =	0.5384693101056831, xAnalSol[0] =	-0.9061798459386640, xAnalSol[4] =	0.9061798459386640;
+  wAnalSol[2] = 0.5688888888888889 , wAnalSol[3] = 0.4786286704993665 , wAnalSol[1] = 0.4786286704993665 , wAnalSol[0] = 0.2369268850561891 , wAnalSol[4] = 0.2369268850561891;
                                       //Analytical solutions found at https://pomax.github.io/bezierinfo/legendre-gauss.html
+                                      //The indexing here is weird because the index needs to match that of the gauleg func.
 
+
+  //Calculated solutions
   double x1 = -1.0, x2 = 1.0;          //Defining interval
 
   double *x = new double [N];          //Mesh points for brute force Legendre
   double *w = new double [N];          //Weights Legendre
 
-  gauleg(x1, x2, x, w, N); //Getting the mesh points and weights from gauleg func
+  gauleg(x1, x2, x, w, N);             //Getting the mesh points and weights from gauleg func
 
-  double eps = 0.00000000001;
+  double eps = 0.00000000001;          //Setting required precision.
 
-
+  }
   for (int i = 0 ; i < N ; i++){
     REQUIRE( x[i] == Approx( xAnalSol[i] ).epsilon(eps));
   }

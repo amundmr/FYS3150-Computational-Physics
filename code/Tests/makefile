@@ -7,8 +7,8 @@ CPPflags= g++ -O3
 LIB = #-larmadillo -llapack -lblas
 # Here we define the name of the executable
 PROG= test.exe
-${PROG} :	   	test_main.o  test_func.o examplefunction.o
-		${CPPflags} test_main.o test_func.o examplefunction.o ${LIB} -o ${PROG}
+${PROG} :	   	test_main.o  test_func.o gauleg.o int_function.o
+		${CPPflags} test_main.o test_func.o gauleg.o int_function.o ${LIB} -o ${PROG}
 
 test_main.o :			test_main.cpp
 						${CPPflags} -c test_main.cpp
@@ -16,8 +16,11 @@ test_main.o :			test_main.cpp
 test_func.o :			test_func.cpp
 						${CPPflags} -c test_func.cpp
 
-examplefunction.o :		../../Programcode/examplefunction.cpp
-						${CPPflags} -c ../../Programcode/examplefunction.cpp
+gauleg.o :		../../Programcode/funcs/gauleg.cpp
+						${CPPflags} -c ../../Programcode/funcs/gauleg.cpp
+
+int_function.o :		../../Programcode/funcs/int_function.cpp
+						${CPPflags} -c ../../Programcode/funcs/int_function.cpp
 
 
 clean:
