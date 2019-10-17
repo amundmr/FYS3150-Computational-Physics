@@ -1,17 +1,9 @@
 This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.3)  17 OCT 2019 13:11
 entering extended mode
-**"C:/Users/Anna Stray Rongve/Documents/Project-3/doc/latex/sections/abstract.t
-ex"
-
-("C:/Users/Anna Stray Rongve/Documents/Project-3/doc/latex/sections/abstract.te
-x"
+**"C:/Users/Anna Stray Rongve/Documents/Project-3/doc/latex/main.tex"
+("C:/Users/Anna Stray Rongve/Documents/Project-3/doc/latex/main.tex"
 LaTeX2e <2018-12-01>
 
-("C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex/latex/subfil
-es\subfiles.cls"
-Document Class: subfiles 2018/07/31 Federico Garcia, Gernot Salzer
-Preamble taken from file `../main.tex'
-(../main.tex
 ("C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\a
 rticle.cls"
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
@@ -182,6 +174,7 @@ Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
 Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
 Package: xcolor-patch 2016/05/16 xcolor patch
 Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
@@ -193,10 +186,6 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ("C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdi
 ek\auxhook.sty"
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
-
-Package auxhook Warning: Cannot patch \document,
-(auxhook)                using \AtBeginDocument instead.
-
 )
 ("C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdi
 ek\kvoptions.sty"
@@ -332,25 +321,23 @@ LaTeX Info: Redefining \] on input line 2845.
 ("C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex/latex/placei
 ns\placeins.sty"
 Package: placeins 2005/04/18  v 2.2
-)))
-("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\abstract.au
-x")
-\openout1 = `abstract.aux'.
+) ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.aux")
+\openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
 
 ("C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex/context/base
 /mkii\supp-pdf.mkii"
@@ -383,7 +370,7 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring OFF on input line 3.
+Package hyperref Info: Link coloring OFF on input line 16.
 
 ("C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperr
 ef\nameref.sty"
@@ -395,51 +382,124 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count136
 )
-LaTeX Info: Redefining \ref on input line 3.
-LaTeX Info: Redefining \pageref on input line 3.
-LaTeX Info: Redefining \nameref on input line 3.
-
-("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\abstract.ou
-t")
-("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\abstract.ou
-t")
+LaTeX Info: Redefining \ref on input line 16.
+LaTeX Info: Redefining \pageref on input line 16.
+LaTeX Info: Redefining \nameref on input line 16.
+("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.out") ("C:\User
+s\Anna Stray Rongve\Documents\Project-3\doc\latex\main.out")
 \@outlinefile=\write3
-\openout3 = `abstract.out'.
+\openout3 = `main.out'.
 
 
+("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/abstract.te
+x"
 Overfull \hbox (1.1043pt too wide) in paragraph at lines 8--9
 []\OT1/cmr/m/n/9 The meth-ods used are Guas-sian quadra-ture, with both Guass-L
 egandre
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 13.
-[1
+)
+("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/introductio
+n.tex") ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/the
+ory.tex" [1
 
 {C:/Users/Anna Stray Rongve/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 13.
 
-("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\abstract.au
-x")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 13.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 13.
-Package rerunfilecheck Info: File `abstract.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+[2]
+
+LaTeX Warning: Reference `ref:GL-quad_wiki' on page 3 undefined on input line 6
+1.
+
+) ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/results.t
+ex"
+C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/results.tex:9
+: Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.9  \multicolumn{4}{|c}{Legandre}
+                                   \\
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+
+C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/results.tex:2
+4: Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.24  \multicolumn{4}{|c}{Laguerre}
+                                    \\
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+)
+("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/discussion.
+tex")
+("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/conclusion.
+tex"
+
+LaTeX Warning: Reference `sec:intro' on page 3 undefined on input line 5.
+
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 32.
+ [3] [4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 32.
+
+("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 32.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 32.
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  12AB3206E25501B8FF554F19DD256093;412.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 32.
  ) 
 Here is how much of TeX's memory you used:
- 6358 strings out of 492895
- 96848 string characters out of 3118130
- 204068 words of memory out of 3000000
- 10208 multiletter control sequences out of 15000+200000
- 4247 words of font info for 16 fonts, out of 3000000 for 9000
+ 6414 strings out of 492895
+ 97871 string characters out of 3118130
+ 211769 words of memory out of 3000000
+ 10230 multiletter control sequences out of 15000+200000
+ 9630 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,4n,25p,609b,339s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 28i,9n,31p,624b,431s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Anna Stray Rongve/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmbx9.pfb><C:/Users/Anna Stray Rongve/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Anna Stray Rongve/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on abstract.pdf (1 page, 34383 bytes).
+lic/amsfonts/cm/cmbx10.pfb><C:/Users/Anna Stray Rongve/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Anna Stray Rongve
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:
+/Users/Anna Stray Rongve/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmex10.pfb><C:/Users/Anna Stray Rongve/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Anna Stray Rongve/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/User
+s/Anna Stray Rongve/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmmi7.pfb><C:/Users/Anna Stray Rongve/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Anna Stray Rongve/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Anna 
+Stray Rongve/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr17.pfb><C:/Users/Anna Stray Rongve/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr5.pfb><C:/Users/Anna Stray Rongve/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Anna Stray Ron
+gve/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><
+C:/Users/Anna Stray Rongve/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb><C:/Users/Anna Stray Rongve/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on main.pdf (4 pages, 178446 bytes).
 PDF statistics:
- 23 PDF objects out of 1000 (max. 8388607)
- 2 named destinations out of 1000 (max. 500000)
+ 92 PDF objects out of 1000 (max. 8388607)
+ 12 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
