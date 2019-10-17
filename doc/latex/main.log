@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.3)  17 OCT 2019 13:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.3)  17 OCT 2019 14:17
 entering extended mode
 **"C:/Users/Anna Stray Rongve/Documents/Project-3/doc/latex/main.tex"
 ("C:/Users/Anna Stray Rongve/Documents/Project-3/doc/latex/main.tex"
@@ -392,16 +392,47 @@ s\Anna Stray Rongve\Documents\Project-3\doc\latex\main.out")
 
 
 ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/abstract.te
-x"
-Overfull \hbox (1.1043pt too wide) in paragraph at lines 8--9
-[]\OT1/cmr/m/n/9 The meth-ods used are Guas-sian quadra-ture, with both Guass-L
-egandre
+x")
+("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/introductio
+n.tex"
+C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/introduction.
+tex:10: You can't use `macro parameter character #' in horizontal mode.
+l.10 https://www.jstor.org/stable/24898684?seq=2#
+                                                 metadata_info_tab_contents
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/introduction.
+tex:10: Missing $ inserted.
+<inserted text> 
+                $
+l.10 ....jstor.org/stable/24898684?seq=2#metadata_
+                                                  info_tab_contents
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/introduction.
+tex:11: Missing $ inserted.
+<inserted text> 
+                $
+l.11 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (21.99182pt too wide) in paragraph at lines 9--11
+[]\OT1/cmr/m/n/10 KILDE: https://www.jstor.org/stable/24898684?seq=2metadata$[]
+\OML/cmm/m/it/10 nfo[]ab[]ontents$ 
  []
 
 )
-("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/introductio
-n.tex") ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/the
-ory.tex" [1
+("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/theory.tex"
+ [1
 
 {C:/Users/Anna Stray Rongve/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
@@ -409,29 +440,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
-[2]
+ [2]
 
 LaTeX Warning: Reference `ref:GL-quad_wiki' on page 3 undefined on input line 6
 1.
 
-) ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/results.t
-ex"
-C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/results.tex:9
-: Extra alignment tab has been changed to \cr.
+)
+("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/results.tex
+"
+C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/results.tex:1
+1: Extra alignment tab has been changed to \cr.
 <template> \endtemplate 
                         
-l.9  \multicolumn{4}{|c}{Legandre}
-                                   \\
+l.11  \multicolumn{4}{|c}{Legandre}
+                                    \\
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
 
 C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/results.tex:2
-4: Extra alignment tab has been changed to \cr.
+6: Extra alignment tab has been changed to \cr.
 <template> \endtemplate 
                         
-l.24  \multicolumn{4}{|c}{Laguerre}
+l.26  \multicolumn{4}{|c}{Laguerre}
                                     \\
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -439,15 +471,11 @@ So I'll assume that you meant to type \cr instead.
 
 )
 ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/discussion.
-tex")
+tex" [3])
 ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/conclusion.
-tex"
-
-LaTeX Warning: Reference `sec:intro' on page 3 undefined on input line 5.
-
-)
+tex")
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 32.
- [3] [4]
+ [4]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 32.
 
 ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.aux")
@@ -459,8 +487,8 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  12AB3206E25501B8FF554F19DD256093;412.
+(rerunfilecheck)             Before: 12AB3206E25501B8FF554F19DD256093;412
+(rerunfilecheck)             After:  8C85F3B6F419FCD97ACC8B84CB4BEF77;522.
 
 LaTeX Warning: There were undefined references.
 
@@ -470,13 +498,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 32.
  ) 
 Here is how much of TeX's memory you used:
- 6414 strings out of 492895
- 97871 string characters out of 3118130
- 211769 words of memory out of 3000000
- 10230 multiletter control sequences out of 15000+200000
+ 6425 strings out of 492895
+ 98001 string characters out of 3118130
+ 212036 words of memory out of 3000000
+ 10239 multiletter control sequences out of 15000+200000
  9630 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,9n,31p,624b,431s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 28i,9n,31p,622b,431s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Anna Stray Rongve/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmbx10.pfb><C:/Users/Anna Stray Rongve/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Anna Stray Rongve
@@ -497,9 +525,9 @@ gve/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><
 C:/Users/Anna Stray Rongve/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmsy10.pfb><C:/Users/Anna Stray Rongve/AppData/Local/Programs/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on main.pdf (4 pages, 178446 bytes).
+Output written on main.pdf (4 pages, 181843 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
- 12 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 118 PDF objects out of 1000 (max. 8388607)
+ 14 named destinations out of 1000 (max. 500000)
+ 57 words of extra memory for PDF output out of 10000 (max. 10000000)
 
