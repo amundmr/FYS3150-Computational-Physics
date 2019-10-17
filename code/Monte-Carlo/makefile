@@ -1,7 +1,7 @@
 CC = g++
 CCFLAGS = -larmadillo -lblas -llapack -std=c++11 -O3
 DEPS = ./include/mclib.h
-OBJ = ./obj/input-func.o ./obj/naiveMC.o
+OBJ = ./obj/input-func.o ./obj/naiveMC.o ./obj/input-func_sphere.o
 
 NO_OF_FILES := $(words $(OBJ))
 COUNTER = 1
@@ -13,11 +13,12 @@ main: $(OBJ) $(DEPS)
 ./obj/%.o: ./src/%.cpp obj_dir $(DEPS)
 	@$(CC) $(CCFLAGS) $< -c; \
 	mv *.o ./obj/
-	@echo "$< compiled \t \t \033[0;32m$(COUNTER)/$(NO_OF_FILES)\033[0m"
+	@echo "$< compiled\t\t\t \033[0;32m$(COUNTER)/$(NO_OF_FILES)\033[0m"
 	@$(eval COUNTER=$(shell echo $$(($(COUNTER)+1))))
 
 obj_dir:
-	@if [ ! -d "./obj" ]; then echo "Making obj directory"; mkdir obj; fi
+	@if [ ! -d "./obj" ]; then echo "Making \033[0;36mobj\033[0m directory"; mkdir obj; fi
 
 clean:
 	@rm -rf obj main.exe
+	@echo "Directory \033[0;36mobj\033[0m and executable \033[0;36mmain.exe\033[0m deleted."
