@@ -16,11 +16,12 @@ int main(){
     double a = -infty; // Lower integration bound.
     double b = infty; // Upper integration bound.
 
-    // Naive Monte Carlo. Cartesian coordinates and uniform distribution.
-    double naive = naiveMC(a,b,MCsamples); 
-    double improved = improvedMC(infty,MCsamples);
+    cout << "Waiting for naïve Monte Carlo..." << endl;
+    double naive = naiveMC(a,b,MCsamples); // Naive Monte Carlo. Cartesian coordinates and uniform distribution.
+    cout << "Waiting for improved Monte Carlo..." << endl;
+    double improved = improvedMC(infty,MCsamples); // Improved Monte Carlo. Spherical coordinates and exponential PDF.
 
-    cout << "Naive Monte Carlo integral is:\t\t" << naive << endl;
-    cout << "Improved Monte Carlo integral is:\t\t" << improved << endl;
+    cout << "\rNaïve Monte Carlo integral is:\t\t" << naive << endl;
+    cout << "Improved Monte Carlo integral is:\t" << improved << endl;
     cout << "Analytical integral value (5pi^2/16^2):\t" << 5*M_PI*M_PI/(16*16) << endl;
 }

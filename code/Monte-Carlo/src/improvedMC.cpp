@@ -3,8 +3,9 @@
 // Monte Carlo integration with spherical coordinates, where r is distributed along the exponential distribution.
 double improvedMC(double infty,int MCsamples){
     double mc, var, fval; vec r1 = zeros<vec>(3); vec r2 = zeros<vec>(3); // Variable storage.
+    double lambda = 1.0/4; // Weight of exponential distribution.
 
-    double V = pow(M_PI,3)*pow(infty,6)/6; // Integration volume.
+    double V = 4*(2*M_PI)*(2*M_PI)*lambda*lambda; // Weighted integration volume.
 
     // Initialize RNG (Mersenne Twister) in our intervals.
     mt19937::result_type seed = time(0);
@@ -14,7 +15,7 @@ double improvedMC(double infty,int MCsamples){
 
     for (int i=0 ; i<MCsamples ; i++){
         // Fill vectors with random values in interval.
-        r1(0) = -1.0/4 * log(1-r_rand()); r2(0) = -1.0/4 * log(1-r_rand());
+        r1(0) = -lambda * log(1-r_rand()); r2(0) = -lambda * log(1-r_rand());
         r1(1) = costheta_rand(); r2(1) = costheta_rand();
         r1(2) = phi_rand(); r2(2) = phi_rand();
 
@@ -25,10 +26,10 @@ double improvedMC(double infty,int MCsamples){
     // Find variance
     var = var/MCsamples-(mc/MCsamples)*(mc/MCsamples);
     // Find mean and multiply by integration volume.
-    mc = (mc/MCsamples)*2*2*(2*M_PI)*(2*M_PI)/16;
+    mc = V*mc/(10*MCsamples);
 
     // Printing the variance.
-    cout << "Variance is: " << var << endl;
+    cout << "\e[A\r\e[0KVariance is: " << var << endl;
 
     return mc;
 }

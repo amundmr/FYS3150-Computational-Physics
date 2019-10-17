@@ -25,7 +25,7 @@ double naiveMC(double a,double b,int MCsamples){
     mc *= V/MCsamples;
 
     // Printing the variance.
-    cout << "Variance is: " << var << endl;
+    cout << "\e[A\r\e[0KVariance is: " << var << endl;
 
     return mc;
 }
