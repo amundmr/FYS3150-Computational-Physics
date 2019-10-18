@@ -16,25 +16,22 @@ int main(){
     double a = -infty; // Lower integration bound.
     double b = infty; // Upper integration bound.
 
-<<<<<<< HEAD
 
-    auto t1 = std::chrono::high_resolution_clock::now();
-    // Naive Monte Carlo. Cartesian coordinates and uniform distribution.
-    double naive = naiveMC(a,b,MCsamples);
 
-    auto t2 = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();
-
-    cout << "Time spent: " << duration << " microseconds" << endl;
-    cout << "Naive Monte Carlo integral is:\t\t" << naive << endl;
-=======
+    auto tStart = std::chrono::high_resolution_clock::now();
     cout << "Waiting for naïve Monte Carlo..." << endl;
     double naive = naiveMC(a,b,MCsamples); // Naive Monte Carlo. Cartesian coordinates and uniform distribution.
+    auto tNaive = std::chrono::high_resolution_clock::now();
+
     cout << "Waiting for improved Monte Carlo..." << endl;
     double improved = improvedMC(infty,MCsamples); // Improved Monte Carlo. Spherical coordinates and exponential PDF.
+    auto tImproved = std::chrono::high_resolution_clock::now();
 
-    cout << "\rNaïve Monte Carlo integral is:\t\t" << naive << endl;
-    cout << "Improved Monte Carlo integral is:\t" << improved << endl;
->>>>>>> 66d80145fe3f6462efaf786d041df2c65fb9e5b0
+    auto tImproved = std::chrono::duration_cast<std::chrono::microseconds>( tImproved - tNaive ).count();
+    auto tNaive = std::chrono::duration_cast<std::chrono::microseconds>( tNaive - tStart ).count();
+
+
+    cout << setpresicion(8) << "\rNaïve Monte Carlo integral is:\t\t" << naive << ", Time spent: " << tNaive << endl;
+    cout << setpresicion(8) << "Improved Monte Carlo integral is:\t" << improved << ", Time spent: " << tImproved << endl;
     cout << "Analytical integral value (5pi^2/16^2):\t" << 5*M_PI*M_PI/(16*16) << endl;
 }

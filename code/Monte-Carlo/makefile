@@ -1,11 +1,7 @@
 CC = g++
 CCFLAGS = -larmadillo -lblas -llapack -std=c++11  -O3 -fopenmp
 DEPS = ./include/mclib.h
-<<<<<<< HEAD
-OBJ = ./obj/input-func.o ./obj/naiveMC.o #./obj/input-func_sphere.o
-=======
 OBJ = ./obj/input-func.o ./obj/naiveMC.o ./obj/input-func_sphere.o ./obj/improvedMC.o
->>>>>>> 66d80145fe3f6462efaf786d041df2c65fb9e5b0
 
 NO_OF_FILES := $(words $(OBJ))
 COUNTER = 1
