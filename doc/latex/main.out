@@ -1,0 +1,12 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Theory}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{The Quantum Mechanical Problem}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Gaussian Quadrature}{section.2}% 4
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Gauss-Legendre}{subsection.2.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Improved Gauss-Quadrature- Laguerre}{subsection.2.2}% 6
+\BOOKMARK [2][-]{subsection.2.3}{Monte Carlo}{section.2}% 7
+\BOOKMARK [1][-]{section.3}{Results}{}% 8
+\BOOKMARK [2][-]{subsection.3.1}{Laguerre/Legendre}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.2}{Paralellization with openMP}{section.3}% 10
+\BOOKMARK [1][-]{section.4}{Discussion}{}% 11
+\BOOKMARK [1][-]{section.5}{Conclusion}{}% 12
