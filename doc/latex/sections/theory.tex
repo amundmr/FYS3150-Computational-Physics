@@ -2,24 +2,25 @@
 
 \begin{document}
 \section{Theory} \label{sec:theory}
-\subsection{The Quantum Mechanical Problem} \label{sec:QMProb}
-The problem in question is a quantum mechanical one with two electrons in a hydrogen atom.
-
+\subsection{The Quantum Mechanical Problem} \label{sec:QMProb}.
 The single-particle wave function of an electron $i$ in the $1s$ state is given in terms of a dimensionless variable (the wave function is not normalized)
 
 \[\vec{r}_i = x_i \vec{e}_x + y_i \vec{e}_y + z_i \vec{e}_z\]
 as
 \[\psi_{1s}(\vec{r}_i) = e^{-\alpha r_i}\]
-Where $\alpha$ is a parameter and the length $r_i$ is defined by
+Where $\alpha$ is a parameter set to 2, due to the two electrons, and the length $r_i$ is defined by
 \[r_i = \sqrt{x_i^2 + y_i^2 + z_i^2}\]
 
-In this paper we will fix $\alpha = 2$, which corresponds to the helium atom, Z = 2.\\
-
-Four our system with two electrons, we have the product of the two $1s$ wave functions defined as
+For our system with two electrons, we have the product of the two $1s$ wave functions defined as
 \[\Psi(\vec{r}_1, \vec{r}_2) = e^{-\alpha(r_1 + r_2)}\]
 
-This leads us to the integral that needs solving, namely the quantum mechanical expectation value of the energy between two electrons which repel each other via the classical Coulomb interaction.
+This leads to the integral, see below, which will be solved nummericaly with the three different methods mentioned earlier.
+The value of the integral corresponds to the energy between the two electrons repelling each other due to Columb interactions.
+
 \[\langle \frac{1}{|\vec{r}_1 - \vec{r}_2|} \rangle = \int_{\infty}^\infty d\vec{r}_1 d\vec{r}_2 e^{-2\alpha(r_1 + r_2)} \frac{1}{\vec{r_1} - \vec{r_2}}\]
+
+
+The analytical result $5\pi/16^2$.
 
 
 

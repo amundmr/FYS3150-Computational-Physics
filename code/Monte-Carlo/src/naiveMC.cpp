@@ -6,7 +6,7 @@ double naiveMC(double a,double b,int MCsamples){
     // Integration volume.
     double V = pow((b-a),6);
     double seed;
-    #pragma omp parallel num_threads(4) private(seed)
+    #pragma omp parallel private(seed)
     {
     // Initialize RNG (Mersenne Twister) in our interval
     mt19937::result_type seed = time(0)+omp_get_thread_num();

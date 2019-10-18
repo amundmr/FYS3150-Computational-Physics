@@ -73,7 +73,7 @@ options:
     2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
 files:
   dicy-instance.yaml-ParsedYAML:
-    timeStamp: 2019-10-16T13:48:26.723Z
+    timeStamp: 2019-10-18T10:37:34.756Z
     jobNames: []
     value:
       severity: info
@@ -134,13 +134,13 @@ files:
         2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
     type: ParsedYAML
   theory.tex:
-    timeStamp: 2019-10-16T13:48:26.603Z
+    timeStamp: 2019-10-18T10:47:11.384Z
     jobNames: []
-    hash: I8HoPjNouYYdqSIgiwJckC05In9npvNKQcpt8oztlAM=
+    hash: lhnQ9eNEQOOiXfA/XCsa6pT40nGEcghTJnLqFSbT12E=
     type: LaTeX
     subType: subfiles
   'C:\Users\Anna Stray Rongve\AppData\Roaming\dicy\config.yaml':
-    timeStamp: 2019-10-16T11:52:21.444Z
+    timeStamp: 2019-10-18T10:37:34.790Z
     jobNames: []
     type: YAML
   x.y-Nil:
@@ -341,7 +341,7 @@ files:
       calls: []
     type: ParsedFileListing
   theory.log-ParsedLaTeXLog:
-    timeStamp: 2019-10-16T13:48:30.321Z
+    timeStamp: 2019-10-18T10:45:55.235Z
     jobNames: []
     value:
       messages:
@@ -1695,13 +1695,13 @@ files:
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 61
-              end: 61
+              start: 62
+              end: 62
           log:
             file: theory.log
             range:
-              start: 413
-              end: 414
+              start: 408
+              end: 409
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1709,8 +1709,36 @@ files:
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 63
-              end: 63
+              start: 64
+              end: 64
+          log:
+            file: theory.log
+            range:
+              start: 411
+              end: 411
+        - severity: info
+          name: pdfTeX
+          category: Package atveryend
+          text: Empty hook `AfterLastShipout'
+          source:
+            file: theory.tex"LaTeX2e <2018-12-01>
+            range:
+              start: 64
+              end: 64
+          log:
+            file: theory.log
+            range:
+              start: 413
+              end: 413
+        - severity: info
+          name: pdfTeX
+          category: Package atveryend
+          text: Executing hook `AtVeryEndDocument'
+          source:
+            file: theory.tex"LaTeX2e <2018-12-01>
+            range:
+              start: 64
+              end: 64
           log:
             file: theory.log
             range:
@@ -1719,45 +1747,17 @@ files:
         - severity: info
           name: pdfTeX
           category: Package atveryend
-          text: Empty hook `AfterLastShipout'
-          source:
-            file: theory.tex"LaTeX2e <2018-12-01>
-            range:
-              start: 63
-              end: 63
-          log:
-            file: theory.log
-            range:
-              start: 418
-              end: 418
-        - severity: info
-          name: pdfTeX
-          category: Package atveryend
-          text: Executing hook `AtVeryEndDocument'
-          source:
-            file: theory.tex"LaTeX2e <2018-12-01>
-            range:
-              start: 63
-              end: 63
-          log:
-            file: theory.log
-            range:
-              start: 421
-              end: 421
-        - severity: info
-          name: pdfTeX
-          category: Package atveryend
           text: Executing hook `AtEndAfterFileList'
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 63
-              end: 63
+              start: 64
+              end: 64
           log:
             file: theory.log
             range:
-              start: 422
-              end: 422
+              start: 417
+              end: 417
         - severity: info
           name: pdfTeX
           category: Package rerunfilecheck
@@ -1769,8 +1769,8 @@ files:
           log:
             file: theory.log
             range:
-              start: 423
-              end: 424
+              start: 418
+              end: 419
         - severity: warning
           name: pdfTeX
           category: LaTeX
@@ -1780,38 +1780,38 @@ files:
           log:
             file: theory.log
             range:
-              start: 426
-              end: 426
+              start: 421
+              end: 421
       inputs: []
       outputs:
         - theory.pdf
       calls: []
     type: ParsedLaTeXLog
   theory.aux:
-    timeStamp: 2019-10-16T13:48:30.179Z
+    timeStamp: 2019-10-18T10:47:13.127Z
     jobNames: []
     hash: W63cM+2IMIUdLv5we4cKvYjuttYdEjtmQzQSGhutNPo=
     type: LaTeXAuxilary
   theory.fls:
-    timeStamp: 2019-10-16T13:48:30.230Z
+    timeStamp: 2019-10-18T10:47:13.218Z
     jobNames: []
     hash: nhASeGzXa1T7z3X/hl2189ki+W8PzmR0b+H6y0TNpnE=
     type: FileListing
   theory.log:
-    timeStamp: 2019-10-16T13:48:30.228Z
+    timeStamp: 2019-10-18T10:47:13.216Z
     jobNames: []
-    hash: /5ToN0DB6YqzaaLKS0NnmPxXjhmFq68i1mZVfYy41HE=
+    hash: 1rsdGS4UD2SgWr1QItdyZt9Lr+xQO0azs+lo+Hk6SWw=
     type: LaTeXLog
     subType: pdfTeX
   theory.synctex.gz:
-    timeStamp: 2019-10-16T13:48:30.227Z
+    timeStamp: 2019-10-18T10:47:13.215Z
     jobNames: []
-    hash: xBum4ANiSBuKFq/HMsJ7l1+q/aLKBB0Oqk64PW93mNg=
+    hash: MttG4vDikM/IP++9XL+vR3qsNMpghZiA/NMmA/PoP1E=
     type: SyncTeX
   theory.pdf:
-    timeStamp: 2019-10-16T13:48:30.226Z
+    timeStamp: 2019-10-18T10:47:13.213Z
     jobNames: []
-    hash: NTZDS8OEdyylhGHclonbOsNJVLX4hR8F1sLzB4gw4hk=
+    hash: zQ5w1AmgiGI5N/BI94twSEjecYSh3dc6QkCxev2HBlo=
     type: PortableDocumentFormat
   theory.aux-ParsedLaTeXAuxilary:
     timeStamp: 2019-10-16T13:48:28.174Z
@@ -2054,15 +2054,20 @@ files:
     jobNames: []
     type: LaTeXStyle
   'C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.tex':
-    timeStamp: 2019-10-11T12:25:27.578Z
+    timeStamp: 2019-10-17T12:17:07.455Z
     jobNames: []
     type: LaTeX
     subType: article
   theory.out:
-    timeStamp: 2019-10-16T13:48:30.180Z
+    timeStamp: 2019-10-18T10:47:13.129Z
     jobNames: []
     hash: sflmSONNgS8bvG4YyAgiyFKvE/HWEsjXqdo9bx8KZ1E=
     type: OUT
+  'C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.tex-ParsedLaTeXMagic':
+    timeStamp: 2019-10-18T10:37:35.302Z
+    jobNames: []
+    value: {}
+    type: ParsedLaTeXMagic
 rules:
   - name: ApplyOptions
     command: load
@@ -2503,3 +2508,16 @@ rules:
     parameters: []
     inputs: []
     outputs: []
+  - name: ParseLaTeXMagic
+    command: load
+    phase: execute
+    parameters:
+      - 'C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.tex'
+    inputs:
+      - file: 'C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.tex'
+        type: default
+    outputs:
+      - file: >-
+          C:\Users\Anna Stray
+          Rongve\Documents\Project-3\doc\latex\main.tex-ParsedLaTeXMagic
+        type: default

@@ -8,7 +8,7 @@ double improvedMC(double infty,int MCsamples){
     double V = 4*(2*M_PI)*(2*M_PI)*lambda*lambda; // Weighted integration volume.
     double seed;
 
-    #pragma omp parallel num_threads(4) private(seed)
+    #pragma omp parallel private(seed)
     { //Start paralellization
     // Initialize RNG (Mersenne Twister) in our intervals.
     mt19937::result_type seed = time(0);
