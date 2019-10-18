@@ -6,6 +6,7 @@
 #include <random>
 #include <chrono>
 #include <iomanip>
+#include <omp.h>
 
 using namespace std;
 using namespace arma;
