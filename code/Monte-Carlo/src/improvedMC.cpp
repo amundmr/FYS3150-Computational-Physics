@@ -14,9 +14,8 @@ double improvedMC(double infty,int MCsamples){
 
     for (int i=0 ; i<MCsamples ; i++){
         // Fill vectors with random values in interval.
-        r1(0) = -1.0/4 * log(1-r_rand()); r2(0) = -1.0/4 * log(1-r_rand());
-        r1(1) = costheta_rand(); r2(1) = costheta_rand();
-        r1(2) = phi_rand(); r2(2) = phi_rand();
+        r1(0) = -1.0/4 * log(1-r_rand()); r1(1) = costheta_rand(); r1(2) = phi_rand();
+        r2(0) = -1.0/4 * log(1-r_rand()); r2(1) = costheta_rand(); r2(2) = phi_rand();
 
         // Add function value to sum.
         mc += f2(r1,r2);

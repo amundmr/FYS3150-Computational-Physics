@@ -11,7 +11,7 @@ int main(){
     // Take in an approximation of infinity, used to find the integration domain.
     cout << "Approximation of infinity: ";
     cin >> infty;
-    cout << "===========================================================================" << endl;
+    cout << "=======================================================================================" << endl;
 
     double a = -infty; // Lower integration bound.
     double b = infty; // Upper integration bound.
@@ -30,7 +30,7 @@ int main(){
     double tImproved = std::chrono::duration_cast<std::chrono::microseconds>( t_Improved - t_Naive ).count();
     double tNaive = std::chrono::duration_cast<std::chrono::microseconds>( t_Naive - tStart ).count();
 
-    cout << "\r---------------------------------------------------------------------------" << endl;
+    cout << "\r---------------------------------------------------------------------------------------" << endl;
     cout << setprecision(8) << "Naïve Monte Carlo integral is:\t\t" << naive << "\t\tTime spent: " << tNaive/1000000 << "s" << endl;
     cout << setprecision(8) << "Improved Monte Carlo integral is:\t" << improved << "\t\tTime spent: " << tImproved/1000000 << "s" << endl;
     cout << "Analytical integral value (5pi^2/16^2):\t" << 5*M_PI*M_PI/(16*16) << endl;
