@@ -1,7 +1,7 @@
 #include "../include/mclib.h"
 
 double naiveMC(double a,double b,int MCsamples){
-    double mc, var, fval; vec r1 = zeros<vec>(3); vec r2 = zeros<vec>(3); // Variable storage.
+    double mc, var, fval, sigma, int_mc; vec r1 = zeros<vec>(3); vec r2 = zeros<vec>(3); // Variable storage.
 
     // Integration volume.
     double V = pow((b-a),6);
@@ -12,11 +12,8 @@ double naiveMC(double a,double b,int MCsamples){
     mt19937::result_type seed = time(0)+omp_get_thread_num();
     auto interval_rand = bind(uniform_real_distribution<double>(a,b),mt19937(seed));
 
-    int i;
-
-
     #pragma omp for reduction(+:mc) reduction(+:var)
-    for ( i=0 ; i<MCsamples ; i++){
+    for ( int i=0 ; i<MCsamples ; i++){
         // Fill vectors with random values.
         r1(0) = interval_rand(); r1(1) = interval_rand(); r1(2) = interval_rand();
         r2(0) = interval_rand(); r2(1) = interval_rand(); r2(2) = interval_rand();
@@ -28,13 +25,17 @@ double naiveMC(double a,double b,int MCsamples){
 
     //End paralellization here
 }
+    // Find mean.
+    mc /= MCsamples;
     // Find variance
-    var = V*sqrt((var-mc/MCsamples)/MCsamples);
-    // Find mean and multiply by integration volume.
-    mc *= V/MCsamples;
-
+    var = var/MCsamples-pow(mc,2);
+    var /= MCsamples;
+    // Find standard deviation
+    sigma = sqrt(var);
+    // Find final integral by multiplying with integration volume.
+    int_mc = V*mc;
     // Printing the variance.
-    cout << "\e[A\r\e[0KVariance is: " << var << endl;
+    cout << "\e[A\r\e[0KStandard deviation of naïve Monte Carlo is: " << var << endl;
 
-    return mc;
+    return int_mc;
 }
