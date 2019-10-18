@@ -6,13 +6,17 @@ double improvedMC(double infty,int MCsamples){
     double lambda = 1.0/4; // Weight of exponential distribution.
 
     double V = 4*(2*M_PI)*(2*M_PI)*lambda*lambda; // Weighted integration volume.
+    double seed;
 
+    #pragma omp parallel num_threads(4) private(seed)
+    { //Start paralellization
     // Initialize RNG (Mersenne Twister) in our intervals.
     mt19937::result_type seed = time(0);
     auto r_rand = bind(uniform_real_distribution<double>(0,1),mt19937(seed));
     auto costheta_rand = bind(uniform_real_distribution<double>(-1,1),mt19937(seed));
     auto phi_rand = bind(uniform_real_distribution<double>(0,2*M_PI),mt19937(seed));
 
+    #pragma omp for reduction(+:mc) reduction(+:var)
     for (int i=0 ; i<MCsamples ; i++){
         // Fill vectors with random values in interval.
         r1(0) = -lambda * log(1-r_rand()); r2(0) = -lambda * log(1-r_rand());
@@ -23,6 +27,8 @@ double improvedMC(double infty,int MCsamples){
         mc += f2(r1,r2);
         var += f2(r1,r2) * f2(r1,r2);
     }
+    //end paralellization
+  }
     // Find variance
     var = var/MCsamples-(mc/MCsamples)*(mc/MCsamples);
     // Find mean and multiply by integration volume.
