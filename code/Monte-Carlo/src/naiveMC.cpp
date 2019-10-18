@@ -1,5 +1,5 @@
 #include "../include/mclib.h"
-#include <omp.h>
+
 
 
 double naiveMC(double a,double b,int MCsamples){

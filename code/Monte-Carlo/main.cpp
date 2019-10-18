@@ -27,11 +27,11 @@ int main(){
     double improved = improvedMC(infty,MCsamples); // Improved Monte Carlo. Spherical coordinates and exponential PDF.
     auto t_Improved = std::chrono::high_resolution_clock::now();
 
-    auto tImproved = std::chrono::duration_cast<std::chrono::microseconds>( t_Improved - t_Naive ).count();
-    auto tNaive = std::chrono::duration_cast<std::chrono::microseconds>( t_Naive - tStart ).count();
+    double tImproved = std::chrono::duration_cast<std::chrono::microseconds>( t_Improved - t_Naive ).count();
+    double tNaive = std::chrono::duration_cast<std::chrono::microseconds>( t_Naive - tStart ).count();
 
 
-    cout << setprecision(8) << "\rNaïve Monte Carlo integral is:\t\t" << naive << ", Time spent: " << tNaive << endl;
-    cout << setprecision(8) << "Improved Monte Carlo integral is:\t" << improved << ", Time spent: " << tImproved << endl;
+    cout << setprecision(8) << "\rNaïve Monte Carlo integral is:\t\t" << naive << ", Time spent: " << tNaive/1000000 << "s" << endl;
+    cout << setprecision(8) << "Improved Monte Carlo integral is:\t" << improved << ", Time spent: " << tImproved/1000000 << "s" << endl;
     cout << "Analytical integral value (5pi^2/16^2):\t" << 5*M_PI*M_PI/(16*16) << endl;
 }
