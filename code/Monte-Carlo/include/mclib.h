@@ -5,7 +5,7 @@
 #include <armadillo>
 #include <random>
 #include <chrono>
-#include <omp.h>
+#include <iomanip>
 
 using namespace std;
 using namespace arma;
