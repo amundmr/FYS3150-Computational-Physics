@@ -97,12 +97,18 @@ INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.
 INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.out
 OUTPUT results.out
 OUTPUT results.pdf
+INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.aux
 INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.out
 INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.out
+INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb

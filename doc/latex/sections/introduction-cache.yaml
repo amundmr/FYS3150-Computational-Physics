@@ -73,7 +73,7 @@ options:
     2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
 files:
   dicy-instance.yaml-ParsedYAML:
-    timeStamp: 2019-10-16T13:39:53.918Z
+    timeStamp: 2019-10-17T11:16:17.268Z
     jobNames: []
     value:
       severity: info
@@ -134,20 +134,20 @@ files:
         2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
     type: ParsedYAML
   introduction.tex:
-    timeStamp: 2019-10-16T13:46:25.673Z
+    timeStamp: 2019-10-17T12:10:24.186Z
     jobNames: []
-    hash: 5AXa0HYZt9M8Rp+pXmFdgEmOk3lFNiPdWVa6+4/QxzA=
+    hash: 8rVCpas6QzMTOTuKMeeqZW8Rb8wZaFjHYH1L0m6ZXas=
     type: LaTeX
     subType: subfiles
   'C:\Users\Anna Stray Rongve\AppData\Roaming\dicy\config.yaml':
-    timeStamp: 2019-10-16T11:52:21.444Z
+    timeStamp: 2019-10-17T08:54:52.119Z
     jobNames: []
     type: YAML
   x.y-Nil:
     jobNames: []
     type: Nil
   introduction.fls-ParsedFileListing:
-    timeStamp: 2019-10-16T13:39:55.061Z
+    timeStamp: 2019-10-17T11:54:31.958Z
     jobNames: []
     value:
       messages: []
@@ -160,6 +160,9 @@ files:
           Rongve\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
         - >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+        - >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\fonts\tfm\public\cm\cmbx12.tfm
         - >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
@@ -167,6 +170,12 @@ files:
         - >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+        - >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+        - >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
         - >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
@@ -308,7 +317,7 @@ files:
       calls: []
     type: ParsedFileListing
   introduction.log-ParsedLaTeXLog:
-    timeStamp: 2019-10-16T13:46:28.807Z
+    timeStamp: 2019-10-17T11:59:53.174Z
     jobNames: []
     value:
       messages:
@@ -1655,6 +1664,45 @@ files:
             range:
               start: 400
               end: 400
+        - severity: error
+          name: pdfTeX
+          text: 'You can''t use `macro parameter character #'' in horizontal mode'
+          log:
+            file: introduction.log
+            range:
+              start: 410
+              end: 410
+          source:
+            file: tex
+            range:
+              start: 10
+              end: 10
+        - severity: error
+          name: pdfTeX
+          text: Missing $ inserted
+          log:
+            file: introduction.log
+            range:
+              start: 420
+              end: 420
+          source:
+            file: tex
+            range:
+              start: 10
+              end: 10
+        - severity: error
+          name: pdfTeX
+          text: Missing $ inserted
+          log:
+            file: introduction.log
+            range:
+              start: 430
+              end: 430
+          source:
+            file: tex
+            range:
+              start: 11
+              end: 11
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1662,13 +1710,13 @@ files:
           source:
             file: introduction.tex
             range:
-              start: 10
-              end: 10
+              start: 19
+              end: 19
           log:
             file: introduction.log
             range:
-              start: 409
-              end: 409
+              start: 444
+              end: 444
         - severity: info
           name: pdfTeX
           category: >-
@@ -1679,13 +1727,13 @@ files:
           source:
             file: introduction.tex
             range:
-              start: 10
-              end: 10
+              start: 19
+              end: 19
           log:
             file: introduction.log
             range:
-              start: 412
-              end: 413
+              start: 447
+              end: 448
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1693,13 +1741,13 @@ files:
           source:
             file: introduction.tex
             range:
-              start: 10
-              end: 10
+              start: 19
+              end: 19
           log:
             file: introduction.log
             range:
-              start: 417
-              end: 417
+              start: 452
+              end: 452
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1707,13 +1755,13 @@ files:
           source:
             file: introduction.tex
             range:
-              start: 10
-              end: 10
+              start: 19
+              end: 19
           log:
             file: introduction.log
             range:
-              start: 418
-              end: 418
+              start: 453
+              end: 453
         - severity: info
           name: pdfTeX
           category: Package rerunfilecheck
@@ -1725,41 +1773,41 @@ files:
           log:
             file: introduction.log
             range:
-              start: 419
-              end: 420
+              start: 454
+              end: 455
       inputs: []
       outputs:
         - introduction.pdf
       calls: []
     type: ParsedLaTeXLog
   introduction.aux:
-    timeStamp: 2019-10-16T13:46:27.527Z
+    timeStamp: 2019-10-17T12:10:26.010Z
     jobNames: []
     hash: YyDy4MXI+No8KuglmfEIZ41PPKd065OqTL/+T+Ft8XQ=
     type: LaTeXAuxilary
   introduction.fls:
-    timeStamp: 2019-10-16T13:46:27.558Z
+    timeStamp: 2019-10-17T12:10:26.097Z
     jobNames: []
-    hash: zlyAiwuvX3yj6ISAhgcBMy/ERkJCLaNESNh43NBXg+M=
+    hash: THdt1skJNCqSYhfQkwIe7VW2IFVAfShejmFw0jNU+7I=
     type: FileListing
   introduction.log:
-    timeStamp: 2019-10-16T13:46:27.555Z
+    timeStamp: 2019-10-17T12:10:26.084Z
     jobNames: []
-    hash: MdD3/ZV+8ardoqo3RqRgRi5bbo2GtZpJqRX8eFPj9r4=
+    hash: RWphyObpezydmVkXVfbe21v2xnDsTqFQDLRw1wlJ9Co=
     type: LaTeXLog
     subType: pdfTeX
   introduction.synctex.gz:
-    timeStamp: 2019-10-16T13:46:27.554Z
+    timeStamp: 2019-10-17T12:10:26.084Z
     jobNames: []
-    hash: IXJT0mk9w2rGNiMrXms3+jBsP0gftFRB3kM3eSyLX8k=
+    hash: cOGa1WhvGxtM9tzJHuZT5aM92HUEWYwYstW8Wzs+nLQ=
     type: SyncTeX
   introduction.pdf:
-    timeStamp: 2019-10-16T13:46:27.553Z
+    timeStamp: 2019-10-17T12:10:26.084Z
     jobNames: []
-    hash: lI0u93DrUhkVczNeTkXVGN/e74f4kH3gGLl3/8W39d8=
+    hash: HJ641DSFqWjEExZnKb+kWqcNXjlErgpePxvIUelKHYU=
     type: PortableDocumentFormat
   introduction.aux-ParsedLaTeXAuxilary:
-    timeStamp: 2019-10-16T13:39:55.057Z
+    timeStamp: 2019-10-17T11:52:07.576Z
     jobNames: []
     value:
       commands:
@@ -1960,12 +2008,12 @@ files:
     jobNames: []
     type: LaTeXStyle
   'C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.tex':
-    timeStamp: 2019-10-11T12:25:27.578Z
+    timeStamp: 2019-10-17T11:11:59.657Z
     jobNames: []
     type: LaTeX
     subType: article
   introduction.out:
-    timeStamp: 2019-10-16T13:46:27.528Z
+    timeStamp: 2019-10-17T12:10:26.012Z
     jobNames: []
     hash: w3ZLL6OeSWz9kXNVQZeeTJdxjZzDuIk9T3f66eH0XSs=
     type: OUT
@@ -1974,6 +2022,21 @@ files:
     jobNames: []
     value: {}
     type: ParsedLaTeXMagic
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm':
+    timeStamp: 2009-02-06T20:24:08.000Z
+    jobNames: []
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb':
+    timeStamp: 2009-07-14T18:37:47.000Z
+    jobNames: []
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb':
+    timeStamp: 2009-07-14T18:37:47.000Z
+    jobNames: []
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb':
+    timeStamp: 2009-07-14T18:37:47.000Z
+    jobNames: []
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb':
+    timeStamp: 2009-07-14T18:37:46.000Z
+    jobNames: []
 rules:
   - name: ApplyOptions
     command: load
@@ -2262,6 +2325,26 @@ rules:
         type: default
       - file: introduction.out
         type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
+        type: default
     outputs:
       - file: introduction.aux
         type: default
@@ -2517,6 +2600,26 @@ rules:
       - file: introduction.out
         type: default
       - file: introduction.tex
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
         type: default
     outputs:
       - file: introduction.pdf

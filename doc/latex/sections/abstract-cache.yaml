@@ -73,7 +73,7 @@ options:
     2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
 files:
   dicy-instance.yaml-ParsedYAML:
-    timeStamp: 2019-10-16T13:31:26.312Z
+    timeStamp: 2019-10-17T11:11:11.374Z
     jobNames: []
     value:
       severity: info
@@ -134,13 +134,13 @@ files:
         2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
     type: ParsedYAML
   abstract.tex:
-    timeStamp: 2019-10-16T13:39:09.292Z
+    timeStamp: 2019-10-17T12:13:30.964Z
     jobNames: []
-    hash: O5wJbLqcrcbyeeJ9DpWqpNd845ghlnKjy18f0po1HPs=
+    hash: qEL3lsnMg418KNMLOwBpuuS5RsXnQZ91yX0HS4xMcVY=
     type: LaTeX
     subType: subfiles
   'C:\Users\Anna Stray Rongve\AppData\Roaming\dicy\config.yaml':
-    timeStamp: 2019-10-16T11:52:21.444Z
+    timeStamp: 2019-10-17T08:54:52.119Z
     jobNames: []
     type: YAML
   x.y-Nil:
@@ -311,7 +311,7 @@ files:
       calls: []
     type: ParsedFileListing
   abstract.log-ParsedLaTeXLog:
-    timeStamp: 2019-10-16T13:39:11.739Z
+    timeStamp: 2019-10-17T12:13:24.758Z
     jobNames: []
     value:
       messages:
@@ -1665,8 +1665,8 @@ files:
           source:
             file: abstract.te
             range:
-              start: 15
-              end: 15
+              start: 10
+              end: 10
           log:
             file: abstract.log
             range:
@@ -1682,8 +1682,8 @@ files:
           source:
             file: abstract.te
             range:
-              start: 15
-              end: 15
+              start: 10
+              end: 10
           log:
             file: abstract.log
             range:
@@ -1696,8 +1696,8 @@ files:
           source:
             file: abstract.te
             range:
-              start: 15
-              end: 15
+              start: 10
+              end: 10
           log:
             file: abstract.log
             range:
@@ -1710,8 +1710,8 @@ files:
           source:
             file: abstract.te
             range:
-              start: 15
-              end: 15
+              start: 10
+              end: 10
           log:
             file: abstract.log
             range:
@@ -1736,30 +1736,30 @@ files:
       calls: []
     type: ParsedLaTeXLog
   abstract.aux:
-    timeStamp: 2019-10-16T13:39:10.553Z
+    timeStamp: 2019-10-17T12:13:32.373Z
     jobNames: []
     hash: hrMkrgrFL+fvAEKTlf+RuUOf+mF56WwTlp4DyWx7fFc=
     type: LaTeXAuxilary
   abstract.fls:
-    timeStamp: 2019-10-16T13:39:10.589Z
+    timeStamp: 2019-10-17T12:13:32.404Z
     jobNames: []
     hash: 9Js/ndkDXXif1sZQAHuazljDN3pumK3r/wvww9dwiy4=
     type: FileListing
   abstract.log:
-    timeStamp: 2019-10-16T13:39:10.586Z
+    timeStamp: 2019-10-17T12:13:32.402Z
     jobNames: []
-    hash: k5j9wYWCoquSiphUf8z3ZNLJDS2OKkfdzW+O/Aiogsk=
+    hash: J0TmEJv9j1XyvqkiFU+rF7otigJ28E50c7RfpRkxR1c=
     type: LaTeXLog
     subType: pdfTeX
   abstract.synctex.gz:
-    timeStamp: 2019-10-16T13:39:10.585Z
+    timeStamp: 2019-10-17T12:13:32.401Z
     jobNames: []
-    hash: Uz3ADNdVln68uhU5SE0dRShpi8CwznbWAi6lES4B7Go=
+    hash: eyCScYKFPwzzPSPT3FVgu6cI2qjexy7P7+7+DAnVyd8=
     type: SyncTeX
   abstract.pdf:
-    timeStamp: 2019-10-16T13:39:10.584Z
+    timeStamp: 2019-10-17T12:13:32.397Z
     jobNames: []
-    hash: bjsVbeH/gVEtZdnHK/5G+wGGSx486M/kUTwhteDrIK4=
+    hash: AaAsRiKGXcTydTPWsXWX260J5YOvbpBkXplq4CLrtow=
     type: PortableDocumentFormat
   abstract.aux-ParsedLaTeXAuxilary:
     timeStamp: 2019-10-16T13:31:27.750Z
@@ -1964,12 +1964,12 @@ files:
     jobNames: []
     type: LaTeXStyle
   'C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.tex':
-    timeStamp: 2019-10-11T12:25:27.578Z
+    timeStamp: 2019-10-17T11:11:59.657Z
     jobNames: []
     type: LaTeX
     subType: article
   abstract.out:
-    timeStamp: 2019-10-16T13:39:10.495Z
+    timeStamp: 2019-10-17T12:13:32.322Z
     jobNames: []
     hash: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
     type: OUT
