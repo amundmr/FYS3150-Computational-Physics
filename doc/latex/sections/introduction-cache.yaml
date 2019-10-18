@@ -73,7 +73,7 @@ options:
     2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
 files:
   dicy-instance.yaml-ParsedYAML:
-    timeStamp: 2019-10-17T11:16:17.268Z
+    timeStamp: 2019-10-18T13:46:59.046Z
     jobNames: []
     value:
       severity: info
@@ -134,13 +134,13 @@ files:
         2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
     type: ParsedYAML
   introduction.tex:
-    timeStamp: 2019-10-17T12:10:24.186Z
+    timeStamp: 2019-10-18T13:49:52.800Z
     jobNames: []
-    hash: 8rVCpas6QzMTOTuKMeeqZW8Rb8wZaFjHYH1L0m6ZXas=
+    hash: PPZiCNGJSQFnxaDWL5/ANi688n0T4EqGWxWX7YZuuIY=
     type: LaTeX
     subType: subfiles
   'C:\Users\Anna Stray Rongve\AppData\Roaming\dicy\config.yaml':
-    timeStamp: 2019-10-17T08:54:52.119Z
+    timeStamp: 2019-10-18T10:37:34.790Z
     jobNames: []
     type: YAML
   x.y-Nil:
@@ -317,7 +317,7 @@ files:
       calls: []
     type: ParsedFileListing
   introduction.log-ParsedLaTeXLog:
-    timeStamp: 2019-10-17T11:59:53.174Z
+    timeStamp: 2019-10-18T13:48:40.295Z
     jobNames: []
     value:
       messages:
@@ -1710,8 +1710,8 @@ files:
           source:
             file: introduction.tex
             range:
-              start: 19
-              end: 19
+              start: 18
+              end: 18
           log:
             file: introduction.log
             range:
@@ -1727,8 +1727,8 @@ files:
           source:
             file: introduction.tex
             range:
-              start: 19
-              end: 19
+              start: 18
+              end: 18
           log:
             file: introduction.log
             range:
@@ -1741,8 +1741,8 @@ files:
           source:
             file: introduction.tex
             range:
-              start: 19
-              end: 19
+              start: 18
+              end: 18
           log:
             file: introduction.log
             range:
@@ -1755,8 +1755,8 @@ files:
           source:
             file: introduction.tex
             range:
-              start: 19
-              end: 19
+              start: 18
+              end: 18
           log:
             file: introduction.log
             range:
@@ -1781,30 +1781,30 @@ files:
       calls: []
     type: ParsedLaTeXLog
   introduction.aux:
-    timeStamp: 2019-10-17T12:10:26.010Z
+    timeStamp: 2019-10-18T13:49:54.072Z
     jobNames: []
     hash: YyDy4MXI+No8KuglmfEIZ41PPKd065OqTL/+T+Ft8XQ=
     type: LaTeXAuxilary
   introduction.fls:
-    timeStamp: 2019-10-17T12:10:26.097Z
+    timeStamp: 2019-10-18T13:49:54.110Z
     jobNames: []
     hash: THdt1skJNCqSYhfQkwIe7VW2IFVAfShejmFw0jNU+7I=
     type: FileListing
   introduction.log:
-    timeStamp: 2019-10-17T12:10:26.084Z
+    timeStamp: 2019-10-18T13:49:54.108Z
     jobNames: []
-    hash: RWphyObpezydmVkXVfbe21v2xnDsTqFQDLRw1wlJ9Co=
+    hash: ObcKkuHvKcoNyiwSXe210VNkhlwFnmwQQRY2lbq8j20=
     type: LaTeXLog
     subType: pdfTeX
   introduction.synctex.gz:
-    timeStamp: 2019-10-17T12:10:26.084Z
+    timeStamp: 2019-10-18T13:49:54.106Z
     jobNames: []
-    hash: cOGa1WhvGxtM9tzJHuZT5aM92HUEWYwYstW8Wzs+nLQ=
+    hash: 81vzy926VZHFzsBcOUyuBuUH6FFagkgBlmAwLoPPoRk=
     type: SyncTeX
   introduction.pdf:
-    timeStamp: 2019-10-17T12:10:26.084Z
+    timeStamp: 2019-10-18T13:49:54.105Z
     jobNames: []
-    hash: HJ641DSFqWjEExZnKb+kWqcNXjlErgpePxvIUelKHYU=
+    hash: kQGVB3MwkxcSWVbByffcbdDCTAKfr79ZxL+5m6Q04N0=
     type: PortableDocumentFormat
   introduction.aux-ParsedLaTeXAuxilary:
     timeStamp: 2019-10-17T11:52:07.576Z
@@ -2008,12 +2008,12 @@ files:
     jobNames: []
     type: LaTeXStyle
   'C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.tex':
-    timeStamp: 2019-10-17T11:11:59.657Z
+    timeStamp: 2019-10-18T12:26:30.170Z
     jobNames: []
     type: LaTeX
     subType: article
   introduction.out:
-    timeStamp: 2019-10-17T12:10:26.012Z
+    timeStamp: 2019-10-18T13:49:54.073Z
     jobNames: []
     hash: w3ZLL6OeSWz9kXNVQZeeTJdxjZzDuIk9T3f66eH0XSs=
     type: OUT

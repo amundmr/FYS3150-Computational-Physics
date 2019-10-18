@@ -73,7 +73,7 @@ options:
     2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
 files:
   dicy-instance.yaml-ParsedYAML:
-    timeStamp: 2019-10-18T10:37:34.756Z
+    timeStamp: 2019-10-18T11:57:55.103Z
     jobNames: []
     value:
       severity: info
@@ -134,9 +134,9 @@ files:
         2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
     type: ParsedYAML
   theory.tex:
-    timeStamp: 2019-10-18T10:47:11.384Z
+    timeStamp: 2019-10-18T13:51:43.464Z
     jobNames: []
-    hash: lhnQ9eNEQOOiXfA/XCsa6pT40nGEcghTJnLqFSbT12E=
+    hash: 9/eY0j//ol7rwog0K22HqVthEyRa+gXMoI+E+2YBRok=
     type: LaTeX
     subType: subfiles
   'C:\Users\Anna Stray Rongve\AppData\Roaming\dicy\config.yaml':
@@ -147,7 +147,7 @@ files:
     jobNames: []
     type: Nil
   theory.fls-ParsedFileListing:
-    timeStamp: 2019-10-16T13:48:28.179Z
+    timeStamp: 2019-10-18T12:38:01.404Z
     jobNames: []
     value:
       messages: []
@@ -170,6 +170,9 @@ files:
         - >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\fonts\tfm\public\cm\cmr12.tfm
+        - >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmtt10.tfm
         - >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
@@ -203,6 +206,9 @@ files:
         - >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
+        - >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmtt10.pfb
         - >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\tex\context\base\mkii\supp-pdf.mkii
@@ -341,7 +347,7 @@ files:
       calls: []
     type: ParsedFileListing
   theory.log-ParsedLaTeXLog:
-    timeStamp: 2019-10-18T10:45:55.235Z
+    timeStamp: 2019-10-18T13:44:39.875Z
     jobNames: []
     value:
       messages:
@@ -1691,17 +1697,45 @@ files:
         - severity: warning
           name: pdfTeX
           category: LaTeX
-          text: 'Reference `ref:GL-quad_wiki'' on page 2 undefined'
+          text: 'File `{doc/imag/expfunc_plot.png}'' not found'
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 62
-              end: 62
+              start: 30
+              end: 30
+          log:
+            file: theory.log
+            range:
+              start: 405
+              end: 405
+        - severity: error
+          name: pdfTeX
+          text: 'File `doc/imag/expfunc_plot.png'' not found: using draft setting'
           log:
             file: theory.log
             range:
               start: 408
-              end: 409
+              end: 410
+          source:
+            file: theory.tex
+            range:
+              start: 30
+              end: 30
+          category: Package pdftex.def
+        - severity: warning
+          name: pdfTeX
+          category: LaTeX
+          text: 'Reference `ref:GL-quad_wiki'' on page 3 undefined'
+          source:
+            file: theory.tex"LaTeX2e <2018-12-01>
+            range:
+              start: 71
+              end: 71
+          log:
+            file: theory.log
+            range:
+              start: 441
+              end: 442
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1709,13 +1743,13 @@ files:
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 64
-              end: 64
+              start: 92
+              end: 92
           log:
             file: theory.log
             range:
-              start: 411
-              end: 411
+              start: 455
+              end: 455
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1723,13 +1757,13 @@ files:
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 64
-              end: 64
+              start: 92
+              end: 92
           log:
             file: theory.log
             range:
-              start: 413
-              end: 413
+              start: 457
+              end: 457
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1737,13 +1771,13 @@ files:
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 64
-              end: 64
+              start: 92
+              end: 92
           log:
             file: theory.log
             range:
-              start: 416
-              end: 416
+              start: 461
+              end: 461
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1751,26 +1785,26 @@ files:
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 64
-              end: 64
+              start: 92
+              end: 92
           log:
             file: theory.log
             range:
-              start: 417
-              end: 417
+              start: 462
+              end: 462
         - severity: info
           name: pdfTeX
           category: Package rerunfilecheck
           text: >-
             File `theory.out' has not changed. Checksum:
-            3E7F9EFD9EFB5074A98733C3A1E056F6;272.
+            8749BA19C91679369A2DB070429673D8;421.
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
           log:
             file: theory.log
             range:
-              start: 418
-              end: 419
+              start: 463
+              end: 464
         - severity: warning
           name: pdfTeX
           category: LaTeX
@@ -1780,41 +1814,31 @@ files:
           log:
             file: theory.log
             range:
-              start: 421
-              end: 421
+              start: 466
+              end: 466
       inputs: []
       outputs:
         - theory.pdf
       calls: []
     type: ParsedLaTeXLog
   theory.aux:
-    timeStamp: 2019-10-18T10:47:13.127Z
+    timeStamp: 2019-10-18T13:51:44.801Z
     jobNames: []
-    hash: W63cM+2IMIUdLv5we4cKvYjuttYdEjtmQzQSGhutNPo=
+    hash: O7CBDnhrfJLF0I/MIXsOmk0ph76OiM2UBzUcjzpTEcQ=
     type: LaTeXAuxilary
   theory.fls:
-    timeStamp: 2019-10-18T10:47:13.218Z
+    timeStamp: 2019-10-18T13:51:44.876Z
     jobNames: []
-    hash: nhASeGzXa1T7z3X/hl2189ki+W8PzmR0b+H6y0TNpnE=
+    hash: XqmNkWj9stjDA7/94ODUaaH36cv/E4J1ThiepO4fvSE=
     type: FileListing
   theory.log:
-    timeStamp: 2019-10-18T10:47:13.216Z
+    timeStamp: 2019-10-18T13:51:44.873Z
     jobNames: []
-    hash: 1rsdGS4UD2SgWr1QItdyZt9Lr+xQO0azs+lo+Hk6SWw=
+    hash: VGCs2bN8tQgigJGx9LV4fpQ5j/NdA+Ri+sDHSHe5J3M=
     type: LaTeXLog
     subType: pdfTeX
-  theory.synctex.gz:
-    timeStamp: 2019-10-18T10:47:13.215Z
-    jobNames: []
-    hash: MttG4vDikM/IP++9XL+vR3qsNMpghZiA/NMmA/PoP1E=
-    type: SyncTeX
-  theory.pdf:
-    timeStamp: 2019-10-18T10:47:13.213Z
-    jobNames: []
-    hash: zQ5w1AmgiGI5N/BI94twSEjecYSh3dc6QkCxev2HBlo=
-    type: PortableDocumentFormat
   theory.aux-ParsedLaTeXAuxilary:
-    timeStamp: 2019-10-16T13:48:28.174Z
+    timeStamp: 2019-10-18T13:44:28.394Z
     jobNames: []
     value:
       commands:
@@ -1837,6 +1861,12 @@ files:
         - providecommand
         - providecommand
         - babel@aux
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
         - '@writefile'
         - newlabel
         - '@writefile'
@@ -2054,20 +2084,39 @@ files:
     jobNames: []
     type: LaTeXStyle
   'C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.tex':
-    timeStamp: 2019-10-17T12:17:07.455Z
+    timeStamp: 2019-10-18T13:49:59.431Z
     jobNames: []
     type: LaTeX
     subType: article
   theory.out:
-    timeStamp: 2019-10-18T10:47:13.129Z
+    timeStamp: 2019-10-18T13:51:44.804Z
     jobNames: []
-    hash: sflmSONNgS8bvG4YyAgiyFKvE/HWEsjXqdo9bx8KZ1E=
+    hash: 59hVlFGULnYBSz7PC9MeytHkfhdwHz2cge39qxvSZr8=
     type: OUT
   'C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.tex-ParsedLaTeXMagic':
     timeStamp: 2019-10-18T10:37:35.302Z
     jobNames: []
     value: {}
     type: ParsedLaTeXMagic
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmtt10.tfm':
+    timeStamp: 2006-01-09T00:04:13.000Z
+    jobNames: []
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt10.pfb':
+    timeStamp: 2009-07-14T18:37:47.000Z
+    jobNames: []
+  theory.pdf:
+    timeStamp: 2019-10-18T13:51:44.869Z
+    jobNames: []
+    hash: xpfKk6SsZ/26dkQALgz6976v3rb9KUv7c8TC75IQxHs=
+    type: PortableDocumentFormat
+  theory.synctex.gz:
+    timeStamp: 2019-10-18T13:51:44.871Z
+    jobNames: []
+    hash: jlj/0eIqEVGnNTJVDNEp3MMDMlyDwqPNRFeab2yVLxw=
+    type: SyncTeX
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy5.pfb':
+    timeStamp: 2009-07-14T18:37:46.000Z
+    jobNames: []
 rules:
   - name: ApplyOptions
     command: load
@@ -2400,6 +2449,18 @@ rules:
         type: default
       - file: theory.out
         type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmtt10.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmtt10.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmsy5.pfb
+        type: default
     outputs:
       - file: theory.aux
         type: default
@@ -2407,12 +2468,12 @@ rules:
         type: default
       - file: theory.log
         type: default
-      - file: theory.synctex.gz
-        type: target
-      - file: theory.pdf
-        type: target
       - file: theory.out
         type: default
+      - file: theory.pdf
+        type: target
+      - file: theory.synctex.gz
+        type: target
   - name: ParseLaTeXAuxilary
     command: build
     phase: execute
@@ -2458,7 +2519,267 @@ rules:
         type: default
       - file: theory.log-ParsedLaTeXLog
         type: default
+      - file: >-
+          C:\Users\Anna Stray
+          Rongve\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmbx12.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmr12.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\context\base\mkii\supp-pdf.mkii
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\generic\babel\babel.def
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\generic\babel\babel.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\generic\babel\switch.def
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\generic\babel\txtbabel.def
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\generic\ifxetex\ifxetex.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\generic\oberdiek\gettitlestring.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\generic\oberdiek\hobsub-generic.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\generic\oberdiek\hobsub-hyperref.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\00miktex\hyperref.cfg
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\amsmath\amsbsy.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\amsmath\amsgen.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\amsmath\amsmath.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\amsmath\amsopn.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\amsmath\amstext.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\arabi\bblopts.cfg
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\babel-english\english.ldf
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\base\article.cls
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\base\inputenc.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\base\size10.clo
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\blindtext\blindtext.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\graphics-cfg\graphics.cfg
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\graphics-def\pdftex.def
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\graphics\graphics.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\graphics\graphicx.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\graphics\keyval.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\graphics\trig.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\hyperref\hpdftex.def
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\hyperref\hyperref.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\hyperref\nameref.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\hyperref\pd1enc.def
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\oberdiek\auxhook.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\oberdiek\epstopdf-base.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\oberdiek\grfext.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\oberdiek\kvoptions.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\oberdiek\rerunfilecheck.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\placeins\placeins.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\subfiles\subfiles.cls
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\subfiles\subfiles.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\tools\verbatim.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\tools\xspace.sty
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\url\url.sty
+        type: default
+      - file: theory.aux
+        type: default
+      - file: theory.out
+        type: default
+      - file: theory.tex
+        type: default
+      - file: >-
+          C:\Users\Anna Stray
+          Rongve\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmbx10.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmtt10.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmmi5.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmr5.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmr7.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmtt10.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmsy5.pfb
+        type: default
     outputs:
+      - file: theory.aux
+        type: default
+      - file: theory.log
+        type: default
+      - file: theory.out
+        type: default
       - file: theory.pdf
         type: default
   - name: LogProducedTargets
