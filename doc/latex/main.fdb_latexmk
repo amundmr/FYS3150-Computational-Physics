@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1571407769 "main.tex" "main.pdf" "main" 1571407825
+["pdflatex"] 1571408444 "main.tex" "main.pdf" "main" 1571408444
   "../imag/expfunc_plot.png" 1571406735 23461 ed80b8454c28e0be9dc09ba4a1b308d5 ""
   "/etc/texmf/web2c/texmf.cnf" 1567507681 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -85,17 +85,17 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1520210507 32485 c64754543d8ac501bea6e75e209ea521 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1567507697 127853 b41f58aff49fe1af38af8d065f49d51c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1570370953 724918 fd05bf5babd59a14331cca8f4c1f8961 ""
-  "main.aux" 1571407769 2801 04054c698a5126057767151f5b77fd57 ""
-  "main.out" 1571407769 739 baab0b2644e79f577cf4d8050df8878e ""
-  "main.tex" 1571407824 724 7fc30183cf92651e5beace8a4409b3e6 ""
+  "main.aux" 1571408444 2785 2e4993b3285c4a05736eac28d19d1238 ""
+  "main.out" 1571408444 731 1afa1fa40bff10ba2a0ba470cb4b1a6a ""
+  "main.tex" 1571408246 725 1fba1b1ceb0e04fa2f907aad0eaaf120 ""
   "sections/abstract.tex" 1571406735 621 376b8bae26877677086c440e8b153ea6 ""
   "sections/conclusion.tex" 1570704865 161 eb010c33885182c9a58d230670f8e06c ""
   "sections/discussion.tex" 1570702649 93 c1887be4da0b9bee8ec7c027e076daae ""
-  "sections/introduction.tex" 1571407570 1364 6687683c93ca0dd3522b54b9071c5464 ""
+  "sections/introduction.tex" 1571408184 990 bfc143bf646923d9bbc5bd989d2d8e97 ""
   "sections/results.tex" 1571407756 1139 c3bb5640882e546d229baa54abc276a8 ""
-  "sections/theory.tex" 1571407662 4211 71c1bebef0004daf59a8ff5fc8bc7974 ""
+  "sections/theory.tex" 1571408184 4766 fe07f92ac517796ffa968b7920313658 ""
   (generated)
-  "main.log"
   "main.out"
   "main.pdf"
+  "main.log"
   "main.aux"

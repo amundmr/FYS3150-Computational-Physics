@@ -1,10 +1,6 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{Theory}{}% 2
-<<<<<<< HEAD
 \BOOKMARK [2][-]{subsection.2.1}{Wavefunction of Helium}{section.2}% 3
-=======
-\BOOKMARK [2][-]{subsection.2.1}{The Quantum Mechanical Problem}{section.2}% 3
->>>>>>> b35182e4499d591cae1ab1b38fc0817d1ff8007d
 \BOOKMARK [2][-]{subsection.2.2}{Gaussian Quadrature}{section.2}% 4
 \BOOKMARK [3][-]{subsubsection.2.2.1}{Gauss-Legendre}{subsection.2.2}% 5
 \BOOKMARK [3][-]{subsubsection.2.2.2}{Improved Gauss-Quadrature- Laguerre}{subsection.2.2}% 6
