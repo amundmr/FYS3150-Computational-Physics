@@ -1,6 +1,4 @@
 #include "../include/mclib.h"
-#include <omp.h>
-
 
 double naiveMC(double a,double b,int MCsamples){
     double mc, var, fval; vec r1 = zeros<vec>(3); vec r2 = zeros<vec>(3); // Variable storage.
