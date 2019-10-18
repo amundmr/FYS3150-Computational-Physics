@@ -1,162 +1,130 @@
-PWD C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.tex
+PWD /home/amund/Documents/FYS3150/Project-3/doc/latex
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT main.tex
 OUTPUT main.log
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\switch.def
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-english\english.ldf
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-english\english.ldf
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\txtbabel.def
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\subfiles\subfiles.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\subfiles\subfiles.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\verbatim.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\verbatim.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\blindtext\blindtext.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\blindtext\blindtext.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\xspace.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\xspace.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\placeins\placeins.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\placeins\placeins.sty
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.aux
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.aux
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfiles/subfiles.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfiles/subfiles.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/blindtext/blindtext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/blindtext/blindtext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+INPUT main.aux
+INPUT main.aux
 OUTPUT main.aux
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.out
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.out
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.out
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.out
-OUTPUT main.pdf
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.out
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.out
+INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+INPUT main.out
+INPUT main.out
+INPUT main.out
+INPUT main.out
+INPUT ./main.out
+INPUT ./main.out
 OUTPUT main.out
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr17.tfm
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr8.tfm
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr6.tfm
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi12.tfm
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi8.tfm
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi6.tfm
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy8.tfm
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy6.tfm
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\abstract.tex
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\abstract.tex
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr9.tfm
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx9.tfm
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\introduction.tex
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\introduction.tex
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\theory.tex
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\theory.tex
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx10.tfm
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.tex
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.tex
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\discussion.tex
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\discussion.tex
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\conclusion.tex
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\conclusion.tex
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.aux
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.out
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.out
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx9.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx9.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi5.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi5.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr17.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr17.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr5.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr5.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr7.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr7.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr9.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr9.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
-INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
+OUTPUT main.pdf
+INPUT /usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT sections/abstract.tex
+INPUT sections/abstract.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
+INPUT sections/introduction.tex
+INPUT sections/introduction.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm

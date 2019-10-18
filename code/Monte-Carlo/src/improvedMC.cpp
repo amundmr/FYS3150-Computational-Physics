@@ -10,7 +10,7 @@ double improvedMC(double infty,int MCsamples){
     {
 
     // Initialize RNG (Mersenne Twister) in our intervals.
-    mt19937::result_type seedu = time(0) + omp_get_thread_num();
+    mt19937::result_type seedu = time(0);// + omp_get_thread_num();
     auto r_rand = bind(uniform_real_distribution<double>(0,1),mt19937(seedu));
     auto costheta_rand = bind(uniform_real_distribution<double>(-1,1),mt19937(seedu));
     auto phi_rand = bind(uniform_real_distribution<double>(0,2*M_PI),mt19937(seedu));

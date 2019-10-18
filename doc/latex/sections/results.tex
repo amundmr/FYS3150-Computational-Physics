@@ -37,4 +37,16 @@ $$N \in [-5,5]$$
 \end{tabular}
 
 
+\subsection{Paralellization with openMP} \label{sec:res-paralell}
+\begin{table}[]
+    \begin{tabular}{lllll}
+
+        Compile flags & -O3 -fopenmp & -O3 & -fopenmp & no optimzation \\
+        \hline
+        Naive MC      & 12s          & 31s &          & 173s           \\
+        Improved MC   & 15s          & 38s &          & 200s           
+    \end{tabular}
+\end{table}
+
+
 \end{document}
