@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.3)  18 OCT 2019 15:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.3)  18 OCT 2019 16:08
 entering extended mode
 **"C:/Users/Anna Stray Rongve/Documents/Project-3/doc/latex/main.tex"
 ("C:/Users/Anna Stray Rongve/Documents/Project-3/doc/latex/main.tex"
@@ -321,38 +321,46 @@ LaTeX Info: Redefining \] on input line 2845.
 ("C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex/latex/placei
 ns\placeins.sty"
 Package: placeins 2005/04/18  v 2.2
+)
+("C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex/latex/multir
+ow\multirow.sty"
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip47
+\multirow@cntb=\count130
+\multirow@dima=\skip48
+\bigstrutjot=\dimen119
 ) ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\main.aux"
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
 
 ("C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex/context/base
 /mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count130
-\scratchdimen=\dimen119
+\scratchcounter=\count131
+\scratchdimen=\dimen120
 \scratchbox=\box29
-\nofMPsegments=\count131
-\nofMParguments=\count132
+\nofMPsegments=\count132
+\nofMParguments=\count133
 \everyMPshowfont=\toks24
-\MPscratchCnt=\count133
-\MPscratchDim=\dimen120
-\MPnumerator=\count134
-\makeMPintoPDFobject=\count135
+\MPscratchCnt=\count134
+\MPscratchDim=\dimen121
+\MPnumerator=\count135
+\makeMPintoPDFobject=\count136
 \everyMPtoPDFconversion=\toks25
 )
 ("C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdi
@@ -371,7 +379,7 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring OFF on input line 16.
+Package hyperref Info: Link coloring OFF on input line 17.
 
 ("C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperr
 ef\nameref.sty"
@@ -381,11 +389,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 diek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count136
+\c@section@level=\count137
 )
-LaTeX Info: Redefining \ref on input line 16.
-LaTeX Info: Redefining \pageref on input line 16.
-LaTeX Info: Redefining \nameref on input line 16.
+LaTeX Info: Redefining \ref on input line 17.
+LaTeX Info: Redefining \pageref on input line 17.
+LaTeX Info: Redefining \nameref on input line 17.
 ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\main.out") 
 ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\main.out")
 \@outlinefile=\write3
@@ -398,21 +406,21 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: tex)
 
 Enter file name: 
- :20: Emergency stop.
+ :21: Emergency stop.
 <read *> 
          
-l.20 \subfile{sections/abstract}
+l.21 \subfile{sections/abstract}
                                 
 *** (cannot \read from terminal in nonstop modes)
 
  
 Here is how much of TeX's memory you used:
- 6350 strings out of 492895
- 96115 string characters out of 3118130
- 202769 words of memory out of 3000000
- 10203 multiletter control sequences out of 15000+200000
+ 6403 strings out of 492895
+ 97026 string characters out of 3118130
+ 203319 words of memory out of 3000000
+ 10252 multiletter control sequences out of 15000+200000
  7349 words of font info for 27 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,6n,25p,328b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
 
- :20:  ==> Fatal error occurred, no output PDF file produced!
+ :21:  ==> Fatal error occurred, no output PDF file produced!

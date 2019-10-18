@@ -134,9 +134,9 @@ files:
         2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
     type: ParsedYAML
   introduction.tex:
-    timeStamp: 2019-10-18T13:49:52.800Z
+    timeStamp: 2019-10-18T13:59:18.450Z
     jobNames: []
-    hash: PPZiCNGJSQFnxaDWL5/ANi688n0T4EqGWxWX7YZuuIY=
+    hash: /m+oB9PoQSz/RFa4ppAQsVIAwKu+DsgA0vXYMn47ADw=
     type: LaTeX
     subType: subfiles
   'C:\Users\Anna Stray Rongve\AppData\Roaming\dicy\config.yaml':
@@ -317,7 +317,7 @@ files:
       calls: []
     type: ParsedFileListing
   introduction.log-ParsedLaTeXLog:
-    timeStamp: 2019-10-18T13:48:40.295Z
+    timeStamp: 2019-10-18T13:59:21.140Z
     jobNames: []
     value:
       messages:
@@ -1427,66 +1427,22 @@ files:
             range:
               start: 334
               end: 334
+        - name: pdfTeX
+          severity: info
+          text: multirow 2019/05/31 v2.5 Span multiple rows of a table
+          source:
+            file: >-
+              C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+              2.9\tex\latex\multirow\multirow.sty
+          log:
+            file: introduction.log
+            range:
+              start: 338
+              end: 338
         - severity: info
           name: pdfTeX
           category: LaTeX Font
           text: Checking defaults for OML/cmm/m/it ... okay
-          source:
-            file: introduction.tex
-            range:
-              start: 3
-              end: 3
-          log:
-            file: introduction.log
-            range:
-              start: 340
-              end: 341
-        - severity: info
-          name: pdfTeX
-          category: LaTeX Font
-          text: Checking defaults for T1/cmr/m/n ... okay
-          source:
-            file: introduction.tex
-            range:
-              start: 3
-              end: 3
-          log:
-            file: introduction.log
-            range:
-              start: 342
-              end: 343
-        - severity: info
-          name: pdfTeX
-          category: LaTeX Font
-          text: Checking defaults for OT1/cmr/m/n ... okay
-          source:
-            file: introduction.tex
-            range:
-              start: 3
-              end: 3
-          log:
-            file: introduction.log
-            range:
-              start: 344
-              end: 345
-        - severity: info
-          name: pdfTeX
-          category: LaTeX Font
-          text: Checking defaults for OMS/cmsy/m/n ... okay
-          source:
-            file: introduction.tex
-            range:
-              start: 3
-              end: 3
-          log:
-            file: introduction.log
-            range:
-              start: 346
-              end: 347
-        - severity: info
-          name: pdfTeX
-          category: LaTeX Font
-          text: Checking defaults for OMX/cmex/m/n ... okay
           source:
             file: introduction.tex
             range:
@@ -1500,7 +1456,7 @@ files:
         - severity: info
           name: pdfTeX
           category: LaTeX Font
-          text: Checking defaults for U/cmr/m/n ... okay
+          text: Checking defaults for T1/cmr/m/n ... okay
           source:
             file: introduction.tex
             range:
@@ -1514,7 +1470,7 @@ files:
         - severity: info
           name: pdfTeX
           category: LaTeX Font
-          text: Checking defaults for PD1/pdf/m/n ... okay
+          text: Checking defaults for OT1/cmr/m/n ... okay
           source:
             file: introduction.tex
             range:
@@ -1525,6 +1481,62 @@ files:
             range:
               start: 352
               end: 353
+        - severity: info
+          name: pdfTeX
+          category: LaTeX Font
+          text: Checking defaults for OMS/cmsy/m/n ... okay
+          source:
+            file: introduction.tex
+            range:
+              start: 3
+              end: 3
+          log:
+            file: introduction.log
+            range:
+              start: 354
+              end: 355
+        - severity: info
+          name: pdfTeX
+          category: LaTeX Font
+          text: Checking defaults for OMX/cmex/m/n ... okay
+          source:
+            file: introduction.tex
+            range:
+              start: 3
+              end: 3
+          log:
+            file: introduction.log
+            range:
+              start: 356
+              end: 357
+        - severity: info
+          name: pdfTeX
+          category: LaTeX Font
+          text: Checking defaults for U/cmr/m/n ... okay
+          source:
+            file: introduction.tex
+            range:
+              start: 3
+              end: 3
+          log:
+            file: introduction.log
+            range:
+              start: 358
+              end: 359
+        - severity: info
+          name: pdfTeX
+          category: LaTeX Font
+          text: Checking defaults for PD1/pdf/m/n ... okay
+          source:
+            file: introduction.tex
+            range:
+              start: 3
+              end: 3
+          log:
+            file: introduction.log
+            range:
+              start: 360
+              end: 361
         - name: pdfTeX
           severity: info
           text: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1535,8 +1547,8 @@ files:
           log:
             file: introduction.log
             range:
-              start: 372
-              end: 372
+              start: 380
+              end: 380
         - name: pdfTeX
           severity: info
           text: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
@@ -1547,8 +1559,8 @@ files:
           log:
             file: introduction.log
             range:
-              start: 376
-              end: 376
+              start: 384
+              end: 384
         - severity: info
           name: pdfTeX
           category: Package epstopdf-base
@@ -1563,8 +1575,8 @@ files:
           log:
             file: introduction.log
             range:
-              start: 378
-              end: 379
+              start: 386
+              end: 387
         - severity: info
           name: pdfTeX
           category: Package grfext
@@ -1582,8 +1594,8 @@ files:
           log:
             file: introduction.log
             range:
-              start: 380
-              end: 383
+              start: 388
+              end: 391
         - severity: info
           name: pdfTeX
           category: Package hyperref
@@ -1596,8 +1608,8 @@ files:
           log:
             file: introduction.log
             range:
-              start: 386
-              end: 386
+              start: 394
+              end: 394
         - name: pdfTeX
           severity: info
           text: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1608,8 +1620,8 @@ files:
           log:
             file: introduction.log
             range:
-              start: 390
-              end: 390
+              start: 398
+              end: 398
         - name: pdfTeX
           severity: info
           text: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
@@ -1620,8 +1632,8 @@ files:
           log:
             file: introduction.log
             range:
-              start: 394
-              end: 394
+              start: 402
+              end: 402
         - severity: info
           name: pdfTeX
           category: LaTeX
@@ -1634,8 +1646,8 @@ files:
           log:
             file: introduction.log
             range:
-              start: 398
-              end: 398
+              start: 406
+              end: 406
         - severity: info
           name: pdfTeX
           category: LaTeX
@@ -1648,8 +1660,8 @@ files:
           log:
             file: introduction.log
             range:
-              start: 399
-              end: 399
+              start: 407
+              end: 407
         - severity: info
           name: pdfTeX
           category: LaTeX
@@ -1662,16 +1674,16 @@ files:
           log:
             file: introduction.log
             range:
-              start: 400
-              end: 400
+              start: 408
+              end: 408
         - severity: error
           name: pdfTeX
           text: 'You can''t use `macro parameter character #'' in horizontal mode'
           log:
             file: introduction.log
             range:
-              start: 410
-              end: 410
+              start: 418
+              end: 418
           source:
             file: tex
             range:
@@ -1683,8 +1695,8 @@ files:
           log:
             file: introduction.log
             range:
-              start: 420
-              end: 420
+              start: 428
+              end: 428
           source:
             file: tex
             range:
@@ -1696,8 +1708,8 @@ files:
           log:
             file: introduction.log
             range:
-              start: 430
-              end: 430
+              start: 438
+              end: 438
           source:
             file: tex
             range:
@@ -1710,13 +1722,13 @@ files:
           source:
             file: introduction.tex
             range:
-              start: 18
-              end: 18
+              start: 16
+              end: 16
           log:
             file: introduction.log
             range:
-              start: 444
-              end: 444
+              start: 452
+              end: 452
         - severity: info
           name: pdfTeX
           category: >-
@@ -1727,13 +1739,13 @@ files:
           source:
             file: introduction.tex
             range:
-              start: 18
-              end: 18
+              start: 16
+              end: 16
           log:
             file: introduction.log
             range:
-              start: 447
-              end: 448
+              start: 455
+              end: 456
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1741,13 +1753,13 @@ files:
           source:
             file: introduction.tex
             range:
-              start: 18
-              end: 18
+              start: 16
+              end: 16
           log:
             file: introduction.log
             range:
-              start: 452
-              end: 452
+              start: 460
+              end: 460
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1755,13 +1767,13 @@ files:
           source:
             file: introduction.tex
             range:
-              start: 18
-              end: 18
+              start: 16
+              end: 16
           log:
             file: introduction.log
             range:
-              start: 453
-              end: 453
+              start: 461
+              end: 461
         - severity: info
           name: pdfTeX
           category: Package rerunfilecheck
@@ -1773,38 +1785,28 @@ files:
           log:
             file: introduction.log
             range:
-              start: 454
-              end: 455
+              start: 462
+              end: 463
       inputs: []
       outputs:
         - introduction.pdf
       calls: []
     type: ParsedLaTeXLog
-  introduction.aux:
-    timeStamp: 2019-10-18T13:49:54.072Z
-    jobNames: []
-    hash: YyDy4MXI+No8KuglmfEIZ41PPKd065OqTL/+T+Ft8XQ=
-    type: LaTeXAuxilary
-  introduction.fls:
-    timeStamp: 2019-10-18T13:49:54.110Z
-    jobNames: []
-    hash: THdt1skJNCqSYhfQkwIe7VW2IFVAfShejmFw0jNU+7I=
-    type: FileListing
   introduction.log:
-    timeStamp: 2019-10-18T13:49:54.108Z
+    timeStamp: 2019-10-18T13:59:19.918Z
     jobNames: []
-    hash: ObcKkuHvKcoNyiwSXe210VNkhlwFnmwQQRY2lbq8j20=
+    hash: oUiYi+Pq7HuS12AvRr+YiFinHwUZw4baoUjNNNNweNI=
     type: LaTeXLog
     subType: pdfTeX
   introduction.synctex.gz:
-    timeStamp: 2019-10-18T13:49:54.106Z
+    timeStamp: 2019-10-18T13:59:19.918Z
     jobNames: []
-    hash: 81vzy926VZHFzsBcOUyuBuUH6FFagkgBlmAwLoPPoRk=
+    hash: m/iC2PemInuiVIAta0nNZ4zvdEmGFcXe7Nzl/mqL44o=
     type: SyncTeX
   introduction.pdf:
-    timeStamp: 2019-10-18T13:49:54.105Z
+    timeStamp: 2019-10-18T13:59:19.917Z
     jobNames: []
-    hash: kQGVB3MwkxcSWVbByffcbdDCTAKfr79ZxL+5m6Q04N0=
+    hash: kNP/WdB4OAawDNkPnAAhNwZQHQPywtKysZUMUY10Zjc=
     type: PortableDocumentFormat
   introduction.aux-ParsedLaTeXAuxilary:
     timeStamp: 2019-10-17T11:52:07.576Z
@@ -2008,15 +2010,10 @@ files:
     jobNames: []
     type: LaTeXStyle
   'C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.tex':
-    timeStamp: 2019-10-18T12:26:30.170Z
+    timeStamp: 2019-10-18T13:53:33.255Z
     jobNames: []
     type: LaTeX
     subType: article
-  introduction.out:
-    timeStamp: 2019-10-18T13:49:54.073Z
-    jobNames: []
-    hash: w3ZLL6OeSWz9kXNVQZeeTJdxjZzDuIk9T3f66eH0XSs=
-    type: OUT
   'C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.tex-ParsedLaTeXMagic':
     timeStamp: 2019-10-16T13:43:32.965Z
     jobNames: []
@@ -2126,8 +2123,6 @@ rules:
       - file: introduction.fls-ParsedFileListing
         type: default
       - file: introduction.log-ParsedLaTeXLog
-        type: default
-      - file: introduction.aux
         type: default
       - file: >-
           C:\Users\Anna Stray
@@ -2323,8 +2318,6 @@ rules:
         type: default
       - file: 'C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.tex'
         type: default
-      - file: introduction.out
-        type: default
       - file: >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
@@ -2346,40 +2339,12 @@ rules:
           2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
         type: default
     outputs:
-      - file: introduction.aux
-        type: default
-      - file: introduction.fls
-        type: default
       - file: introduction.log
         type: default
       - file: introduction.synctex.gz
         type: target
       - file: introduction.pdf
         type: target
-      - file: introduction.out
-        type: default
-  - name: ParseLaTeXAuxilary
-    command: build
-    phase: execute
-    parameters:
-      - introduction.aux
-    inputs:
-      - file: introduction.aux
-        type: default
-    outputs:
-      - file: introduction.aux-ParsedLaTeXAuxilary
-        type: default
-  - name: ParseFileListing
-    command: build
-    phase: execute
-    parameters:
-      - introduction.fls
-    inputs:
-      - file: introduction.fls
-        type: default
-    outputs:
-      - file: introduction.fls-ParsedFileListing
-        type: default
   - name: ParseLaTeXLog
     command: build
     phase: execute
@@ -2595,10 +2560,6 @@ rules:
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\tex\latex\url\url.sty
         type: default
-      - file: introduction.aux
-        type: default
-      - file: introduction.out
-        type: default
       - file: introduction.tex
         type: default
       - file: >-
@@ -2624,11 +2585,7 @@ rules:
     outputs:
       - file: introduction.pdf
         type: default
-      - file: introduction.aux
-        type: default
       - file: introduction.log
-        type: default
-      - file: introduction.out
         type: default
   - name: LogProducedTargets
     command: build

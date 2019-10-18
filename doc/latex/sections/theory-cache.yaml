@@ -73,7 +73,7 @@ options:
     2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
 files:
   dicy-instance.yaml-ParsedYAML:
-    timeStamp: 2019-10-18T11:57:55.103Z
+    timeStamp: 2019-10-18T14:08:28.087Z
     jobNames: []
     value:
       severity: info
@@ -134,9 +134,9 @@ files:
         2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
     type: ParsedYAML
   theory.tex:
-    timeStamp: 2019-10-18T13:51:43.464Z
+    timeStamp: 2019-10-18T14:08:49.820Z
     jobNames: []
-    hash: 9/eY0j//ol7rwog0K22HqVthEyRa+gXMoI+E+2YBRok=
+    hash: 0zqieCzmsjiTLpNuUffVhP6vxvr5DmMdiYwap8mjLeM=
     type: LaTeX
     subType: subfiles
   'C:\Users\Anna Stray Rongve\AppData\Roaming\dicy\config.yaml':
@@ -147,7 +147,7 @@ files:
     jobNames: []
     type: Nil
   theory.fls-ParsedFileListing:
-    timeStamp: 2019-10-18T12:38:01.404Z
+    timeStamp: 2019-10-18T14:08:52.446Z
     jobNames: []
     value:
       messages: []
@@ -304,6 +304,9 @@ files:
           2.9\tex\latex\hyperref\pd1enc.def
         - >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\multirow\multirow.sty
+        - >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\tex\latex\oberdiek\auxhook.sty
         - >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
@@ -347,7 +350,7 @@ files:
       calls: []
     type: ParsedFileListing
   theory.log-ParsedLaTeXLog:
-    timeStamp: 2019-10-18T13:44:39.875Z
+    timeStamp: 2019-10-18T14:08:54.679Z
     jobNames: []
     value:
       messages:
@@ -1457,66 +1460,22 @@ files:
             range:
               start: 332
               end: 332
+        - name: pdfTeX
+          severity: info
+          text: multirow 2019/05/31 v2.5 Span multiple rows of a table
+          source:
+            file: >-
+              C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+              2.9\tex\latex\multirow\multirow.sty
+          log:
+            file: theory.log
+            range:
+              start: 336
+              end: 336
         - severity: info
           name: pdfTeX
           category: LaTeX Font
           text: Checking defaults for OML/cmm/m/it ... okay
-          source:
-            file: theory.tex"LaTeX2e <2018-12-01>
-            range:
-              start: 3
-              end: 3
-          log:
-            file: theory.log
-            range:
-              start: 337
-              end: 338
-        - severity: info
-          name: pdfTeX
-          category: LaTeX Font
-          text: Checking defaults for T1/cmr/m/n ... okay
-          source:
-            file: theory.tex"LaTeX2e <2018-12-01>
-            range:
-              start: 3
-              end: 3
-          log:
-            file: theory.log
-            range:
-              start: 339
-              end: 340
-        - severity: info
-          name: pdfTeX
-          category: LaTeX Font
-          text: Checking defaults for OT1/cmr/m/n ... okay
-          source:
-            file: theory.tex"LaTeX2e <2018-12-01>
-            range:
-              start: 3
-              end: 3
-          log:
-            file: theory.log
-            range:
-              start: 341
-              end: 342
-        - severity: info
-          name: pdfTeX
-          category: LaTeX Font
-          text: Checking defaults for OMS/cmsy/m/n ... okay
-          source:
-            file: theory.tex"LaTeX2e <2018-12-01>
-            range:
-              start: 3
-              end: 3
-          log:
-            file: theory.log
-            range:
-              start: 343
-              end: 344
-        - severity: info
-          name: pdfTeX
-          category: LaTeX Font
-          text: Checking defaults for OMX/cmex/m/n ... okay
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
@@ -1530,7 +1489,7 @@ files:
         - severity: info
           name: pdfTeX
           category: LaTeX Font
-          text: Checking defaults for U/cmr/m/n ... okay
+          text: Checking defaults for T1/cmr/m/n ... okay
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
@@ -1544,7 +1503,7 @@ files:
         - severity: info
           name: pdfTeX
           category: LaTeX Font
-          text: Checking defaults for PD1/pdf/m/n ... okay
+          text: Checking defaults for OT1/cmr/m/n ... okay
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
@@ -1555,6 +1514,62 @@ files:
             range:
               start: 349
               end: 350
+        - severity: info
+          name: pdfTeX
+          category: LaTeX Font
+          text: Checking defaults for OMS/cmsy/m/n ... okay
+          source:
+            file: theory.tex"LaTeX2e <2018-12-01>
+            range:
+              start: 3
+              end: 3
+          log:
+            file: theory.log
+            range:
+              start: 351
+              end: 352
+        - severity: info
+          name: pdfTeX
+          category: LaTeX Font
+          text: Checking defaults for OMX/cmex/m/n ... okay
+          source:
+            file: theory.tex"LaTeX2e <2018-12-01>
+            range:
+              start: 3
+              end: 3
+          log:
+            file: theory.log
+            range:
+              start: 353
+              end: 354
+        - severity: info
+          name: pdfTeX
+          category: LaTeX Font
+          text: Checking defaults for U/cmr/m/n ... okay
+          source:
+            file: theory.tex"LaTeX2e <2018-12-01>
+            range:
+              start: 3
+              end: 3
+          log:
+            file: theory.log
+            range:
+              start: 355
+              end: 356
+        - severity: info
+          name: pdfTeX
+          category: LaTeX Font
+          text: Checking defaults for PD1/pdf/m/n ... okay
+          source:
+            file: theory.tex"LaTeX2e <2018-12-01>
+            range:
+              start: 3
+              end: 3
+          log:
+            file: theory.log
+            range:
+              start: 357
+              end: 358
         - name: pdfTeX
           severity: info
           text: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1565,8 +1580,8 @@ files:
           log:
             file: theory.log
             range:
-              start: 369
-              end: 369
+              start: 377
+              end: 377
         - name: pdfTeX
           severity: info
           text: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
@@ -1577,8 +1592,8 @@ files:
           log:
             file: theory.log
             range:
-              start: 373
-              end: 373
+              start: 381
+              end: 381
         - severity: info
           name: pdfTeX
           category: Package epstopdf-base
@@ -1593,8 +1608,8 @@ files:
           log:
             file: theory.log
             range:
-              start: 375
-              end: 376
+              start: 383
+              end: 384
         - severity: info
           name: pdfTeX
           category: Package grfext
@@ -1612,8 +1627,8 @@ files:
           log:
             file: theory.log
             range:
-              start: 377
-              end: 380
+              start: 385
+              end: 388
         - severity: info
           name: pdfTeX
           category: Package hyperref
@@ -1626,8 +1641,8 @@ files:
           log:
             file: theory.log
             range:
-              start: 383
-              end: 383
+              start: 391
+              end: 391
         - name: pdfTeX
           severity: info
           text: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1638,8 +1653,8 @@ files:
           log:
             file: theory.log
             range:
-              start: 387
-              end: 387
+              start: 395
+              end: 395
         - name: pdfTeX
           severity: info
           text: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
@@ -1650,8 +1665,8 @@ files:
           log:
             file: theory.log
             range:
-              start: 391
-              end: 391
+              start: 399
+              end: 399
         - severity: info
           name: pdfTeX
           category: LaTeX
@@ -1664,8 +1679,8 @@ files:
           log:
             file: theory.log
             range:
-              start: 395
-              end: 395
+              start: 403
+              end: 403
         - severity: info
           name: pdfTeX
           category: LaTeX
@@ -1678,8 +1693,8 @@ files:
           log:
             file: theory.log
             range:
-              start: 396
-              end: 396
+              start: 404
+              end: 404
         - severity: info
           name: pdfTeX
           category: LaTeX
@@ -1692,35 +1707,35 @@ files:
           log:
             file: theory.log
             range:
-              start: 397
-              end: 397
+              start: 405
+              end: 405
         - severity: warning
           name: pdfTeX
           category: LaTeX
-          text: 'File `{doc/imag/expfunc_plot.png}'' not found'
+          text: File `expfunc_plot.png' not found
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 30
-              end: 30
+              start: 39
+              end: 39
           log:
             file: theory.log
             range:
-              start: 405
-              end: 405
+              start: 416
+              end: 416
         - severity: error
           name: pdfTeX
-          text: 'File `doc/imag/expfunc_plot.png'' not found: using draft setting'
+          text: 'File `expfunc_plot.png'' not found: using draft setting'
           log:
             file: theory.log
             range:
-              start: 408
-              end: 410
+              start: 419
+              end: 421
           source:
             file: theory.tex
             range:
-              start: 30
-              end: 30
+              start: 39
+              end: 39
           category: Package pdftex.def
         - severity: warning
           name: pdfTeX
@@ -1729,13 +1744,13 @@ files:
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 71
-              end: 71
+              start: 80
+              end: 80
           log:
             file: theory.log
             range:
-              start: 441
-              end: 442
+              start: 448
+              end: 449
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1743,50 +1758,8 @@ files:
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 92
-              end: 92
-          log:
-            file: theory.log
-            range:
-              start: 455
-              end: 455
-        - severity: info
-          name: pdfTeX
-          category: Package atveryend
-          text: Empty hook `AfterLastShipout'
-          source:
-            file: theory.tex"LaTeX2e <2018-12-01>
-            range:
-              start: 92
-              end: 92
-          log:
-            file: theory.log
-            range:
-              start: 457
-              end: 457
-        - severity: info
-          name: pdfTeX
-          category: Package atveryend
-          text: Executing hook `AtVeryEndDocument'
-          source:
-            file: theory.tex"LaTeX2e <2018-12-01>
-            range:
-              start: 92
-              end: 92
-          log:
-            file: theory.log
-            range:
-              start: 461
-              end: 461
-        - severity: info
-          name: pdfTeX
-          category: Package atveryend
-          text: Executing hook `AtEndAfterFileList'
-          source:
-            file: theory.tex"LaTeX2e <2018-12-01>
-            range:
-              start: 92
-              end: 92
+              start: 101
+              end: 101
           log:
             file: theory.log
             range:
@@ -1794,17 +1767,59 @@ files:
               end: 462
         - severity: info
           name: pdfTeX
+          category: Package atveryend
+          text: Empty hook `AfterLastShipout'
+          source:
+            file: theory.tex"LaTeX2e <2018-12-01>
+            range:
+              start: 101
+              end: 101
+          log:
+            file: theory.log
+            range:
+              start: 464
+              end: 464
+        - severity: info
+          name: pdfTeX
+          category: Package atveryend
+          text: Executing hook `AtVeryEndDocument'
+          source:
+            file: theory.tex"LaTeX2e <2018-12-01>
+            range:
+              start: 101
+              end: 101
+          log:
+            file: theory.log
+            range:
+              start: 468
+              end: 468
+        - severity: info
+          name: pdfTeX
+          category: Package atveryend
+          text: Executing hook `AtEndAfterFileList'
+          source:
+            file: theory.tex"LaTeX2e <2018-12-01>
+            range:
+              start: 101
+              end: 101
+          log:
+            file: theory.log
+            range:
+              start: 469
+              end: 469
+        - severity: info
+          name: pdfTeX
           category: Package rerunfilecheck
           text: >-
             File `theory.out' has not changed. Checksum:
-            8749BA19C91679369A2DB070429673D8;421.
+            D86E825540B847CEECA792B126ACAD7B;413.
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
           log:
             file: theory.log
             range:
-              start: 463
-              end: 464
+              start: 470
+              end: 471
         - severity: warning
           name: pdfTeX
           category: LaTeX
@@ -1814,31 +1829,31 @@ files:
           log:
             file: theory.log
             range:
-              start: 466
-              end: 466
+              start: 473
+              end: 473
       inputs: []
       outputs:
         - theory.pdf
       calls: []
     type: ParsedLaTeXLog
   theory.aux:
-    timeStamp: 2019-10-18T13:51:44.801Z
+    timeStamp: 2019-10-18T14:08:53.446Z
     jobNames: []
-    hash: O7CBDnhrfJLF0I/MIXsOmk0ph76OiM2UBzUcjzpTEcQ=
+    hash: y5IS1zQqCzQKrZNn+ACNSclIxF3CDt9Fqn3hYj/Iwt0=
     type: LaTeXAuxilary
   theory.fls:
-    timeStamp: 2019-10-18T13:51:44.876Z
+    timeStamp: 2019-10-18T14:08:53.504Z
     jobNames: []
-    hash: XqmNkWj9stjDA7/94ODUaaH36cv/E4J1ThiepO4fvSE=
+    hash: XHFJ2L8RvLGj4Ia4lGIRXEv7R0ce5b+YGUUgVydz46s=
     type: FileListing
   theory.log:
-    timeStamp: 2019-10-18T13:51:44.873Z
+    timeStamp: 2019-10-18T14:08:53.502Z
     jobNames: []
-    hash: VGCs2bN8tQgigJGx9LV4fpQ5j/NdA+Ri+sDHSHe5J3M=
+    hash: BLMl3CjvvAGO8xF2Cb6goYaScXQiVPrLO9+Srqe+omk=
     type: LaTeXLog
     subType: pdfTeX
   theory.aux-ParsedLaTeXAuxilary:
-    timeStamp: 2019-10-18T13:44:28.394Z
+    timeStamp: 2019-10-18T14:08:52.438Z
     jobNames: []
     value:
       commands:
@@ -2084,14 +2099,14 @@ files:
     jobNames: []
     type: LaTeXStyle
   'C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.tex':
-    timeStamp: 2019-10-18T13:49:59.431Z
+    timeStamp: 2019-10-18T13:53:33.255Z
     jobNames: []
     type: LaTeX
     subType: article
   theory.out:
-    timeStamp: 2019-10-18T13:51:44.804Z
+    timeStamp: 2019-10-18T14:08:53.448Z
     jobNames: []
-    hash: 59hVlFGULnYBSz7PC9MeytHkfhdwHz2cge39qxvSZr8=
+    hash: prN3PS5M2aRIi/b+neImi0uKt3zfI7iy0IRxuykddZs=
     type: OUT
   'C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.tex-ParsedLaTeXMagic':
     timeStamp: 2019-10-18T10:37:35.302Z
@@ -2104,19 +2119,18 @@ files:
   'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt10.pfb':
     timeStamp: 2009-07-14T18:37:47.000Z
     jobNames: []
-  theory.pdf:
-    timeStamp: 2019-10-18T13:51:44.869Z
-    jobNames: []
-    hash: xpfKk6SsZ/26dkQALgz6976v3rb9KUv7c8TC75IQxHs=
-    type: PortableDocumentFormat
-  theory.synctex.gz:
-    timeStamp: 2019-10-18T13:51:44.871Z
-    jobNames: []
-    hash: jlj/0eIqEVGnNTJVDNEp3MMDMlyDwqPNRFeab2yVLxw=
-    type: SyncTeX
   'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy5.pfb':
     timeStamp: 2009-07-14T18:37:46.000Z
     jobNames: []
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\multirow\multirow.sty':
+    timeStamp: 2019-06-01T16:11:18.000Z
+    jobNames: []
+    type: LaTeXStyle
+  theory.pdf:
+    timeStamp: 2019-10-18T14:08:53.500Z
+    jobNames: []
+    hash: OpXoEQ87XWR3WMrCwZfWc2QqgJ+4zpzZUWeBVH01zNQ=
+    type: PortableDocumentFormat
 rules:
   - name: ApplyOptions
     command: load
@@ -2461,6 +2475,10 @@ rules:
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\fonts\type1\public\amsfonts\cm\cmsy5.pfb
         type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\multirow\multirow.sty
+        type: default
     outputs:
       - file: theory.aux
         type: default
@@ -2471,9 +2489,7 @@ rules:
       - file: theory.out
         type: default
       - file: theory.pdf
-        type: target
-      - file: theory.synctex.gz
-        type: target
+        type: default
   - name: ParseLaTeXAuxilary
     command: build
     phase: execute
@@ -2772,6 +2788,10 @@ rules:
       - file: >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\fonts\type1\public\amsfonts\cm\cmsy5.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\tex\latex\multirow\multirow.sty
         type: default
     outputs:
       - file: theory.aux

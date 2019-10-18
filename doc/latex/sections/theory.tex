@@ -2,7 +2,7 @@
 
 \begin{document}
 \section{Theory} \label{sec:theory}
-\subsection{The Quantum Mechanical Problem} \label{sec:QMProb}.
+\subsection{Wavefunction of Helium} \label{sec:QMProb}.
 The single-particle wave function of an electron $i$ in the $1s$ state is given in terms of a dimensionless variable (the wave function is not normalized)
 
 \[\vec{r}_i = x_i \vec{e}_x + y_i \vec{e}_y + z_i \vec{e}_z\]
@@ -20,14 +20,23 @@ The value of the integral corresponds to the energy between the two electrons re
 \[\langle \frac{1}{|\vec{r}_1 - \vec{r}_2|} \rangle = \int_{\infty}^\infty d\vec{r}_1 d\vec{r}_2 e^{-2\alpha(r_1 + r_2)} \frac{1}{\vec{r_1} - \vec{r_2}}\]
 \vspace{1cm}
 
-The analytical result $5\pi/16^2$.
+The analytical result is $5\pi/16^2$.
 
 \subsection{Gaussian Quadrature} \label{sec:GQ}
+The main idea of Gaussian quadrature is to integrate over a set of points $x_i$ not equally spaced with weights $w_i$, which are calculated in  the program Gauleg.cpp and Gauss Legendre.cpp). The weights are found throug ortogonal polynomials(Laguerre and Legendre polynomials) in a set interval. The points $x_i$ are chosen in a optimal sense and lie in the interval.
+
+The intgral is approximated as
+\[\int_a^b W(x)f(x) \approx \sum_{i=1}^n \omega_i f(x_i) \]
+
+For a more detalied derivation and explenation?? of Gaussian qudrature see (Hjort-Jensen, 2015)
+
+
 \subsubsection{Gauss-Legendre}\label{sec:GLQ}
 Using Gauss-Legendre quadrature with Legendre polynomials will make it possible to utilize the integral numerically. The first step is to change the integration limits from  $-\infty$ and $\infty$ to $-\lambda$ and $\lambda$. The $\lambda$'s are found by inserting it for $r_i$ in the expression $e^{-\alpha r_i}$ because $r_i \approx \lambda$ when $e^{-\alpha r_i} \approx 0$. From FIGURE 1 $\lambda \in [-5,5]$ is therefor a good approximation for the integration limits.
 
-\begin{figure}
-  \includegraphics{{doc/imag/expfunc_plot.png}}
+\begin{figure}[h]
+  \graphicspath{ {./imag}}
+  \includegraphics{expfunc_plot.png}
   \caption{Plot of wavefunction in one dimension}
   \label{fig:plot}
 \end{figure}
