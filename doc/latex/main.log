@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.3)  17 OCT 2019 14:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.3)  18 OCT 2019 13:58
 entering extended mode
 **"C:/Users/Anna Stray Rongve/Documents/Project-3/doc/latex/main.tex"
 ("C:/Users/Anna Stray Rongve/Documents/Project-3/doc/latex/main.tex"
@@ -321,7 +321,11 @@ LaTeX Info: Redefining \] on input line 2845.
 ("C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex/latex/placei
 ns\placeins.sty"
 Package: placeins 2005/04/18  v 2.2
-) ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.aux")
+) ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.aux"
+
+LaTeX Warning: Label `sec:QMProb' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -436,14 +440,53 @@ Overfull \hbox (21.99182pt too wide) in paragraph at lines 9--11
 
 {C:/Users/Anna Stray Rongve/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
+C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/theory.tex:32
+: Undefined control sequence.
+<argument> \figures 
+                    
+l.32   \includegraphics{\figures}
+                                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
- []
+
+
+C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/theory.tex:32
+: Undefined control sequence.
+ ->\errmessage  LaTeX Error: File `\figures 
+                                            ' not found.
+
+See the LaTeX manu...
+l.32   \includegraphics{\figures}
+                                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/theory.tex:32
+: LaTeX Error: File `' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32   \includegraphics{\figures}
+                                 
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
  [2]
 
 LaTeX Warning: Reference `ref:GL-quad_wiki' on page 3 undefined on input line 6
-1.
+6.
 
 )
 ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/results.tex
@@ -458,7 +501,7 @@ You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
-
+ [3]
 C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/results.tex:2
 6: Extra alignment tab has been changed to \cr.
 <template> \endtemplate 
@@ -471,7 +514,7 @@ So I'll assume that you meant to type \cr instead.
 
 )
 ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/discussion.
-tex" [3])
+tex")
 ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/conclusion.
 tex")
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 32.
@@ -481,27 +524,21 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 32.
 ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 32.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 32.
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 12AB3206E25501B8FF554F19DD256093;412
-(rerunfilecheck)             After:  8C85F3B6F419FCD97ACC8B84CB4BEF77;522.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 8C85F3B6F419FCD97ACC8B84CB4BEF77;522.
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 32.
  ) 
 Here is how much of TeX's memory you used:
- 6425 strings out of 492895
- 98001 string characters out of 3118130
- 212036 words of memory out of 3000000
- 10239 multiletter control sequences out of 15000+200000
+ 6446 strings out of 492895
+ 98133 string characters out of 3118130
+ 210130 words of memory out of 3000000
+ 10244 multiletter control sequences out of 15000+200000
  9630 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,9n,31p,622b,431s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -525,9 +562,9 @@ gve/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><
 C:/Users/Anna Stray Rongve/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmsy10.pfb><C:/Users/Anna Stray Rongve/AppData/Local/Programs/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on main.pdf (4 pages, 181843 bytes).
+Output written on main.pdf (4 pages, 182920 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 14 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 125 PDF objects out of 1000 (max. 8388607)
+ 15 named destinations out of 1000 (max. 500000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 

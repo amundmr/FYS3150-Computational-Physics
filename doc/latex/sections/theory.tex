@@ -18,47 +18,70 @@ This leads to the integral, see below, which will be solved nummericaly with the
 The value of the integral corresponds to the energy between the two electrons repelling each other due to Columb interactions.
 
 \[\langle \frac{1}{|\vec{r}_1 - \vec{r}_2|} \rangle = \int_{\infty}^\infty d\vec{r}_1 d\vec{r}_2 e^{-2\alpha(r_1 + r_2)} \frac{1}{\vec{r_1} - \vec{r_2}}\]
-
+\vspace{1cm}
 
 The analytical result $5\pi/16^2$.
 
-
-
 \subsection{Gauss-Legendre Quadrature} \label{sec:GLQ}
-To compute this integral we will first be utilizing the Gauss-Legendre quadrature. Step one is to change the integration limits to something a little more suitable for a computer. We will therefore change the limits $-\infty$ and $\infty$ to $-\lambda$ and $\lambda$. The values of $\lambda$ can be found by inserting it for $r_i$ in the formula $e^{-\alpha r_i}$ and getting it sufficiently close to zero.  We will also check that this approximation is satisfactory by plotting the function.
+Using Gauss-Legendre quadrature will make it possible to utilize the integral numerically. The first step is to change the integration limits from  $-\infty$ and $\infty$ to $-\lambda$ and $\lambda$. The $\lambda$'s are found by inserting it for $r_i$ in the expression $e^{-\alpha r_i}$ because $r_i \approx \lambda$ when $e^{-\alpha r_i} \approx 0$. From FIGURE 1 $\lambda \in [-5,5]$ is therefor a good approximation for the integration limits.
+
+\begin{figure}
+  \includegraphics{{doc/imag/expfunc_plot.png}}
+  \caption{Plot of wavefunction in one dimension}
+  \label{fig:plot}
+\end{figure}
 
 
 
-
-
-\subsection{Improved Gauss-Quadrature} \label{sec:improved_GQ}
-
-
-While the Gauss-Legendre quadrature gets the job done, its not a pretty sight. What can be improved is to replace the Legendre polynomials with the Laguerre polynomials. These polynomials are defined for $x \in [0, \infty)$.
+\subsection{Improved Gauss-Quadrature- Laguerre} \label{sec:improved_GQ}
+Gauss-Legendre quadrature gets the job done, but it is unstable and unsatisfactory. By changing to spherical coordinates and  replacing Legendre- with Laguerre polynomials an improvement in accuracy is expected. The Laguerre polynomials are defined for  $x \in [0, \infty)$,and in spherical coordinates:
 \\
-We will change our original integral from cartesian coordinates to spherical, thus the following relations:
+
 \[ d\vec{r}_1 d\vec{r}_2 = r_1^2 dr_1 r_2^2 dr_2 dcos(\theta_1) dcos(\theta_2) d\phi_1 d\phi_2\]
+\\
+with
 
 \[\frac{1}{r_{12}} = \frac{1}{\sqrt{r_1^2 + r_2^2 - 2r_1r_2cos(\beta)}} \]
+\\and
+
 
 \[cos(\beta) = cos(\theta_1)cos(\theta_2) + sin(\theta_1)sin(\theta_2)cos(\phi_1 - \phi_2)\]
-
-As previousley described, our integral is:
-\[\int_{\infty}^\infty d\vec{r}_1 d\vec{r}_2 e^{-2\alpha(r_1 + r_2)} \frac{1}{\vec{r_1} - \vec{r_2}}\]
+\\
 
 For numerical integration, the deployment of the following relation is nessecary:
 
 \[\int_0^\infty e^{-x}f(x)dx \approx \sum_{i=1}^n w_i f(x_i)\]
 where $x_i$ is the $i$-th root of the Laguerre polynomial $L_n(x)$ and the weight $w_i$ is given by
+\\
 \[w_i = \frac{x_i}{(n+1)^2 [L_{n+1}(x_i)]^2}\]
+\\
 The Laguerre polynomials are defined by Rodrigues formula:
 \[L_n(x) = \frac{e^x}{n!}\frac{d^n}{dx^n}\left(e^{-x} x^n\right) = \frac{1}{n!}\left(\frac{d}{dx}-1\right)^n x^n\]
 or recursively relations:
 \begin{align*}
   L_0(x) &= 1\\
   L_1(x) &= 1 - x\\
-  L_{n+1}(x) &= \frac{(2n + 1 - x)L_n(x) - nL_{n-1}(x)}{n+1}
+  L_{n+1}(x) &= \frac{(2n + 1 - x)L_n(x) - nL_{n-1}(x)}{n+1}\\
 \end{align*}
 \ref{ref:GL-quad_wiki}
+
+
+\subsection{Monte Carlo}
+\label{sec:MC}
+KILDE:https://cs.dartmouth.edu/~wjarosz/publications/dissertation/appendixA.pdf
+Monte Carlo is numerical methods dependent of a random samlping from a function in order to approximate the integral.
+
+
+In general the integral, F, of a function, $f(x), x\in[a,b]$
+
+\[F = \int_a^b f(x)dx\] \\
+
+can be approximated by taking avarage samples of $f$ with a uniform distrubution of points in the interaval. Having N uniform random variables  $x_i \in [a,b)$ with probability distrubution function, PDF $\frac{1}{b-a}$ the Monte-Carlo approximation of $F$ is
+
+
+\[\langle F^N \rangle = (b-a)\frac{1}{N-1} \sum_{i=0}^{N}  f(x_i)\]
+
+\[x_i\] is genereated:
+
 
 \end{document}

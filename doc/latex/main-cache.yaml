@@ -73,7 +73,7 @@ options:
     2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
 files:
   dicy-instance.yaml-ParsedYAML:
-    timeStamp: 2019-10-17T11:11:53.288Z
+    timeStamp: 2019-10-18T11:58:00.043Z
     jobNames: []
     value:
       severity: info
@@ -134,29 +134,29 @@ files:
         2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
     type: ParsedYAML
   main.tex:
-    timeStamp: 2019-10-17T12:17:07.455Z
+    timeStamp: 2019-10-18T12:26:30.170Z
     jobNames: []
     hash: sjSQ61rnP51aOOUaTcSS0iGJUZp62S+t0ee0hjk4WQg=
     type: LaTeX
     subType: article
   'C:\Users\Anna Stray Rongve\AppData\Roaming\dicy\config.yaml':
-    timeStamp: 2019-10-17T08:54:52.119Z
+    timeStamp: 2019-10-18T10:37:34.790Z
     jobNames: []
     type: YAML
   x.y-Nil:
     jobNames: []
     type: Nil
   main.log:
-    timeStamp: 2019-10-17T12:15:51.413Z
+    timeStamp: 2019-10-18T11:58:01.345Z
     jobNames: []
-    hash: keYxxV6GfuvofxB5qec+kS895X8s7+djH5Ky4dYUNBk=
+    hash: UhIu97X09ceGZMvK3xzPDmIZIFbT/3V08EmxgqoSdfk=
     type: LaTeXLog
     subType: pdfTeX
   main.fls-ParsedFileListing:
     jobNames: []
     type: ParsedFileListing
   main.log-ParsedLaTeXLog:
-    timeStamp: 2019-10-17T12:17:08.896Z
+    timeStamp: 2019-10-18T11:58:01.434Z
     jobNames: []
     value:
       messages:
@@ -1266,38 +1266,21 @@ files:
             range:
               start: 323
               end: 323
+        - severity: warning
+          name: pdfTeX
+          category: LaTeX
+          text: 'Label `sec:QMProb'' multiply defined.'
+          source:
+            file: main.aux
+          log:
+            file: main.log
+            range:
+              start: 326
+              end: 326
         - severity: info
           name: pdfTeX
           category: LaTeX Font
           text: Checking defaults for OML/cmm/m/it ... okay
-          source:
-            file: main.tex
-            range:
-              start: 16
-              end: 16
-          log:
-            file: main.log
-            range:
-              start: 327
-              end: 328
-        - severity: info
-          name: pdfTeX
-          category: LaTeX Font
-          text: Checking defaults for T1/cmr/m/n ... okay
-          source:
-            file: main.tex
-            range:
-              start: 16
-              end: 16
-          log:
-            file: main.log
-            range:
-              start: 329
-              end: 330
-        - severity: info
-          name: pdfTeX
-          category: LaTeX Font
-          text: Checking defaults for OT1/cmr/m/n ... okay
           source:
             file: main.tex
             range:
@@ -1311,7 +1294,7 @@ files:
         - severity: info
           name: pdfTeX
           category: LaTeX Font
-          text: Checking defaults for OMS/cmsy/m/n ... okay
+          text: Checking defaults for T1/cmr/m/n ... okay
           source:
             file: main.tex
             range:
@@ -1325,7 +1308,7 @@ files:
         - severity: info
           name: pdfTeX
           category: LaTeX Font
-          text: Checking defaults for OMX/cmex/m/n ... okay
+          text: Checking defaults for OT1/cmr/m/n ... okay
           source:
             file: main.tex
             range:
@@ -1339,7 +1322,7 @@ files:
         - severity: info
           name: pdfTeX
           category: LaTeX Font
-          text: Checking defaults for U/cmr/m/n ... okay
+          text: Checking defaults for OMS/cmsy/m/n ... okay
           source:
             file: main.tex
             range:
@@ -1353,7 +1336,7 @@ files:
         - severity: info
           name: pdfTeX
           category: LaTeX Font
-          text: Checking defaults for PD1/pdf/m/n ... okay
+          text: Checking defaults for OMX/cmex/m/n ... okay
           source:
             file: main.tex
             range:
@@ -1364,6 +1347,34 @@ files:
             range:
               start: 339
               end: 340
+        - severity: info
+          name: pdfTeX
+          category: LaTeX Font
+          text: Checking defaults for U/cmr/m/n ... okay
+          source:
+            file: main.tex
+            range:
+              start: 16
+              end: 16
+          log:
+            file: main.log
+            range:
+              start: 341
+              end: 342
+        - severity: info
+          name: pdfTeX
+          category: LaTeX Font
+          text: Checking defaults for PD1/pdf/m/n ... okay
+          source:
+            file: main.tex
+            range:
+              start: 16
+              end: 16
+          log:
+            file: main.log
+            range:
+              start: 343
+              end: 344
         - name: pdfTeX
           severity: info
           text: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1374,8 +1385,8 @@ files:
           log:
             file: main.log
             range:
-              start: 359
-              end: 359
+              start: 363
+              end: 363
         - name: pdfTeX
           severity: info
           text: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
@@ -1386,8 +1397,8 @@ files:
           log:
             file: main.log
             range:
-              start: 363
-              end: 363
+              start: 367
+              end: 367
         - severity: info
           name: pdfTeX
           category: Package epstopdf-base
@@ -1402,8 +1413,8 @@ files:
           log:
             file: main.log
             range:
-              start: 365
-              end: 366
+              start: 369
+              end: 370
         - severity: info
           name: pdfTeX
           category: Package grfext
@@ -1421,8 +1432,8 @@ files:
           log:
             file: main.log
             range:
-              start: 367
-              end: 370
+              start: 371
+              end: 374
         - severity: info
           name: pdfTeX
           category: Package hyperref
@@ -1435,8 +1446,8 @@ files:
           log:
             file: main.log
             range:
-              start: 373
-              end: 373
+              start: 377
+              end: 377
         - name: pdfTeX
           severity: info
           text: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1447,8 +1458,8 @@ files:
           log:
             file: main.log
             range:
-              start: 377
-              end: 377
+              start: 381
+              end: 381
         - name: pdfTeX
           severity: info
           text: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
@@ -1459,8 +1470,8 @@ files:
           log:
             file: main.log
             range:
-              start: 381
-              end: 381
+              start: 385
+              end: 385
         - severity: info
           name: pdfTeX
           category: LaTeX
@@ -1473,8 +1484,8 @@ files:
           log:
             file: main.log
             range:
-              start: 385
-              end: 385
+              start: 389
+              end: 389
         - severity: info
           name: pdfTeX
           category: LaTeX
@@ -1487,8 +1498,8 @@ files:
           log:
             file: main.log
             range:
-              start: 386
-              end: 386
+              start: 390
+              end: 390
         - severity: info
           name: pdfTeX
           category: LaTeX
@@ -1501,16 +1512,16 @@ files:
           log:
             file: main.log
             range:
-              start: 387
-              end: 387
+              start: 391
+              end: 391
         - severity: error
           name: pdfTeX
           text: 'You can''t use `macro parameter character #'' in horizontal mode'
           log:
             file: main.log
             range:
-              start: 399
-              end: 399
+              start: 403
+              end: 403
           source:
             file: tex
             range:
@@ -1522,8 +1533,8 @@ files:
           log:
             file: main.log
             range:
-              start: 409
-              end: 409
+              start: 413
+              end: 413
           source:
             file: tex
             range:
@@ -1535,13 +1546,53 @@ files:
           log:
             file: main.log
             range:
-              start: 419
-              end: 419
+              start: 423
+              end: 423
           source:
             file: tex
             range:
               start: 11
               end: 11
+        - severity: error
+          name: pdfTeX
+          text: Undefined control sequence
+          log:
+            file: main.log
+            range:
+              start: 443
+              end: 444
+          source:
+            file: sections\theory.tex
+            range:
+              start: 32
+              end: 32
+        - severity: error
+          name: pdfTeX
+          text: Undefined control sequence
+          log:
+            file: main.log
+            range:
+              start: 457
+              end: 458
+          source:
+            file: sections\theory.tex
+            range:
+              start: 32
+              end: 32
+        - severity: error
+          name: pdfTeX
+          text: File `' not found
+          log:
+            file: main.log
+            range:
+              start: 472
+              end: 473
+          source:
+            file: sections\theory.tex
+            range:
+              start: 32
+              end: 32
+          category: LaTeX
         - severity: warning
           name: pdfTeX
           category: LaTeX
@@ -1549,21 +1600,21 @@ files:
           source:
             file: sections\theory.tex
             range:
-              start: 61
-              end: 61
+              start: 66
+              end: 66
           log:
             file: main.log
             range:
-              start: 445
-              end: 446
+              start: 488
+              end: 489
         - severity: error
           name: pdfTeX
           text: Extra alignment tab has been changed to \cr
           log:
             file: main.log
             range:
-              start: 451
-              end: 452
+              start: 494
+              end: 495
           source:
             file: sections\results.tex
             range:
@@ -1575,8 +1626,8 @@ files:
           log:
             file: main.log
             range:
-              start: 462
-              end: 463
+              start: 505
+              end: 506
           source:
             file: sections\results.tex
             range:
@@ -1594,8 +1645,8 @@ files:
           log:
             file: main.log
             range:
-              start: 477
-              end: 477
+              start: 520
+              end: 520
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1608,8 +1659,8 @@ files:
           log:
             file: main.log
             range:
-              start: 479
-              end: 479
+              start: 522
+              end: 522
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1622,8 +1673,8 @@ files:
           log:
             file: main.log
             range:
-              start: 482
-              end: 482
+              start: 525
+              end: 525
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1636,35 +1687,21 @@ files:
           log:
             file: main.log
             range:
-              start: 483
-              end: 483
-        - severity: warning
-          name: pdfTeX
-          category: Package rerunfilecheck
-          text: >-
-            File `main.out' has changed. Rerun to get outlines right or use
-            package `bookmark'.
-          source:
-            file: main.tex
-          log:
-            file: main.log
-            range:
-              start: 485
-              end: 487
+              start: 526
+              end: 526
         - severity: info
           name: pdfTeX
           category: Package rerunfilecheck
           text: >-
-            Checksums for `main.out': Before:
-            12AB3206E25501B8FF554F19DD256093;412 After:
+            File `main.out' has not changed. Checksum:
             8C85F3B6F419FCD97ACC8B84CB4BEF77;522.
           source:
             file: main.tex
           log:
             file: main.log
             range:
-              start: 489
-              end: 491
+              start: 527
+              end: 528
         - severity: warning
           name: pdfTeX
           category: LaTeX
@@ -1674,19 +1711,19 @@ files:
           log:
             file: main.log
             range:
-              start: 493
-              end: 493
+              start: 530
+              end: 530
         - severity: warning
           name: pdfTeX
           category: LaTeX
-          text: Label(s) may have changed. Rerun to get cross-references right.
+          text: There were multiply-defined labels.
           source:
             file: main.tex
           log:
             file: main.log
             range:
-              start: 496
-              end: 496
+              start: 533
+              end: 533
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1699,17 +1736,17 @@ files:
           log:
             file: main.log
             range:
-              start: 498
-              end: 498
+              start: 535
+              end: 535
       inputs: []
       outputs:
         - main.pdf
       calls: []
     type: ParsedLaTeXLog
   main.pdf:
-    timeStamp: 2019-10-17T12:17:08.770Z
+    timeStamp: 2019-10-18T11:58:01.342Z
     jobNames: []
-    hash: MVWPHf+oL4z95k7hpUAgOq9B/b4Gg04reUND1ihgWzI=
+    hash: xKPYpCBTmzoCtAphwrJwPAD0V61sEzZgHq2QG62z/8A=
     type: PortableDocumentFormat
 rules:
   - name: ApplyOptions
