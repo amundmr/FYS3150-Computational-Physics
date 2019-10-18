@@ -21,17 +21,17 @@ int main(){
     auto tStart = std::chrono::high_resolution_clock::now();
     cout << "Waiting for naïve Monte Carlo..." << endl;
     double naive = naiveMC(a,b,MCsamples); // Naive Monte Carlo. Cartesian coordinates and uniform distribution.
-    auto tNaive = std::chrono::high_resolution_clock::now();
+    auto t_Naive = std::chrono::high_resolution_clock::now();
 
     cout << "Waiting for improved Monte Carlo..." << endl;
     double improved = improvedMC(infty,MCsamples); // Improved Monte Carlo. Spherical coordinates and exponential PDF.
-    auto tImproved = std::chrono::high_resolution_clock::now();
+    auto t_Improved = std::chrono::high_resolution_clock::now();
 
-    auto tImproved = std::chrono::duration_cast<std::chrono::microseconds>( tImproved - tNaive ).count();
-    auto tNaive = std::chrono::duration_cast<std::chrono::microseconds>( tNaive - tStart ).count();
+    auto tImproved = std::chrono::duration_cast<std::chrono::microseconds>( t_Improved - t_Naive ).count();
+    auto tNaive = std::chrono::duration_cast<std::chrono::microseconds>( t_Naive - tStart ).count();
 
 
-    cout << setpresicion(8) << "\rNaïve Monte Carlo integral is:\t\t" << naive << ", Time spent: " << tNaive << endl;
-    cout << setpresicion(8) << "Improved Monte Carlo integral is:\t" << improved << ", Time spent: " << tImproved << endl;
+    cout << setprecision(8) << "\rNaïve Monte Carlo integral is:\t\t" << naive << ", Time spent: " << tNaive << endl;
+    cout << setprecision(8) << "Improved Monte Carlo integral is:\t" << improved << ", Time spent: " << tImproved << endl;
     cout << "Analytical integral value (5pi^2/16^2):\t" << 5*M_PI*M_PI/(16*16) << endl;
 }
