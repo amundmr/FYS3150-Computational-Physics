@@ -134,7 +134,7 @@ files:
         2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
     type: ParsedYAML
   main.tex:
-    timeStamp: 2019-10-18T12:26:30.170Z
+    timeStamp: 2019-10-18T13:49:59.431Z
     jobNames: []
     hash: sjSQ61rnP51aOOUaTcSS0iGJUZp62S+t0ee0hjk4WQg=
     type: LaTeX

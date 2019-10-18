@@ -14,7 +14,7 @@ Where $\alpha$ is a parameter set to 2, due to the two electrons, and the length
 For our system with two electrons, we have the product of the two $1s$ wave functions defined as
 \[\Psi(\vec{r}_1, \vec{r}_2) = e^{-\alpha(r_1 + r_2)}\]
 
-This leads to the integral, see below, which will be solved nummericaly with the three different methods mentioned earlier.
+This leads to the integral, REFERANCE, which will be solved nummericaly with the three different methods mentioned earlier.
 The value of the integral corresponds to the energy between the two electrons repelling each other due to Columb interactions.
 
 \[\langle \frac{1}{|\vec{r}_1 - \vec{r}_2|} \rangle = \int_{\infty}^\infty d\vec{r}_1 d\vec{r}_2 e^{-2\alpha(r_1 + r_2)} \frac{1}{\vec{r_1} - \vec{r_2}}\]
@@ -22,8 +22,9 @@ The value of the integral corresponds to the energy between the two electrons re
 
 The analytical result $5\pi/16^2$.
 
-\subsection{Gauss-Legendre Quadrature} \label{sec:GLQ}
-Using Gauss-Legendre quadrature will make it possible to utilize the integral numerically. The first step is to change the integration limits from  $-\infty$ and $\infty$ to $-\lambda$ and $\lambda$. The $\lambda$'s are found by inserting it for $r_i$ in the expression $e^{-\alpha r_i}$ because $r_i \approx \lambda$ when $e^{-\alpha r_i} \approx 0$. From FIGURE 1 $\lambda \in [-5,5]$ is therefor a good approximation for the integration limits.
+\subsection{Gaussian Quadrature} \label{sec:GQ}
+\subsubsection{Gauss-Legendre}\label{sec:GLQ}
+Using Gauss-Legendre quadrature with Legendre polynomials will make it possible to utilize the integral numerically. The first step is to change the integration limits from  $-\infty$ and $\infty$ to $-\lambda$ and $\lambda$. The $\lambda$'s are found by inserting it for $r_i$ in the expression $e^{-\alpha r_i}$ because $r_i \approx \lambda$ when $e^{-\alpha r_i} \approx 0$. From FIGURE 1 $\lambda \in [-5,5]$ is therefor a good approximation for the integration limits.
 
 \begin{figure}
   \includegraphics{{doc/imag/expfunc_plot.png}}
@@ -31,9 +32,13 @@ Using Gauss-Legendre quadrature will make it possible to utilize the integral nu
   \label{fig:plot}
 \end{figure}
 
+Furthermore, the  weights and mesh points are computed using "gauleg"(see program exampleprog.cpp????).
 
+Eventually ending up with a sixdimensional integral, where all six integration limits are the same.
 
-\subsection{Improved Gauss-Quadrature- Laguerre} \label{sec:improved_GQ}
+\[\int_a^b\int_a^b\int_a^b\int_a^b\int_a^b\int_a^b e^{-x}f(x)dx \approx \sum_{i=1}^n w_i f(x_i)\]
+
+\subsubsection{Improved Gauss-Quadrature- Laguerre} \label{sec:improved_GQ}
 Gauss-Legendre quadrature gets the job done, but it is unstable and unsatisfactory. By changing to spherical coordinates and  replacing Legendre- with Laguerre polynomials an improvement in accuracy is expected. The Laguerre polynomials are defined for  $x \in [0, \infty)$,and in spherical coordinates:
 \\
 
@@ -81,7 +86,7 @@ can be approximated by taking avarage samples of $f$ with a uniform distrubution
 
 \[\langle F^N \rangle = (b-a)\frac{1}{N-1} \sum_{i=0}^{N}  f(x_i)\]
 
-\[x_i\] is genereated:
+\[x_i\] is constructed
 
 
 \end{document}

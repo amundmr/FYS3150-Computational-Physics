@@ -134,9 +134,9 @@ files:
         2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
     type: ParsedYAML
   theory.tex:
-    timeStamp: 2019-10-18T13:17:26.885Z
+    timeStamp: 2019-10-18T13:51:43.464Z
     jobNames: []
-    hash: ZPYp2TwBM5dGrEL40AMMrqKbrgTrnIRiSTK1LKcjwks=
+    hash: 9/eY0j//ol7rwog0K22HqVthEyRa+gXMoI+E+2YBRok=
     type: LaTeX
     subType: subfiles
   'C:\Users\Anna Stray Rongve\AppData\Roaming\dicy\config.yaml':
@@ -347,7 +347,7 @@ files:
       calls: []
     type: ParsedFileListing
   theory.log-ParsedLaTeXLog:
-    timeStamp: 2019-10-18T13:17:31.131Z
+    timeStamp: 2019-10-18T13:44:39.875Z
     jobNames: []
     value:
       messages:
@@ -1701,8 +1701,8 @@ files:
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 29
-              end: 29
+              start: 30
+              end: 30
           log:
             file: theory.log
             range:
@@ -1719,23 +1719,23 @@ files:
           source:
             file: theory.tex
             range:
-              start: 29
-              end: 29
+              start: 30
+              end: 30
           category: Package pdftex.def
         - severity: warning
           name: pdfTeX
           category: LaTeX
-          text: 'Reference `ref:GL-quad_wiki'' on page 2 undefined'
+          text: 'Reference `ref:GL-quad_wiki'' on page 3 undefined'
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 66
-              end: 66
+              start: 71
+              end: 71
           log:
             file: theory.log
             range:
-              start: 440
-              end: 441
+              start: 441
+              end: 442
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1743,13 +1743,13 @@ files:
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 87
-              end: 87
+              start: 92
+              end: 92
           log:
             file: theory.log
             range:
-              start: 454
-              end: 454
+              start: 455
+              end: 455
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1757,13 +1757,13 @@ files:
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 87
-              end: 87
+              start: 92
+              end: 92
           log:
             file: theory.log
             range:
-              start: 456
-              end: 456
+              start: 457
+              end: 457
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1771,22 +1771,8 @@ files:
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 87
-              end: 87
-          log:
-            file: theory.log
-            range:
-              start: 460
-              end: 460
-        - severity: info
-          name: pdfTeX
-          category: Package atveryend
-          text: Executing hook `AtEndAfterFileList'
-          source:
-            file: theory.tex"LaTeX2e <2018-12-01>
-            range:
-              start: 87
-              end: 87
+              start: 92
+              end: 92
           log:
             file: theory.log
             range:
@@ -1794,17 +1780,31 @@ files:
               end: 461
         - severity: info
           name: pdfTeX
+          category: Package atveryend
+          text: Executing hook `AtEndAfterFileList'
+          source:
+            file: theory.tex"LaTeX2e <2018-12-01>
+            range:
+              start: 92
+              end: 92
+          log:
+            file: theory.log
+            range:
+              start: 462
+              end: 462
+        - severity: info
+          name: pdfTeX
           category: Package rerunfilecheck
           text: >-
             File `theory.out' has not changed. Checksum:
-            CA740D82CB4BC6023CF295EBC41C2D4B;343.
+            8749BA19C91679369A2DB070429673D8;421.
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
           log:
             file: theory.log
             range:
-              start: 462
-              end: 463
+              start: 463
+              end: 464
         - severity: warning
           name: pdfTeX
           category: LaTeX
@@ -1814,31 +1814,31 @@ files:
           log:
             file: theory.log
             range:
-              start: 465
-              end: 465
+              start: 466
+              end: 466
       inputs: []
       outputs:
         - theory.pdf
       calls: []
     type: ParsedLaTeXLog
   theory.aux:
-    timeStamp: 2019-10-18T13:17:28.530Z
+    timeStamp: 2019-10-18T13:51:44.801Z
     jobNames: []
-    hash: AJhlzwbFoEbcE5ZGW9NQkc2xMh5z8LterVBSGlF7twk=
+    hash: O7CBDnhrfJLF0I/MIXsOmk0ph76OiM2UBzUcjzpTEcQ=
     type: LaTeXAuxilary
   theory.fls:
-    timeStamp: 2019-10-18T13:17:28.634Z
+    timeStamp: 2019-10-18T13:51:44.876Z
     jobNames: []
-    hash: eV/CAIeIEiRR075+4SBqcC7qHh5y0BRFP0qrVgmT3SY=
+    hash: XqmNkWj9stjDA7/94ODUaaH36cv/E4J1ThiepO4fvSE=
     type: FileListing
   theory.log:
-    timeStamp: 2019-10-18T13:17:28.630Z
+    timeStamp: 2019-10-18T13:51:44.873Z
     jobNames: []
-    hash: n4wP/PvkNQPDCB6X/sbOcNw3dJ577sgvcaZBY1z5EU8=
+    hash: VGCs2bN8tQgigJGx9LV4fpQ5j/NdA+Ri+sDHSHe5J3M=
     type: LaTeXLog
     subType: pdfTeX
   theory.aux-ParsedLaTeXAuxilary:
-    timeStamp: 2019-10-18T12:28:31.937Z
+    timeStamp: 2019-10-18T13:44:28.394Z
     jobNames: []
     value:
       commands:
@@ -1861,6 +1861,8 @@ files:
         - providecommand
         - providecommand
         - babel@aux
+        - '@writefile'
+        - newlabel
         - '@writefile'
         - newlabel
         - '@writefile'
@@ -2082,14 +2084,14 @@ files:
     jobNames: []
     type: LaTeXStyle
   'C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.tex':
-    timeStamp: 2019-10-18T12:26:30.170Z
+    timeStamp: 2019-10-18T13:49:59.431Z
     jobNames: []
     type: LaTeX
     subType: article
   theory.out:
-    timeStamp: 2019-10-18T13:17:28.533Z
+    timeStamp: 2019-10-18T13:51:44.804Z
     jobNames: []
-    hash: xLBd0ie0C+rL0Y5WifhsHKZKUJezeh36kk78HoXiMPU=
+    hash: 59hVlFGULnYBSz7PC9MeytHkfhdwHz2cge39qxvSZr8=
     type: OUT
   'C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.tex-ParsedLaTeXMagic':
     timeStamp: 2019-10-18T10:37:35.302Z
@@ -2103,14 +2105,14 @@ files:
     timeStamp: 2009-07-14T18:37:47.000Z
     jobNames: []
   theory.pdf:
-    timeStamp: 2019-10-18T13:17:28.625Z
+    timeStamp: 2019-10-18T13:51:44.869Z
     jobNames: []
-    hash: zqbgywoNe4XgjQteNfC0HPQePy8GeAvDlqRPNUREPOo=
+    hash: xpfKk6SsZ/26dkQALgz6976v3rb9KUv7c8TC75IQxHs=
     type: PortableDocumentFormat
   theory.synctex.gz:
-    timeStamp: 2019-10-18T13:17:28.628Z
+    timeStamp: 2019-10-18T13:51:44.871Z
     jobNames: []
-    hash: 8dqHyTFT56wHbygX1YhTbxsS3Sx8PDp/yfnd6DYp5+E=
+    hash: jlj/0eIqEVGnNTJVDNEp3MMDMlyDwqPNRFeab2yVLxw=
     type: SyncTeX
   'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy5.pfb':
     timeStamp: 2009-07-14T18:37:46.000Z
