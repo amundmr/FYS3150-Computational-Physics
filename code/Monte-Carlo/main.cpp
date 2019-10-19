@@ -31,7 +31,9 @@ int main(){
     double tNaive = std::chrono::duration_cast<std::chrono::microseconds>( t_Naive - tStart ).count();
 
     cout << "\r---------------------------------------------------------------------------------------" << endl;
-    cout << setprecision(8) << "Naïve Monte Carlo integral is:\t\t" << naive << "\t\tTime spent: " << tNaive/1000000 << "s" << endl;
-    cout << setprecision(8) << "Improved Monte Carlo integral is:\t" << improved << "\t\tTime spent: " << tImproved/1000000 << "s" << endl;
-    cout << "Analytical integral value (5pi^2/16^2):\t" << 5*M_PI*M_PI/(16*16) << endl;
+    cout << "\033[4mNaïve Monte Carlo\033[0m" << endl;
+    cout << setprecision(8) << "\tIntegral:\t" << naive << endl << "\tTime spent:\t" << tNaive/1000000 << "s" << endl << endl;
+    cout << "\033[4mImproved Monte Carlo\033[0m" << endl;
+    cout << setprecision(8) << "\tIntegral:\t" << improved << endl << "\tTime spent:\t" << tImproved/1000000 << "s" << endl << endl;
+    cout << "\033[4mAnalytical solution\033[0m" << endl << "\tIntegral:\t" << 5*M_PI*M_PI/(16*16) << endl << endl;
 }

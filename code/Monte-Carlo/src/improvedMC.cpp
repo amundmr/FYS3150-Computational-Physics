@@ -32,7 +32,7 @@ double improvedMC(double infty,int MCsamples){
     int_mc = V*mc;
 
     // Printing the variance.
-    cout << "\e[A\r\e[0KStandard deviation of improved Monte Carlo is: " << sigma << endl;
+    cout << "\e[A\r\e[0KStandard deviation of improved Monte Carlo is:\t" << sigma << endl;
 
     return mc;
 }
