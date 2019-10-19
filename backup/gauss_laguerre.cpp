@@ -1,21 +1,11 @@
+#include "../include/gqlib.h"
 
-//  Function to set up Gauss-Laguerre integration points and weights from
-//  the text Numerical Recipes of Teukolsky et al.
-#include <cmath>
-#include <iostream>
-#include <fstream>
-#include <iomanip>
-#include <cmath>
-#include <stdlib.h>
-#include <stdio.h>
 #define EPS 3.0e-14
 #define MAXIT 10
 
-using namespace std;
+//  Function to set up Gauss-Laguerre integration points and weights from
+//  the text Numerical Recipes of Teukolsky et al.
 
-double gammln(double);
-double func_polar_lag(double r1, double t1, double p1, double r2, double t2, double p2);
-void gauss_laguerre(double *x, double *w, int n, double alf);
 //  Note that you need to call it with a given value of alpha,
 // called alf here. This comes from x^{alpha} exp(-x)
 
@@ -80,11 +70,5 @@ double func_polar_lag(double r1, double t1, double p1, double r2, double t2, dou
 	else
 	return 0;
 }
-
-int main(){
-
-
-}
-// end function gammln
 #undef EPS
 #undef MAXIT

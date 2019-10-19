@@ -22,5 +22,4 @@ plt.tick_params(direction='in', top = 'true', right = 'true')
 plt.title(r"Value of $e^{-\alpha r_i}$ over interatomic spacing.")
 plt.legend()
 
-plt.savefig("expfunc_plot.png", bbox_inches='tight')
-plt.show()
+plt.savefig("../../doc/latex/img/expfunc_plot.png", bbox_inches='tight')

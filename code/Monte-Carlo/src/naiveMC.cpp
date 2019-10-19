@@ -3,9 +3,9 @@
 double naiveMC(double a,double b,int MCsamples){
     double mc, var, fval, sigma, int_mc;  // Variable storage.
 
-    // Integration volume.
-    double V = pow((b-a),6);
+    double V = pow((b-a),6); // Integration volume.
 
+    //Start parallellization
     #pragma omp parallel
     {
     vec r1 = zeros<vec>(3); vec r2 = zeros<vec>(3);
@@ -25,9 +25,9 @@ double naiveMC(double a,double b,int MCsamples){
         mc += f(r1,r2);
         var += f(r1,r2) * f(r1,r2);
     }
-
-    //End paralellization here
-}
+    // End paralellization here
+    }
+    
     // Find mean.
     mc /= MCsamples;
     // Find variance
@@ -38,7 +38,7 @@ double naiveMC(double a,double b,int MCsamples){
     // Find final integral by multiplying with integration volume.
     int_mc = V*mc;
     // Printing the variance.
-    cout << "\e[A\r\e[0KStandard deviation of naïve Monte Carlo is:\t" << var << endl;
+    cout << "\r\e[0KStandard deviation of naïve Monte Carlo is:\t" << var << endl;
 
     return int_mc;
 }

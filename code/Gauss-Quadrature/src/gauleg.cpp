@@ -1,14 +1,8 @@
-#include <cmath>
-#include <iostream>
-#include <fstream>
-#include <iomanip>
-#include <cmath>
-#include <stdlib.h>
-#include <stdio.h>
+#include "../include/gqlib.h"
+
 #define EPS 3.0e-14
 #define MAXIT 10
 #define ZERO 1.0E-10
-using namespace std;
 
 //This finds the roots of the legendre polynomial and returns them to x (the mesh points)
 //It also returns the weights for the polynmoial to w

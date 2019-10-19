@@ -1,14 +1,8 @@
-#include <cmath>
-#include <iostream>
-#include <fstream>
-#include <iomanip>
-#include <cmath>
-#include <stdlib.h>
-#include <stdio.h>
+#include "../include/gqlib.h"
+
 #define EPS 3.0e-14
 #define MAXIT 10
 #define ZERO 1.0E-10
-using namespace std;
 
 //  this function defines the function to integrate
 double int_function(double x1, double y1, double z1, double x2, double y2, double z2)
