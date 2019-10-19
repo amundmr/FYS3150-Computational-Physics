@@ -37,9 +37,9 @@ For a more detalied derivation and explenation?? of Gaussian qudrature see (Hjor
 Using Gauss-Legendre quadrature with Legendre polynomials will make it possible to utilize the integral numerically. The first step is to change the integration limits from  $-\infty$ and $\infty$ to $-\lambda$ and $\lambda$. The $\lambda$'s are found by inserting it for $r_i$ in the expression $e^{-\alpha r_i}$ because $r_i \approx \lambda$ when $e^{-\alpha r_i} \approx 0$. As we see from figure \ref{fig:expfunc}, $\lambda \in [-5,5]$ is therefore a good approximation for the integration limits.
 
 \begin{figure}
-  \includegraphics[width=\textwidth]{../img/expfunc_plot.png}
+  \includegraphics{../imag/expfunc_plot.png}
   \caption{Plot of wavefunction in one dimension}
-  \label{fig:expfunc}
+  \label{fig:plot}
 \end{figure}
 
 Furthermore, the  weights and mesh points are computed using "gauleg"(see program exampleprog.cpp????).
@@ -78,35 +78,25 @@ or recursively relations:
   L_1(x) &= 1 - x\\
   L_{n+1}(x) &= \frac{(2n + 1 - x)L_n(x) - nL_{n-1}(x)}{n+1}\\
 \end{align*}
-\ref{sec:GLQ}
+\ref{ref:GL-quad_wiki}
 
 
 \subsection{Monte Carlo}
-\subsubsection{Generalized}
 \label{sec:MC}
-Monte Carlo integration is based on the idea of finding the mean of a function in a domain by sampling random function values. This mean multiplied by the volume of the domain will be an approximation of the integral. \\
+KILDE:https://cs.dartmouth.edu/~wjarosz/publications/dissertation/appendixA.pdf
+Monte Carlo is numerical methods dependent of a random samlping from a function in order to approximate the integral.
 
-Say we have an integral $I$ of $f(\mathbf x)$ we want to find:
 
-\begin{equation*}
-  I=\int_D f(\mathbf x)d\mathbf x
-\end{equation*}
+In general the integral, F, of a function, $f(x), x\in[a,b]$
 
-where $\mathbf{x}$ is in the domain $D$. This integral can be approximated by using random numbers distributed on $D$ by the probability distribution function (PDF) $p(\mathbf x)$. Discretizing, the approximated integral now becomes
+\[F = \int_a^b f(x)dx\] \\
 
-\begin{equation}
-  I \approx \langle I \rangle = \frac{1}{N}\sum_{i=0}^N\frac{f(\mathbf x_i)}{p(\mathbf x_i)},
-  \label{eq:genapproxMC}
-\end{equation}
+can be approximated by taking avarage samples of $f$ with a uniform distrubution of points in the interaval. Having N uniform random variables  $x_i \in [a,b)$ with probability distrubution function, PDF $\frac{1}{b-a}$ the Monte-Carlo approximation of $F$ is
 
-where  $N$ is the number of sampled values.
 
-\subsubsection{Naïve approach (uniform PDF)}
-To solve our six-dimensional integral, we first take the naïve approach and distribute our randomly chosen variables on the uniform distribution
+\[\langle F^N \rangle = (b-a)\frac{1}{N-1} \sum_{i=0}^{N}  f(x_i)\]
 
-\begin{equation*}
-  \theta (x) = \bigg\{ \begin{matrix}\frac{1}{b-a}, & \text{for}\ x\in[a,b] \\ 0 & \text{else}\end{matrix},
-\end{equation*}
+\[x_i\] is constructed
 
 and keep our variables $\mathbf r_1$ and $\mathbf r_2$ in cartesian coordinates. Putting the uniform distribution into (\ref{eq:genapproxMC}), we get the naïve approximation of an integral:
 
