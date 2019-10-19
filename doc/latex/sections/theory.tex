@@ -105,5 +105,7 @@ To run the computations faster, openMP will be used to paralellize the code. Thi
  \item Sum the private summations from each thread together after the calculations are completed.
 \end{itemize}
 By doing this we avoid having the threads wait for the random number generator and to write to the same memory, and achieve optimal speedup.
+\\
+The code is commented in for example \textsc{/code/Monte-Carlo/src/naiveMC.cpp}.
 
 \end{document}
