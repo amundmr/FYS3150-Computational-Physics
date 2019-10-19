@@ -76,25 +76,36 @@ or recursively relations:
   L_1(x) &= 1 - x\\
   L_{n+1}(x) &= \frac{(2n + 1 - x)L_n(x) - nL_{n-1}(x)}{n+1}\\
 \end{align*}
-\ref{ref:GL-quad_wiki}
+\ref{sec:GLQ}
 
 
 \subsection{Monte Carlo}
+\subsubsection{Generalized}
 \label{sec:MC}
-KILDE:https://cs.dartmouth.edu/~wjarosz/publications/dissertation/appendixA.pdf
-Monte Carlo is numerical methods dependent of a random samlping from a function in order to approximate the integral.
+Monte Carlo integration is based on the idea of finding the mean of a function in a domain by sampling random function values. This mean multiplied by the volume of the domain will be an approximation of the integral. \\
 
+Say we have an integral $I$ of $f(\mathbf x)$ we want to find:
 
-In general the integral, F, of a function, $f(x), x\in[a,b]$
+\begin{equation*}
+  I=\int_D f(\mathbf x)d\mathbf x
+\end{equation*}
 
-\[F = \int_a^b f(x)dx\] \\
+where $\mathbf{x}$ is in the domain $D$. This integral can be approximated by using random numbers distributed on $D$ by the probability distribution function (PDF) $p(\mathbf x)$. Discretizing, the approximated integral now becomes
 
-can be approximated by taking avarage samples of $f$ with a uniform distrubution of points in the interaval. Having N uniform random variables  $x_i \in [a,b)$ with probability distrubution function, PDF $\frac{1}{b-a}$ the Monte-Carlo approximation of $F$ is
+\begin{equation}
+  I \approx \langle I \rangle = \frac{1}{N}\sum_{i=0}^N\frac{f(\mathbf x_i)}{p(\mathbf x_i)},
+  \label{eq:genapproxMC}
+\end{equation}
 
+where  $N$ is the number of sampled values.
 
-\[\langle F^N \rangle = (b-a)\frac{1}{N-1} \sum_{i=0}^{N}  f(x_i)\]
+\subsubsection{Naïve approach (uniform PDF)}
+To solve our six-dimensional integral, we first take the naïve approach and distribute our randomly chosen variables on the uniform distribution
 
-\[x_i\] is constructed
+\begin{equation*}
+  \theta (x) = \bigg\{ \begin{matrix}\frac{1}{b-a}, & \text{for}\ x\in[a,b] \\ 0 & \text{else}\end{matrix},
+\end{equation*}
 
+and keep our variables $\mathbf r_1$ and $\mathbf r_2$ in cartesian coordinates.
 
 \end{document}
