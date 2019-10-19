@@ -1,9 +1,0 @@
-[0] Config.pm:304> INFO - This is Biber 2.12
-[0] Config.pm:307> INFO - Logfile is 'c:\Users\knut-\OneDrive\UiO\FYS3150\Projects\Project-3\doc\latex\theory.blg'
-[38] biber-MSWIN32:315> INFO - === 
-[77] Biber.pm:371> INFO - Reading 'c:\Users\knut-\OneDrive\UiO\FYS3150\Projects\Project-3\doc\latex\theory.bcf'
-[199] Biber.pm:889> INFO - Found 0 citekeys in bib section 0
-[206] Utils.pm:193> WARN - The file 'c:\Users\knut-\OneDrive\UiO\FYS3150\Projects\Project-3\doc\latex\theory.bcf' does not contain any citations!
-[216] bbl.pm:636> INFO - Writing 'c:\Users\knut-\OneDrive\UiO\FYS3150\Projects\Project-3\doc\latex\theory.bbl' with encoding 'UTF-8'
-[216] bbl.pm:739> INFO - Output to c:\Users\knut-\OneDrive\UiO\FYS3150\Projects\Project-3\doc\latex\theory.bbl
-[218] Biber.pm:110> INFO - WARNINGS: 1

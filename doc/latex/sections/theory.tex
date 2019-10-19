@@ -14,13 +14,15 @@ Where $\alpha$ is a parameter set to 2, due to the two electrons, and the length
 For our system with two electrons, we have the product of the two $1s$ wave functions defined as
 \[\Psi(\vec{r}_1, \vec{r}_2) = e^{-\alpha(r_1 + r_2)}\]
 
-This leads to the integral, REFERANCE, which will be solved nummericaly with the three different methods mentioned earlier.
+This leads to the integral (\ref{eq:int-to-solve}), which will be solved nummericaly with the three different methods mentioned earlier.
 The value of the integral corresponds to the energy between the two electrons repelling each other due to Columb interactions.
 
-\[\langle \frac{1}{|\vec{r}_1 - \vec{r}_2|} \rangle = \int_{\infty}^\infty d\vec{r}_1 d\vec{r}_2 e^{-2\alpha(r_1 + r_2)} \frac{1}{\vec{r_1} - \vec{r_2}}\]
-\vspace{1cm}
+\begin{equation}
+  \langle \frac{1}{|\vec{r}_1 - \vec{r}_2|} \rangle = \int_{\infty}^\infty d\vec{r}_1 d\vec{r}_2 e^{-2\alpha(r_1 + r_2)} \frac{1}{\vec{r}_1 - \vec{r}_2}
+  \label{eq:int-to-solve}
+\end{equation}
 
-The analytical result is $5\pi/16^2$.
+\vspace{1cm}The analytical result is $5\pi/16^2$.
 
 \subsection{Gaussian Quadrature} \label{sec:GQ}
 The main idea of Gaussian quadrature is to integrate over a set of points $x_i$ not equally spaced with weights $w_i$, which are calculated in  the program Gauleg.cpp and Gauss Legendre.cpp). The weights are found throug ortogonal polynomials(Laguerre and Legendre polynomials) in a set interval. The points $x_i$ are chosen in a optimal sense and lie in the interval.
@@ -32,7 +34,7 @@ For a more detalied derivation and explenation?? of Gaussian qudrature see (Hjor
 
 
 \subsubsection{Gauss-Legendre}\label{sec:GLQ}
-Using Gauss-Legendre quadrature with Legendre polynomials will make it possible to utilize the integral numerically. The first step is to change the integration limits from  $-\infty$ and $\infty$ to $-\lambda$ and $\lambda$. The $\lambda$'s are found by inserting it for $r_i$ in the expression $e^{-\alpha r_i}$ because $r_i \approx \lambda$ when $e^{-\alpha r_i} \approx 0$. From figure \ref{fig:expfunc} $\lambda \in [-5,5]$ is therefor a good approximation for the integration limits.
+Using Gauss-Legendre quadrature with Legendre polynomials will make it possible to utilize the integral numerically. The first step is to change the integration limits from  $-\infty$ and $\infty$ to $-\lambda$ and $\lambda$. The $\lambda$'s are found by inserting it for $r_i$ in the expression $e^{-\alpha r_i}$ because $r_i \approx \lambda$ when $e^{-\alpha r_i} \approx 0$. As we see from figure \ref{fig:expfunc}, $\lambda \in [-5,5]$ is therefore a good approximation for the integration limits.
 
 \begin{figure}
   \includegraphics[width=\textwidth]{../img/expfunc_plot.png}
@@ -106,6 +108,12 @@ To solve our six-dimensional integral, we first take the naïve approach and dis
   \theta (x) = \bigg\{ \begin{matrix}\frac{1}{b-a}, & \text{for}\ x\in[a,b] \\ 0 & \text{else}\end{matrix},
 \end{equation*}
 
-and keep our variables $\mathbf r_1$ and $\mathbf r_2$ in cartesian coordinates.
+and keep our variables $\mathbf r_1$ and $\mathbf r_2$ in cartesian coordinates. Putting the uniform distribution into (\ref{eq:genapproxMC}), we get the naïve approximation of an integral:
+
+\begin{equation}
+  \langle I\rangle = \frac{V}{N}\sum_{i=0}^Nf(\mathbf x_i)
+\end{equation}
+
+Here $V$ is the integration volume (for $d$ dimensions in cartesian coordinates $V=(b-a)^d$, with $b$ and $a$ being the integration limits for each dimension).
 
 \end{document}
