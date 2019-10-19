@@ -8,7 +8,7 @@ $$N \in [-5,5]$$
 
 \begin{tabular}{ |p{1cm}|p{3cm}|p{3cm}|}
  \hline
- \multicolumn{4}{|c}{Legandre} \\
+ \multicolumn{3}{|c}{Legandre} \\
  \hline
        N   & Value & Error\\
  \hline
@@ -23,7 +23,7 @@ $$N \in [-5,5]$$
 
 \begin{tabular}{ |p{1cm}|p{3cm}|p{3cm}|}
  \hline
- \multicolumn{4}{|c}{Laguerre} \\
+ \multicolumn{3}{|c}{Laguerre} \\
  \hline
        N   & Value & Error\\
  \hline
@@ -35,6 +35,18 @@ $$N \in [-5,5]$$
 
  \hline
 \end{tabular}
+
+
+\subsection{Paralellization with openMP} \label{sec:res-paralell}
+\begin{table}[]
+    \begin{tabular}{lllll}
+
+        Compile flags & -O3 -fopenmp & -O3 & -fopenmp & no optimzation \\
+        \hline
+        Naive MC      & 12s          & 31s &          & 173s           \\
+        Improved MC   & 15s          & 38s &          & 200s
+    \end{tabular}
+\end{table}
 
 
 \end{document}
