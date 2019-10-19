@@ -5,8 +5,8 @@
 
 
 $$N \in [-5,5]$$
-
-\begin{tabular}{ |p{1cm}|p{3cm}|p{3cm}|}
+\begin{table}
+  \begin{tabular}{ |p{1cm}|p{3cm}|p{3cm}|}
  \hline
  \multicolumn{3}{|c}{Legandre} \\
  \hline
@@ -18,9 +18,11 @@ $$N \in [-5,5]$$
  25 & 0.240135 & 0.047370\\
  27 & 0.229623 & 0.036858\\
  \hline
-\end{tabular}
+ \end{tabular}
+ \caption{Fill me in!}
+\end{table}
 
-
+\begin{table}
 \begin{tabular}{ |p{1cm}|p{3cm}|p{3cm}|}
  \hline
  \multicolumn{3}{|c}{Laguerre} \\
@@ -35,17 +37,20 @@ $$N \in [-5,5]$$
 
  \hline
 \end{tabular}
+\caption{Fill me in!}
+\end{table}
 
-
+\FloatBarrier
 \subsection{Paralellization with openMP} \label{sec:res-paralell}
-\begin{table}[]
-    \begin{tabular}{lllll}
+\begin{table}[!h]
+    \begin{tabular}{ l | l l l l }
 
-        Compile flags & -O3 -fopenmp & -O3 & -fopenmp & no optimzation \\
+        Compile flags & -O3 -fopenMP \hspace{5mm} & -O3 \hspace{1cm} & -fopenmp\hspace{5mm} & no optimzation \\
         \hline
-        Naive MC      & 12s          & 31s &          & 173s           \\
-        Improved MC   & 15s          & 38s &          & 200s
+        Naive MC      & 12s          & 31s &    71s      & 173s           \\
+        Improved MC   & 15s          & 38s &     79s     & 200s
     \end{tabular}
+    \caption{Shows the time spent on the same calculations with different compile parameters.($N = 10^8, \lambda = 5$)}
 \end{table}
 
 
