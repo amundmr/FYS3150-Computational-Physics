@@ -41,7 +41,11 @@ $$N \in [-5,5]$$
 \end{table}
 
 \FloatBarrier
-\subsection{Paralellization with openMP} \label{sec:res-paralell}
+\subsection{Paralellization} \label{sec:res-paralell}
+Our paralellization results was achieved using a quad core Intel Core i5-8250U processor with 6MB cache at 1.6GHz base clock, which boosted to 3.4GHz during testing. Thermal throttling was avoided.
+The memory was 4GB 1866MHz LPDDR3 soldered on board.
+
+We also ran this test on an octa-core processor with memory of 8GB 1866MHz, and achieved no noticable speedup compared to the abovementioned computer.
 \begin{table}[!h]
     \begin{tabular}{ l | l l l l }
 
@@ -50,7 +54,7 @@ $$N \in [-5,5]$$
         Naive MC      & 12s          & 31s &    71s      & 173s           \\
         Improved MC   & 15s          & 38s &     79s     & 200s
     \end{tabular}
-    \caption{Shows the time spent on the same calculations with different compile parameters.($N = 10^8, \lambda = 5$)}
+    \caption{Shows the time spent on the same calculations with different compile parameters on a quad core processor.($N = 10^8, \lambda = 5$)} \label{tab:res-paralell}
 \end{table}
 
 
