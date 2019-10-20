@@ -13,6 +13,7 @@ double naiveMC(double a,double b,int MCsamples){
     mt19937::result_type seed = time(0);//+omp_get_thread_num();
     auto interval_rand = bind(uniform_real_distribution<double>(a,b),mt19937(seed));
 
+    //State paralellization of for loop, 
     #pragma omp for reduction(+:mc) reduction(+:var)
     for ( int i=0 ; i<MCsamples ; i++){
 
@@ -27,7 +28,7 @@ double naiveMC(double a,double b,int MCsamples){
     }
     // End paralellization here
     }
-    
+
     // Find mean.
     mc /= MCsamples;
     // Find variance
