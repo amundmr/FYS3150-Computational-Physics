@@ -144,14 +144,14 @@ INPUT c:/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT c:/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT c:/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT c:/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT c:/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT c:/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT c:/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
+INPUT c:/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
+INPUT c:/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/img/expfunc_plot.png
 INPUT c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/img/expfunc_plot.png
 INPUT c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/img/expfunc_plot.png
-INPUT c:/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
-INPUT c:/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
 INPUT c:/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 INPUT c:/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 INPUT c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.aux

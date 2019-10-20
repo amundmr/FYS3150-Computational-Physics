@@ -1,19 +1,19 @@
 # Fdb version 3
-["biber c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory"] 1571573573 "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.bcf" "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.bbl" "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory" 1571573679
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.bcf" 1571573640 91083 dfc8b853125a1c9920a824415d2ba875 ""
+["biber c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory"] 1571574766 "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.bcf" "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.bbl" "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory" 1571575817
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.bcf" 1571575817 91083 dfc8b853125a1c9920a824415d2ba875 ""
   "c:\Users\knut-\OneDrive\UiO\FYS3150\Projects\Project-3\doc\latex\/./bib/references.bib" 1571502550 1946 fe91f71430af55ef7e938aa94d823e7a ""
-  "c:\Users\knut-\OneDrive\UiO\FYS3150\Projects\Project-3\doc\latex\theory.bcf" 1571573640 91083 dfc8b853125a1c9920a824415d2ba875 ""
+  "c:\Users\knut-\OneDrive\UiO\FYS3150\Projects\Project-3\doc\latex\theory.bcf" 1571575817 91083 dfc8b853125a1c9920a824415d2ba875 ""
   (generated)
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.bbl"
   "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.blg"
-["pdflatex"] 1571573636 "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/sections/theory.tex" "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.pdf" "theory" 1571573679
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.bbl"
+["pdflatex"] 1571575814 "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/sections/theory.tex" "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.pdf" "theory" 1571575817
   "../main.tex" 1571573522 878 12d2c50967e29b18b8c5c83da4dabdad ""
   "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/img/expfunc_plot.png" 1571573187 22968 4beb67f8f8bd6362ebb65bae74eb835c ""
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/sections/theory.tex" 1571573635 7318 f421c201fe2458dd5b1733726e26e139 ""
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.aux" 1571573640 3736 3502922d5dbb39dba590204659e0d3ac ""
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.bbl" 1571573579 1753 8ee56aecceffe5d3be5ccdc6a7fce1fc "biber c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory"
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.out" 1571573640 643 7ee60553c6c8514abd2860b9f8589936 ""
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.run.xml" 1571573640 2325 97fdfce98d60e99da76a18cc79e7c3ae ""
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/sections/theory.tex" 1571575812 8263 6a405a3b66765c5a089022114f275c27 ""
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.aux" 1571575817 4214 5d7faa9635bbfcbc8f21ba15591ce485 ""
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.bbl" 1571574771 1753 8ee56aecceffe5d3be5ccdc6a7fce1fc "biber c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory"
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.out" 1571575817 741 79388132d3b4ac9570c6785cd445905d ""
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.run.xml" 1571575817 2325 97fdfce98d60e99da76a18cc79e7c3ae ""
   "c:/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1554320611 3332 103109f5612ad95229751940c61aada0 ""
   "c:/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1554319202 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1554319792 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -98,11 +98,11 @@
   "c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1554323398 3265573 655ac40406f2c37c0d9078d533adef20 ""
   "c:/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1554323534 4223236 e78c56de74948d2391f3acfea01f277f ""
   "c:/texlive/2018/texmf.cnf" 1554323363 673 4ae7b2f49cee444c5343a45b5d0f169c ""
-  "theory.tex" 1571573635 7318 f421c201fe2458dd5b1733726e26e139 ""
+  "theory.tex" 1571575812 8263 6a405a3b66765c5a089022114f275c27 ""
   (generated)
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.run.xml"
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.bcf"
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.pdf"
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.log"
   "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.out"
   "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.aux"
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.pdf"
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.bcf"
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.log"
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.run.xml"

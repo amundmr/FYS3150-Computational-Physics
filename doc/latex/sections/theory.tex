@@ -21,7 +21,7 @@ This leads to the integral which will be solved nummericaly with the  different 
 The value of the integral corresponds to the expectation value of the  energy between the two electrons repelling each other due to Columb interactions.
 
 \begin{equation}
-  \langle \frac{1}{|\vec{r}_1 - \vec{r}_2|} \rangle = \int_{\infty}^\infty d\vec{r}_1 d\vec{r}_2 e^{-2\alpha(r_1 + r_2)} \frac{1}{\vec{r_1} - \vec{r_2}}
+  \langle \frac{1}{|\mathbf{r}_1 - \mathbf{r}_2|} \rangle = \int_{\infty}^\infty d\mathbf{r}_1 d\mathbf{r}_2 e^{-2\alpha(r_1 + r_2)} \frac{1}{|\mathbf{r}_1 - \mathbf{r}_2|}
   \label{eq:int-to-solve}
 \end{equation}
 \vspace{1cm}
@@ -105,7 +105,8 @@ where $\mathbf{x}$ is in the domain $D$. This integral can be approximated by us
 
 where  $N$ is the number of sampled values.
 
-\subsubsection{Naïve approach (uniform PDF)}
+% ---------------------------------------------------------------
+\subsubsection{Naïve approach (uniform PDF)} \label{sec:naiveMC}
 To solve our six-dimensional integral, we first take the naïve approach and distribute our randomly chosen variables on the uniform distribution
 
 \begin{equation*}
@@ -120,7 +121,20 @@ and keep our variables $\mathbf r_1$ and $\mathbf r_2$ in cartesian coordinates.
 
 Here $V$ is the integration volume (for $d$ dimensions in cartesian coordinates $V=(b-a)^d$, with $b$ and $a$ being the integration limits for each dimension). Going back to our original integral (\ref{eq:int-to-solve}), our approximation of it using this method is
 
-\subsubsection{Paralellization} \label{sec:theory-Paralellization}
+\begin{equation}
+  \langle I \rangle = \frac{(b-a)^2}{N}\sum_{i=0}^Ne^{-2\alpha(r_{1,i}+r_{2,i})}\frac{1}{|\mathbf r_{1,i}-\mathbf r_{2,i}|}
+  \label{eq:naive-approx}
+\end{equation}
+
+with $b=a=\infty$, or our approximation of infinity, namely $\lambda = 5$ (as found in section \ref{sec:GLQ}).
+
+% ------------------------------------------------------------------------------------
+\subsubsection{Importance sampling (exponential distribution)} \label{sec:improvedMC}
+
+As mentioned in section \ref{sec:GLQ}, our integrand quickly goes to zero. This means that inserting bigger approximations for infinity, $\lambda$, requires a greater number of sampling points, since we are not sure if the random numbers will give us the significant values of the integrand.
+
+% ---------------------------------------------------------------
+\subsection{Paralellization} \label{sec:theory-Paralellization}
 
 To run the computations faster, openMP will be used to paralellize the code. This shares the workload across multiple processor threads and results in a substantional decrease in time spent for the same amount of operations. Some important remarks when doing Monte-Carlo integration in paralell is:
 \begin{itemize}
