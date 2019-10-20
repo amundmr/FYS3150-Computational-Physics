@@ -6,6 +6,7 @@
 
 $$N \in [-5,5]$$
 \begin{table}
+\begin{center}
   \begin{tabular}{ |p{1cm}|p{3cm}|p{3cm}|}
  \hline
  \multicolumn{3}{|c}{Legandre} \\
@@ -20,9 +21,11 @@ $$N \in [-5,5]$$
  \hline
  \end{tabular}
  \caption{Fill me in!}
+ \end{center}
 \end{table}
 
 \begin{table}
+\begin{center}
 \begin{tabular}{ |p{1cm}|p{3cm}|p{3cm}|}
  \hline
  \multicolumn{3}{|c}{Laguerre} \\
@@ -38,19 +41,21 @@ $$N \in [-5,5]$$
  \hline
 \end{tabular}
 \caption{Fill me in!}
+\end{center}
 \end{table}
 
 \FloatBarrier
 \subsection{Paralellization} \label{sec:res-paralell}
 Our paralellization results was achieved using a quad core Intel Core i5-8250U processor with 6MB cache at 1.6GHz base clock, which boosted to 3.4GHz during testing. Thermal throttling was avoided.
-The memory was 4GB 1866MHz LPDDR3 soldered on board.
+The memory was 4GB 1866MHz LPDDR3 soldered on board. See table \ref{tab:res-paralell}
 
-We also ran this test on an octa-core processor with memory of 8GB 1866MHz, and achieved no noticable speedup compared to the abovementioned computer.
+We also ran this test on an octa-core processor with memory of 8GB 1866MHz, and achieved no noticable speedup compared to the abovementioned computer. See table \ref{tab:res-paralell-octacore}
 
 $\vspace{0.1cm}$
 
 For runtime imputs the number of samples was set to $10^8$, with an approximation of infity of $\lambda = 5$.
 \begin{table}[!h]
+\begin{center}
     \begin{tabular}{ l | l l l l }
 
         Compile flags & -O3 -fopenMP \hspace{5mm} & -O3 \hspace{1cm} & -fopenmp\hspace{5mm} & no optimzation \\
@@ -59,6 +64,20 @@ For runtime imputs the number of samples was set to $10^8$, with an approximatio
         Improved MC   & 15s          & 38s &     79s     & 200s
     \end{tabular}
     \caption{Shows the time spent on the same calculations with different compile parameters on a quad core processor.($N = 10^8, \lambda = 5$)} \label{tab:res-paralell}
+    \end{center}
+\end{table}
+
+\begin{table}[!h]
+\begin{center}
+    \begin{tabular}{ l | l }
+
+        Compile flags & -O3 -fopenMP \\
+        \hline
+        Naive MC      & 12s      \\
+        Improved MC   & 15s
+    \end{tabular}
+    \caption{Shows the time spent on the Monte-Carlo calculations on an octa-core system.($N = 10^8, \lambda = 5$)} \label{tab:res-paralell-octacore}
+    \end{center}
 \end{table}
 
 
