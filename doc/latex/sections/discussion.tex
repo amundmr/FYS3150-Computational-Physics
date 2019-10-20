@@ -4,7 +4,7 @@
 
 \section{Discussion}
 \subsection{Paralellization}
-From figure \ref{tab:res-paralell} it is easy to understand the impact of correct optimization. Not only was the paralellization of the code a big time-saver but also the vectorization flag (-O3) made a really dramatic impact.\\
+From table \ref{tab:res-paralell} it is easy to understand the impact of correct optimization. Not only was the paralellization of the code a big time-saver but also the vectorization flag (-O3) made a really dramatic impact.\\
 
 Both from no optimization, to paralellization, and from vectorization to vectorization and paralellization, the time spent is halved. However, this was paralellized over four cores, so shouldn't the time be one fourth of the original? The bottleneck is probably memory speed, as we ran the same calculations on a octacore processor with more capacity, but same frequency RAM, and achieved the same results.\\
 
