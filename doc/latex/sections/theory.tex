@@ -131,7 +131,24 @@ with $\mathbf r_{1/2,i}$ being randomly chosen vectors and $b=a=\infty$, or our 
 % ------------------------------------------------------------------------------------
 \subsubsection{Importance sampling (exponential distribution)} \label{sec:improvedMC}
 
-As mentioned in section \ref{sec:GLQ}, our integrand quickly goes to zero. This means that inserting bigger approximations for infinity, $\lambda$, requires a greater number of sampling points, since we are not sure if the random numbers will give us the significant values of the integrand. A sensible way around this is to distribute the randomly chosen variables on a probability distribution matching the function we're integrating. The quite obvious choice here is the exponential distribution $\lambda e^{-\lambda x}$.
+As mentioned in section \ref{sec:GLQ}, our integrand quickly goes to zero. This means that inserting bigger approximations for infinity, $\lambda$, requires a greater number of sampling points, since we are not sure if the random numbers will give us the significant values of the integrand. \\
+
+A sensible way around this is to distribute the randomly chosen variables on a probability distribution matching the function we're integrating. The quite obvious choice here is the exponential distribution $\lambda e^{-\lambda x}$. Inserting it into the general Monte Carlo integral approximation (equation (\ref{eq:genapproxMC})), we get
+
+\begin{equation*}
+  \langle I \rangle =\frac{V}{N}\sum_{i=0}^N\frac{e^{-2\alpha(r_{1,i}+r_{2,i})}}{\lambda e^{-\lambda(r_{1,i}+r_{2,i})}}\frac{1}{|\mathbf r_{1,i}-\mathbf r_{2,i}|}=\frac{V}{4N}\sum_{i=0}^N\frac{1}{|\mathbf r_{1,i} - \mathbf r_{2,i}|}.
+\end{equation*}
+
+Here we put $\lambda=4$, since $\alpha=2$. This distribution does however not apply well with negative numbers, and thus we have to change into spherical coordinates. Our approximated integral now reads:
+
+\begin{equation}
+  \langle I \rangle =\frac{\pi^4}{4N}\sum_{i=0}^N\frac{r_1^2 r_2^2}{\sqrt{r_1^2+r_2^2-2r_1r_2\cos \theta_1 \cos \theta_2 +\sqrt{1-\cos \theta_1^2}\sqrt{1-\cos \theta_2^2}\cos (\phi_1-\phi2)}}
+  \label{eq:improved-approx}
+\end{equation}
+
+%---------------------------------------------
+\subsection{Standard deviation}\label{sec:std}
+
 
 % ---------------------------------------------------------------
 \subsection{Paralellization} \label{sec:theory-Paralellization}
