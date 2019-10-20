@@ -1,5 +1,5 @@
 CC = g++
-CCFLAGS = -larmadillo -lblas -llapack -std=c++11   -fopenmp #-O3
+CCFLAGS = -larmadillo -lblas -llapack -std=c++11   -fopenmp -O3
 DEPS = ./include/mclib.h
 OBJ = ./obj/input-func.o ./obj/naiveMC.o ./obj/input-func_sphere.o ./obj/improvedMC.o
 

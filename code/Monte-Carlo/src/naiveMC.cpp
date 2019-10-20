@@ -10,7 +10,7 @@ double naiveMC(double a,double b,int MCsamples){
     {
     vec r1 = zeros<vec>(3); vec r2 = zeros<vec>(3);
     // Initialize RNG (Mersenne Twister) in our interval
-    mt19937::result_type seed = time(0);//+omp_get_thread_num();  //Include last command to get different seed for each thread
+    mt19937::result_type seed = time(0)+omp_get_thread_num();  //Include last command to get different seed for each thread
     auto interval_rand = bind(uniform_real_distribution<double>(a,b),mt19937(seed));
 
     //State paralellization of for loop, keeping mc and var private for each thread to sum invidivually, and then globally at end of loop
