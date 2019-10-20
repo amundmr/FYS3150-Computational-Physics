@@ -126,12 +126,12 @@ Here $V$ is the integration volume (for $d$ dimensions in cartesian coordinates 
   \label{eq:naive-approx}
 \end{equation}
 
-with $b=a=\infty$, or our approximation of infinity, namely $\lambda = 5$ (as found in section \ref{sec:GLQ}).
+with $\mathbf r_{1/2,i}$ being randomly chosen vectors and $b=a=\infty$, or our approximation of infinity, namely $\lambda = 5$ (as found in section \ref{sec:GLQ}).
 
 % ------------------------------------------------------------------------------------
 \subsubsection{Importance sampling (exponential distribution)} \label{sec:improvedMC}
 
-As mentioned in section \ref{sec:GLQ}, our integrand quickly goes to zero. This means that inserting bigger approximations for infinity, $\lambda$, requires a greater number of sampling points, since we are not sure if the random numbers will give us the significant values of the integrand.
+As mentioned in section \ref{sec:GLQ}, our integrand quickly goes to zero. This means that inserting bigger approximations for infinity, $\lambda$, requires a greater number of sampling points, since we are not sure if the random numbers will give us the significant values of the integrand. A sensible way around this is to distribute the randomly chosen variables on a probability distribution matching the function we're integrating. The quite obvious choice here is the exponential distribution $\lambda e^{-\lambda x}$.
 
 % ---------------------------------------------------------------
 \subsection{Paralellization} \label{sec:theory-Paralellization}
