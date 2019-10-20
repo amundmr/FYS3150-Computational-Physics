@@ -20,7 +20,10 @@ For our system with two electrons, we have the product of the two $1s$ wave func
 This leads to the integral which will be solved nummericaly with the  different methods mentioned earlier.
 The value of the integral corresponds to the expectation value of the  energy between the two electrons repelling each other due to Columb interactions.
 
-\[\langle \frac{1}{|\vec{r}_1 - \vec{r}_2|} \rangle = \int_{\infty}^\infty d\vec{r}_1 d\vec{r}_2 e^{-2\alpha(r_1 + r_2)} \frac{1}{\vec{r_1} - \vec{r_2}}\]
+\begin{equation}
+  \langle \frac{1}{|\vec{r}_1 - \vec{r}_2|} \rangle = \int_{\infty}^\infty d\vec{r}_1 d\vec{r}_2 e^{-2\alpha(r_1 + r_2)} \frac{1}{\vec{r_1} - \vec{r_2}}
+  \label{eq:int-to-solve}
+\end{equation}
 \vspace{1cm}
 
 This is the integration that will be performed numerically in multiple ways in this paper. The analytical result is $5\pi/16^2$.
@@ -79,7 +82,7 @@ or the recursive relation:
   L_1(x) &= 1 - x\\
   L_{n+1}(x) &= \frac{(2n + 1 - x)L_n(x) - nL_{n-1}(x)}{n+1}\\
 \end{align*}
-\ref{ref:GL-quad_wiki}
+\ref{sec:GLQ}
 
 
 \subsection{Monte Carlo}

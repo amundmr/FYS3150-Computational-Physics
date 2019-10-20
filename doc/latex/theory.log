@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.4.3)  20 OCT 2019 14:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.4.3)  20 OCT 2019 14:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -463,18 +463,32 @@ Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
  (c:/texlive/2018/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
+)) (c:/texlive/2018/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2018/04/13 v5.2d context-sensitive quotations (JAW)
+\csq@reset=\count320
+\csq@gtype=\count321
+\csq@glevel=\count322
+\csq@qlevel=\count323
+\csq@maxlvl=\count324
+\csq@tshold=\count325
+\csq@ltx@everypar=\toks24
+ (c:/texlive/2018/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2018/04/13 v5.2d csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+ (c:/texlive/2018/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
 ))
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
  (c:/texlive/2018/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
 )
-
-Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
-(biblatex)                Loading 'csquotes' recommended.
-
-\@quotelevel=\count320
-\@quotereset=\count321
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'english'.
 )) (c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.aux)
 \openout1 = `theory.aux'.
 
@@ -494,17 +508,17 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
  (c:/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count322
+\scratchcounter=\count326
 \scratchdimen=\dimen120
 \scratchbox=\box29
-\nofMPsegments=\count323
-\nofMParguments=\count324
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count325
+\nofMPsegments=\count327
+\nofMParguments=\count328
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count329
 \MPscratchDim=\dimen121
-\MPnumerator=\count326
-\makeMPintoPDFobject=\count327
-\everyMPtoPDFconversion=\toks25
+\MPnumerator=\count330
+\makeMPintoPDFobject=\count331
+\everyMPtoPDFconversion=\toks26
 ) (c:/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  (c:/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -524,7 +538,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count328
+\c@section@level=\count332
 )
 LaTeX Info: Redefining \ref on input line 3.
 LaTeX Info: Redefining \pageref on input line 3.
@@ -544,93 +558,83 @@ Package biblatex Info: ... file 'theory.bbl' found.
 Package biblatex Info: Reference section=0 on input line 3.
 Package biblatex Info: Reference segment=0 on input line 3.
 
-Overfull \hbox (88.15375pt too wide) in paragraph at lines 29--30
+Overfull \hbox (88.15375pt too wide) in paragraph at lines 32--33
 \OT1/cmr/m/n/10 equally spaced with weights $\OML/cmm/m/it/10 w[]$\OT1/cmr/m/n/10 , which are cal-cu-lated in []\OT1/cmtt/m/n/10 /code/Gauss-Quadrature/src/gauleg.cpp[]\OT1/cmr/m/n/10 .
  []
 
 [1
 
 {c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<img/expfunc_plot.png, id=60, 408.3255pt x 325.9377pt>
+<img/expfunc_plot.png, id=61, 408.3255pt x 325.9377pt>
 File: img/expfunc_plot.png Graphic file (type png)
 <use img/expfunc_plot.png>
-Package pdftex.def Info: img/expfunc_plot.png  used on input line 41.
+Package pdftex.def Info: img/expfunc_plot.png  used on input line 44.
 (pdftex.def)             Requested size: 408.3245pt x 325.93689pt.
 
-Overfull \hbox (63.3245pt too wide) in paragraph at lines 41--42
+Overfull \hbox (63.3245pt too wide) in paragraph at lines 44--45
 [][] 
  []
 
 
-Overfull \hbox (78.38753pt too wide) in paragraph at lines 48--49
+Overfull \hbox (78.38753pt too wide) in paragraph at lines 51--52
 []\OT1/cmr/m/n/10 The weights and mesh points are com-puted us-ing []\OT1/cmtt/m/n/10 /code/Gauss-Quadrature/src/gauleg.cpp[]\OT1/cmr/m/n/10 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--55
+Underfull \hbox (badness 10000) in paragraph at lines 56--58
 
  []
 
 [2 <c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/img/expfunc_plot.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 64--66
+Underfull \hbox (badness 10000) in paragraph at lines 67--69
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--72
+Underfull \hbox (badness 10000) in paragraph at lines 72--75
 
  []
 
 
-LaTeX Warning: Reference `ref:GL-quad_wiki' on page 3 undefined on input line 82.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
 [3]
-
-LaTeX Warning: Reference `eq:int-to-solve' on page 4 undefined on input line 118.
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 124.
-(c:/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 127.
+ (c:/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 124.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 127.
  [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 132.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 135.
  [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 132.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 135.
  (c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 132.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 132.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 135.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 135.
 Package rerunfilecheck Info: File `theory.out' has not changed.
 (rerunfilecheck)             Checksum: 7EE60553C6C8514ABD2860B9F8589936;643.
-
-
-LaTeX Warning: There were undefined references.
-
 Package logreq Info: Writing requests to 'theory.run.xml'.
 \openout1 = `theory.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13066 strings out of 492616
- 219279 string characters out of 6132769
- 686409 words of memory out of 5000000
- 16833 multiletter control sequences out of 15000+600000
+ 13582 strings out of 492616
+ 227741 string characters out of 6132769
+ 704365 words of memory out of 5000000
+ 17340 multiletter control sequences out of 15000+600000
  6399 words of font info for 24 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,9n,39p,837b,1663s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{cite.0@MortenMC2019} has been referenced but does not exist, replaced by a fixed one
 
 <c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.pdf (5 pages, 165084 bytes).
+Output written on c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/theory.pdf (5 pages, 164954 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 109 compressed objects within 2 object streams
- 19 named destinations out of 1000 (max. 500000)
+ 135 PDF objects out of 1000 (max. 8388607)
+ 112 compressed objects within 2 object streams
+ 20 named destinations out of 1000 (max. 500000)
  78 words of extra memory for PDF output out of 10000 (max. 10000000)
 
