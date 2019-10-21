@@ -49,6 +49,56 @@ Improving our algorithm using Legandre polynomials for angles and Laguerre polyn
 \end{table}
 
 \FloatBarrier
+
+%------------------------
+\subsection{Monte Carlo}
+\subsubsection{Naïve approach}
+The results from our Monte Carlo integration program (\href{https://github.com/kmaasrud/Project-3/blob/master/code/Monte-Carlo/main.exe}{main.exe}), are listed in this table:
+
+\begin{table}[h!]
+  \begin{center}
+    \begin{tabular}{ |p{1cm}|p{4cm}|p{3cm}|}
+     \hline
+     \multicolumn{3}{|c|}{Naïve Monte Carlo} \\
+     \hline
+           N   & Approximate integral & Error\\
+     \hline
+     $10^5$ &  0.16799913 &  ?\\
+     $10^6$ &  0.14673294 &  ?\\
+     $10^7$ &  0.21039322 &  ?\\
+     $10^8$ &  0.1898926 &  ?\\
+     $10^9$ &  0.19482898 &  ?\\
+    
+     \hline
+    \end{tabular}
+    \caption{Results from running Monte Carlo with cartesian coordinates and integration limits $x\in[-5,5]$ - our approximation of infinity.}
+  \end{center}
+\end{table}
+
+%------------------------------------
+\subsubsection{Importance sampling}
+The results from our Monte Carlo integration program (\href{https://github.com/kmaasrud/Project-3/blob/master/code/Monte-Carlo/main.exe}{main.exe}), are listed in this table:
+
+\begin{table}[h!]
+    \begin{center}
+      \begin{tabular}{ |p{1cm}|p{4cm}|p{3cm}|}
+       \hline
+       \multicolumn{3}{|c|}{Improved Monte Carlo} \\
+       \hline
+             N   & Approximate integral & Error\\
+       \hline
+       $10^5$ &  0.21375956 &  0.0684499 \\
+       $10^6$ &  0.1898093 &  0.0414734 \\
+       $10^7$ &  0.19337239 &  0.00909323 \\
+       $10^8$ &  0.20778867 &  0.00601385\\
+       $10^9$ &  0.21422913 &  0.00256967\\
+      
+       \hline
+      \end{tabular}
+      \caption{Results from running Monte Carlo with importance sampling along the exponential distribution and using spherical coordinates.}
+    \end{center}
+  \end{table}
+
 \subsection{Paralellization} \label{sec:res-paralell}
 Our paralellization results was achieved using a quad core Intel Core i5-8250U processor with 6MB cache at 1.6GHz base clock, which boosted to 3.4GHz during testing. Thermal throttling was avoided.
 The memory was 4GB 1866MHz LPDDR3 soldered on board. See table \ref{tab:res-paralell}
