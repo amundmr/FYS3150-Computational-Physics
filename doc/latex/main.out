@@ -1,0 +1,23 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Theory}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Wavefunction of Helium}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Gaussian Quadrature}{section.2}% 4
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Gauss-Legendre}{subsection.2.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Improved Gauss-Quadrature- Laguerre}{subsection.2.2}% 6
+\BOOKMARK [2][-]{subsection.2.3}{Monte Carlo}{section.2}% 7
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Generalized}{subsection.2.3}% 8
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Na\357ve approach \(uniform PDF\)}{subsection.2.3}% 9
+\BOOKMARK [3][-]{subsubsection.2.3.3}{Importance sampling \(exponential distribution\)}{subsection.2.3}% 10
+\BOOKMARK [2][-]{subsection.2.4}{Standard deviation}{section.2}% 11
+\BOOKMARK [2][-]{subsection.2.5}{Paralellization}{section.2}% 12
+\BOOKMARK [1][-]{section.3}{Results}{}% 13
+\BOOKMARK [2][-]{subsection.3.1}{Gauss-Legendre}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.2}{Gauss-Laguerre}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.3}{Monte Carlo}{section.3}% 16
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Na\357ve approach}{subsection.3.3}% 17
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Importance sampling}{subsection.3.3}% 18
+\BOOKMARK [2][-]{subsection.3.4}{Paralellization}{section.3}% 19
+\BOOKMARK [1][-]{section.4}{Discussion}{}% 20
+\BOOKMARK [2][-]{subsection.4.1}{Monte Carlo}{section.4}% 21
+\BOOKMARK [2][-]{subsection.4.2}{Parallelization}{section.4}% 22
+\BOOKMARK [1][-]{section.5}{Conclusion}{}% 23
