@@ -5,7 +5,7 @@
 
 Solving our integral with Legendre polynomials gives unstable results for $N \in [-5,5]$ as seen in table \ref{tab:res-gauleg}. Though with a carefull choise of N = 27 and integration limits a = -2.9 and b = 2.9 our results are precice with 4 leading digits after the decimal point.
 
-\begin{table}[h!]\label{tab:res-gauleg}
+\begin{table}[h!]
 \begin{center}
   \begin{tabular}{ |p{1cm}|p{4cm}|p{3cm}|}
  \hline
@@ -22,13 +22,14 @@ Solving our integral with Legendre polynomials gives unstable results for $N \in
  \hline
  \end{tabular}
  \caption{Values of the integral for different N's, calculated with Gauss-Legendre. Integration limits are $x\in[-5,5]$. *: Special case with integration limits $x\in[-2.9,2.9]$}
+ \label{tab:res-gauleg}
  \end{center}
 \end{table}
 
 \subsection{Gauss-Laguerre} \label{sec:QMProbresults}
 Improving our algorithm using Legendre polynomials for angles and Laguerre polynomials for radial parts improved accuracy and stability of our results. An increase in $N \in [-5,5]$ from N = 11 to N = 15 also gives an increase in precision, though for and higer increase the accuracy decrease slightly, which is shown in table \ref{tab:res-gaulag}.
 
-\begin{table}[h!]\label{tab:res-gaulag}
+\begin{table}[h!]
 \begin{center}
 \begin{tabular}{ |p{1cm}|p{4cm}|p{3cm}|}
  \hline
@@ -45,6 +46,7 @@ Improving our algorithm using Legendre polynomials for angles and Laguerre polyn
  \hline
 \end{tabular}
 \caption{Values of the integral for different N's, calculated with Gauss-Laguerre. Integration limits are $x\in[-5,5]$.}
+\label{tab:res-gaulag}
 \end{center}
 \end{table}
 
@@ -53,7 +55,7 @@ Improving our algorithm using Legendre polynomials for angles and Laguerre polyn
 %------------------------
 \subsection{Monte Carlo}
 \subsubsection{Naïve approach}
-The results from our Monte Carlo integration program (\href{https://github.com/kmaasrud/Project-3/blob/master/code/Monte-Carlo/main.exe}{main.exe}), are listed in this table:
+The results from our Monte Carlo integration program (\href{https://github.com/kmaasrud/Project-3/blob/master/code/Monte-Carlo/main.exe}{\texttt{main.exe}}, are listed in table \ref{tab:res-naive}.
 
 \begin{table}[h!]
   \begin{center}
@@ -72,6 +74,7 @@ The results from our Monte Carlo integration program (\href{https://github.com/k
      \hline
     \end{tabular}
     \caption{Results from running Monte Carlo with cartesian coordinates and integration limits $x\in[-5,5]$ - our approximation of infinity.}
+    \label{tab:res-naive}
   \end{center}
 \end{table}
 
@@ -79,7 +82,7 @@ For higher $N$'s, the approximated integral get closer to the actual value and t
 
 %------------------------------------
 \subsubsection{Importance sampling}
-The results from our Monte Carlo integration program (\href{https://github.com/kmaasrud/Project-3/blob/master/code/Monte-Carlo/main.exe}{main.exe}), are listed in this table:
+The results from our Monte Carlo integration program (\href{https://github.com/kmaasrud/Project-3/blob/master/code/Monte-Carlo/main.exe}{main.exe}), are listed in table \ref{tab:res-impsamp}.
 
 \begin{table}[h!]
   \begin{center}
@@ -97,9 +100,10 @@ The results from our Monte Carlo integration program (\href{https://github.com/k
       \hline
     \end{tabular}
     \caption{Results from running Monte Carlo with importance sampling along the exponential distribution and using spherical coordinates.}
+    \label{tab:res-impsamp}
   \end{center}
 \end{table}
-
+\FloatBarrier
 The improved Monte Carlo integration gets within a small error margin for smaller $N$'s than the naïve, However, it over- and undershoots randomly. The trend is that the standard deviation decreases, but does not match up with the error ($|\text{Exact}-\text{Approximated}|$).
 
 \subsection{Paralellization} \label{sec:res-paralell}
