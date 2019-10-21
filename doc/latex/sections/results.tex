@@ -1,15 +1,15 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \section{Results} \label{sec:results}
-\subsection{Laguerre/Legendre} \label{sec:QMProbresults}
+\subsection{Gauss-Legendre} \label{sec:QMProbresults}
 
+Solving our integral with Legandre polynomials gives unstable results for $N \in [-5,5]$ as seen in the table below. Though when choosing N = 27 and a = -2.9 and b = 2.9 our results are precice with 3 leading digits after the decimal point.
 
-$$N \in [-5,5]$$
-\begin{table}
+\begin{table}[h!]
 \begin{center}
   \begin{tabular}{ |p{1cm}|p{3cm}|p{3cm}|}
  \hline
- \multicolumn{3}{|c}{Legandre} \\
+ \multicolumn{3}{|c|}{Legandre} \\
  \hline
        N   & Value & Error\\
  \hline
@@ -24,11 +24,11 @@ $$N \in [-5,5]$$
  \end{center}
 \end{table}
 
-\begin{table}
+\begin{table}[h!]
 \begin{center}
 \begin{tabular}{ |p{1cm}|p{3cm}|p{3cm}|}
  \hline
- \multicolumn{3}{|c}{Laguerre} \\
+ \multicolumn{3}{|c|}{Laguerre} \\
  \hline
        N   & Value & Error\\
  \hline
