@@ -108,9 +108,9 @@ The improved Monte Carlo integration gets within a small error margin for smalle
 
 \subsection{Paralellization} \label{sec:res-paralell}
 Our paralellization results was achieved using a quad core Intel Core i5-8250U processor with 6MB cache at 1.6GHz base clock, which boosted to 3.4GHz during testing. Thermal throttling was avoided.
-The memory was 4GB 1866MHz LPDDR3 soldered on board. See table \ref{tab:res-parallel}
+The memory was 4GB 2133MHz LPDDR3 soldered on board. See table \ref{tab:res-parallel}
 
-We also ran this test on an octa-core processor with memory of 8GB 1866MHz, and achieved no noticable speedup compared to the abovementioned computer. See table \ref{tab:res-paralell-octacore}
+We also ran this test on an octa-core processor with memory of 8GB 2400MHz (12.5\% faster), and achieved an additional speedup compared to the abovementioned computer. See table \ref{tab:res-paralell-octacore}
 
 $\vspace{0.1cm}$
 
@@ -134,14 +134,14 @@ For runtime imputs the number of samples was set to $10^8$, with an approximatio
 
 \begin{table}[!h]
 \begin{center}
-  \begin{tabular}{|p{2.5cm}|p{2.5cm}|}
+  \begin{tabular}{|p{2.5cm}|p{2.5cm}|c|}
     \hline
-    \multicolumn{2}{|c|}{\textbf{Runtime with optimization on octa-core}} \\
+    \multicolumn{3}{|c|}{\textbf{Runtime with optimization on octa-core}} \\
     \hline
-    Compile flags & -O3 -fopenMP \\
+    Compile flags & -O3 -fopenMP  & $\hspace{1cm}$\% faster than the quad-core\\
     \hline
-    Naive MC & 12s \\
-    Improved MC & 15s \\
+    Naive MC & 8s  & $\hspace{1cm}$50\%\\
+    Improved MC & 11s & $\hspace{1cm}$36\%\\
     \hline
   \end{tabular}
   \caption{Shows the time spent on the Monte-Carlo calculations on an octa-core system.($N = 10^8, \lambda = 5$)}

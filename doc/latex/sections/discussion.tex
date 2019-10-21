@@ -10,7 +10,7 @@ Looking at the results, the non-deterministic nature of Monte Carlo integration 
 \subsection{Parallelization}
 From table \ref{tab:res-parallel} it is easy to understand the impact of correct optimization. Not only was the paralellization of the code a big time-saver but also the vectorization flag (-O3) made a really dramatic impact.\\
 
-Both from no optimization, to parallelization, and from vectorization to vectorization and parallelization, the time spent is halved. However, this was parallelized over four cores, so shouldn't the time be one fourth of the original? The bottleneck is probably memory speed, as we ran the same calculations on a octacore processor with more capacity, but same frequency RAM, and achieved the same results.\\
+Both from no optimization, to parallelization, and from vectorization to vectorization and parallelization, the time spent is halved. However, this was parallelized over four cores, so shouldn't the time be one fourth of the original? The bottleneck is probably a mix of memory speed, small cache and low processing power as the memory speed upgrade of $12\%$ on the octa-core PC is not enough to justify the $~40\%$ speed increase compared to the quad-core PC.
 
-This means that further improvements on the parallelization can be done by using faster memory, or changing the code to access memory less frequently.
+This means that further improvements on the parallelization can be done by using faster memory, changing the code to access memory less frequently, and to add more processing power.
 \end{document}
