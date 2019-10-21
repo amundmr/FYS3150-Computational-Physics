@@ -1,6 +1,6 @@
 PWD C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\discussion.tex
-OUTPUT discussion.log
+INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\introduction.tex
+OUTPUT introduction.log
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\subfiles\subfiles.cls
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\subfiles\subfiles.cls

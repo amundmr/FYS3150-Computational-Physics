@@ -5,6 +5,8 @@
 
 Solving our integral with Legandre polynomials gives unstable results for $N \in [-5,5]$ as seen in the table below. Though with a carefull choise of N = 27 and integration limits a = -2.9 and b = 2.9 our results are precice with 4 leading digits after the decimal point.
 
+The results from our Legandre (and Laguerre  (\ref{QMProbresults} )) integration program are found at: (\href{https://github.com/kmaasrud/Project-3/tree/master/code/Gauss-Quadrature}{main.exe})
+
 \begin{table}[h!]
 \begin{center}
   \begin{tabular}{ |p{1cm}|p{4cm}|p{3cm}|}
@@ -24,6 +26,7 @@ Solving our integral with Legandre polynomials gives unstable results for $N \in
  \caption{Values of the integral for different N's, calculated with Gauss-Legendre. Integration limits are $x\in[-5,5]$. *: Special case with integration limits $x\in[-2.9,2.9]$}
  \end{center}
 \end{table}
+
 
 \subsection{Gauss-Laguerre} \label{sec:QMProbresults}
 Improving our algorithm using Legandre polynomials for angles and Laguerre polynomials for radial parts improved accuracy and stability of our results. An increase in $N \in [-5,5]$ from N = 11 to N = 15 also gives an increase in precistion, tough for and higer increase the accuracy decrese slightly, which is shown in Table 2.
@@ -68,7 +71,7 @@ The results from our Monte Carlo integration program (\href{https://github.com/k
      $10^7$ &  0.16704012 &  0.023165 & 0.025725592\\
      $10^8$ &  0.17903453 &  0.00936631 & 0.013731177\\
      $10^9$ &  0.19105511 &  0.0041004 & 0.0017106036\\
-    
+
      \hline
     \end{tabular}
     \caption{Results from running Monte Carlo with cartesian coordinates and integration limits $x\in[-5,5]$ - our approximation of infinity.}
