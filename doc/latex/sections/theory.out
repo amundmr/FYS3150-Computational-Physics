@@ -1,0 +1,11 @@
+\BOOKMARK [1][-]{section.1}{Theory}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Wavefunction of Helium}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Gaussian Quadrature}{section.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Gauss-Legendre}{subsection.1.2}% 4
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Improved Gauss-Quadrature- Laguerre}{subsection.1.2}% 5
+\BOOKMARK [2][-]{subsection.1.3}{Monte Carlo}{section.1}% 6
+\BOOKMARK [3][-]{subsubsection.1.3.1}{Generalized}{subsection.1.3}% 7
+\BOOKMARK [3][-]{subsubsection.1.3.2}{Na\357ve approach \(uniform PDF\)}{subsection.1.3}% 8
+\BOOKMARK [3][-]{subsubsection.1.3.3}{Importance sampling \(exponential distribution\)}{subsection.1.3}% 9
+\BOOKMARK [2][-]{subsection.1.4}{Standard deviation}{section.1}% 10
+\BOOKMARK [2][-]{subsection.1.5}{Paralellization}{section.1}% 11

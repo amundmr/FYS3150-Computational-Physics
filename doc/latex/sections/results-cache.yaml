@@ -134,9 +134,9 @@ files:
         2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
     type: ParsedYAML
   results.tex:
-    timeStamp: 2019-10-21T17:44:22.632Z
+    timeStamp: 2019-10-21T17:51:06.896Z
     jobNames: []
-    hash: L2EiZPKU55fVA3Vn9U0bUqGHlUoT0zfRSYHdhcyox8c=
+    hash: s2PJ7xDVc316XjfLfETegU07H5/eCP7s36zzL8nipjo=
     type: LaTeX
     subType: subfiles
   'C:\Users\Anna Stray Rongve\AppData\Roaming\dicy\config.yaml':
@@ -147,7 +147,7 @@ files:
     jobNames: []
     type: Nil
   results.fls-ParsedFileListing:
-    timeStamp: 2019-10-21T17:38:54.803Z
+    timeStamp: 2019-10-21T17:49:23.396Z
     jobNames: []
     value:
       messages: []
@@ -172,6 +172,9 @@ files:
           2.9\fonts\tfm\public\cm\cmr12.tfm
         - >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmtt10.tfm
+        - >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
         - >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
@@ -188,6 +191,9 @@ files:
         - >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+        - >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmtt10.pfb
         - >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\tex\context\base\mkii\supp-pdf.mkii
@@ -381,7 +387,7 @@ files:
       calls: []
     type: ParsedFileListing
   results.log-ParsedLaTeXLog:
-    timeStamp: 2019-10-21T17:44:29.200Z
+    timeStamp: 2019-10-21T17:50:38.844Z
     jobNames: []
     value:
       messages:
@@ -2190,34 +2196,6 @@ files:
             range:
               start: 696
               end: 696
-        - severity: warning
-          name: pdfTeX
-          category: LaTeX
-          text: Reference `QMProbresults' on page 1 undefined
-          source:
-            file: results.tex
-            range:
-              start: 8
-              end: 8
-          log:
-            file: results.log
-            range:
-              start: 698
-              end: 698
-        - severity: warning
-          name: pdfTeX
-          category: LaTeX
-          text: 'Reference `tab:res-paralell'' on page 2 undefined'
-          source:
-            file: results.tex
-            range:
-              start: 110
-              end: 110
-          log:
-            file: results.log
-            range:
-              start: 714
-              end: 715
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -2225,13 +2203,13 @@ files:
           source:
             file: results.tex
             range:
-              start: 152
-              end: 152
+              start: 156
+              end: 156
           log:
             file: results.log
             range:
-              start: 728
-              end: 728
+              start: 721
+              end: 721
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -2239,13 +2217,13 @@ files:
           source:
             file: results.tex
             range:
-              start: 152
-              end: 152
+              start: 156
+              end: 156
           log:
             file: results.log
             range:
-              start: 730
-              end: 730
+              start: 723
+              end: 723
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -2253,13 +2231,13 @@ files:
           source:
             file: results.tex
             range:
-              start: 152
-              end: 152
+              start: 156
+              end: 156
           log:
             file: results.log
             range:
-              start: 733
-              end: 733
+              start: 726
+              end: 726
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -2267,13 +2245,13 @@ files:
           source:
             file: results.tex
             range:
-              start: 152
-              end: 152
+              start: 156
+              end: 156
           log:
             file: results.log
             range:
-              start: 734
-              end: 734
+              start: 727
+              end: 727
         - severity: info
           name: pdfTeX
           category: Package rerunfilecheck
@@ -2285,19 +2263,8 @@ files:
           log:
             file: results.log
             range:
-              start: 735
-              end: 736
-        - severity: warning
-          name: pdfTeX
-          category: LaTeX
-          text: There were undefined references.
-          source:
-            file: results.tex
-          log:
-            file: results.log
-            range:
-              start: 738
-              end: 738
+              start: 728
+              end: 729
         - severity: warning
           name: pdfTeX
           category: LaTeX
@@ -2307,8 +2274,8 @@ files:
           log:
             file: results.log
             range:
-              start: 741
-              end: 741
+              start: 731
+              end: 731
         - severity: info
           name: pdfTeX
           category: Package logreq
@@ -2318,41 +2285,41 @@ files:
           log:
             file: results.log
             range:
-              start: 743
-              end: 743
+              start: 733
+              end: 733
       inputs: []
       outputs:
         - results.pdf
       calls: []
     type: ParsedLaTeXLog
   results.aux:
-    timeStamp: 2019-10-21T17:44:27.057Z
+    timeStamp: 2019-10-21T17:51:14.568Z
     jobNames: []
-    hash: EH5RsdjDaqulU1STs7a+f2KiNnIIkJVq//Dy2qfOZHo=
+    hash: MeQ6nc7PjXZEEquFOJelPAuVnnH8fMQBq4jWZfUAJok=
     type: LaTeXAuxilary
   results.fls:
-    timeStamp: 2019-10-21T17:44:27.110Z
+    timeStamp: 2019-10-21T17:51:14.677Z
     jobNames: []
-    hash: iuOTRL8yIXu8p05YAmm5sswpMWoAznQYFv/X5PzTmHc=
+    hash: RgA5KXlCPT7fRSI/xX2wmhhBtY5eCvL9WFQDxC039pA=
     type: FileListing
   results.log:
-    timeStamp: 2019-10-21T17:44:27.107Z
+    timeStamp: 2019-10-21T17:51:14.670Z
     jobNames: []
-    hash: m4R88QirRkPcRgot2XQvF34FvGJxu54QACdljd5+kzA=
+    hash: nBf7PO02QS1NpeW+NvLeA/88mlegdjEA4/7fklHo4AE=
     type: LaTeXLog
     subType: pdfTeX
   results.synctex.gz:
-    timeStamp: 2019-10-21T17:44:27.105Z
+    timeStamp: 2019-10-21T17:51:14.667Z
     jobNames: []
-    hash: yVexI/zoS5jOrWRjR9HLw2u5OffTp+l9+OTdOaw2VGM=
+    hash: 8qyJwyltD1QiBJM+DDy2XSgJPos7FxnVoBDrb4/y3Jc=
     type: SyncTeX
   results.pdf:
-    timeStamp: 2019-10-21T17:44:27.103Z
+    timeStamp: 2019-10-21T17:51:14.665Z
     jobNames: []
-    hash: D4TO+e3RiGp3BS0qCEC1gLlwTuvON1iRHA20ilWZefY=
+    hash: /OQ4IFn4IFfUNFK2ESm7jlTDv5mzEMi/Yi0KXdmiLN0=
     type: PortableDocumentFormat
   results.aux-ParsedLaTeXAuxilary:
-    timeStamp: 2019-10-21T17:38:43.881Z
+    timeStamp: 2019-10-21T17:49:23.354Z
     jobNames: []
     value:
       commands:
@@ -2384,14 +2351,18 @@ files:
         - '@writefile'
         - newlabel
         - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
         - '@writefile'
         - newlabel
         - '@writefile'
         - '@writefile'
         - '@writefile'
+        - newlabel
         - '@writefile'
         - '@writefile'
-        - '@writefile'
+        - newlabel
         - '@writefile'
         - newlabel
         - '@writefile'
@@ -2649,22 +2620,22 @@ files:
     jobNames: []
     type: LaTeXStyle
   'C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.tex':
-    timeStamp: 2019-10-21T09:16:24.774Z
+    timeStamp: 2019-10-21T17:45:05.141Z
     jobNames: []
     type: LaTeX
     subType: article
   results.out:
-    timeStamp: 2019-10-21T17:44:27.062Z
+    timeStamp: 2019-10-21T17:51:14.578Z
     jobNames: []
     hash: 3xcxJDF8kEBMNRbi8RaeKmIiu7/HEoNDz6jKoaHJ9m8=
     type: OUT
   results.bcf:
-    timeStamp: 2019-10-21T17:44:27.073Z
+    timeStamp: 2019-10-21T17:51:14.594Z
     jobNames: []
     hash: 6+ZNR6SQsPrz4Sohv0H40H9EBM/SZiAgjm3F594SZNE=
     type: BiberControlFile
   results.run.xml:
-    timeStamp: 2019-10-21T17:44:27.078Z
+    timeStamp: 2019-10-21T17:51:14.600Z
     jobNames: []
     hash: 9UEY12q/ZFqRXoMgSSr84kflWeBJ7f8RcFpoXvS7RlM=
     type: XML
@@ -2753,19 +2724,25 @@ files:
       calls: []
     type: ParsedBiberLog
   results.bbl:
-    timeStamp: 2019-10-21T17:44:25.276Z
+    timeStamp: 2019-10-21T17:51:10.345Z
     jobNames: []
     hash: MYNJSqm+vViBR2USWHzkHs/j3O/nQ+F+Zux+OwOJVVI=
   results.blg:
-    timeStamp: 2019-10-21T17:44:25.276Z
+    timeStamp: 2019-10-21T17:51:10.345Z
     jobNames: []
-    hash: hZa1VgWDs2La76y+ZVSF2ZxKX2u1MVMmnrXy85AQ8QE=
+    hash: pKI2QEI71e7MW+OIMHZOE3r4hAM2YkrXKfUCDDV6qxI=
     type: BiberLog
   'C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.tex-ParsedLaTeXMagic':
     timeStamp: 2019-10-21T17:40:08.481Z
     jobNames: []
     value: {}
     type: ParsedLaTeXMagic
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmtt10.tfm':
+    timeStamp: 2006-01-09T00:04:13.000Z
+    jobNames: []
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt10.pfb':
+    timeStamp: 2009-07-14T18:37:47.000Z
+    jobNames: []
 rules:
   - name: ApplyOptions
     command: load
@@ -3150,6 +3127,14 @@ rules:
         type: default
       - file: results.run.xml
         type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmtt10.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmtt10.pfb
+        type: default
     outputs:
       - file: results.aux
         type: default
@@ -3505,6 +3490,14 @@ rules:
       - file: results.run.xml
         type: default
       - file: results.tex
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmtt10.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmtt10.pfb
         type: default
     outputs:
       - file: results.aux

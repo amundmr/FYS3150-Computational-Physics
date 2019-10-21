@@ -1,9 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.3)  21 OCT 2019 19:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.3)  21 OCT 2019 20:08
 entering extended mode
-**"C:/Users/Anna Stray Rongve/Documents/Project-3/doc/latex/sections/results.te
-x"
-("C:/Users/Anna Stray Rongve/Documents/Project-3/doc/latex/sections/results.tex
+**"C:/Users/Anna Stray Rongve/Documents/Project-3/doc/latex/sections/theory.tex
 "
+("C:/Users/Anna Stray Rongve/Documents/Project-3/doc/latex/sections/theory.tex"
 LaTeX2e <2018-12-01>
 
 ("C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex/latex/subfil
@@ -608,28 +607,24 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
-)) ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.
-aux"
+)) ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\theory.a
+ux")
+\openout1 = `theory.aux'.
 
-LaTeX Warning: Label `sec:QMProbresults' multiply defined.
-
-)
-\openout1 = `results.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
-LaTeX Font Info:    ... okay on input line 2.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 2.
-LaTeX Font Info:    ... okay on input line 2.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 2.
-LaTeX Font Info:    ... okay on input line 2.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 2.
-LaTeX Font Info:    ... okay on input line 2.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 2.
-LaTeX Font Info:    ... okay on input line 2.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 2.
-LaTeX Font Info:    ... okay on input line 2.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 2.
-LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
 
 ("C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex/context/base
 /mkii\supp-pdf.mkii"
@@ -662,7 +657,7 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring OFF on input line 2.
+Package hyperref Info: Link coloring OFF on input line 3.
 
 ("C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperr
 ef\nameref.sty"
@@ -674,87 +669,146 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count334
 )
-LaTeX Info: Redefining \ref on input line 2.
-LaTeX Info: Redefining \pageref on input line 2.
-LaTeX Info: Redefining \nameref on input line 2.
-("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.out
-") ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.
-out")
+LaTeX Info: Redefining \ref on input line 3.
+LaTeX Info: Redefining \pageref on input line 3.
+LaTeX Info: Redefining \nameref on input line 3.
+("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\theory.out"
+) ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\theory.ou
+t")
 \@outlinefile=\write4
-\openout4 = `results.out'.
+\openout4 = `theory.out'.
 
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout3 = `results.bcf'.
+\openout3 = `theory.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'results.bbl' found.
-("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.bbl
-")
-Package biblatex Info: Reference section=0 on input line 2.
-Package biblatex Info: Reference segment=0 on input line 2.
+Package biblatex Info: ... file 'theory.bbl' not found.
+No file theory.bbl.
+Package biblatex Info: Reference section=0 on input line 3.
+Package biblatex Info: Reference segment=0 on input line 3.
 
-Overfull \hbox (1.7539pt too wide) in paragraph at lines 65--79
- [] 
+Overfull \hbox (88.15375pt too wide) in paragraph at lines 32--33
+\OT1/cmr/m/n/10 equally spaced with weights $\OML/cmm/m/it/10 w[]$\OT1/cmr/m/n/
+10 , which are cal-cu-lated in []\OT1/cmtt/m/n/10 /code/Gauss-Quadrature/src/ga
+uleg.cpp[]\OT1/cmr/m/n/10 .
  []
+
+
+LaTeX Warning: Citation 'MortenMC2019' on page 1 undefined on input line 37.
 
 [1
 
 {C:/Users/Anna Stray Rongve/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
-Overfull \hbox (1.7539pt too wide) in paragraph at lines 92--105
- [] 
+LaTeX Warning: File `img/expfunc_plot.png' not found on input line 44.
+
+
+C:/Users/Anna Stray Rongve/Documents/Project-3/doc/latex/sections/theory.tex:44
+: Package pdftex.def Error: File `img/expfunc_plot.png' not found: using draft 
+setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.44 ...cs[width=\textwidth]{img/expfunc_plot.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (78.38753pt too wide) in paragraph at lines 51--52
+[]\OT1/cmr/m/n/10 The weights and mesh points are com-puted us-ing []\OT1/cmtt/
+m/n/10 /code/Gauss-Quadrature/src/gauleg.cpp[]\OT1/cmr/m/n/10 .
  []
 
-[2]
-Overfull \hbox (1.45776pt too wide) in paragraph at lines 116--117
-[]\OT1/cmr/m/n/10 We also ran this test on an octa-core pro-ces-sor with mem-or
-y of 8GB 2400MHz
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--58
+
+ []
+
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 75--77
+
  []
 
 
-Overfull \hbox (13.75389pt too wide) in paragraph at lines 123--133
- [] 
+Underfull \hbox (badness 10000) in paragraph at lines 80--83
+
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 156.
-[3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 156.
-("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.aux
-")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 156.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 156.
-Package rerunfilecheck Info: File `results.out' has not changed.
-(rerunfilecheck)             Checksum: BA2FCD84F914A87A0D8088D15D468F80;453.
 
-LaTeX Warning: There were multiply-defined labels.
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
-Package logreq Info: Writing requests to 'results.run.xml'.
-\openout1 = `results.run.xml'.
+ []
+
+ [3] [4]
+Overfull \hbox (20.72076pt too wide) detected at line 151
+\OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 I\OMS/cmsy/m/n/10 i \OT1/cmr/m/n/10 = [] [] 
+[]\OML/cmm/m/it/10 :
+ []
+
+ [5]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 178.
+
+
+("C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\o
+mscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 178.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 186.
+ [6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 186.
+
+("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\theory.aux"
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 186.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 186.
+Package rerunfilecheck Info: File `theory.out' has not changed.
+(rerunfilecheck)             Checksum: CA7F7CAAB785DA3798CCF6F581B10D3D;820.
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                theory
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'theory.run.xml'.
+\openout1 = `theory.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13699 strings out of 492895
- 237964 string characters out of 3118130
- 744851 words of memory out of 3000000
- 17469 multiletter control sequences out of 15000+200000
- 5780 words of font info for 22 fonts, out of 3000000 for 9000
+ 13927 strings out of 492895
+ 242077 string characters out of 3118130
+ 738902 words of memory out of 3000000
+ 17678 multiletter control sequences out of 15000+200000
+ 6399 words of font info for 24 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,10n,33p,848b,1665s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,9n,39p,831b,1665s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Anna Stray Rongve/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmbx10.pfb><C:/Users/Anna Stray Rongve/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Anna Stray Rongve
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C
 :/Users/Anna Stray Rongve/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr10.pfb><C:/Users/Anna Stray Rongve/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Anna Stray Rongve/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users
-/Anna Stray Rongve/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmtt10.pfb>
-Output written on results.pdf (3 pages, 101436 bytes).
+amsfonts/cm/cmmi10.pfb><C:/Users/Anna Stray Rongve/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Anna Stray Rongve/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/User
+s/Anna Stray Rongve/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr10.pfb><C:/Users/Anna Stray Rongve/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Anna Stray Rongve/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Anna St
+ray Rongve/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+y10.pfb><C:/Users/Anna Stray Rongve/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Anna Stray Rongve/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on theory.pdf (6 pages, 170724 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 152 PDF objects out of 1000 (max. 8388607)
+ 28 named destinations out of 1000 (max. 500000)
+ 89 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,7 +1,7 @@
 PWD C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.tex
-OUTPUT results.log
+INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\theory.tex
+OUTPUT theory.log
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\subfiles\subfiles.cls
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\subfiles\subfiles.cls
 INPUT ..\main.tex
@@ -110,9 +110,9 @@ INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\csq
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\csquotes\csquotes.cfg
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.aux
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.aux
-OUTPUT results.aux
+INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\theory.aux
+INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\theory.aux
+OUTPUT theory.aux
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
@@ -123,18 +123,15 @@ INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyp
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.out
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.out
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.out
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.out
-OUTPUT results.pdf
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.out
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.out
-OUTPUT results.out
-OUTPUT results.bcf
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.bbl
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.bbl
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.bbl
+INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\theory.out
+INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\theory.out
+INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\theory.out
+INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\theory.out
+OUTPUT theory.pdf
+INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\theory.out
+INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\theory.out
+OUTPUT theory.out
+OUTPUT theory.bcf
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
@@ -142,24 +139,38 @@ INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\pub
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx10.tfm
+INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx7.tfm
+INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx5.tfm
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmtt10.tfm
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.aux
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.out
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.out
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.run.xml
-OUTPUT results.run.xml
+INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd
+INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd
+INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\theory.aux
+INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\theory.out
+INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\theory.out
+INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\theory.run.xml
+OUTPUT theory.run.xml
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi5.pfb
+INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi5.pfb
+INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
+INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr5.pfb
+INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr5.pfb
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
+INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt10.pfb

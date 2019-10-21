@@ -134,7 +134,7 @@ files:
         2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
     type: ParsedYAML
   main.tex:
-    timeStamp: 2019-10-21T17:45:05.141Z
+    timeStamp: 2019-10-21T18:09:08.011Z
     jobNames: []
     hash: 4/JGMeY+qtq4q33ABNvajulWF2eJGAh6rej0SiI1+PU=
     type: LaTeX
@@ -471,7 +471,7 @@ files:
       calls: []
     type: ParsedFileListing
   main.log-ParsedLaTeXLog:
-    timeStamp: 2019-10-21T17:45:21.549Z
+    timeStamp: 2019-10-21T18:09:17.550Z
     jobNames: []
     value:
       messages:
@@ -2327,12 +2327,12 @@ files:
         - severity: warning
           name: pdfTeX
           category: LaTeX
-          text: Reference `QMProbresults' on page 7 undefined
+          text: 'Reference `tab:res-gauleg'' on page 7 undefined'
           source:
             file: sections\results.t
             range:
-              start: 8
-              end: 8
+              start: 6
+              end: 6
           log:
             file: main.log
             range:
@@ -2341,9 +2341,12 @@ files:
         - severity: warning
           name: pdfTeX
           category: LaTeX
-          text: '`!h'' float specifier changed to `!ht''.'
+          text: 'Reference `tab:res-gaulag'' on page 7 undefined'
           source:
             file: sections\results.t
+            range:
+              start: 33
+              end: 33
           log:
             file: main.log
             range:
@@ -2358,22 +2361,58 @@ files:
           log:
             file: main.log
             range:
-              start: 767
-              end: 767
+              start: 758
+              end: 758
         - severity: warning
           name: pdfTeX
           category: LaTeX
-          text: 'Reference `tab:res-paralell'' on page 8 undefined'
+          text: 'Reference `tab:res-naive'' on page 8 undefined'
           source:
             file: sections\results.t
             range:
-              start: 110
-              end: 110
+              start: 61
+              end: 61
+          log:
+            file: main.log
+            range:
+              start: 762
+              end: 762
+        - severity: warning
+          name: pdfTeX
+          category: LaTeX
+          text: 'Reference `tab:res-impsamp'' on page 8 undefined'
+          source:
+            file: sections\results.t
+            range:
+              start: 88
+              end: 88
           log:
             file: main.log
             range:
               start: 770
               end: 771
+        - severity: warning
+          name: pdfTeX
+          category: LaTeX
+          text: '`!h'' float specifier changed to `!ht''.'
+          source:
+            file: sections\results.t
+          log:
+            file: main.log
+            range:
+              start: 779
+              end: 779
+        - severity: warning
+          name: pdfTeX
+          category: LaTeX
+          text: '`!h'' float specifier changed to `!ht''.'
+          source:
+            file: sections\results.t
+          log:
+            file: main.log
+            range:
+              start: 793
+              end: 793
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -2386,8 +2425,8 @@ files:
           log:
             file: main.log
             range:
-              start: 799
-              end: 799
+              start: 805
+              end: 805
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -2400,8 +2439,8 @@ files:
           log:
             file: main.log
             range:
-              start: 801
-              end: 801
+              start: 807
+              end: 807
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -2414,8 +2453,8 @@ files:
           log:
             file: main.log
             range:
-              start: 803
-              end: 803
+              start: 809
+              end: 809
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -2428,8 +2467,8 @@ files:
           log:
             file: main.log
             range:
-              start: 804
-              end: 804
+              start: 810
+              end: 810
         - severity: info
           name: pdfTeX
           category: Package rerunfilecheck
@@ -2441,8 +2480,8 @@ files:
           log:
             file: main.log
             range:
-              start: 805
-              end: 806
+              start: 811
+              end: 812
         - severity: warning
           name: pdfTeX
           category: LaTeX
@@ -2452,8 +2491,8 @@ files:
           log:
             file: main.log
             range:
-              start: 808
-              end: 808
+              start: 814
+              end: 814
         - severity: warning
           name: pdfTeX
           category: LaTeX
@@ -2463,8 +2502,8 @@ files:
           log:
             file: main.log
             range:
-              start: 811
-              end: 811
+              start: 817
+              end: 817
         - severity: info
           name: pdfTeX
           category: Package logreq
@@ -2474,8 +2513,8 @@ files:
           log:
             file: main.log
             range:
-              start: 813
-              end: 813
+              start: 819
+              end: 819
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -2488,41 +2527,41 @@ files:
           log:
             file: main.log
             range:
-              start: 816
-              end: 816
+              start: 822
+              end: 822
       inputs: []
       outputs:
         - main.pdf
       calls: []
     type: ParsedLaTeXLog
   main.aux:
-    timeStamp: 2019-10-21T17:45:18.918Z
+    timeStamp: 2019-10-21T18:09:14.242Z
     jobNames: []
-    hash: 0P2931CSBNdFZgnPb0RoDfIh3GEiiEl9m5ydjatZlXU=
+    hash: lmsiAN40frofJnLX3/XJPCbJo9GRD624NjosWfRqkec=
     type: LaTeXAuxilary
   main.fls:
-    timeStamp: 2019-10-21T17:45:19.059Z
+    timeStamp: 2019-10-21T18:09:14.418Z
     jobNames: []
     hash: mENto3fW30C9v9YaSpPkb1eQQHe933FQVm2eaDLLl2o=
     type: FileListing
   main.log:
-    timeStamp: 2019-10-21T17:45:19.053Z
+    timeStamp: 2019-10-21T18:09:14.414Z
     jobNames: []
-    hash: hM50FdHp7IZZ+8Wotgg2q8mKnPo0RgO7e+iNZAA3FAM=
+    hash: S9kFhVJhc6y5w3Tn1D2re2Zim3n0M+DpUj6QPakFK6E=
     type: LaTeXLog
     subType: pdfTeX
   main.synctex.gz:
-    timeStamp: 2019-10-21T17:45:19.051Z
+    timeStamp: 2019-10-21T18:09:14.412Z
     jobNames: []
-    hash: i3ejgrpqWBlEAhXgYjs0VPUZipM2HVvjyQY6n4gL5tA=
+    hash: 4fLrEEA/3pZPxqq9cwejpGue3n/wsc3BTrkqFr4aD/0=
     type: SyncTeX
   main.pdf:
-    timeStamp: 2019-10-21T17:45:19.050Z
+    timeStamp: 2019-10-21T18:09:14.412Z
     jobNames: []
-    hash: xRHy2U0xh9Zg/VsI9Bi0ydd2PezKSrNOjR1xvj+kNCY=
+    hash: BZIvWNWcujZFeRNhhg8bLNxrfHYiZmQXbv8q+++Z3KA=
     type: PortableDocumentFormat
   main.aux-ParsedLaTeXAuxilary:
-    timeStamp: 2019-10-21T17:45:21.536Z
+    timeStamp: 2019-10-21T18:09:17.538Z
     jobNames: []
     value:
       commands:
@@ -2589,27 +2628,31 @@ files:
         - '@writefile'
         - newlabel
         - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
         - '@writefile'
         - newlabel
         - '@writefile'
         - '@writefile'
         - '@writefile'
-        - '@writefile'
-        - '@writefile'
+        - newlabel
         - '@writefile'
         - '@writefile'
         - newlabel
         - '@writefile'
         - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
         - '@writefile'
         - newlabel
         - abx@aux@refcontextdefaultsdone
         - abx@aux@defaultrefcontext
-        - '@writefile'
-        - '@writefile'
-        - '@writefile'
-        - '@writefile'
-        - newlabel
     type: ParsedLaTeXAuxilary
   'C:\Users\Anna Stray Rongve\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt':
     timeStamp: 2019-09-03T16:10:03.377Z
@@ -2939,11 +2982,11 @@ files:
     jobNames: []
     type: LaTeXStyle
   img\expfunc_plot.png:
-    timeStamp: 2019-10-21T08:13:23.831Z
+    timeStamp: 2019-10-21T17:47:28.522Z
     jobNames: []
-    hash: get5NPf5rdUKT6wd0lVe/OGqnlDBHgrLVYNzJbZgD8M=
+    hash: YOXd/ZREt5dTL3zwA7tSHcS9+7dDNk+kLRp2Fx3ALbQ=
   main.out:
-    timeStamp: 2019-10-21T17:45:18.926Z
+    timeStamp: 2019-10-21T18:09:14.258Z
     jobNames: []
     hash: gPDuBK2Yw19DQ96hYpHbhtTIPdyYj/tJVQMAwheD5a4=
     type: OUT
@@ -2960,9 +3003,9 @@ files:
     type: LaTeX
     subType: subfiles
   sections\discussion.tex:
-    timeStamp: 2019-10-21T16:54:10.262Z
+    timeStamp: 2019-10-21T17:47:28.523Z
     jobNames: []
-    hash: bpNUXvnSSacTJwxp+nUFAPyi5K+7rih0NVScl31IlwA=
+    hash: d5oXMeD9zhPjnWgkMuVkO2FFXM+XpP/OIYMTNQcgAbA=
     type: LaTeX
     subType: subfiles
   sections\introduction.tex:
@@ -2972,29 +3015,29 @@ files:
     type: LaTeX
     subType: subfiles
   sections\results.tex:
-    timeStamp: 2019-10-21T17:44:22.632Z
+    timeStamp: 2019-10-21T17:51:06.896Z
     jobNames: []
-    hash: L2EiZPKU55fVA3Vn9U0bUqGHlUoT0zfRSYHdhcyox8c=
+    hash: s2PJ7xDVc316XjfLfETegU07H5/eCP7s36zzL8nipjo=
     type: LaTeX
     subType: subfiles
   sections\theory.tex:
-    timeStamp: 2019-10-21T08:18:07.209Z
+    timeStamp: 2019-10-21T18:08:49.249Z
     jobNames: []
     hash: U2pGm+gQUjr6Laoadnaf/Zp3Kidixg2yjWsPjLbnkNo=
     type: LaTeX
     subType: subfiles
   main.bcf:
-    timeStamp: 2019-10-21T17:45:18.943Z
+    timeStamp: 2019-10-21T18:09:14.284Z
     jobNames: []
     hash: jCGwYEvBET0W4EKZ3s8DlHMp07hOMFmboKV/79YCBFI=
     type: BiberControlFile
   main.run.xml:
-    timeStamp: 2019-10-21T17:45:18.953Z
+    timeStamp: 2019-10-21T18:09:14.297Z
     jobNames: []
     hash: CsxA/4FjGw5wM00rlcwTb9Qmab8yub+2zefjUWETi9I=
     type: XML
   main.blg-ParsedBiberLog:
-    timeStamp: 2019-10-21T17:45:13.370Z
+    timeStamp: 2019-10-21T18:09:12.060Z
     jobNames: []
     value:
       messages:
@@ -3089,8 +3132,8 @@ files:
         - severity: info
           name: Biber
           text: >-
-            Overriding locale 'en-US' defaults 'normalization = NFD' with
-            'normalization = prenormalized'
+            Overriding locale 'en-US' defaults 'variable = shifted' with
+            'variable = non-ignorable'
           log:
             file: main.blg
             range:
@@ -3099,8 +3142,8 @@ files:
         - severity: info
           name: Biber
           text: >-
-            Overriding locale 'en-US' defaults 'variable = shifted' with
-            'variable = non-ignorable'
+            Overriding locale 'en-US' defaults 'normalization = NFD' with
+            'normalization = prenormalized'
           log:
             file: main.blg
             range:
@@ -3149,13 +3192,13 @@ files:
       calls: []
     type: ParsedBiberLog
   main.bbl:
-    timeStamp: 2019-10-21T17:45:13.224Z
+    timeStamp: 2019-10-21T18:09:11.908Z
     jobNames: []
     hash: KrjXH5B74Z/K3uxCJDcdpv+1BUpYB9how2aX7eVjoII=
   main.blg:
-    timeStamp: 2019-10-21T17:45:13.224Z
+    timeStamp: 2019-10-21T18:09:11.908Z
     jobNames: []
-    hash: hkDyFkBoGtKJsMohBc2mx3+XuffT4gqw74kljnesMa4=
+    hash: Oj5q6F3X8++074f0YBscCPyKHXi2FQXrobH1Nn4aMJ8=
     type: BiberLog
   bib\references.bib:
     timeStamp: 2019-10-21T08:48:26.764Z
@@ -3168,6 +3211,36 @@ files:
   'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti10.pfb':
     timeStamp: 2009-07-14T18:37:47.000Z
     jobNames: []
+  sections\theory.tex-ParsedLaTeXMagic:
+    timeStamp: 2019-10-21T18:09:01.299Z
+    jobNames: []
+    value: {}
+    type: ParsedLaTeXMagic
+  sections\abstract.tex-ParsedLaTeXMagic:
+    timeStamp: 2019-10-21T18:09:01.303Z
+    jobNames: []
+    value: {}
+    type: ParsedLaTeXMagic
+  sections\conclusion.tex-ParsedLaTeXMagic:
+    timeStamp: 2019-10-21T18:09:01.306Z
+    jobNames: []
+    value: {}
+    type: ParsedLaTeXMagic
+  sections\discussion.tex-ParsedLaTeXMagic:
+    timeStamp: 2019-10-21T18:09:01.310Z
+    jobNames: []
+    value: {}
+    type: ParsedLaTeXMagic
+  sections\introduction.tex-ParsedLaTeXMagic:
+    timeStamp: 2019-10-21T18:09:01.313Z
+    jobNames: []
+    value: {}
+    type: ParsedLaTeXMagic
+  sections\results.tex-ParsedLaTeXMagic:
+    timeStamp: 2019-10-21T18:09:01.319Z
+    jobNames: []
+    value: {}
+    type: ParsedLaTeXMagic
 rules:
   - name: ApplyOptions
     command: load
@@ -6481,3 +6554,69 @@ rules:
     parameters: []
     inputs: []
     outputs: []
+  - name: ParseLaTeXMagic
+    command: load
+    phase: execute
+    parameters:
+      - sections\abstract.tex
+    inputs:
+      - file: sections\abstract.tex
+        type: default
+    outputs:
+      - file: sections\abstract.tex-ParsedLaTeXMagic
+        type: default
+  - name: ParseLaTeXMagic
+    command: load
+    phase: execute
+    parameters:
+      - sections\conclusion.tex
+    inputs:
+      - file: sections\conclusion.tex
+        type: default
+    outputs:
+      - file: sections\conclusion.tex-ParsedLaTeXMagic
+        type: default
+  - name: ParseLaTeXMagic
+    command: load
+    phase: execute
+    parameters:
+      - sections\discussion.tex
+    inputs:
+      - file: sections\discussion.tex
+        type: default
+    outputs:
+      - file: sections\discussion.tex-ParsedLaTeXMagic
+        type: default
+  - name: ParseLaTeXMagic
+    command: load
+    phase: execute
+    parameters:
+      - sections\introduction.tex
+    inputs:
+      - file: sections\introduction.tex
+        type: default
+    outputs:
+      - file: sections\introduction.tex-ParsedLaTeXMagic
+        type: default
+  - name: ParseLaTeXMagic
+    command: load
+    phase: execute
+    parameters:
+      - sections\results.tex
+    inputs:
+      - file: sections\results.tex
+        type: default
+    outputs:
+      - file: sections\results.tex-ParsedLaTeXMagic
+        type: default
+  - name: ParseLaTeXMagic
+    command: load
+    phase: execute
+    parameters:
+      - sections\theory.tex
+    inputs:
+      - file: sections\theory.tex
+        type: default
+    outputs:
+      - file: sections\theory.tex-ParsedLaTeXMagic
+        type: default
