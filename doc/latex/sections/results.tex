@@ -3,9 +3,9 @@
 \section{Results} \label{sec:results}
 \subsection{Gauss-Legendre} \label{sec:QMProbresults}
 
-Solving our integral with Legandre polynomials gives unstable results for $N \in [-5,5]$ as seen in the table below. Though with a carefull choise of N = 27 and integration limits a = -2.9 and b = 2.9 our results are precice with 4 leading digits after the decimal point.
+Solving our integral with Legendre polynomials gives unstable results for $N \in [-5,5]$ as seen in table \ref{tab:res-gauleg}. Though with a carefull choise of N = 27 and integration limits a = -2.9 and b = 2.9 our results are precice with 4 leading digits after the decimal point.
 
-\begin{table}[h!]
+\begin{table}[h!]\label{tab:res-gauleg}
 \begin{center}
   \begin{tabular}{ |p{1cm}|p{4cm}|p{3cm}|}
  \hline
@@ -26,9 +26,9 @@ Solving our integral with Legandre polynomials gives unstable results for $N \in
 \end{table}
 
 \subsection{Gauss-Laguerre} \label{sec:QMProbresults}
-Improving our algorithm using Legandre polynomials for angles and Laguerre polynomials for radial parts improved accuracy and stability of our results. An increase in $N \in [-5,5]$ from N = 11 to N = 15 also gives an increase in precistion, tough for and higer increase the accuracy decrese slightly, which is shown in Table 2.
+Improving our algorithm using Legendre polynomials for angles and Laguerre polynomials for radial parts improved accuracy and stability of our results. An increase in $N \in [-5,5]$ from N = 11 to N = 15 also gives an increase in precision, though for and higer increase the accuracy decrease slightly, which is shown in table \ref{tab:res-gaulag}.
 
-\begin{table}[h!]
+\begin{table}[h!]\label{tab:res-gaulag}
 \begin{center}
 \begin{tabular}{ |p{1cm}|p{4cm}|p{3cm}|}
  \hline
@@ -68,7 +68,7 @@ The results from our Monte Carlo integration program (\href{https://github.com/k
      $10^7$ &  0.16704012 &  0.023165 & 0.025725592\\
      $10^8$ &  0.17903453 &  0.00936631 & 0.013731177\\
      $10^9$ &  0.19105511 &  0.0041004 & 0.0017106036\\
-    
+
      \hline
     \end{tabular}
     \caption{Results from running Monte Carlo with cartesian coordinates and integration limits $x\in[-5,5]$ - our approximation of infinity.}
@@ -104,7 +104,7 @@ The improved Monte Carlo integration gets within a small error margin for smalle
 
 \subsection{Paralellization} \label{sec:res-paralell}
 Our paralellization results was achieved using a quad core Intel Core i5-8250U processor with 6MB cache at 1.6GHz base clock, which boosted to 3.4GHz during testing. Thermal throttling was avoided.
-The memory was 4GB 1866MHz LPDDR3 soldered on board. See table \ref{tab:res-paralell}
+The memory was 4GB 1866MHz LPDDR3 soldered on board. See table \ref{tab:res-parallel}
 
 We also ran this test on an octa-core processor with memory of 8GB 1866MHz, and achieved no noticable speedup compared to the abovementioned computer. See table \ref{tab:res-paralell-octacore}
 
