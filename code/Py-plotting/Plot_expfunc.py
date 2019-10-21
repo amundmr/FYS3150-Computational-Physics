@@ -15,8 +15,8 @@ y2 = exp(4*(r2))
 #Plotting read data
 
 plt.plot(r1,y1, label = r"$e^{-\alpha r_1}$", color = 'g')
-plt.plot(r2,y2, label = r"$e^{-\alpha r_2}$", color = 'g')
-plt.ylabel(r"$e^{-\alpha r_i}$ [arb units]")
+plt.plot(r2,y2,  color = 'g') #label = r"$e^{-\alpha r_2}$",
+plt.ylabel(r"$e^{-\alpha r_i}$ [arb. units]")
 plt.xlabel("Distance from origin, r")
 plt.tick_params(direction='in', top = 'true', right = 'true')
 plt.title(r"Value of $e^{-\alpha r_i}$ over distance.")

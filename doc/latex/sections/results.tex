@@ -3,7 +3,7 @@
 \section{Results} \label{sec:results}
 \subsection{Gauss-Legendre} \label{sec:QMProbresults}
 
-Solving our integral with Legandre polynomials gives unstable results for $N \in [-5,5]$ as seen in the table below. Though with a carefull choise of N = 27 and integration limits a = -2.9 and b = 2.9 our results are precice with 4 leading digits after the decimal point.
+Solving our integral with Legendre polynomials gives unstable results for $N \in [-5,5]$ as seen in table \ref{tab:res-gauleg}. Though with a carefull choise of N = 27 and integration limits a = -2.9 and b = 2.9 our results are precice with 4 leading digits after the decimal point.
 
 The results from our Legandre (and Laguerre  (\ref{QMProbresults} )) integration program are found at: (\href{https://github.com/kmaasrud/Project-3/tree/master/code/Gauss-Quadrature}{main.exe})
 
@@ -24,12 +24,13 @@ The results from our Legandre (and Laguerre  (\ref{QMProbresults} )) integration
  \hline
  \end{tabular}
  \caption{Values of the integral for different N's, calculated with Gauss-Legendre. Integration limits are $x\in[-5,5]$. *: Special case with integration limits $x\in[-2.9,2.9]$}
+ \label{tab:res-gauleg}
  \end{center}
 \end{table}
 
 
 \subsection{Gauss-Laguerre} \label{sec:QMProbresults}
-Improving our algorithm using Legandre polynomials for angles and Laguerre polynomials for radial parts improved accuracy and stability of our results. An increase in $N \in [-5,5]$ from N = 11 to N = 15 also gives an increase in precistion, tough for and higer increase the accuracy decrese slightly, which is shown in Table 2.
+Improving our algorithm using Legendre polynomials for angles and Laguerre polynomials for radial parts improved accuracy and stability of our results. An increase in $N \in [-5,5]$ from N = 11 to N = 15 also gives an increase in precision, though for and higer increase the accuracy decrease slightly, which is shown in table \ref{tab:res-gaulag}.
 
 \begin{table}[h!]
 \begin{center}
@@ -48,6 +49,7 @@ Improving our algorithm using Legandre polynomials for angles and Laguerre polyn
  \hline
 \end{tabular}
 \caption{Values of the integral for different N's, calculated with Gauss-Laguerre. Integration limits are $x\in[-5,5]$.}
+\label{tab:res-gaulag}
 \end{center}
 \end{table}
 
@@ -56,7 +58,7 @@ Improving our algorithm using Legandre polynomials for angles and Laguerre polyn
 %------------------------
 \subsection{Monte Carlo}
 \subsubsection{Naïve approach}
-The results from our Monte Carlo integration program (\href{https://github.com/kmaasrud/Project-3/blob/master/code/Monte-Carlo/main.exe}{main.exe}), are listed in this table:
+The results from our Monte Carlo integration program (\href{https://github.com/kmaasrud/Project-3/blob/master/code/Monte-Carlo/main.exe}{\texttt{main.exe}}, are listed in table \ref{tab:res-naive}.
 
 \begin{table}[h!]
   \begin{center}
@@ -75,6 +77,7 @@ The results from our Monte Carlo integration program (\href{https://github.com/k
      \hline
     \end{tabular}
     \caption{Results from running Monte Carlo with cartesian coordinates and integration limits $x\in[-5,5]$ - our approximation of infinity.}
+    \label{tab:res-naive}
   \end{center}
 \end{table}
 
@@ -82,7 +85,7 @@ For higher $N$'s, the approximated integral get closer to the actual value and t
 
 %------------------------------------
 \subsubsection{Importance sampling}
-The results from our Monte Carlo integration program (\href{https://github.com/kmaasrud/Project-3/blob/master/code/Monte-Carlo/main.exe}{main.exe}), are listed in this table:
+The results from our Monte Carlo integration program (\href{https://github.com/kmaasrud/Project-3/blob/master/code/Monte-Carlo/main.exe}{main.exe}), are listed in table \ref{tab:res-impsamp}.
 
 \begin{table}[h!]
   \begin{center}
@@ -100,16 +103,17 @@ The results from our Monte Carlo integration program (\href{https://github.com/k
       \hline
     \end{tabular}
     \caption{Results from running Monte Carlo with importance sampling along the exponential distribution and using spherical coordinates.}
+    \label{tab:res-impsamp}
   \end{center}
 \end{table}
-
+\FloatBarrier
 The improved Monte Carlo integration gets within a small error margin for smaller $N$'s than the naïve, However, it over- and undershoots randomly. The trend is that the standard deviation decreases, but does not match up with the error ($|\text{Exact}-\text{Approximated}|$).
 
 \subsection{Paralellization} \label{sec:res-paralell}
 Our paralellization results was achieved using a quad core Intel Core i5-8250U processor with 6MB cache at 1.6GHz base clock, which boosted to 3.4GHz during testing. Thermal throttling was avoided.
-The memory was 4GB 1866MHz LPDDR3 soldered on board. See table \ref{tab:res-paralell}
+The memory was 4GB 2133MHz LPDDR3 soldered on board. See table \ref{tab:res-parallel}
 
-We also ran this test on an octa-core processor with memory of 8GB 1866MHz, and achieved no noticable speedup compared to the abovementioned computer. See table \ref{tab:res-paralell-octacore}
+We also ran this test on an octa-core processor with memory of 8GB 2400MHz (12.5\% faster), and achieved an additional speedup compared to the abovementioned computer. See table \ref{tab:res-paralell-octacore}
 
 $\vspace{0.1cm}$
 
@@ -133,14 +137,14 @@ For runtime imputs the number of samples was set to $10^8$, with an approximatio
 
 \begin{table}[!h]
 \begin{center}
-  \begin{tabular}{|p{2.5cm}|p{2.5cm}|}
+  \begin{tabular}{|p{2.5cm}|p{2.5cm}|c|}
     \hline
-    \multicolumn{2}{|c|}{\textbf{Runtime with optimization on octa-core}} \\
+    \multicolumn{3}{|c|}{\textbf{Runtime with optimization on octa-core}} \\
     \hline
-    Compile flags & -O3 -fopenMP \\
+    Compile flags & -O3 -fopenMP  & $\hspace{1cm}$\% faster than the quad-core\\
     \hline
-    Naive MC & 12s \\
-    Improved MC & 15s \\
+    Naive MC & 8s  & $\hspace{1cm}$50\%\\
+    Improved MC & 11s & $\hspace{1cm}$36\%\\
     \hline
   \end{tabular}
   \caption{Shows the time spent on the Monte-Carlo calculations on an octa-core system.($N = 10^8, \lambda = 5$)}
