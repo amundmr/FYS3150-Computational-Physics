@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.3)  21 OCT 2019 10:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.3)  21 OCT 2019 11:16
 entering extended mode
 **"C:/Users/Anna Stray Rongve/Documents/Project-3/doc/latex/main.tex"
 ("C:/Users/Anna Stray Rongve/Documents/Project-3/doc/latex/main.tex"
@@ -598,7 +598,11 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
-("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.aux")
+("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\main.aux"
+
+LaTeX Warning: Label `sec:QMProbresults' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
@@ -693,7 +697,7 @@ uleg.cpp[]\OT1/cmr/m/n/10 .
  []
 
 [2]
-<img/expfunc_plot.png, id=106, 408.3255pt x 325.9377pt>
+<img/expfunc_plot.png, id=110, 408.3255pt x 325.9377pt>
 File: img/expfunc_plot.png Graphic file (type png)
 <use img/expfunc_plot.png>
 Package pdftex.def Info: img/expfunc_plot.png  used on input line 44.
@@ -742,14 +746,18 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 178.
 ) ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/results.t
-ex" [7]
-Overfull \hbox (4.23555pt too wide) in paragraph at lines 52--53
+ex"
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7]
+Overfull \hbox (4.23555pt too wide) in paragraph at lines 56--57
 []\OT1/cmr/m/n/10 We also ran this test on an octa-core pro-ces-sor with mem-or
 y of 8GB 1866MHz,
  []
 
 
-Overfull \hbox (25.4061pt too wide) in paragraph at lines 59--66
+Overfull \hbox (25.4061pt too wide) in paragraph at lines 63--70
  [] 
  []
 
@@ -760,14 +768,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
 )
 ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections/conclusion.
-tex" [8])
+tex")
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 38.
 [9]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 38.
@@ -775,20 +783,23 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 38.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 38.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 38.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 92FBD7ABDF833A571880C1B3B0C9BECA;1207.
+(rerunfilecheck)             Checksum: 251D2A94C59E2A0E6AC7F9A57FC4C81E;1269.
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 38.
  ) 
 Here is how much of TeX's memory you used:
- 14013 strings out of 492895
- 243909 string characters out of 3118130
- 741295 words of memory out of 3000000
- 17725 multiletter control sequences out of 15000+200000
+ 14015 strings out of 492895
+ 243939 string characters out of 3118130
+ 742331 words of memory out of 3000000
+ 17726 multiletter control sequences out of 15000+200000
  10763 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 35i,10n,45p,989b,1665s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 35i,9n,45p,989b,1665s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Anna Stray Rongve/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmbx10.pfb><C:/Users/Anna Stray Rongve/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Anna Stray Rongve
@@ -812,9 +823,9 @@ eX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Anna Stray Rongve/App
 Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Us
 ers/Anna Stray Rongve/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmtt10.pfb>
-Output written on main.pdf (9 pages, 263903 bytes).
+Output written on main.pdf (9 pages, 265281 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
- 44 named destinations out of 1000 (max. 500000)
- 150 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 238 PDF objects out of 1000 (max. 8388607)
+ 45 named destinations out of 1000 (max. 500000)
+ 158 words of extra memory for PDF output out of 10000 (max. 10000000)
 
