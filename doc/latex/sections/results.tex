@@ -1,7 +1,7 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \section{Results} \label{sec:results}
-\subsection{Gauss-Legendre} \label{sec:QMProbresults}
+\subsection{Gauss-Legendre} \label{sec:QMGausslegresults}
 
 Solving our integral with Legendre polynomials gives unstable results for $N \in [-5,5]$ as seen in table \ref{tab:res-gauleg}. Though with a carefull choise of N = 27 and integration limits a = -2.9 and b = 2.9 our results are precice with 4 leading digits after the decimal point.
 
@@ -29,7 +29,7 @@ The results from our Legandre (and Laguerre \ref{sec:QMProbresults}) integration
 \end{table}
 
 
-\subsection{Gauss-Laguerre} \label{sec:QMProbresults}
+\subsection{Gauss-Laguerre} \label{sec:QMQMGausslagresults}
 Improving our algorithm using Legendre polynomials for angles and Laguerre polynomials for radial parts improved accuracy and stability of our results. An increase in $N \in [-5,5]$ from N = 11 to N = 15 also gives an increase in precision, though for and higer increase the accuracy decrease slightly, which is shown in table \ref{tab:res-gaulag}.
 
 \begin{table}[h!]

@@ -34,8 +34,7 @@ The main idea of Gaussian quadrature is to integrate over a set of points $x_i$ 
 The intgral is approximated as
 \[\int_a^b W(x)f(x) \approx \sum_{i=1}^n \omega_i f(x_i) \]
 
-For a more detalied derivation and explanation of Gaussian quadrature see \cite{MortenMC2019}.
-
+For a more detalied derivation and explanation of Gaussian quadrature see \cite{MortenMC2019}. The program used to find mesh points and weights is found at \href{https://github.com/CompPhysics/ComputationalPhysics/tree/master/doc/Projects/2019/Project3/CodeExamples}.
 
 \subsubsection{Gauss-Legendre}\label{sec:GLQ}
 Using Gauss-Legendre quadrature with Legendre polynomials will make it possible to solve the integral numerically. The first step is to change the integration limits from  $-\infty$ and $\infty$ to $-\lambda$ and $\lambda$. The $\lambda$'s are found by inserting it for $r_i$ in the expression $e^{-\alpha r_i}$ because $r_i \approx \lambda$ when $e^{-\alpha r_i} \approx 0$. From figure \ref{fig:plot}, $\lambda \in [-5,5]$ is therefor a good approximation for the integration limits.

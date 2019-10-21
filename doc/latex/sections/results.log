@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.3)  21 OCT 2019 19:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.3)  21 OCT 2019 20:30
 entering extended mode
 **"C:/Users/Anna Stray Rongve/Documents/Project-3/doc/latex/sections/results.te
 x"
@@ -677,9 +677,6 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 2.
 LaTeX Info: Redefining \pageref on input line 2.
 LaTeX Info: Redefining \nameref on input line 2.
-("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.out
-") ("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.
-out")
 \@outlinefile=\write4
 \openout4 = `results.out'.
 
@@ -689,9 +686,8 @@ Package biblatex Info: Automatic encoding selection.
 \openout3 = `results.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'results.bbl' found.
-("C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.bbl
-")
+Package biblatex Info: ... file 'results.bbl' not found.
+No file results.bbl.
 Package biblatex Info: Reference section=0 on input line 2.
 Package biblatex Info: Reference segment=0 on input line 2.
 
@@ -725,8 +721,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 156.
 ")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 156.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 156.
-Package rerunfilecheck Info: File `results.out' has not changed.
-(rerunfilecheck)             Checksum: BA2FCD84F914A87A0D8088D15D468F80;453.
+
+Package rerunfilecheck Warning: File `results.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `results.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  BA2FCD84F914A87A0D8088D15D468F80;453.
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -735,13 +737,13 @@ Package logreq Info: Writing requests to 'results.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13699 strings out of 492895
- 237964 string characters out of 3118130
- 744851 words of memory out of 3000000
- 17469 multiletter control sequences out of 15000+200000
+ 13687 strings out of 492895
+ 237431 string characters out of 3118130
+ 744780 words of memory out of 3000000
+ 17463 multiletter control sequences out of 15000+200000
  5780 words of font info for 22 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,10n,33p,848b,1665s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,10n,33p,848b,1667s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Anna Stray Rongve/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmbx10.pfb><C:/Users/Anna Stray Rongve/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Anna Stray Rongve
@@ -752,9 +754,9 @@ amsfonts/cm/cmr10.pfb><C:/Users/Anna Stray Rongve/AppData/Local/Programs/MiKTeX
 a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users
 /Anna Stray Rongve/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmtt10.pfb>
-Output written on results.pdf (3 pages, 101436 bytes).
+Output written on results.pdf (3 pages, 99706 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
+ 73 PDF objects out of 1000 (max. 8388607)
  17 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

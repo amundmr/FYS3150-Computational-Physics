@@ -134,9 +134,9 @@ files:
         2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
     type: ParsedYAML
   theory.tex:
-    timeStamp: 2019-10-21T18:08:49.249Z
+    timeStamp: 2019-10-21T18:40:10.592Z
     jobNames: []
-    hash: U2pGm+gQUjr6Laoadnaf/Zp3Kidixg2yjWsPjLbnkNo=
+    hash: XFH1O0fgZg9PPHK0vXq6bsD72GTKDekaPHgCW/0MdvI=
     type: LaTeX
     subType: subfiles
   'C:\Users\Anna Stray Rongve\AppData\Roaming\dicy\config.yaml':
@@ -150,7 +150,7 @@ files:
     jobNames: []
     type: ParsedFileListing
   theory.log-ParsedLaTeXLog:
-    timeStamp: 2019-10-21T18:06:30.057Z
+    timeStamp: 2019-10-21T18:40:05.908Z
     jobNames: []
     value:
       messages:
@@ -1961,6 +1961,20 @@ files:
         - severity: warning
           name: pdfTeX
           category: LaTeX
+          text: Citation 'Hjorth-Jensen2019' on page 1 undefined
+          source:
+            file: theory.tex"LaTeX2e <2018-12-01>
+            range:
+              start: 14
+              end: 14
+          log:
+            file: theory.log
+            range:
+              start: 692
+              end: 693
+        - severity: warning
+          name: pdfTeX
+          category: LaTeX
           text: Citation 'MortenMC2019' on page 1 undefined
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
@@ -1970,8 +1984,21 @@ files:
           log:
             file: theory.log
             range:
-              start: 699
-              end: 699
+              start: 703
+              end: 703
+        - severity: error
+          name: pdfTeX
+          text: Paragraph ended before \href@split was complete
+          log:
+            file: theory.log
+            range:
+              start: 706
+              end: 707
+          source:
+            file: theory.tex
+            range:
+              start: 38
+              end: 38
         - severity: warning
           name: pdfTeX
           category: LaTeX
@@ -1979,26 +2006,26 @@ files:
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 44
-              end: 44
+              start: 43
+              end: 43
           log:
             file: theory.log
             range:
-              start: 705
-              end: 705
+              start: 720
+              end: 720
         - severity: error
           name: pdfTeX
           text: 'File `img/expfunc_plot.png'' not found: using draft setting'
           log:
             file: theory.log
             range:
-              start: 708
-              end: 710
+              start: 724
+              end: 726
           source:
             file: theory.tex
             range:
-              start: 44
-              end: 44
+              start: 43
+              end: 43
           category: Package pdftex.def
         - severity: info
           name: pdfTeX
@@ -2007,13 +2034,13 @@ files:
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 178
-              end: 178
+              start: 177
+              end: 177
           log:
             file: theory.log
             range:
-              start: 754
-              end: 754
+              start: 770
+              end: 770
         - severity: info
           name: pdfTeX
           category: LaTeX Font
@@ -2023,13 +2050,13 @@ files:
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 178
-              end: 178
+              start: 177
+              end: 177
           log:
             file: theory.log
             range:
-              start: 761
-              end: 762
+              start: 777
+              end: 778
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -2037,13 +2064,13 @@ files:
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 186
-              end: 186
+              start: 185
+              end: 185
           log:
             file: theory.log
             range:
-              start: 763
-              end: 763
+              start: 779
+              end: 779
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -2051,13 +2078,13 @@ files:
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 186
-              end: 186
+              start: 185
+              end: 185
           log:
             file: theory.log
             range:
-              start: 765
-              end: 765
+              start: 781
+              end: 781
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -2065,13 +2092,13 @@ files:
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 186
-              end: 186
+              start: 185
+              end: 185
           log:
             file: theory.log
             range:
-              start: 769
-              end: 769
+              start: 785
+              end: 785
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -2079,13 +2106,13 @@ files:
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 186
-              end: 186
+              start: 185
+              end: 185
           log:
             file: theory.log
             range:
-              start: 770
-              end: 770
+              start: 786
+              end: 786
         - severity: info
           name: pdfTeX
           category: Package rerunfilecheck
@@ -2097,8 +2124,8 @@ files:
           log:
             file: theory.log
             range:
-              start: 771
-              end: 772
+              start: 787
+              end: 788
         - severity: warning
           name: pdfTeX
           category: LaTeX
@@ -2108,8 +2135,19 @@ files:
           log:
             file: theory.log
             range:
-              start: 774
-              end: 774
+              start: 790
+              end: 790
+        - severity: warning
+          name: pdfTeX
+          category: LaTeX
+          text: Label(s) may have changed. Rerun to get cross-references right.
+          source:
+            file: theory.tex"LaTeX2e <2018-12-01>
+          log:
+            file: theory.log
+            range:
+              start: 793
+              end: 793
         - severity: warning
           name: pdfTeX
           category: Package biblatex
@@ -2119,8 +2157,8 @@ files:
           log:
             file: theory.log
             range:
-              start: 777
-              end: 779
+              start: 796
+              end: 798
         - severity: info
           name: pdfTeX
           category: Package logreq
@@ -2130,23 +2168,23 @@ files:
           log:
             file: theory.log
             range:
-              start: 781
-              end: 781
+              start: 800
+              end: 800
       inputs: []
       outputs:
         - theory.pdf
       calls: []
     type: ParsedLaTeXLog
   theory.log:
-    timeStamp: 2019-10-21T18:06:29.787Z
+    timeStamp: 2019-10-21T18:40:05.774Z
     jobNames: []
-    hash: ziiak/qNcHxd4vu7sEcyuPFRimoEJiOnGFCbkUeGAzU=
+    hash: kmYMw/ggosqGV1jbtHzk1AtrPjoDlX9KHwtmXUsE99M=
     type: LaTeXLog
     subType: pdfTeX
   theory.pdf:
-    timeStamp: 2019-10-21T18:08:51.587Z
+    timeStamp: 2019-10-21T18:40:13.121Z
     jobNames: []
-    hash: 7RQZRHQ78aSQ5j21UwvZoc0RLXPmVi8eIozVJ/4LFCo=
+    hash: D3pVKpNhfMtPqpk9TXAPq7IM5oc2JIorwwLR9ThSGHg=
     type: PortableDocumentFormat
 rules:
   - name: ApplyOptions

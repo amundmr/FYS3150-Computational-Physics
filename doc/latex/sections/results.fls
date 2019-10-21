@@ -123,18 +123,9 @@ INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyp
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.out
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.out
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.out
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.out
-OUTPUT results.pdf
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.out
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.out
 OUTPUT results.out
+OUTPUT results.pdf
 OUTPUT results.bcf
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.bbl
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.bbl
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.bbl
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
@@ -147,7 +138,6 @@ INPUT C:\Users\Anna Stray Rongve\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.m
 INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.aux
 INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.out
 INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.out
-INPUT C:\Users\Anna Stray Rongve\Documents\Project-3\doc\latex\sections\results.run.xml
 OUTPUT results.run.xml
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
