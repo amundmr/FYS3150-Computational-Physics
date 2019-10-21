@@ -3,34 +3,38 @@
 \section{Results} \label{sec:results}
 \subsection{Gauss-Legendre} \label{sec:QMProbresults}
 
-Solving our integral with Legandre polynomials gives unstable results for $N \in [-5,5]$ as seen in the table below. Though when choosing N = 27 and a = -2.9 and b = 2.9 our results are precice with 3 leading digits after the decimal point.
+Solving our integral with Legandre polynomials gives unstable results for $N \in [-5,5]$ as seen in the table below. Though with a carefull choise of N = 27 and integration limits a = -2.9 and b = 2.9 our results are precice with 4 leading digits after the decimal point.
 
 \begin{table}[h!]
 \begin{center}
-  \begin{tabular}{ |p{1cm}|p{3cm}|p{3cm}|}
+  \begin{tabular}{ |p{1cm}|p{4cm}|p{3cm}|}
  \hline
  \multicolumn{3}{|c|}{Legandre} \\
  \hline
-       N   & Value & Error\\
+       N   &Approximate integral & Error\\
  \hline
  11 & 0.297447 & 0.104681\\
  15 & 0.315863 & 0.123098\\
  21 & 0.268075 & 0.075310\\
  25 & 0.240135 & 0.047370\\
  27 & 0.229623 & 0.036858\\
+ 27*& 0.192725 & 0.000039\\
  \hline
  \end{tabular}
- \caption{Fill me in!}
+ \caption{Values for the integral for different N. *: Special case with a = -2.9 and b = 2.90.}
  \end{center}
 \end{table}
 
+\subsection{Gauss-Laguerre} \label{sec:QMProbresults}
+Improving our algorithm using Legandre polynomials for angles and Laguerre polynomials for radial parts improved accuracy and stability of our results. An increase in $N \in [-5,5]$ from N = 11 to N = 15 also gives an increase in precistion, tough for and higer increase the accuracy decrese slightly, which is shown in Table 2.
+
 \begin{table}[h!]
 \begin{center}
-\begin{tabular}{ |p{1cm}|p{3cm}|p{3cm}|}
+\begin{tabular}{ |p{1cm}|p{4cm}|p{3cm}|}
  \hline
  \multicolumn{3}{|c|}{Laguerre} \\
  \hline
-       N   & Value & Error\\
+       N   & Approximate integral & Error\\
  \hline
  11 &  0.183021 &  0.009743\\
  15 &  0.193285 &  0.000520\\
