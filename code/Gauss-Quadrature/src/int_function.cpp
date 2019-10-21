@@ -4,7 +4,7 @@
 #define MAXIT 10
 #define ZERO 1.0E-10
 
-//  this function defines the function to integrate
+//  this function defines the function to integrate for Legandre
 double int_function(double x1, double y1, double z1, double x2, double y2, double z2)
 {
   double alpha = 2.0;
