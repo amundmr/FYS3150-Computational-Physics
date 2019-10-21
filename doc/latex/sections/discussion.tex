@@ -6,7 +6,7 @@
 \subsection{Monte Carlo}
 Looking at the results, the non-deterministic nature of Monte Carlo integration shines through. They are not consistent across runs and seem to fluctuate randomly (which they of course do). However, looking at the standard deviation and error, the trend is that the accuracy increases - which is a good sign. The approximations also come "quite" close (meaning order of $10^{-3}$...). From equation (\ref{eq:std}) in section \ref{sec:theory} Theory, its also worth noting that the standard deviation decreases by order of $\frac{1}{\sqrt{N}}$, regardless of how many dimensions you integrate. Compared to the Gaussian-Quadrature methods, this makes Monte Carlo integration way more viable for multi-dimensional integral solving.
 
-As a note to 
+As a note to the large difference between the standard deviation and the error, this is probably because of the high unceirtanty in the integral result. We might get lucky and get a spot on answer - giving us a tiny error - but other times we might not. This is reflected in the standard deviation being quite high.
 
 %---------------------------
 \subsection{Parallelization}

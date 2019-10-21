@@ -1,17 +1,17 @@
 # Fdb version 3
-["biber c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion"] 1571679503 "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.bcf" "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.bbl" "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion" 1571679989
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.bcf" 1571679989 91029 10f44cac8485a0f69912e1ffff679c33 ""
-  "c:\Users\knut-\OneDrive\UiO\FYS3150\Projects\Project-3\doc\latex\discussion.bcf" 1571679989 91029 10f44cac8485a0f69912e1ffff679c33 ""
+["biber c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion"] 1571679503 "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.bcf" "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.bbl" "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion" 1571680165
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.bcf" 1571680165 91029 10f44cac8485a0f69912e1ffff679c33 ""
+  "c:\Users\knut-\OneDrive\UiO\FYS3150\Projects\Project-3\doc\latex\discussion.bcf" 1571680165 91029 10f44cac8485a0f69912e1ffff679c33 ""
   (generated)
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.bbl"
   "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.blg"
-["pdflatex"] 1571679987 "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/sections/discussion.tex" "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.pdf" "discussion" 1571679989
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.bbl"
+["pdflatex"] 1571680162 "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/sections/discussion.tex" "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.pdf" "discussion" 1571680165
   "../main.tex" 1571649384 878 12d2c50967e29b18b8c5c83da4dabdad ""
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.aux" 1571679989 1600 b73b91232b9bdb4b154b267591677c19 ""
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.aux" 1571680165 1600 b73b91232b9bdb4b154b267591677c19 ""
   "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.bbl" 1571679513 486 d461c786d5ba60caa26aa3f363275b19 "biber c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion"
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.out" 1571679989 169 888d723eeab21971ef21fac1192f82d4 ""
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.run.xml" 1571679989 2353 4c02ffd88c65867b071884c17202ef63 ""
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/sections/discussion.tex" 1571679985 1729 6e16029ba1dc95d14fbe26142fdc74d5 ""
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.out" 1571680165 169 888d723eeab21971ef21fac1192f82d4 ""
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.run.xml" 1571680165 2353 4c02ffd88c65867b071884c17202ef63 ""
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/sections/discussion.tex" 1571680160 2115 28234c9736f607630b775a1a147f65d9 ""
   "c:/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1554320611 3332 103109f5612ad95229751940c61aada0 ""
   "c:/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1554319202 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1554319792 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -86,11 +86,11 @@
   "c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1554323398 3265573 655ac40406f2c37c0d9078d533adef20 ""
   "c:/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1554323534 4223236 e78c56de74948d2391f3acfea01f277f ""
   "c:/texlive/2018/texmf.cnf" 1554323363 673 4ae7b2f49cee444c5343a45b5d0f169c ""
-  "discussion.tex" 1571679985 1729 6e16029ba1dc95d14fbe26142fdc74d5 ""
+  "discussion.tex" 1571680160 2115 28234c9736f607630b775a1a147f65d9 ""
   (generated)
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.bcf"
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.pdf"
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.log"
   "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.aux"
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.run.xml"
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.bcf"
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.log"
   "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.out"
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.run.xml"
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.pdf"
