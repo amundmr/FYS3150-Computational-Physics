@@ -29,10 +29,10 @@ int main()
 
   // set up the mesh points and weights
 
-  gauleg(a, b, x, w, N);
-  gauss_laguerre(xgl,wgl, N, alf);
-  gauleg(0,M_PI,t,wg_t,N);
-  gauleg(0,2*M_PI, p,wg_p, N);
+  gauleg(a, b, x, w, N); //Legandre
+  gauss_laguerre(xgl,wgl, N, alf); //Laguerre
+  gauleg(0,M_PI,t,wg_t,N); //Laguerre
+  gauleg(0,2*M_PI, p,wg_p, N); //Laguerre
 
   //Legandre-loop:
   double int_gauss = 0.;
@@ -43,7 +43,8 @@ int main()
   for (int m = 0;m<N;m++){
   for (int n = 0;n<N;n++){
 
-    int_gauss += w[i]*w[j]*w[k]*w[l]*w[m]*w[n]*int_function(x[i],x[j],x[k],x[l],x[m],x[n]);
+    int_gauss += w[i]*w[j]*w[k]*w[l]*w[m]*w[n]
+    *int_function(x[i],x[j],x[k],x[l],x[m],x[n]);
 
   }}}}}} //end Legandre
 
@@ -57,7 +58,8 @@ int main()
   for (int m = 0;m < N;m++){
   for (int n = 0;n < N;n++){
 
-    int_gausslag += wgl[i]*wgl[j]*wg_t[k]*wg_t[l]*wg_p[m]*wg_p[n]*func_polar_laguerre(xgl[i],xgl[j],t[k],t[l],p[m],p[n]);
+    int_gausslag += wgl[i]*wgl[j]*wg_t[k]*wg_t[l]*wg_p[m]*wg_p[n]
+    *func_polar_laguerre(xgl[i],xgl[j],t[k],t[l],p[m],p[n]);
 
   }}}}}} //end Laguerre
 
