@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.4.3)  21 OCT 2019 16:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.4.3)  21 OCT 2019 16:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/sections/results.tex
-(c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/sections/results.tex
+**c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/sections/discussion.tex
+(c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/sections/discussion.tex
 LaTeX2e <2018-12-01>
 (c:/texlive/2018/texmf-dist/tex/latex/subfiles/subfiles.cls
 Document Class: subfiles 2018/07/31 Federico Garcia, Gernot Salzer
@@ -489,27 +489,23 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
-)) (c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.aux
+)) (c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.aux)
+\openout1 = `discussion.aux'.
 
-LaTeX Warning: Label `sec:QMProbresults' multiply defined.
-
-)
-\openout1 = `results.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
-LaTeX Font Info:    ... okay on input line 2.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 2.
-LaTeX Font Info:    ... okay on input line 2.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 2.
-LaTeX Font Info:    ... okay on input line 2.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 2.
-LaTeX Font Info:    ... okay on input line 2.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 2.
-LaTeX Font Info:    ... okay on input line 2.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 2.
-LaTeX Font Info:    ... okay on input line 2.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 2.
-LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
  (c:/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count326
@@ -536,7 +532,7 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring OFF on input line 2.
+Package hyperref Info: Link coloring OFF on input line 3.
  (c:/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -544,80 +540,68 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count332
 )
-LaTeX Info: Redefining \ref on input line 2.
-LaTeX Info: Redefining \pageref on input line 2.
-LaTeX Info: Redefining \nameref on input line 2.
- (c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.out) (c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.out)
+LaTeX Info: Redefining \ref on input line 3.
+LaTeX Info: Redefining \pageref on input line 3.
+LaTeX Info: Redefining \nameref on input line 3.
+ (c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.out) (c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.out)
 \@outlinefile=\write4
-\openout4 = `results.out'.
+\openout4 = `discussion.out'.
 
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout3 = `results.bcf'.
+\openout3 = `discussion.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'results.bbl' found.
- (c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.bbl)
-Package biblatex Info: Reference section=0 on input line 2.
-Package biblatex Info: Reference segment=0 on input line 2.
+Package biblatex Info: ... file 'discussion.bbl' found.
+ (c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.bbl)
+Package biblatex Info: Reference section=0 on input line 3.
+Package biblatex Info: Reference segment=0 on input line 3.
 
-Overfull \hbox (1.7539pt too wide) in paragraph at lines 60--74
- [] 
+
+LaTeX Warning: Reference `tab:res-parallel' on page 1 undefined on input line 11.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 16.
 [1
 
 {c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (1.7539pt too wide) in paragraph at lines 86--99
- [] 
- []
-
-
-LaTeX Warning: Reference `tab:res-paralell' on page 2 undefined on input line 107.
-
-[2]
-Overfull \hbox (4.23555pt too wide) in paragraph at lines 109--110
-[]\OT1/cmr/m/n/10 We also ran this test on an octa-core pro-ces-sor with mem-ory of 8GB 1866MHz,
- []
-
-
-Overfull \hbox (13.75389pt too wide) in paragraph at lines 116--126
- [] 
- []
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 149.
-[3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 149.
- (c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 149.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 149.
-Package rerunfilecheck Info: File `results.out' has not changed.
-(rerunfilecheck)             Checksum: 929C4A7539C7DFBF7A94A85551DC2B2E;446.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 16.
+ (c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 16.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 16.
+Package rerunfilecheck Info: File `discussion.out' has not changed.
+(rerunfilecheck)             Checksum: 888D723EEAB21971EF21FAC1192F82D4;169.
 
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package logreq Info: Writing requests to 'results.run.xml'.
-\openout1 = `results.run.xml'.
+Package logreq Info: Writing requests to 'discussion.run.xml'.
+\openout1 = `discussion.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13348 strings out of 492616
- 223235 string characters out of 6132769
- 710255 words of memory out of 5000000
- 17118 multiletter control sequences out of 15000+600000
+ 13326 strings out of 492616
+ 222986 string characters out of 6132769
+ 700844 words of memory out of 5000000
+ 17108 multiletter control sequences out of 15000+600000
  5612 words of font info for 21 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,10n,33p,854b,1663s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.pdf (3 pages, 81213 bytes).
+ 43i,4n,33p,841b,1659s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/discussion.pdf (1 page, 47585 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 42 PDF objects out of 1000 (max. 8388607)
+ 34 compressed objects within 1 object stream
+ 5 named destinations out of 1000 (max. 500000)
+ 25 words of extra memory for PDF output out of 10000 (max. 10000000)
 
