@@ -33,7 +33,7 @@ double improvedMC(double infty,int MCsamples){
     mc /= MCsamples;
     // Find variance
     var = var/MCsamples-pow(mc,2);
-    var /= MCsamples;
+    var = pow(V,2)*var/MCsamples;
     // Find standard deviation
     sigma = sqrt(var);
     // Find final integral by multiplying with integration volume.

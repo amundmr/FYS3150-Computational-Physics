@@ -9,7 +9,7 @@ Solving our integral with Legandre polynomials gives unstable results for $N \in
 \begin{center}
   \begin{tabular}{ |p{1cm}|p{4cm}|p{3cm}|}
  \hline
- \multicolumn{3}{|c|}{Legandre} \\
+ \multicolumn{3}{|c|}{\textbf{Legendre}} \\
  \hline
        N   &Approximate integral & Error\\
  \hline
@@ -21,7 +21,7 @@ Solving our integral with Legandre polynomials gives unstable results for $N \in
  27*& 0.192725 & 0.000039\\
  \hline
  \end{tabular}
- \caption{Values for the integral for different N. *: Special case with a = -2.9 and b = 2.90.}
+ \caption{Values of the integral for different N's, calculated with Gauss-Legendre. Integration limits are $x\in[-5,5]$. *: Special case with integration limits $x\in[-2.9,2.9]$}
  \end{center}
 \end{table}
 
@@ -32,7 +32,7 @@ Improving our algorithm using Legandre polynomials for angles and Laguerre polyn
 \begin{center}
 \begin{tabular}{ |p{1cm}|p{4cm}|p{3cm}|}
  \hline
- \multicolumn{3}{|c|}{Laguerre} \\
+ \multicolumn{3}{|c|}{\textbf{Laguerre}} \\
  \hline
        N   & Approximate integral & Error\\
  \hline
@@ -44,7 +44,7 @@ Improving our algorithm using Legandre polynomials for angles and Laguerre polyn
 
  \hline
 \end{tabular}
-\caption{Fill me in!}
+\caption{Values of the integral for different N's, calculated with Gauss-Laguerre. Integration limits are $x\in[-5,5]$.}
 \end{center}
 \end{table}
 
@@ -57,17 +57,17 @@ The results from our Monte Carlo integration program (\href{https://github.com/k
 
 \begin{table}[h!]
   \begin{center}
-    \begin{tabular}{ |p{1cm}|p{4cm}|p{3cm}|}
+    \begin{tabular}{|p{1cm}|p{3.5cm}|p{3cm}|p{3cm}|}
      \hline
-     \multicolumn{3}{|c|}{Naïve Monte Carlo} \\
+     \multicolumn{4}{|c|}{\textbf{Naïve Monte Carlo}} \\
      \hline
-           N   & Approximate integral & Error\\
+           N   & Approximate integral & Standard deviation & Error\\
      \hline
-     $10^5$ &  0.16799913 &  ?\\
-     $10^6$ &  0.14673294 &  ?\\
-     $10^7$ &  0.21039322 &  ?\\
-     $10^8$ &  0.1898926 &  ?\\
-     $10^9$ &  0.19482898 &  ?\\
+     $10^5$ &  0.21953065 &  0.154683 & 0.026764935\\
+     $10^6$ &  0.14149215 &  0.0368397 & 0.051273556\\
+     $10^7$ &  0.16704012 &  0.023165 & 0.025725592\\
+     $10^8$ &  0.17903453 &  0.00936631 & 0.013731177\\
+     $10^9$ &  0.19105511 &  0.0041004 & 0.0017106036\\
     
      \hline
     \end{tabular}
@@ -75,29 +75,32 @@ The results from our Monte Carlo integration program (\href{https://github.com/k
   \end{center}
 \end{table}
 
+For higher $N$'s, the approximated integral get closer to the actual value and the standard deviation decreases. The error ($|\text{Exact}-\text{Approximated}|$) does however not match up with the standard deviation, and oscillates a bit up and down, despite having a trend of decreasing.
+
 %------------------------------------
 \subsubsection{Importance sampling}
 The results from our Monte Carlo integration program (\href{https://github.com/kmaasrud/Project-3/blob/master/code/Monte-Carlo/main.exe}{main.exe}), are listed in this table:
 
 \begin{table}[h!]
-    \begin{center}
-      \begin{tabular}{ |p{1cm}|p{4cm}|p{3cm}|}
-       \hline
-       \multicolumn{3}{|c|}{Improved Monte Carlo} \\
-       \hline
-             N   & Approximate integral & Error\\
-       \hline
-       $10^5$ &  0.21375956 &  0.0684499 \\
-       $10^6$ &  0.1898093 &  0.0414734 \\
-       $10^7$ &  0.19337239 &  0.00909323 \\
-       $10^8$ &  0.20778867 &  0.00601385\\
-       $10^9$ &  0.21422913 &  0.00256967\\
-      
-       \hline
-      \end{tabular}
-      \caption{Results from running Monte Carlo with importance sampling along the exponential distribution and using spherical coordinates.}
-    \end{center}
-  \end{table}
+  \begin{center}
+    \begin{tabular}{|p{1cm}|p{3.5cm}|p{3cm}|p{3cm}|}
+      \hline
+      \multicolumn{4}{|c|}{\textbf{Improved Monte Carlo}} \\
+      \hline
+      N   & Approximate integral & Standard deviation & Error\\
+      \hline
+      $10^5$ &  0.13773907 &  0.284624 & 0.055026645\\
+      $10^6$ &  0.19068327 &  0.405372 & 0.0020824368\\
+      $10^7$ &  0.2075781 &  0.381901  & 0.014812393\\
+      $10^8$ &  0.19459392 &  0.092418  & 0.001828214\\
+      $10^9$ &  0.20918288 &  0.0646068 & 0.016417166\\
+      \hline
+    \end{tabular}
+    \caption{Results from running Monte Carlo with importance sampling along the exponential distribution and using spherical coordinates.}
+  \end{center}
+\end{table}
+
+The improved Monte Carlo integration gets within a small error margin for smaller $N$'s than the naïve, However, it over- and undershoots randomly. The trend is that the standard deviation decreases, but does not match up with the error ($|\text{Exact}-\text{Approximated}|$).
 
 \subsection{Paralellization} \label{sec:res-paralell}
 Our paralellization results was achieved using a quad core Intel Core i5-8250U processor with 6MB cache at 1.6GHz base clock, which boosted to 3.4GHz during testing. Thermal throttling was avoided.
@@ -109,29 +112,37 @@ $\vspace{0.1cm}$
 
 For runtime imputs the number of samples was set to $10^8$, with an approximation of infity of $\lambda = 5$.
 \begin{table}[!h]
-\begin{center}
-    \begin{tabular}{ l | l l l l }
-
-        Compile flags & -O3 -fopenMP \hspace{5mm} & -O3 \hspace{1cm} & -fopenmp\hspace{5mm} & no optimzation \\
-        \hline
-        Naive MC      & 12s          & 31s &    71s      & 173s           \\
-        Improved MC   & 15s          & 38s &     79s     & 200s
+  \begin{center}
+    \begin{tabular}{|p{2.5cm}|p{2.5cm}|p{1cm}|p{1.7cm}|p{2.8cm}|}
+      \hline
+      \multicolumn{5}{|c|}{\textbf{Runtime with different optimizations}} \\
+      \hline
+      Compile flags & -O3 -fopenMP & -O3 & -fopenmp & No optimization \\
+      \hline
+      Naive MC & 12s & 31s & 71s & 173s \\
+      Improved MC & 15s & 38s & 79s & 200s \\
+      \hline
     \end{tabular}
-    \caption{Shows the time spent on the same calculations with different compile parameters on a quad core processor.($N = 10^8, \lambda = 5$)} \label{tab:res-paralell}
-    \end{center}
+    \caption{Shows the time spent on the same calculations with different compile parameters on a quad core processor.($N = 10^8, \lambda = 5$)}
+    \label{tab:res-paralell}
+  \end{center}
 \end{table}
 
 \begin{table}[!h]
 \begin{center}
-    \begin{tabular}{ l | l }
-
-        Compile flags & -O3 -fopenMP \\
-        \hline
-        Naive MC      & 12s      \\
-        Improved MC   & 15s
-    \end{tabular}
-    \caption{Shows the time spent on the Monte-Carlo calculations on an octa-core system.($N = 10^8, \lambda = 5$)} \label{tab:res-paralell-octacore}
-    \end{center}
+  \begin{tabular}{|p{2.5cm}|p{2.5cm}|}
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Runtime with optimization on octa-core}} \\
+    \hline
+    Compile flags & -O3 -fopenMP \\
+    \hline
+    Naive MC & 12s \\
+    Improved MC & 15s \\
+    \hline
+  \end{tabular}
+  \caption{Shows the time spent on the Monte-Carlo calculations on an octa-core system.($N = 10^8, \lambda = 5$)}
+  \label{tab:res-paralell-octacore}
+  \end{center}
 \end{table}
 
 

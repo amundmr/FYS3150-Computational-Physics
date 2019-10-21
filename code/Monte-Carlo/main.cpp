@@ -1,12 +1,13 @@
 #include "./include/mclib.h"
 
 int main(){
-    int MCsamples; double infty; int power;
+    int MCsamples; double infty; int power; double exact;
 
     // Take in the number of samples to be done.
     cout << "Number of Monte Carlo samples: 10^";
     cin >> power;
     MCsamples = pow(10,power);
+    exact = 5*M_PI*M_PI/(16*16);
 
     // Take in an approximation of infinity, used to find the integration domain.
     cout << "Approximation of infinity: ";
@@ -30,8 +31,10 @@ int main(){
     double tNaive = std::chrono::duration_cast<std::chrono::microseconds>( t_Naive - tStart ).count();
 
     cout << "\033[4mNaïve Monte Carlo\033[0m" << endl;
-    cout << setprecision(8) << "\tIntegral:\t" << naive << endl << "\tTime spent:\t" << tNaive/1000000 << "s" << endl << endl;
+    cout << setprecision(8) << "\tIntegral:\t" << naive << endl << "\tRelative error:\t" << fabs(naive-exact) << endl << "\tTime spent:\t" << tNaive/1000000 << "s" << endl << endl;
+
     cout << "\033[4mImproved Monte Carlo\033[0m" << endl;
-    cout << setprecision(8) << "\tIntegral:\t" << improved << endl << "\tTime spent:\t" << tImproved/1000000 << "s" << endl << endl;
-    cout << "\033[4mAnalytical solution\033[0m" << endl << "\tIntegral:\t" << 5*M_PI*M_PI/(16*16) << endl << endl;
+    cout << setprecision(8) << "\tIntegral:\t" << improved << endl << "\tRelative error:\t" << fabs(improved-exact) << endl << "\tTime spent:\t" << tImproved/1000000 << "s" << endl << endl;
+    
+    cout << "\033[4mAnalytical solution\033[0m" << endl << "\tIntegral:\t" << exact << endl << endl;
 }

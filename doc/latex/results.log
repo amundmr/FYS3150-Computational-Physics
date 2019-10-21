@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.4.3)  21 OCT 2019 11:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.4.3)  21 OCT 2019 15:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -562,33 +562,33 @@ Package biblatex Info: ... file 'results.bbl' found.
 Package biblatex Info: Reference section=0 on input line 2.
 Package biblatex Info: Reference segment=0 on input line 2.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Overfull \hbox (1.7539pt too wide) in paragraph at lines 60--74
+ [] 
+ []
 
 [1
 
 {c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (4.23555pt too wide) in paragraph at lines 106--107
+Overfull \hbox (1.7539pt too wide) in paragraph at lines 86--99
+ [] 
+ []
+
+[2]
+Overfull \hbox (4.23555pt too wide) in paragraph at lines 109--110
 []\OT1/cmr/m/n/10 We also ran this test on an octa-core pro-ces-sor with mem-ory of 8GB 1866MHz,
  []
 
 
-Overfull \hbox (25.4061pt too wide) in paragraph at lines 113--120
+Overfull \hbox (13.75389pt too wide) in paragraph at lines 116--126
  [] 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 138.
-[2] [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 138.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 149.
+[3]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 149.
  (c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 138.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 138.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 149.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 149.
 Package rerunfilecheck Info: File `results.out' has not changed.
 (rerunfilecheck)             Checksum: 929C4A7539C7DFBF7A94A85551DC2B2E;446.
 
@@ -602,13 +602,13 @@ Package logreq Info: Writing requests to 'results.run.xml'.
 Here is how much of TeX's memory you used:
  13347 strings out of 492616
  223217 string characters out of 6132769
- 712255 words of memory out of 5000000
+ 710255 words of memory out of 5000000
  17117 multiletter control sequences out of 15000+600000
  5612 words of font info for 21 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,10n,33p,854b,1663s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.pdf (3 pages, 77897 bytes).
+Output written on c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.pdf (3 pages, 81013 bytes).
 PDF statistics:
  87 PDF objects out of 1000 (max. 8388607)
  75 compressed objects within 1 object stream

@@ -1,17 +1,17 @@
 # Fdb version 3
-["biber c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results"] 1571650286 "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.bcf" "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.bbl" "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results" 1571651200
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.bcf" 1571651178 91029 10f44cac8485a0f69912e1ffff679c33 ""
-  "c:\Users\knut-\OneDrive\UiO\FYS3150\Projects\Project-3\doc\latex\results.bcf" 1571651178 91029 10f44cac8485a0f69912e1ffff679c33 ""
+["biber c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results"] 1571650286 "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.bcf" "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.bbl" "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results" 1571666309
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.bcf" 1571666309 91029 10f44cac8485a0f69912e1ffff679c33 ""
+  "c:\Users\knut-\OneDrive\UiO\FYS3150\Projects\Project-3\doc\latex\results.bcf" 1571666309 91029 10f44cac8485a0f69912e1ffff679c33 ""
   (generated)
   "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.blg"
   "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.bbl"
-["pdflatex"] 1571651174 "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/sections/results.tex" "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.pdf" "results" 1571651200
+["pdflatex"] 1571666306 "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/sections/results.tex" "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.pdf" "results" 1571666309
   "../main.tex" 1571649384 878 12d2c50967e29b18b8c5c83da4dabdad ""
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.aux" 1571651178 4481 8beaef4aea8e880cd8533b3cb9b83af5 ""
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.aux" 1571666309 4666 33d95c2aac963f9f282cf51e8875549b ""
   "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.bbl" 1571650289 486 d461c786d5ba60caa26aa3f363275b19 "biber c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results"
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.out" 1571651178 446 929c4a7539c7dfbf7a94a85551dc2b2e ""
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.run.xml" 1571651178 2332 0c0eb17afd0b5eae202d27aab009c698 ""
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/sections/results.tex" 1571651170 5216 c0dbc8fb364b201e3de23a849ae40add ""
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.out" 1571666309 446 929c4a7539c7dfbf7a94a85551dc2b2e ""
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.run.xml" 1571666309 2332 0c0eb17afd0b5eae202d27aab009c698 ""
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/sections/results.tex" 1571666305 6357 6a16375124f33450d2552ece3f8755d3 ""
   "c:/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1554320611 3332 103109f5612ad95229751940c61aada0 ""
   "c:/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1554319202 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1554319792 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -86,11 +86,11 @@
   "c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1554323398 3265573 655ac40406f2c37c0d9078d533adef20 ""
   "c:/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1554323534 4223236 e78c56de74948d2391f3acfea01f277f ""
   "c:/texlive/2018/texmf.cnf" 1554323363 673 4ae7b2f49cee444c5343a45b5d0f169c ""
-  "results.tex" 1571651170 5216 c0dbc8fb364b201e3de23a849ae40add ""
+  "results.tex" 1571666305 6357 6a16375124f33450d2552ece3f8755d3 ""
   (generated)
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.pdf"
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.bcf"
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.out"
-  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.log"
   "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.run.xml"
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.pdf"
   "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.aux"
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.bcf"
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.log"
+  "c:/Users/knut-/OneDrive/UiO/FYS3150/Projects/Project-3/doc/latex/results.out"

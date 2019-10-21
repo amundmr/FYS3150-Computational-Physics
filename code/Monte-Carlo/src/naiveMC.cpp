@@ -34,13 +34,13 @@ double naiveMC(double a,double b,int MCsamples){
     mc /= MCsamples;
     // Find variance
     var = var/MCsamples-pow(mc,2);
-    var /= MCsamples;
+    var = pow(V,2)*var/MCsamples;
     // Find standard deviation
-    sigma = V*sqrt(var);
+    sigma = sqrt(var);
     // Find final integral by multiplying with integration volume.
     int_mc = V*mc;
     // Printing the variance.
-    cout << "\r\e[0KStandard deviation of naïve Monte Carlo is:\t" << var << endl;
+    cout << "\r\e[0KStandard deviation of naïve Monte Carlo is:\t" << sigma << endl;
 
     return int_mc;
 }
