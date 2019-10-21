@@ -5,9 +5,9 @@
 \subsection{Wavefunction of Helium} \label{sec:QMProb}
 The single-particle wave function of an electron $i$ in the $1s$ state is given in terms of a dimensionless variable (the wave function is not normalized) as
 
-\[\psi_{1s}(\vec{r}_i) = e^{-\alpha r_i}\]
-Where the electron position $\vec{r}_i$ is
-\[\vec{r}_i = x_i \vec{e}_x + y_i \vec{e}_y + z_i \vec{e}_z\]
+\[\psi_{1s}(\mathbf{r}_i) = e^{-\alpha r_i}\]
+Where the electron position $\mathbf{r}_i$ is
+\[\mathbf{r}_i = x_i \mathbf{e}_x + y_i \mathbf{e}_y + z_i \mathbf{e}_z\]
 and its distance from the origin $r_i$ is
 \[r_i = \sqrt{x_i^2 + y_i^2 + z_i^2}\]
 
@@ -15,7 +15,7 @@ $\alpha$ is a parameter set to 2, which corresponds to the carge of the Helium a
 
 
 For our system with two electrons, we have the product of the two $1s$ wave functions defined as
-\[\Psi(\vec{r}_1, \vec{r}_2) = e^{-\alpha(r_1 + r_2)}\]
+\[\Psi(\mathbf{r}_1, \mathbf{r}_2) = e^{-\alpha(r_1 + r_2)}\]
 
 This leads to the integral which will be solved nummericaly with the  different methods mentioned earlier.
 The value of the integral corresponds to the expectation value of the  energy between the two electrons repelling each other due to Columb interactions.
@@ -41,7 +41,7 @@ For a more detalied derivation and explanation of Gaussian quadrature see \cite{
 Using Gauss-Legendre quadrature with Legendre polynomials will make it possible to solve the integral numerically. The first step is to change the integration limits from  $-\infty$ and $\infty$ to $-\lambda$ and $\lambda$. The $\lambda$'s are found by inserting it for $r_i$ in the expression $e^{-\alpha r_i}$ because $r_i \approx \lambda$ when $e^{-\alpha r_i} \approx 0$. From figure \ref{fig:plot}, $\lambda \in [-5,5]$ is therefor a good approximation for the integration limits.
 
 \begin{figure}[!h]
-  \includegraphics{img/expfunc_plot.png}
+  \includegraphics[width=\textwidth]{img/expfunc_plot.png}
   \caption{Plot of wavefunction in one dimension}
   \label{fig:plot}
 \end{figure}
@@ -56,15 +56,23 @@ The  weights and mesh points are computed using \href{https://github.com/kmaasru
 Gauss-Legendre quadrature gets the job done, but it is unstable and unsatisfactory. By changing to spherical coordinates and  replacing Legendre- with Laguerre polynomials an improvement in accuracy is expected. The Laguerre polynomials are defined for  $x \in [0, \infty)$,and in spherical coordinates:
 \\
 
-\[ d\vec{r}_1 d\vec{r}_2 = r_1^2 dr_1 r_2^2 dr_2 dcos(\theta_1) dcos(\theta_2) d\phi_1 d\phi_2\]
+\begin{equation}
+  d\mathbf{r}_1 d\mathbf{r}_2 = r_1^2 dr_1 r_2^2 dr_2 dcos(\theta_1) dcos(\theta_2) d\phi_1 d\phi_2
+  \label{eq:sphere-cord1}
+\end{equation}
 \\
 with
 
-\[\frac{1}{r_{12}} = \frac{1}{\sqrt{r_1^2 + r_2^2 - 2r_1r_2cos(\beta)}} \]
+\begin{equation}
+  \frac{1}{r_{12}} = \frac{1}{\sqrt{r_1^2 + r_2^2 - 2r_1r_2cos(\beta)}}
+  \label{eq:sphere-cord2}
+\end{equation}
 \\and
 
-
-\[cos(\beta) = cos(\theta_1)cos(\theta_2) + sin(\theta_1)sin(\theta_2)cos(\phi_1 - \phi_2)\]
+\begin{equation}
+  cos(\beta) = cos(\theta_1)cos(\theta_2) + sin(\theta_1)sin(\theta_2)cos(\phi_1 - \phi_2)
+  \label{eq:sphere-cord3}
+\end{equation}
 \\
 
 For numerical integration, the deployment of the following relation is nessecary:
@@ -95,14 +103,12 @@ Say we have an integral $I$ of $f(\mathbf x)$ we want to find:
 \begin{equation*}
   I=\int_D f(\mathbf x)d\mathbf x
 \end{equation*}
-
 where $\mathbf{x}$ is in the domain $D$. This integral can be approximated by using random numbers distributed on $D$ by the probability distribution function (PDF) $p(\mathbf x)$. Discretizing, the approximated integral now becomes
 
 \begin{equation}
   I \approx \langle I \rangle = \frac{1}{N}\sum_{i=0}^N\frac{f(\mathbf x_i)}{p(\mathbf x_i)},
   \label{eq:genapproxMC}
 \end{equation}
-
 where  $N$ is the number of sampled values.
 
 % ---------------------------------------------------------------
@@ -112,7 +118,6 @@ To solve our six-dimensional integral, we first take the naïve approach and dis
 \begin{equation*}
   \theta (x) = \bigg\{ \begin{matrix}\frac{1}{b-a}, & \text{for}\ x\in[a,b] \\ 0 & \text{else}\end{matrix},
 \end{equation*}
-
 and keep our variables $\mathbf r_1$ and $\mathbf r_2$ in cartesian coordinates. Putting the uniform distribution into (\ref{eq:genapproxMC}), we get the naïve approximation of an integral:
 
 \begin{equation}
@@ -122,33 +127,48 @@ and keep our variables $\mathbf r_1$ and $\mathbf r_2$ in cartesian coordinates.
 Here $V$ is the integration volume (for $d$ dimensions in cartesian coordinates $V=(b-a)^d$, with $b$ and $a$ being the integration limits for each dimension). Going back to our original integral (\ref{eq:int-to-solve}), our approximation of it using this method is
 
 \begin{equation}
-  \langle I \rangle = \frac{(b-a)^2}{N}\sum_{i=0}^Ne^{-2\alpha(r_{1,i}+r_{2,i})}\frac{1}{|\mathbf r_{1,i}-\mathbf r_{2,i}|}
+  \langle I \rangle = \frac{(b-a)^2}{N}\sum_{i=0}^Ne^{-2\alpha(r_{1,i}+r_{2,i})}\frac{1}{|\mathbf r_{1,i}-\mathbf r_{2,i}|},
   \label{eq:naive-approx}
 \end{equation}
-
-with $\mathbf r_{1/2,i}$ being randomly chosen vectors and $b=a=\infty$, or our approximation of infinity, namely $\lambda = 5$ (as found in section \ref{sec:GLQ}).
+with $\mathbf r_{1/2,i}$ being randomly chosen vectors and $b=a=\infty$, or our approximation of infinity, namely $\lambda = 5$ (see section \ref{sec:GLQ}).
 
 % ------------------------------------------------------------------------------------
 \subsubsection{Importance sampling (exponential distribution)} \label{sec:improvedMC}
 
-As mentioned in section \ref{sec:GLQ}, our integrand quickly goes to zero. This means that inserting bigger approximations for infinity, $\lambda$, requires a greater number of sampling points, since we are not sure if the random numbers will give us the significant values of the integrand. \\
+As mentioned in section \ref{sec:GLQ}, our integrand quickly goes to zero. This means that inserting bigger approximations for infinity, $\lambda$, requires a greater number of sampling points, since we are not sure if the random numbers will give us the significant values of the integrand.
 
-A sensible way around this is to distribute the randomly chosen variables on a probability distribution matching the function we're integrating. The quite obvious choice here is the exponential distribution $\lambda e^{-\lambda x}$. Inserting it into the general Monte Carlo integral approximation (equation (\ref{eq:genapproxMC})), we get
+A sensible way around this is to distribute the randomly chosen variables on a probability distribution matching the function we're integrating. The quite obvious choice here is the exponential distribution $\lambda e^{-\lambda x}$. Inserting it into the general Monte Carlo integral approximation (equation (\ref{eq:genapproxMC})), together with the integrand we are finding the integral of, we get
 
 \begin{equation*}
-  \langle I \rangle =\frac{V}{N}\sum_{i=0}^N\frac{e^{-2\alpha(r_{1,i}+r_{2,i})}}{\lambda e^{-\lambda(r_{1,i}+r_{2,i})}}\frac{1}{|\mathbf r_{1,i}-\mathbf r_{2,i}|}=\frac{V}{4N}\sum_{i=0}^N\frac{1}{|\mathbf r_{1,i} - \mathbf r_{2,i}|}.
+  \langle I \rangle =\frac{1}{N}\sum_{i=0}^N\frac{e^{-2\alpha(r_{1,i}+r_{2,i})}}{\lambda e^{-\lambda(r_{1,i}+r_{2,i})}}\frac{1}{|\mathbf r_{1,i}-\mathbf r_{2,i}|}=\frac{1}{4N}\sum_{i=0}^N\frac{1}{|\mathbf r_{1,i} - \mathbf r_{2,i}|}.
 \end{equation*}
 
-Here we put $\lambda=4$, since $\alpha=2$. This distribution does however not apply well with negative numbers, and thus we have to change into spherical coordinates. Our approximated integral now reads:
+Here we put $\lambda=4$, since $\alpha=2$. This distribution does however not apply well with negative numbers, and thus we have to change into spherical coordinates. With the results from equations (\ref{eq:sphere-cord1}), (\ref{eq:sphere-cord2}) and (\ref{eq:sphere-cord3}), our approximated integral now reads:
 
 \begin{equation}
-  \langle I \rangle =\frac{\pi^4}{4N}\sum_{i=0}^N\frac{r_1^2 r_2^2}{\sqrt{r_1^2+r_2^2-2r_1r_2\cos \theta_1 \cos \theta_2 +\sqrt{1-\cos \theta_1^2}\sqrt{1-\cos \theta_2^2}\cos (\phi_1-\phi2)}}
+  \langle I \rangle =\frac{\pi^4}{4N}\sum_{i=0}^N\frac{r_1^2 r_2^2}{\sqrt{r_1^2+r_2^2-2r_1r_2\cos \theta_1 \cos \theta_2 +\sqrt{1-\cos \theta_1^2}\sqrt{1-\cos \theta_2^2}\cos (\phi_1-\phi2)}}.
   \label{eq:improved-approx}
 \end{equation}
 
 %---------------------------------------------
 \subsection{Standard deviation}\label{sec:std}
+The variance of our function mean value is given as
 
+\begin{equation*}
+  \sigma_f^2=\frac{1}{N}\sum_{i=0}^N(f(\mathbf x_i)-\langle f\rangle)^2=\langle f^2\rangle-\langle f\rangle^2,
+\end{equation*}
+and thus the variance of the approximated integral is
+
+\begin{equation*}
+  \sigma_I^2=\frac{V^2}{N^2}\sum_{i=0}^N\sigma_f^2 = \frac{V^2\sigma_f^2}{N}.
+\end{equation*}
+
+The standard deviation of our Monte Carlo integration is the square root of the variance, so
+
+\begin{equation}
+  \text{STD}=\sigma_I = \frac{V\sigma_f}{\sqrt{N}}.
+  \label{eq:std}
+\end{equation}
 
 % ---------------------------------------------------------------
 \subsection{Paralellization} \label{sec:theory-Paralellization}
