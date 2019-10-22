@@ -8,7 +8,7 @@
 int main()
 {
 
-  int N = 15.5; //odd in order to find the roots
+  int N = 15; //odd in order to find the roots
   double a = -5.0, b = 5.0;
   double alf = 0.0;
 
