@@ -17,7 +17,7 @@ $\alpha$ is a parameter set to 2, which corresponds to the carge of the Helium a
 For our system with two electrons, we have the product of the two $1s$ wave functions defined as
 \[\Psi(\mathbf{r}_1, \mathbf{r}_2) = e^{-\alpha(r_1 + r_2)}\]
 
-This leads to the integral which will be solved nummericaly with the  different methods mentioned earlier.
+This leads to the integral which will be solved nummerically with the  different methods mentioned earlier.
 The value of the integral corresponds to the expectation value of the  energy between the two electrons repelling each other due to Columb interactions.
 
 \begin{equation}
@@ -26,18 +26,19 @@ The value of the integral corresponds to the expectation value of the  energy be
 \end{equation}
 \vspace{1cm}
 
-This is the integration that will be performed numerically in multiple ways in this paper. The analytical result is $5\pi/16^2$.
+This is the integration that will be performed numerically in multiple ways in this paper. The analytical result is $5\pi^2/16^2 \approx 0.1927657$.
 
 \subsection{Gaussian Quadrature} \label{sec:GQ}
-The main idea of Gaussian quadrature is to integrate over a set of points $x_i$ not equally spaced with weights $w_i$, which are calculated in \href{https://github.com/kmaasrud/Project-3/blob/master/code/Gauss-Quadrature/src/gauleg.cpp}{\texttt{/code/Gauss-Quadrature/src/gauleg.cpp}}. The weights are found through orthogonal polynomials(Laguerre and Legendre polynomials) in a set interval. The points $x_i$ are chosen in a optimal sense and lie in the interval.
+The main idea of the Gaussian quadrature is to integrate over a set of points $x_i$ not equally spaced with weights $w_i$. The weights are found through orthogonal polynomials(Laguerre and Legendre polynomials) in a set interval. The points $x_i$ are chosen in a optimal sense and lie in the interval.
 
 The intgral is approximated as
 \[\int_a^b W(x)f(x) \approx \sum_{i=1}^n \omega_i f(x_i) \]
 
-For a more detalied derivation and explanation of Gaussian quadrature see \cite{MortenMC2019}. The program used to find mesh points and weights is found at \href{https://github.com/CompPhysics/ComputationalPhysics/tree/master/doc/Projects/2019/Project3/CodeExamples}.
+For a more detalied derivation and explanation of Gaussian quadrature see \cite{MortenMC2019}. The program used to find mesh points and weights is found at \href{https://github.com/kmaasrud/Project-3/blob/master/code/Gauss-Quadrature/src/gauleg.cpp}{\texttt{/code/Gauss- Quadrature/src/gauleg.cpp
+}}.
 
 \subsubsection{Gauss-Legendre}\label{sec:GLQ}
-Using Gauss-Legendre quadrature with Legendre polynomials will make it possible to solve the integral numerically. The first step is to change the integration limits from  $-\infty$ and $\infty$ to $-\lambda$ and $\lambda$. The $\lambda$'s are found by inserting it for $r_i$ in the expression $e^{-\alpha r_i}$ because $r_i \approx \lambda$ when $e^{-\alpha r_i} \approx 0$. From figure \ref{fig:plot}, $\lambda \in [-5,5]$ is therefor a good approximation for the integration limits.
+Using Gauss-Legendre quadrature with Legendre polynomials will make it possible to solve the integral numerically. The first step is to change the integration limits from  $-\infty$ and $\infty$ to $-\lambda$ and $\lambda$. The $\lambda$'s are found by inserting it for $r_i$ in the expression $e^{-\alpha r_i}$ because $r_i \approx \lambda$ when $e^{-\alpha r_i} \approx 0$. From figure \ref{fig:plot}, $\lambda \in [-5,5]$ is therefore a good approximation for the integration limits.
 
 \begin{figure}[!h]
   \includegraphics[width=\textwidth]{img/expfunc_plot.png}
@@ -47,12 +48,12 @@ Using Gauss-Legendre quadrature with Legendre polynomials will make it possible 
 \FloatBarrier
 
 
-The  weights and mesh points are computed using \href{https://github.com/kmaasrud/Project-3/blob/master/code/Gauss-Quadrature/src/gauleg.cpp}{\texttt{/code/Gauss-Quadrature/src/gauleg.cpp}}. Eventually ending up with a sixdimensional integral, where all six integration limits are the same.
+Eventually we end up with a sixdimensional integral, where all six integration limits are the same.
 
 \[\int_a^b\int_a^b\int_a^b\int_a^b\int_a^b\int_a^b e^{-x}f(x)dx \approx \sum_{i=1}^n w_i f(x_i)\]
 
-\subsubsection{Improved Gauss-Quadrature- Laguerre} \label{sec:improved_GQ}
-Gauss-Legendre quadrature gets the job done, but it is unstable and unsatisfactory. By changing to spherical coordinates and  replacing Legendre- with Laguerre polynomials an improvement in accuracy is expected. The Laguerre polynomials are defined for  $x \in [0, \infty)$,and in spherical coordinates:
+\subsubsection{Improved Gauss-Quadrature: Laguerre} \label{sec:improved_GQ}
+The Gauss-Legendre quadrature gets the job done, but it takes a large number of integration points to yield satisfactory results, and the choise of $\lambda$ is very hard to make. By changing to spherical coordinates and replacing Legendre- with Laguerre polynomials an improvement in accuracy is expected. The Laguerre polynomials are defined for  $x \in [0, \infty)$, and in spherical coordinates:
 \\
 
 \begin{equation}
@@ -89,7 +90,7 @@ or the recursive relation:
   L_1(x) &= 1 - x\\
   L_{n+1}(x) &= \frac{(2n + 1 - x)L_n(x) - nL_{n-1}(x)}{n+1}\\
 \end{align*}
-\ref{sec:GLQ}
+
 
 
 \subsection{Monte Carlo}
@@ -174,7 +175,7 @@ The standard deviation of our Monte Carlo integration is the square root of the 
 
 To run the computations faster, openMP will be used to paralellize the code. This shares the workload across multiple processor threads and results in a substantional decrease in time spent for the same amount of operations. Some important remarks when doing Monte-Carlo integration in paralell is:
 \begin{itemize}
- \item Create a random number generator in earch thread.
+ \item Create a random number generator in each thread.
  \item Keep the summations private for each thread.
  \item Sum the private summations from each thread together after the calculations are completed.
 \end{itemize}
