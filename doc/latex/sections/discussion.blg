@@ -1,9 +1,0 @@
-[0] Config.pm:304> INFO - This is Biber 2.13
-[0] Config.pm:307> INFO - Logfile is 'discussion.blg'
-[84] biber-MSWIN64:315> INFO - === 
-[129] Biber.pm:375> INFO - Reading 'discussion.bcf'
-[390] Biber.pm:905> INFO - Found 0 citekeys in bib section 0
-[405] Utils.pm:300> WARN - The file 'discussion.bcf' does not contain any citations!
-[425] bbl.pm:648> INFO - Writing 'discussion.bbl' with encoding 'UTF-8'
-[426] bbl.pm:751> INFO - Output to discussion.bbl
-[426] Biber.pm:110> INFO - WARNINGS: 1
