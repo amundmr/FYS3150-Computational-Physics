@@ -8,7 +8,7 @@
 int main()
 {
 
-  int N = 27; //odd in order to find the roots
+  int N = 15; //odd in order to find the roots
   double a = -5.0, b = 5.0;
   double alf = 0.0;
 
@@ -65,8 +65,8 @@ int main()
 
   //  final output
   cout  << setiosflags(ios::showpoint | ios::uppercase);
-  cout << "Gaussian-Legendre quad = "<< setw(20) << setprecision(15)  << int_gauss <<"  Relative error  " <<fabs(int_gauss-exact)<< endl;
-  cout << "Gaussian-Laguerre quad = "<< setw(20) << setprecision(15)  <<  int_gausslag <<"  Relative error  " <<fabs(int_gausslag -exact)<< endl;
+  cout << "Gaussian-Legendre quad = "<< setw(20) << setprecision(15)  << int_gauss <<"  Absolutt error  " <<fabs(int_gauss-exact)<< endl;
+  cout << "Gaussian-Laguerre quad = "<< setw(20) << setprecision(15)  <<  int_gausslag <<"  Absolutt error  " <<fabs(int_gausslag -exact)<< endl;
 
   delete [] x;
   delete [] w;
