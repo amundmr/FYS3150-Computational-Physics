@@ -27,8 +27,7 @@ This is the integration that will be performed numerically in multiple ways in t
 
 \subsection{Gaussian Quadrature} \label{sec:GQ}
 The main idea of Gaussian quadrature is to integrate over a set of points $x_i$, not equally spaced and each with weights $w_i$. The weights are found through orthogonal polynomials (Laguerre and Legendre) in a set interval. The points $x_i$ are chosen in an optimal sense and lie in said interval. \\
-
-The intgral is approximated as
+The integral is approximated as
 \[\int_a^b W(x)f(x) \approx \sum_{i=1}^n \omega_i f(x_i) \]
 
 For a more detalied derivation and explanation of Gaussian quadrature see \cite{MortenMC2019}. The program used to find mesh points and weights is found at \href{https://github.com/kmaasrud/Project-3/blob/master/code/Gauss-Quadrature/src/gauleg.cpp}{\texttt{/code/Gauss- Quadrature/src/gauleg.cpp
@@ -42,43 +41,39 @@ Using Gauss quadrature with Legendre polynomials will make it possible to solve 
   \caption{Plot of wavefunction in one dimension}
   \label{fig:plot}
 \end{figure}
-\FloatBarrier \\
+\FloatBarrier
 
 Eventually we end up with a sixdimensional integral, where all six integration limits are the same.
 
 \[\int_a^b\int_a^b\int_a^b\int_a^b\int_a^b\int_a^b e^{-x}f(x)dx \approx \sum_{i=1}^n w_i f(x_i)\]
 
 \subsubsection{Improved Gauss-Quadrature: Laguerre} \label{sec:improved_GQ}
-The Gauss-Legendre quadrature gets the job done, but it takes a large number of integration points to yield satisfactory results, and the choise of $\lambda$ is very hard to make. By changing to spherical coordinates and replacing Legendre- with Laguerre polynomials an improvement in accuracy is expected. The Laguerre polynomials are defined for  $x \in [0, \infty)$, and in spherical coordinates:
-\\
+The Gauss-Legendre quadrature gets the job done, but it takes a large number of integration points to yield satisfactory results, and the choise of $\lambda$ is hard to make. By changing to spherical coordinates and replacing Legendre- with Laguerre polynomials an improvement in accuracy is expected. The Laguerre polynomials are defined for  $x \in [0, \infty)$, and in spherical coordinates:
 
 \begin{equation}
   d\mathbf{r}_1 d\mathbf{r}_2 = r_1^2 dr_1 r_2^2 dr_2 dcos(\theta_1) dcos(\theta_2) d\phi_1 d\phi_2
   \label{eq:sphere-cord1}
 \end{equation}
-\\
 with
 
 \begin{equation}
   \frac{1}{r_{12}} = \frac{1}{\sqrt{r_1^2 + r_2^2 - 2r_1r_2cos(\beta)}}
   \label{eq:sphere-cord2}
 \end{equation}
-\\and
+and
 
 \begin{equation}
   cos(\beta) = cos(\theta_1)cos(\theta_2) + sin(\theta_1)sin(\theta_2)cos(\phi_1 - \phi_2)
   \label{eq:sphere-cord3}
 \end{equation}
-\\
 
 For numerical integration, the deployment of the following relation is nessecary:
 
 \[\int_0^\infty e^{-x}f(x)dx \approx \sum_{i=1}^n w_i f(x_i)\]
 where $x_i$ is the $i$-th root of the Laguerre polynomial $L_n(x)$ and the weight $w_i$ is given by
-\\
 \[w_i = \frac{x_i}{(n+1)^2 [L_{n+1}(x_i)]^2}\]
-\\
-The Laguerre polynomials are defined by Rodrigues formula:
+
+The Laguerre polynomials are defined by the Rodrigues formula:
 \[L_n(x) = \frac{e^x}{n!}\frac{d^n}{dx^n}\left(e^{-x} x^n\right) = \frac{1}{n!}\left(\frac{d}{dx}-1\right)^n x^n\]
 or the recursive relation:
 \begin{align*}
@@ -92,7 +87,6 @@ or the recursive relation:
 \subsubsection{Generalized}
 \label{sec:MC}
 Monte Carlo integration is based on the idea of finding the mean of a function in a domain by sampling random function values. This mean multiplied by the volume of the domain will be an approximation of the integral. \\
-
 Say we have an integral $I$ of $f(\mathbf x)$ we want to find:
 
 \begin{equation*}
@@ -146,7 +140,7 @@ Here we put $\lambda=4$, since $\alpha=2$. This distribution does however not ap
 \end{equation}
 
 %---------------------------------------------
-\subsection{Standard deviation}\label{sec:std}
+\subsection{Standard deviation (STD)}\label{sec:std}
 The variance of our function mean value is given as
 
 \begin{equation*}

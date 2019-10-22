@@ -3,8 +3,7 @@
 \section{Results} \label{sec:results}
 \subsection{Gauss-Legendre} \label{sec:QMGausslegresults}
 
-Solving our integral with Legendre polynomials gives unstable results for $\lambda = 5$ as seen in table \ref{tab:res-gauleg}. Though with a carefull choise of N = 27 and integration limits $\pm \lambda = \pm 2.9$ our results are precise with 4 leading digits after the decimal point. The error is calculated as absolute error for both Laguerre and Legendre.
-The results from our Legendre \href{https://github.com/kmaasrud/Project-3/tree/master/code/Gauss-Quadrature}{integration program} are found in table \ref{tab:res-gauleg}.
+Solving our integral with Legendre polynomials gives unstable results for $\lambda = 5$ as seen in table \ref{tab:res-gauleg}. Though with a careful choice of $N = 27$ and integration limits $\lambda = 2.9$ our results are precise with 4 leading digits after the decimal point. The error is calculated as the absolute error for both Laguerre and Legendre. The results from our Legendre \href{https://github.com/kmaasrud/Project-3/tree/master/code/Gauss-Quadrature}{integration program} are found in table \ref{tab:res-gauleg}.
 
 \begin{table}[h!]'
 
@@ -33,7 +32,7 @@ The results from our Legendre \href{https://github.com/kmaasrud/Project-3/tree/m
 
 
 \subsection{Gauss-Laguerre} \label{sec:QMQMGausslagresults}
-Improving our algorithm using Legendre polynomials for angles and Laguerre polynomials for radial parts improved accuracy of our results. An increase in N from N = 11 to N = 15 gives an increase in precision, though for any higer increase the accuracy decrease slightly, which is shown in table \ref{tab:res-gaulag}.
+Improving our algorithm using Legendre polynomials for angles and Laguerre polynomials for radial parts improved accuracy of our results. An increase in N from N = 11 to N = 15 gives an increase in precision, though for any higher increase the accuracy decreases slightly, which is shown in table \ref{tab:res-gaulag}.
 
 \begin{table}[h!]
 \begin{center}
@@ -64,7 +63,7 @@ Improving our algorithm using Legendre polynomials for angles and Laguerre polyn
 %------------------------
 \subsection{Monte Carlo}
 \subsubsection{Naïve approach}
-The results from our Monte Carlo integration program (\href{https://github.com/kmaasrud/Project-3/blob/master/code/Monte-Carlo/main.exe}{\texttt{main.exe}}, are listed in table \ref{tab:res-naive}.
+The results from our Monte Carlo integration program (\href{https://github.com/kmaasrud/Project-3/blob/master/code/Monte-Carlo/main.exe}{main.exe}), are listed in table \ref{tab:res-naive}.
 
 \begin{table}[h!]
   \begin{center}
