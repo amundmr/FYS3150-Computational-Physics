@@ -65,8 +65,8 @@ int main()
 
   //  final output
   cout  << setiosflags(ios::showpoint | ios::uppercase);
-  cout << "Gaussian-Legendre quad = "<< setw(20) << setprecision(15)  << int_gauss <<"  Relative error  " <<fabs(int_gauss-exact)<< endl;
-  cout << "Gaussian-Laguerre quad = "<< setw(20) << setprecision(15)  <<  int_gausslag <<"  Relative error  " <<fabs(int_gausslag -exact)<< endl;
+  cout << "Gaussian-Legendre quad = "<< setw(20) << setprecision(15)  << int_gauss <<"  Absolutt error  " <<fabs(int_gauss-exact)<< endl;
+  cout << "Gaussian-Laguerre quad = "<< setw(20) << setprecision(15)  <<  int_gausslag <<"  Absolutt error  " <<fabs(int_gausslag -exact)<< endl;
 
   delete [] x;
   delete [] w;
