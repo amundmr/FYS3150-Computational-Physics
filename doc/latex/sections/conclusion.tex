@@ -2,6 +2,9 @@
 
 \begin{document}
 \section{Conclusion} \label{sec:conclusion}
-From the tables presented in the results section one can simply compare the different methods applied. It seems for the quadrature methods that a higher number of integration points $N$ - beyond whats discussed in the results($N> 11$) - does not yield better results. % reason here
-Comparing Legandre with Laguerre there is a significant improvement in precision, not least in stability with increasing $N$.
+It seems for the quadrature methods that a higher number of integration points $N$ - beyond whats discussed in the results($N> 11$) - does not yield better results. Comparing Legandre with Laguerre there is a significant improvement in precision, not least when it comes to stability when increasing $N$. \\
+
+Monte Carlo, on the other hand, is way less stable and the results can be unpredictable - at least for our implementation. However, compared to the quadrature methods, Monte Carlo is preferred when it comes to multi-dimensional integrals like the one solved here. This is due to the computational power needed and the complexity of the calculations, which are simplified/reduced drastically by utilizing non-deterministic integration. \\
+
+Parallelization and other methods of optimizing had a big impact on the speed of the calculation. However, for this relatively simple integral, the time spent is not exactly impressive.
 \end{document}
