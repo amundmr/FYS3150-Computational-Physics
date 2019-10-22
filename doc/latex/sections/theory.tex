@@ -11,25 +11,22 @@ where the electron position $\mathbf{r}_i$ is
 and its distance from the origin $r_i$ is
 \[r_i = \sqrt{x_i^2 + y_i^2 + z_i^2}\]
 
-$\alpha$ is a parameter set to 2, which corresponds to the carge of the Helium atom, $Z = 2$. \cite{Hjorth-Jensen2019}
-
+$\alpha$ is a parameter set to 2, which corresponds to the charge of the helium atom, $Z = 2$. \cite{Hjorth-Jensen2019}\\
 
 For our system with two electrons, we have the product of the two $1s$ wave functions defined as
 \[\Psi(\mathbf{r}_1, \mathbf{r}_2) = e^{-\alpha(r_1 + r_2)}\]
 
-This leads to the integral which will be solved nummerically with the  different methods mentioned earlier.
-The value of the integral corresponds to the expectation value of the  energy between the two electrons repelling each other due to Columb interactions.
+This leads to the integral which will be solved nummerically with the  different methods mentioned above. The value of the integral corresponds to the expectation value of the  energy between the two electrons repelling each other, due to Columb interactions, and is as follows:
 
 \begin{equation}
   \langle \frac{1}{|\mathbf{r}_1 - \mathbf{r}_2|} \rangle = \int_{\infty}^\infty d\mathbf{r}_1 d\mathbf{r}_2 e^{-2\alpha(r_1 + r_2)} \frac{1}{|\mathbf{r}_1 - \mathbf{r}_2|}
   \label{eq:int-to-solve}
 \end{equation}
-\vspace{1cm}
 
 This is the integration that will be performed numerically in multiple ways in this paper. The analytical result is $5\pi^2/16^2 \approx 0.1927657$.
 
 \subsection{Gaussian Quadrature} \label{sec:GQ}
-The main idea of the Gaussian quadrature is to integrate over a set of points $x_i$ not equally spaced with weights $w_i$. The weights are found through orthogonal polynomials(Laguerre and Legendre polynomials) in a set interval. The points $x_i$ are chosen in a optimal sense and lie in the interval.
+The main idea of Gaussian quadrature is to integrate over a set of points $x_i$, not equally spaced and each with weights $w_i$. The weights are found through orthogonal polynomials (Laguerre and Legendre) in a set interval. The points $x_i$ are chosen in an optimal sense and lie in said interval. \\
 
 The intgral is approximated as
 \[\int_a^b W(x)f(x) \approx \sum_{i=1}^n \omega_i f(x_i) \]
@@ -38,15 +35,14 @@ For a more detalied derivation and explanation of Gaussian quadrature see \cite{
 }}.
 
 \subsubsection{Gauss-Legendre}\label{sec:GLQ}
-Using Gauss-Legendre quadrature with Legendre polynomials will make it possible to solve the integral numerically. The first step is to change the integration limits from  $-\infty$ and $\infty$ to $-\lambda$ and $\lambda$. The $\lambda$'s are found by inserting it for $r_i$ in the expression $e^{-\alpha r_i}$ because $r_i \approx \lambda$ when $e^{-\alpha r_i} \approx 0$. From figure \ref{fig:plot}, $\lambda \in [-5,5]$ is therefore a good approximation for the integration limits.
+Using Gauss quadrature with Legendre polynomials will make it possible to solve the integral numerically. The first step is to change the integration limits from  $-\infty$ and $\infty$ to $-\lambda$ and $\lambda$. $\lambda$ is found by inserting it for $r_i$ in the expression $e^{-\alpha r_i}$ because $r_i \approx \lambda$ when $e^{-\alpha r_i} \approx 0$. From figure \ref{fig:plot}, $\lambda \in [-5,5]$ is therefore a good approximation for the integration limits.
 
 \begin{figure}[!h]
   \includegraphics[width=\textwidth]{img/expfunc_plot.png}
   \caption{Plot of wavefunction in one dimension}
   \label{fig:plot}
 \end{figure}
-\FloatBarrier
-
+\FloatBarrier \\
 
 Eventually we end up with a sixdimensional integral, where all six integration limits are the same.
 
