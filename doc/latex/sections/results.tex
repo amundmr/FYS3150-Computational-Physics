@@ -3,8 +3,8 @@
 \section{Results} \label{sec:results}
 \subsection{Gauss-Legendre} \label{sec:QMGausslegresults}
 
-Solving our integral with Legendre polynomials gives unstable results for $N \in [-5,5]$ as seen in table \ref{tab:res-gauleg}. Though with a carefull choise of N = 27 and integration limits a = -2.9 and b = 2.9 our results are precice with 4 leading digits after the decimal point. The error is calculated as absolutt error(for both Laguerre and Legandre).
-The results from our Legandre (and Laguerre \ref{sec:QMProbresults}) integration program are found at: (\href{https://github.com/kmaasrud/Project-3/tree/master/code/Gauss-Quadrature}{main.exe})
+Solving our integral with Legendre polynomials gives unstable results for $\lambda = 5$ as seen in table \ref{tab:res-gauleg}. Though with a carefull choise of N = 27 and integration limits $\pm \lambda = \pm 2.9$ our results are precise with 4 leading digits after the decimal point. The error is calculated as absolute error for both Laguerre and Legendre.
+The results from our Legendre \href{https://github.com/kmaasrud/Project-3/tree/master/code/Gauss-Quadrature}{integration program} are found in table \ref{tab:res-gauleg}.
 
 \begin{table}[h!]'
 
@@ -33,7 +33,7 @@ The results from our Legandre (and Laguerre \ref{sec:QMProbresults}) integration
 
 
 \subsection{Gauss-Laguerre} \label{sec:QMQMGausslagresults}
-Improving our algorithm using Legendre polynomials for angles and Laguerre polynomials for radial parts improved accuracy and stability of our results. An increase in $N \in [-5,5]$ from N = 11 to N = 15 also gives an increase in precision, though for and higer increase the accuracy decrease slightly, which is shown in table \ref{tab:res-gaulag}.
+Improving our algorithm using Legendre polynomials for angles and Laguerre polynomials for radial parts improved accuracy of our results. An increase in N from N = 11 to N = 15 gives an increase in precision, though for any higer increase the accuracy decrease slightly, which is shown in table \ref{tab:res-gaulag}.
 
 \begin{table}[h!]
 \begin{center}
@@ -87,7 +87,7 @@ The results from our Monte Carlo integration program (\href{https://github.com/k
   \end{center}
 \end{table}
 
-For higher $N$'s, the approximated integral get closer to the actual value and the standard deviation decreases. The error ($|\text{Exact}-\text{Approximated}|$) does however not match up with the standard deviation, and oscillates a bit up and down, despite having a trend of decreasing.
+For higher $N$'s, the approximated integral get closer to the actual value and the standard deviation decreases. The error ($|\text{Exact}-\text{Approximated}|$) does however not match up with the standard deviation, and oscillates a bit up and down, despite having a decreasing trend.
 
 %------------------------------------
 \subsubsection{Importance sampling}
