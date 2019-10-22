@@ -73,7 +73,7 @@ options:
     2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
 files:
   dicy-instance.yaml-ParsedYAML:
-    timeStamp: 2019-10-21T17:38:40.835Z
+    timeStamp: 2019-10-22T17:40:46.585Z
     jobNames: []
     value:
       severity: info
@@ -134,13 +134,13 @@ files:
         2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
     type: ParsedYAML
   results.tex:
-    timeStamp: 2019-10-22T17:06:40.207Z
+    timeStamp: 2019-10-22T17:47:52.344Z
     jobNames: []
-    hash: 9c7KqDOMO11r+UViDaJTVeVWOrKB52PQv6ExfTvhMD8=
+    hash: 1rZOHSEK2NOXu3S9MmfyRzsU33FHZNk5RujkiKlfU3c=
     type: LaTeX
     subType: subfiles
   'C:\Users\Anna Stray Rongve\AppData\Roaming\dicy\config.yaml':
-    timeStamp: 2019-10-21T17:38:40.854Z
+    timeStamp: 2019-10-22T17:35:05.106Z
     jobNames: []
     type: YAML
   x.y-Nil:
@@ -387,7 +387,7 @@ files:
       calls: []
     type: ParsedFileListing
   results.log-ParsedLaTeXLog:
-    timeStamp: 2019-10-22T17:06:50.283Z
+    timeStamp: 2019-10-22T17:47:57.799Z
     jobNames: []
     value:
       messages:
@@ -2199,6 +2199,39 @@ files:
             range:
               start: 694
               end: 695
+        - severity: warning
+          name: pdfTeX
+          category: LaTeX
+          text: '`!h'' float specifier changed to `!ht''.'
+          source:
+            file: results.tex
+          log:
+            file: results.log
+            range:
+              start: 698
+              end: 698
+        - severity: warning
+          name: pdfTeX
+          category: LaTeX
+          text: '`!h'' float specifier changed to `!ht''.'
+          source:
+            file: results.tex
+          log:
+            file: results.log
+            range:
+              start: 714
+              end: 714
+        - severity: warning
+          name: pdfTeX
+          category: LaTeX
+          text: '`!h'' float specifier changed to `!ht''.'
+          source:
+            file: results.tex
+          log:
+            file: results.log
+            range:
+              start: 728
+              end: 728
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -2206,13 +2239,13 @@ files:
           source:
             file: results.tex
             range:
-              start: 156
-              end: 156
+              start: 162
+              end: 162
           log:
             file: results.log
             range:
-              start: 721
-              end: 721
+              start: 730
+              end: 730
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -2220,13 +2253,13 @@ files:
           source:
             file: results.tex
             range:
-              start: 156
-              end: 156
+              start: 162
+              end: 162
           log:
             file: results.log
             range:
-              start: 723
-              end: 723
+              start: 732
+              end: 732
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -2234,13 +2267,13 @@ files:
           source:
             file: results.tex
             range:
-              start: 156
-              end: 156
+              start: 162
+              end: 162
           log:
             file: results.log
             range:
-              start: 726
-              end: 726
+              start: 735
+              end: 735
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -2248,13 +2281,13 @@ files:
           source:
             file: results.tex
             range:
-              start: 156
-              end: 156
+              start: 162
+              end: 162
           log:
             file: results.log
             range:
-              start: 727
-              end: 727
+              start: 736
+              end: 736
         - severity: info
           name: pdfTeX
           category: Package rerunfilecheck
@@ -2266,8 +2299,8 @@ files:
           log:
             file: results.log
             range:
-              start: 728
-              end: 729
+              start: 737
+              end: 738
         - severity: warning
           name: pdfTeX
           category: LaTeX
@@ -2277,8 +2310,8 @@ files:
           log:
             file: results.log
             range:
-              start: 731
-              end: 731
+              start: 740
+              end: 740
         - severity: info
           name: pdfTeX
           category: Package logreq
@@ -2288,8 +2321,8 @@ files:
           log:
             file: results.log
             range:
-              start: 733
-              end: 733
+              start: 742
+              end: 742
       inputs: []
       outputs:
         - results.pdf
@@ -2697,54 +2730,54 @@ files:
     timeStamp: 2009-07-14T18:37:47.000Z
     jobNames: []
   results.aux:
-    timeStamp: 2019-10-22T17:06:47.785Z
+    timeStamp: 2019-10-22T17:47:54.709Z
     jobNames: []
-    hash: ZEOjJW7OA/PS0Pp1fbjPKLnK6PC+jGuyWZ4A1+ROt+A=
+    hash: oDXD5kS/fvZjHTMkfGin902ERO69J4s+pO4KGRNr6sU=
     type: LaTeXAuxilary
   results.fls:
-    timeStamp: 2019-10-22T17:06:47.867Z
+    timeStamp: 2019-10-22T17:47:54.768Z
     jobNames: []
-    hash: RgA5KXlCPT7fRSI/xX2wmhhBtY5eCvL9WFQDxC039pA=
+    hash: bVfszTRqThzC+kx98zScBvrL/vTdbY+S8ysFUwiOx2Y=
     type: FileListing
   results.log:
-    timeStamp: 2019-10-22T17:06:47.864Z
+    timeStamp: 2019-10-22T17:47:54.765Z
     jobNames: []
-    hash: jsJKfoOFCwj+UiexlapookirIGB7J36o1RSwVcsU5Aw=
+    hash: Lt+KsDen/xrpGwIKdE+1OCLz7XNbTSrlvvV5yxY9/uA=
     type: LaTeXLog
     subType: pdfTeX
   results.synctex.gz:
-    timeStamp: 2019-10-22T17:06:47.862Z
+    timeStamp: 2019-10-22T17:47:54.764Z
     jobNames: []
-    hash: gbcTtKzYNFwT2hAzSUuT5aIgwPpzlzieWwzUdCNFYVQ=
+    hash: NqHkRjHH3xKhdG+WgsJsxVQMWAnotWnsWne0kuJPbUY=
     type: SyncTeX
   results.pdf:
-    timeStamp: 2019-10-22T17:06:47.860Z
+    timeStamp: 2019-10-22T17:47:54.763Z
     jobNames: []
-    hash: 7wIYiYO99VUTQPbb4nbuvEbNkNZJ0gHSkHCcituEHO8=
+    hash: SErb6FrcQJS4rOC0Y+lAIru8x0OEzwek3xlRykb5uSs=
     type: PortableDocumentFormat
   results.out:
-    timeStamp: 2019-10-22T17:06:47.792Z
+    timeStamp: 2019-10-22T17:47:54.715Z
     jobNames: []
     hash: 3xcxJDF8kEBMNRbi8RaeKmIiu7/HEoNDz6jKoaHJ9m8=
     type: OUT
   results.run.xml:
-    timeStamp: 2019-10-22T17:06:47.818Z
+    timeStamp: 2019-10-22T17:47:54.732Z
     jobNames: []
     hash: 9UEY12q/ZFqRXoMgSSr84kflWeBJ7f8RcFpoXvS7RlM=
     type: XML
   results.bcf:
-    timeStamp: 2019-10-22T17:06:47.810Z
+    timeStamp: 2019-10-22T17:47:54.726Z
     jobNames: []
     hash: 6+ZNR6SQsPrz4Sohv0H40H9EBM/SZiAgjm3F594SZNE=
     type: BiberControlFile
   results.bbl:
-    timeStamp: 2019-10-22T17:06:45.376Z
+    timeStamp: 2019-10-22T17:40:52.852Z
     jobNames: []
     hash: MYNJSqm+vViBR2USWHzkHs/j3O/nQ+F+Zux+OwOJVVI=
   results.blg:
-    timeStamp: 2019-10-22T17:06:45.376Z
+    timeStamp: 2019-10-22T17:40:52.852Z
     jobNames: []
-    hash: LJNrgmqX2B6lTi9zL6erZtunrZec+NNz4A6eFUgzLH4=
+    hash: hco8o/EIJmf7R7JiKjutcN50+MEI8EHS2ewV8BpHs/I=
     type: BiberLog
 rules:
   - name: ApplyOptions
