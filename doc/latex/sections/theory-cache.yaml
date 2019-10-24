@@ -134,9 +134,9 @@ files:
         2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
     type: ParsedYAML
   theory.tex:
-    timeStamp: 2019-10-24T10:59:26.238Z
+    timeStamp: 2019-10-24T11:08:47.493Z
     jobNames: []
-    hash: QANVnzDUvbf6yiD6mLQHFubvCd3/AEdvwgyXupPuBfQ=
+    hash: cd1J/OYjM1GNpybfK+bAupV91Sqcvo4kh0TZxS47RuY=
     type: LaTeX
     subType: subfiles
   'C:\Users\Anna Stray Rongve\AppData\Roaming\dicy\config.yaml':
@@ -147,7 +147,7 @@ files:
     jobNames: []
     type: Nil
   theory.fls-ParsedFileListing:
-    timeStamp: 2019-10-24T10:59:01.249Z
+    timeStamp: 2019-10-24T11:01:44.919Z
     jobNames: []
     value:
       messages: []
@@ -163,10 +163,46 @@ files:
           2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
         - >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
+        - >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmbx10.tfm
+        - >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\fonts\tfm\public\cm\cmbx12.tfm
         - >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmex10.tfm
+        - >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmmi12.tfm
+        - >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmmi6.tfm
+        - >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmmi8.tfm
+        - >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\fonts\tfm\public\cm\cmr12.tfm
+        - >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmr6.tfm
+        - >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmr8.tfm
+        - >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmsy10.tfm
+        - >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmsy6.tfm
+        - >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmsy8.tfm
+        - >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
         - >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
@@ -178,16 +214,25 @@ files:
           2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
         - >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmmi5.pfb
+        - >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
         - >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
         - >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
+        - >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\fonts\type1\public\amsfonts\cm\cmr7.pfb
         - >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+        - >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
         - >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\tex\context\base\mkii\supp-pdf.mkii
@@ -381,7 +426,7 @@ files:
       calls: []
     type: ParsedFileListing
   theory.log-ParsedLaTeXLog:
-    timeStamp: 2019-10-24T10:59:01.219Z
+    timeStamp: 2019-10-24T11:08:55.775Z
     jobNames: []
     value:
       messages:
@@ -2179,37 +2224,85 @@ files:
             range:
               start: 691
               end: 691
-        - severity: info
+        - severity: warning
           name: pdfTeX
-          category: Package atveryend
-          text: Empty hook `BeforeClearDocument'
+          category: Package hyperref
+          text: >-
+            Token not allowed in a PDF string (PDFDocEncoding): removing `math
+            shift'.
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 22
-              end: 22
+              start: 5
+              end: 5
           log:
             file: theory.log
             range:
-              start: 692
-              end: 692
+              start: 693
+              end: 694
+        - severity: warning
+          name: pdfTeX
+          category: Package hyperref
+          text: >-
+            Token not allowed in a PDF string (PDFDocEncoding): removing
+            `\times'.
+          source:
+            file: theory.tex"LaTeX2e <2018-12-01>
+            range:
+              start: 5
+              end: 5
+          log:
+            file: theory.log
+            range:
+              start: 697
+              end: 698
+        - severity: warning
+          name: pdfTeX
+          category: Package hyperref
+          text: >-
+            Token not allowed in a PDF string (PDFDocEncoding): removing `math
+            shift'.
+          source:
+            file: theory.tex"LaTeX2e <2018-12-01>
+            range:
+              start: 5
+              end: 5
+          log:
+            file: theory.log
+            range:
+              start: 701
+              end: 702
         - severity: info
           name: pdfTeX
           category: >-
             {C:/Users/Anna Stray
             Rongve/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]Package
             atveryend
+          text: Empty hook `BeforeClearDocument'
+          source:
+            file: theory.tex"LaTeX2e <2018-12-01>
+            range:
+              start: 58
+              end: 58
+          log:
+            file: theory.log
+            range:
+              start: 706
+              end: 707
+        - severity: info
+          name: pdfTeX
+          category: Package atveryend
           text: Empty hook `AfterLastShipout'
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 22
-              end: 22
+              start: 58
+              end: 58
           log:
             file: theory.log
             range:
-              start: 695
-              end: 696
+              start: 709
+              end: 709
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -2217,13 +2310,13 @@ files:
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 22
-              end: 22
+              start: 58
+              end: 58
           log:
             file: theory.log
             range:
-              start: 699
-              end: 699
+              start: 712
+              end: 712
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -2231,26 +2324,26 @@ files:
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
             range:
-              start: 22
-              end: 22
+              start: 58
+              end: 58
           log:
             file: theory.log
             range:
-              start: 700
-              end: 700
+              start: 713
+              end: 713
         - severity: info
           name: pdfTeX
           category: Package rerunfilecheck
           text: >-
             File `theory.out' has not changed. Checksum:
-            1A314679EA0929DBF5FBBE17C7049DA7;103.
+            37862FC29FD7EEB0904532F87646F5E6;249.
           source:
             file: theory.tex"LaTeX2e <2018-12-01>
           log:
             file: theory.log
             range:
-              start: 701
-              end: 702
+              start: 714
+              end: 715
         - severity: info
           name: pdfTeX
           category: Package logreq
@@ -2260,41 +2353,41 @@ files:
           log:
             file: theory.log
             range:
-              start: 703
-              end: 703
+              start: 716
+              end: 716
       inputs: []
       outputs:
         - theory.pdf
       calls: []
     type: ParsedLaTeXLog
   theory.log:
-    timeStamp: 2019-10-24T10:59:32.092Z
+    timeStamp: 2019-10-24T11:08:53.125Z
     jobNames: []
-    hash: ZcN1qtxT4W49gO4l9w6KZl41TZkNAnSjc7fNOG9epqo=
+    hash: 8fy7QQXMd3xmdzZqVSo6rUHmucLb5XejzjC9ncsg/fo=
     type: LaTeXLog
     subType: pdfTeX
   theory.pdf:
-    timeStamp: 2019-10-24T10:59:32.088Z
+    timeStamp: 2019-10-24T11:08:53.123Z
     jobNames: []
-    hash: CVqKgvafJ1XUEbHBv41qxD9Ks2IuaN5M0nbiIT9z1ko=
+    hash: Lhz4401i7pp6RaFw9cZjkvVUIxvZIFbu22ETkMJZ6P8=
     type: PortableDocumentFormat
   theory.aux:
-    timeStamp: 2019-10-24T10:59:31.993Z
+    timeStamp: 2019-10-24T11:08:53.049Z
     jobNames: []
-    hash: RDHGqN2A4PE13UWNLQqmBBt3M0ns52BFEN/9aCM7rWA=
+    hash: oUBA3CaEml5KJmhtQN+wg6Ji5bpPovLRyz6nrGqw8Z8=
     type: LaTeXAuxilary
   theory.fls:
-    timeStamp: 2019-10-24T10:59:32.097Z
+    timeStamp: 2019-10-24T11:08:53.128Z
     jobNames: []
-    hash: 5rtzBsJRIqZxDTf3mH1vrvBGVkCkpVuy20HIECVamdc=
+    hash: wG6HvvMiWOY3MdI5H12CgOOwhCNg1HP4StGUo8w5fL0=
     type: FileListing
   theory.synctex.gz:
-    timeStamp: 2019-10-24T10:59:32.089Z
+    timeStamp: 2019-10-24T11:08:53.124Z
     jobNames: []
-    hash: 662tXRALeCTHJoExT72L8cODVbbr7BURhX4fhoGK/lY=
+    hash: +sKfbiIHN0GlzMU6DedY2+qwH1U1Yb3WNbgPVG3pZDw=
     type: SyncTeX
   theory.aux-ParsedLaTeXAuxilary:
-    timeStamp: 2019-10-24T10:47:53.674Z
+    timeStamp: 2019-10-24T11:01:44.898Z
     jobNames: []
     value:
       commands:
@@ -2321,6 +2414,9 @@ files:
         - '@writefile'
         - '@writefile'
         - babel@aux
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
         - '@writefile'
         - '@writefile'
     type: ParsedLaTeXAuxilary
@@ -2571,27 +2667,27 @@ files:
     jobNames: []
     type: LaTeXStyle
   'C:\Users\Anna Stray Rongve\Documents\Project-4\doc\latex\main.tex':
-    timeStamp: 2019-10-24T10:46:03.256Z
+    timeStamp: 2019-10-24T10:59:58.120Z
     jobNames: []
     type: LaTeX
     subType: article
   theory.out:
-    timeStamp: 2019-10-24T10:59:31.998Z
+    timeStamp: 2019-10-24T11:08:53.052Z
     jobNames: []
-    hash: 1tWETML7RFixyHhvCBnfmGxSBpqmNIPrL4MuR6A3J9Q=
+    hash: 80IH/a6aYrqZ+mxWgR0H+lvjJWj0bdhlKlfocvW1wCE=
     type: OUT
   theory.run.xml:
-    timeStamp: 2019-10-24T10:59:32.040Z
+    timeStamp: 2019-10-24T11:08:53.074Z
     jobNames: []
-    hash: BphWuV12So7ETa8z/Bj3dWNKwb78YWijSdjNdtb3XxY=
+    hash: Qzq6po8O8rTqg8A6d4JfQeLVpJz0HzrNO/1uj655PvU=
     type: XML
   theory.bcf:
-    timeStamp: 2019-10-24T10:59:32.028Z
+    timeStamp: 2019-10-24T11:08:53.067Z
     jobNames: []
-    hash: 6+ZNR6SQsPrz4Sohv0H40H9EBM/SZiAgjm3F594SZNE=
+    hash: gDxuVXG9aINszx5ZgjldgUnGcf4swZY8sWkl4ULY95Y=
     type: BiberControlFile
   theory.blg-ParsedBiberLog:
-    timeStamp: 2019-10-24T10:48:02.420Z
+    timeStamp: 2019-10-24T11:01:47.769Z
     jobNames: []
     value:
       messages:
@@ -2627,61 +2723,28 @@ files:
             range:
               start: 4
               end: 4
-        - severity: info
+        - severity: warning
           name: Biber
-          text: Found 0 citekeys in bib section 0
+          text: No data sources defined!
           log:
             file: theory.blg
             range:
               start: 5
               end: 5
-        - severity: warning
-          name: Biber
-          text: The file 'theory.bcf' does not contain any citations!
-          log:
-            file: theory.blg
-            range:
-              start: 6
-              end: 6
-        - severity: info
-          name: Biber
-          text: Writing 'theory.bbl' with encoding 'UTF-8'
-          log:
-            file: theory.blg
-            range:
-              start: 7
-              end: 7
-        - severity: info
-          name: Biber
-          text: Output to theory.bbl
-          log:
-            file: theory.blg
-            range:
-              start: 8
-              end: 8
-        - severity: info
-          name: Biber
-          text: 'WARNINGS: 1'
-          log:
-            file: theory.blg
-            range:
-              start: 9
-              end: 9
       inputs:
         - theory.bcf
       outputs:
         - theory.blg
-        - theory.bbl
       calls: []
     type: ParsedBiberLog
   theory.bbl:
-    timeStamp: 2019-10-24T10:59:29.692Z
+    timeStamp: 2019-10-24T11:08:50.810Z
     jobNames: []
-    hash: MYNJSqm+vViBR2USWHzkHs/j3O/nQ+F+Zux+OwOJVVI=
+    hash: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
   theory.blg:
-    timeStamp: 2019-10-24T10:59:29.693Z
+    timeStamp: 2019-10-24T11:08:50.945Z
     jobNames: []
-    hash: d8EZvEcUjxSOhULrkihChFDzgApL29d0r+GvcQ3si6k=
+    hash: aLQWTlqKjwqrtAQiaQ8nPXAmV90mgse3KGMpAvo8N1g=
     type: BiberLog
   'C:\Users\Anna Stray Rongve\Documents\Project-4\doc\latex\main.tex-ParsedLaTeXMagic':
     timeStamp: 2019-10-24T10:48:37.273Z
@@ -2690,6 +2753,51 @@ files:
     type: ParsedLaTeXMagic
   'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr7.pfb':
     timeStamp: 2009-07-14T18:37:47.000Z
+    jobNames: []
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm':
+    timeStamp: 2009-02-06T20:24:08.000Z
+    jobNames: []
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx10.tfm':
+    timeStamp: 2006-01-09T00:04:13.000Z
+    jobNames: []
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmex10.tfm':
+    timeStamp: 2006-01-09T00:04:13.000Z
+    jobNames: []
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi12.tfm':
+    timeStamp: 2006-01-09T00:04:13.000Z
+    jobNames: []
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi6.tfm':
+    timeStamp: 2006-01-09T00:04:13.000Z
+    jobNames: []
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi8.tfm':
+    timeStamp: 2006-01-09T00:04:13.000Z
+    jobNames: []
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr6.tfm':
+    timeStamp: 2006-01-09T00:04:13.000Z
+    jobNames: []
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr8.tfm':
+    timeStamp: 2006-01-09T00:04:13.000Z
+    jobNames: []
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm':
+    timeStamp: 2006-01-09T00:04:13.000Z
+    jobNames: []
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy6.tfm':
+    timeStamp: 2006-01-09T00:04:13.000Z
+    jobNames: []
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy8.tfm':
+    timeStamp: 2006-01-09T00:04:13.000Z
+    jobNames: []
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb':
+    timeStamp: 2009-07-14T18:37:46.000Z
+    jobNames: []
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi5.pfb':
+    timeStamp: 2009-07-14T18:37:47.000Z
+    jobNames: []
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb':
+    timeStamp: 2009-07-14T18:37:47.000Z
+    jobNames: []
+  'C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb':
+    timeStamp: 2009-07-14T18:37:46.000Z
     jobNames: []
 rules:
   - name: ApplyOptions
@@ -3074,6 +3182,66 @@ rules:
       - file: >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\fonts\type1\public\amsfonts\cm\cmr7.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmbx10.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmex10.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmmi12.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmmi6.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmmi8.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmr6.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmr8.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmsy10.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmsy6.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmsy8.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmmi5.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
         type: default
     outputs:
       - file: theory.pdf
@@ -3477,6 +3645,66 @@ rules:
       - file: >-
           C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
           2.9\fonts\type1\public\amsfonts\cm\cmr7.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmbx10.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmex10.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmmi12.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmmi6.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmmi8.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmr6.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmr8.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmsy10.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmsy6.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\tfm\public\cm\cmsy8.tfm
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmmi5.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
+        type: default
+      - file: >-
+          C:\Users\Anna Stray Rongve\AppData\Local\Programs\MiKTeX
+          2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
         type: default
     outputs:
       - file: theory.aux
