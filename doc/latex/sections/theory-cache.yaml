@@ -134,9 +134,9 @@ files:
         2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
     type: ParsedYAML
   theory.tex:
-    timeStamp: 2019-10-24T10:58:52.645Z
+    timeStamp: 2019-10-24T10:59:26.238Z
     jobNames: []
-    hash: rtLy7TRsmlxo47nfI992O8wDUhQUNBpGy6yWOgWe3Ng=
+    hash: QANVnzDUvbf6yiD6mLQHFubvCd3/AEdvwgyXupPuBfQ=
     type: LaTeX
     subType: subfiles
   'C:\Users\Anna Stray Rongve\AppData\Roaming\dicy\config.yaml':
@@ -2268,28 +2268,28 @@ files:
       calls: []
     type: ParsedLaTeXLog
   theory.log:
-    timeStamp: 2019-10-24T10:58:58.647Z
+    timeStamp: 2019-10-24T10:59:32.092Z
     jobNames: []
     hash: ZcN1qtxT4W49gO4l9w6KZl41TZkNAnSjc7fNOG9epqo=
     type: LaTeXLog
     subType: pdfTeX
   theory.pdf:
-    timeStamp: 2019-10-24T10:58:58.645Z
+    timeStamp: 2019-10-24T10:59:32.088Z
     jobNames: []
     hash: CVqKgvafJ1XUEbHBv41qxD9Ks2IuaN5M0nbiIT9z1ko=
     type: PortableDocumentFormat
   theory.aux:
-    timeStamp: 2019-10-24T10:58:58.565Z
+    timeStamp: 2019-10-24T10:59:31.993Z
     jobNames: []
     hash: RDHGqN2A4PE13UWNLQqmBBt3M0ns52BFEN/9aCM7rWA=
     type: LaTeXAuxilary
   theory.fls:
-    timeStamp: 2019-10-24T10:58:58.653Z
+    timeStamp: 2019-10-24T10:59:32.097Z
     jobNames: []
     hash: 5rtzBsJRIqZxDTf3mH1vrvBGVkCkpVuy20HIECVamdc=
     type: FileListing
   theory.synctex.gz:
-    timeStamp: 2019-10-24T10:58:58.646Z
+    timeStamp: 2019-10-24T10:59:32.089Z
     jobNames: []
     hash: 662tXRALeCTHJoExT72L8cODVbbr7BURhX4fhoGK/lY=
     type: SyncTeX
@@ -2576,17 +2576,17 @@ files:
     type: LaTeX
     subType: article
   theory.out:
-    timeStamp: 2019-10-24T10:58:58.571Z
+    timeStamp: 2019-10-24T10:59:31.998Z
     jobNames: []
     hash: 1tWETML7RFixyHhvCBnfmGxSBpqmNIPrL4MuR6A3J9Q=
     type: OUT
   theory.run.xml:
-    timeStamp: 2019-10-24T10:58:58.606Z
+    timeStamp: 2019-10-24T10:59:32.040Z
     jobNames: []
     hash: BphWuV12So7ETa8z/Bj3dWNKwb78YWijSdjNdtb3XxY=
     type: XML
   theory.bcf:
-    timeStamp: 2019-10-24T10:58:58.593Z
+    timeStamp: 2019-10-24T10:59:32.028Z
     jobNames: []
     hash: 6+ZNR6SQsPrz4Sohv0H40H9EBM/SZiAgjm3F594SZNE=
     type: BiberControlFile
@@ -2675,13 +2675,13 @@ files:
       calls: []
     type: ParsedBiberLog
   theory.bbl:
-    timeStamp: 2019-10-24T10:58:56.303Z
+    timeStamp: 2019-10-24T10:59:29.692Z
     jobNames: []
     hash: MYNJSqm+vViBR2USWHzkHs/j3O/nQ+F+Zux+OwOJVVI=
   theory.blg:
-    timeStamp: 2019-10-24T10:58:56.303Z
+    timeStamp: 2019-10-24T10:59:29.693Z
     jobNames: []
-    hash: 53V/B4wPJqJitZ+hvabXEeZBe27Q9eZbo0WnDHAmQhg=
+    hash: d8EZvEcUjxSOhULrkihChFDzgApL29d0r+GvcQ3si6k=
     type: BiberLog
   'C:\Users\Anna Stray Rongve\Documents\Project-4\doc\latex\main.tex-ParsedLaTeXMagic':
     timeStamp: 2019-10-24T10:48:37.273Z
