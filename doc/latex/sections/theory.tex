@@ -1,0 +1,32 @@
+\begin{document}
+  \section{Theory}
+  \subsection{The problem}
+  \subsection{$2 \times 2$ lattice, analytical expressions}
+    To get started we will find the analytical expression for the partition function and the corresponding expectation values for the energy $E$, the mean absolute value of the magnetic moment $|M|$ (which we will refer to as magnetization), the specific heat $C_V$ and the susceptibility $\chi$ as function of T using periodic boundary conditions. These calculations will serve as benchmarks for our next steps.
+
+    \textbf{Partition function}\\
+    The partition function in the canonical ensemble is defined as:
+    \[ Z = \sum_{i=1}^N e^{-\beta E_i}\]
+    Where $\beta =\frac{1}{k_B T}$ and $E_i$ is the energy of the system in the microstate $i$ and $N$ is the respective microstate.
+    \\
+    We therefore have to find $E_i$ which is defined as:
+    \[E_i = -J \sum_{<kl>}^N s_k s_l\]
+    Where $<kl>$ indicates that we sum only over the nearest neighbors and J is a constant for the bonding strenght. For our two dimensional system the equation reads:
+    \[E_{i,2D} = -J \sum_i^N \sum_j^N \left(s_{i,j}s_{i,j+1} + s_{i,j}s_{i+1,j}\right)\]
+    Four our two-spin-state system with two dimensions we get the following table:
+    \begin{table}[!h]
+      \begin{tabular}{c c c c}
+        Number of spins up & Degeneracy & Energy & Magnetization\\
+        \hline\\
+        4 & 1 & -8J & 4\\
+        3 & 4 & 0 & 2 \\
+        2 & 4 & 0 & 0\\
+        2 & 2 & 8J & 0 \\
+        1 & 4 & 0 & -2 \\
+        0 & 1 & -8J & -4
+      \end{tabular}
+      \caption{Number of spins up, degeneracy, energy and magnetization of the two-dimensional benchmark scenario.}
+    \end{table}
+    \FloatBarrier
+    Where the magnetization is found by subtracting the number of spin downs from the number of spin up.
+\end{document}
