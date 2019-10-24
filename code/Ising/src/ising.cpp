@@ -9,6 +9,7 @@ double energy, spin;
 for (j = 1; j< N;j++){
   for (i = 1; i<N;i++){
     energy += spin[j]*spin[j+1]
+
   }}
 
 jm = N

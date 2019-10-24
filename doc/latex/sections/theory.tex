@@ -5,7 +5,7 @@
   \subsection{$2 \times 2$ lattice, analytical expressions}
     To get started we will find the analytical expression for the partition function and the corresponding expectation values for the energy $E$, the mean absolute value of the magnetic moment $|M|$ (which we will refer to as magnetization), the specific heat $C_V$ and the susceptibility $\chi$ as function of T using periodic boundary conditions. These calculations will serve as benchmarks for our next steps.
 
-    \textbf{Partition function}\\
+    \textbf{Partition function, $Z$}\\
     The partition function in the canonical ensemble is defined as:
     \[ Z = \sum_{i=1}^N e^{-\beta E_i}\]
     Where $\beta =\frac{1}{k_B T}$ and $E_i$ is the energy of the system in the microstate $i$ and $N$ is the respective microstate.
@@ -14,7 +14,7 @@
     \[E_i = -J \sum_{<kl>}^N s_k s_l\]
     Where $<kl>$ indicates that we sum only over the nearest neighbors and J is a constant for the bonding strenght. For our two dimensional system the equation reads:
     \[E_{i,2D} = -J \sum_i^N \sum_j^N \left(s_{i,j}s_{i,j+1} + s_{i,j}s_{i+1,j}\right)\]
-    Four our two-spin-state system with two dimensions we get the following table:
+    Four our two-spin-state system with two dimensions we get the following table if we use periodic boundary conditions:
     \begin{table}[!h]
       \begin{tabular}{c c c c}
         Number of spins up & Degeneracy & Energy & Magnetization\\
@@ -29,6 +29,29 @@
       \caption{Number of spins up, degeneracy, energy and magnetization of the two-dimensional benchmark scenario.}
     \end{table}
     \FloatBarrier
+    Where the magnetization is found by subtracting the number of spin downs from the number of spin up, or in other words the sum of the spins:
+    \[\mathcal{M} = \sum_{j=1}^N s_j\]
+
+    Getting back to the partition function, we insert all $16$ of the $E_i$ respectively.
+
+    \[Z = e^{-\beta (-8J)} + 2 \cdot e^{-\beta (8J)} + e^{-\beta (-8J)} = 2e^{-\beta 8J} + 2e^{\beta 8J}\]
+
+    \textbf{Energy expectation value, $\langle E \rangle$}\\
+    The expectation value of the energy is defined as:
+
+    \[\langle E \rangle = \sum_{i=1}^M E_i P_i(\beta) = \frac{1}{Z}\sum_{i=1}^M E_i e^{-\beta E_i}\]
+
+    Where $M$ is the sum over all microstates. $P_i$ is the Boltzmann probability distribution which reads:
+
+    \[P_i(\beta) = \frac{e^{\beta E_i}}{Z}\]
+
+    For our system, this is easily calculated by inserting the partition function and the microstate energy $E_i$.
+    \begin{align*}
+      \langle E \rangle &= \frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J}} \left(2 \cdot -8J \cdot e^{\beta 8J} + 2\cdot 8J \cdot e^{-\beta8J}\right)\\
+        &= \frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J}} \left(-16J e^{\beta8J} + 16Je^{-\beta 8J}\right)\\
+        &= 8J \frac{1}{e^{-\beta 8J} + e^{\beta 8J}}  \left(e^{-\beta8J} - e^{\beta 8J}\right)
+    \end{align*}
+
     Where the magnetization is found by subtracting the number of spin downs from the number of spin up.
 
 
@@ -51,8 +74,6 @@
     where M is all the microstates, $P_i$ is the probability of having the system in a state/configuration i.
 
     CONFIGURATIONS
-
-
 
 
 \end{document}
