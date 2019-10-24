@@ -1,7 +1,7 @@
 CC = g++
 CCFLAGS = -larmadillo -lblas -llapack -std=c++11 #-fopenmp -O3
 DEPS = ./include/mclib.h
-OBJ = # Names of files in src you want to compile, appended by .o
+OBJ = ./ising.o # Names of files in src you want to compile, appended by .o
 
 NO_OF_FILES := $(words $(OBJ))
 COUNTER = 1
