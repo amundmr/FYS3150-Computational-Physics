@@ -1,8 +1,16 @@
 CC = g++
+
+# Flags for compiler.
 CCFLAGS = -larmadillo -lblas -llapack -std=c++11 #-fopenmp -O3
 
-OBJ = ./obj/initilize.o ./obj/input.o ./obj/output.o  ./obj/metropolis.o # Names of files in src you want to compile, appended by .o
+# Names of files in src you want to compile: "./obj/<name>.o".
+OBJ = ./obj/initilize.o ./obj/input.o ./obj/output.o  ./obj/metropolis.o
 
+# Headerfile(s) used.
+DEPS = ./include/isinglib.h
+
+#------------------------------------
+# No need to change the stuff below.
 NO_OF_FILES := $(words $(OBJ))
 COUNTER = 1
 

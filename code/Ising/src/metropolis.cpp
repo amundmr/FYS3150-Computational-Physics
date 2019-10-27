@@ -1,11 +1,5 @@
-#include <iostream>
-#include <fstream>
-#include <random>
-#include <iomanip>
-#include <vector>
-#include<stdio.h>
-#include<math.h>
-#include<stdlib.h>
+#include "../include/lib.h"
+
 using namespace std;
 
 
