@@ -1,6 +1,6 @@
 #include "../include/lib.h"
 
-inline int periodic_boundary_conditions(int , int , int );
+using namespace std;
 
 void initilize(int L, double T, int **spinn, double& E, double& M)
   {

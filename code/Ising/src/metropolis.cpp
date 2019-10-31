@@ -1,19 +1,6 @@
-<<<<<<< HEAD
-#include <iostream>
-#include <fstream>
-#include <random>
-#include <chrono>
-#include <iomanip>
-#include <vector>
-#include<stdio.h>
-#include<math.h>
-#include<stdlib.h>
-=======
 #include "../include/lib.h"
 
->>>>>>> bf8ab18eee2b3d99ef650c7a9e313b1bd3134b22
 using namespace std;
-inline int periodic_boundary_conditions(int &, int &, int&);
 void Metropolis(int L, long& idum, int **spinn, double &E, double &M, double *w)
 {
 // Initialize RNG (Mersenne Twister) in our interval

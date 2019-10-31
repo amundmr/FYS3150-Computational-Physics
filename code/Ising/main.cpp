@@ -1,24 +1,8 @@
-<<<<<<< HEAD
-#include <iostream>
-#include <fstream>
-#include <iomanip>
-#include <vector>
-#include <random>
-#include <chrono>
-#include<stdio.h>
-#include<math.h>
-#include<stdlib.h>
-//#include "lib.h"
-=======
 #include "./include/lib.h"
 
->>>>>>> bf8ab18eee2b3d99ef650c7a9e313b1bd3134b22
 using namespace std;
 ofstream ofile;
 bind()
-inline int periodic_boundary_conditions(int &i, int &limit, int &add){
-  return (i+limit+add) % (limit);
-}
 
 //Main program
 int main(int argc, char* argv[] ){

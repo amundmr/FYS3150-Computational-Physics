@@ -7,7 +7,7 @@ CCFLAGS = -larmadillo -lblas -llapack -std=c++11 #-fopenmp -O3
 OBJ = ./obj/initilize.o ./obj/input.o ./obj/output.o  ./obj/metropolis.o
 
 # Headerfile(s) used.
-DEPS = ./include/isinglib.h
+DEPS = ./include/lib.h
 
 #------------------------------------
 # No need to change the stuff below.
