@@ -3,7 +3,7 @@
 using namespace std;
 ofstream ofile;
 
-void output(int L, int mcs, double T, vector<int>& ExpecationValues){
+void output(int L, int mcs, double T, vec ExpecationValues){
 
   double norm = 1.0/((double) (mcs));
   double E_ExpectVal    = ExpecationValues[0]*norm;

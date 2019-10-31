@@ -1,16 +1,17 @@
 #include "./include/lib.h"
 
 using namespace std;
+using namespace arma;
 ofstream ofile;
-bind()
+
 
 //Main program
 int main(int argc, char* argv[] ){
-
-  int **spinn, L, mcs,w[17], avarage[5];
-  double T, T_start, T_end, T_step, E, M;
-  string outfilename;
+  char *outfilename;
   long idum;
+  int **spinn, L, mcs;
+  double T, T_start, T_end, T_step, E, M,w[17], avarage[5];
+
 
   //Input arguments from command line. Aborts if there are too few
   if (argc <= 1){
@@ -24,7 +25,7 @@ int main(int argc, char* argv[] ){
 
   ofile.open(outfilename);
   input(L, mcs, T_start, T_end, T_step);
-  spinn = (int**) matrix(L,L, sizeof(int));
+  spinn =(int**) [L][L];
   idum = -1; //random starting point
 
   for (T = T_start; T<= T_end; T += T_step){
@@ -35,7 +36,7 @@ int main(int argc, char* argv[] ){
 
     //Array for expectation values
     for(int i = 0; i < 5; i++) avarage[i] = 0;
-    initilize(L, double T, spinn, E, M);
+    initilize(L, T, spinn, E, M);
 
     //Monte Carlo:
       for (int cycles = 1; cycles <= mcs; cycles++){
@@ -43,7 +44,6 @@ int main(int argc, char* argv[] ){
 
         avarage[0] += E; avarage[1] += E*E;
         avarage[2] += M; avarage[3] += M*M; avarage[4] += fabs(M);
-
 
       }
 

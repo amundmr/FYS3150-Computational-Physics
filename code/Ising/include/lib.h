@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <cmath>
-#include <fstream>
+//#include <fstream>
 #include <random>
 #include <iomanip>
 #include <cstdlib>
@@ -16,9 +16,9 @@
 using namespace std;
 using namespace arma;
 
-void input(int &, int & , double &, double &, double &);
+void input(int&, int& , double&, double&, double&);
 void initilize(int, double, int **, double&, double&);
-void Metropolis(int , long&, int **, double &, double &, double *);
+void Metropolis(int , long&, int **, double&, double&, double *);
 void output(int, int, double, vector<int>&);
 
  int periodic_boundary_conditions(int i, int limit, int add){
