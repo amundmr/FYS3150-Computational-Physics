@@ -2,13 +2,15 @@
 #include <fstream>
 #include <iomanip>
 #include <vector>
+#include <random>
+#include <chrono>
 #include<stdio.h>
 #include<math.h>
 #include<stdlib.h>
 //#include "lib.h"
 using namespace std;
 ofstream ofile;
-
+bind()
 inline int periodic_boundary_conditions(int &i, int &limit, int &add){
   return (i+limit+add) % (limit);
 }

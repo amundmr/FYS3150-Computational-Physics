@@ -1,25 +1,29 @@
 #include <iostream>
 #include <fstream>
 #include <random>
+#include <chrono>
 #include <iomanip>
 #include <vector>
 #include<stdio.h>
 #include<math.h>
 #include<stdlib.h>
 using namespace std;
-
-
+inline int periodic_boundary_conditions(int &, int &, int&);
 void Metropolis(int L, long& idum, int **spinn, double &E, double &M, double *w)
 {
+// Initialize RNG (Mersenne Twister) in our interval
+mt19937::result_type seed = time(0);//+omp_get_thread_num();  //Include last command to get different seed for each thread
+auto interval_rand = bind(uniform_real_distribution<double>(0,1),mt19937(seed));
+
 for (int x = 0;  x < L; x++){
   for (int y = 0; y < L; y++){
     //random position in lattice
-    double ix = (int) (ran1 (idum) * (double) L);
-    double iy = (int) (ran1 (idum) * (double) L);
+    int ix = (int) (interval_rand() * (double) L);
+    int iy = (int) (interval_rand() * (double) L);
     int deltaE = 2*spinn[ix][iy](*spinn[ periodic_boundary_conditions(iy,L,-1)] +
                   spinn[periodic_boundary_conditions(ix,L,-1)][iy]+
-                  spinn[iy][periodic_boundary_conditions(iy,L,1)]+
-                  spinn[periodic_boundary_conditions(ix,L,-1)][iy]);id
+                  spinn[iy][periodic_boundary_conditions(iy,L,-1)]+
+                  spinn[periodic_boundary_conditions(ix,L,-1)][iy]);
 
   //Metropolis test:
   if (ran1(idum)<= w[deltaE+8]){
