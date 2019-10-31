@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <iostream>
 #include <fstream>
 #include <iomanip>
@@ -8,21 +9,16 @@
 #include<math.h>
 #include<stdlib.h>
 //#include "lib.h"
+=======
+#include "./include/lib.h"
+
+>>>>>>> bf8ab18eee2b3d99ef650c7a9e313b1bd3134b22
 using namespace std;
 ofstream ofile;
 bind()
 inline int periodic_boundary_conditions(int &i, int &limit, int &add){
   return (i+limit+add) % (limit);
 }
-inline int periodic_boundary_conditions(int &, int &, int&);
-//read in input in terminal
-void input(int &, int & , double &, double &, double &);
-//initilize energy and magnetization
-void initilize(int, double, int **, double&, double&);
-//Metropolis algo
-void Metropolis(int , long&, int **, double &, double &, double *);
-//Results are by this function printed to a file;
-void output(int, int, double, vector);
 
 //Main program
 int main(int argc, char* argv[] ){

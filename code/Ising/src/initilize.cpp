@@ -1,4 +1,4 @@
-
+#include "../include/lib.h"
 
 inline int periodic_boundary_conditions(int , int , int );
 

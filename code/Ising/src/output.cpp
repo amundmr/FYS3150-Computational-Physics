@@ -1,8 +1,5 @@
-#include <iostream>
-#include <iostream>
-#include <fstream>
-#include <iomanip>
-#include <vector>
+#include "../include/lib.h"
+
 using namespace std;
 ofstream ofile;
 
