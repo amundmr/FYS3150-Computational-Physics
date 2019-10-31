@@ -9,7 +9,7 @@ int main(int argc, char* argv[] ){
 
   int **spinn, L, mcs,w[17], avarage[5];
   double T, T_start, T_end, T_step, E, M;
-  char *outfilename;
+  string outfilename;
   long idum;
 
   //Input arguments from command line. Aborts if there are too few
