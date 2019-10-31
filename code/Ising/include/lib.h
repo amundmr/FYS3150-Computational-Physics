@@ -21,6 +21,6 @@ void initilize(int, double, int **, double&, double&);
 void Metropolis(int , long&, int **, double &, double &, double *);
 void output(int, int, double, vector<int>&);
 
-inline int periodic_boundary_conditions(int i, int limit, int add){
-  return (i+limit+add) % (limit);
+ int periodic_boundary_conditions(int i, int limit, int add){
+  return (i + limit + add) % limit;
 }
