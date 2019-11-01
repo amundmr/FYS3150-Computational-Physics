@@ -1,6 +1,10 @@
 #include "../include/lib.h"
 
 using namespace std;
+<<<<<<< HEAD
+=======
+using namespace arma;
+>>>>>>> 2defaec73b9d1599eb656f574563fadd487e38bc
 void Metropolis(int L, long& idum, mat &spinn, double& E, double& M, double *w)
 {
 // Initialize RNG (Mersenne Twister) in our interval
@@ -14,15 +18,15 @@ for (int y = 0;  y < L; y++){
     int iy = (int) (interval_rand(&idum) * (double)L);
     cout <<ix <<endl;
     cout <<iy <<endl;
-    int deltaE = 2*spinn[iy][ix]*(spinn[iy][periodic_boundary_conditions(ix,L,-1)]+
-                  spinn[periodic_boundary_conditions(iy,L,-1)][ix]+
-                  spinn[iy][periodic_boundary_conditions(ix,L,1)]+
-                  spinn[periodic_boundary_conditions(iy,L,1)][ix]);
+    int deltaE = 2*spinn(iy,ix)*(spinn(iy,periodic_boundary_conditions(ix,L,-1))+
+                  spinn(periodic_boundary_conditions(iy,L,-1),ix)+
+                  spinn(iy,periodic_boundary_conditions(ix,L,1))+
+                  spinn(periodic_boundary_conditions(iy,L,1),ix));
 
   //Metropolis test:
   if (interval_rand() <= w[deltaE+8]){
     spinn[iy][ix] *= -1;    //flipp spinn
-    M += (double) 2*spinn[iy][ix];
+    M += (double) 2*spinn(iy,ix);
     E += (double) deltaE;
   }
   }
