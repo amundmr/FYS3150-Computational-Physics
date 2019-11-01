@@ -45,6 +45,8 @@ int main(int argc, char* argv[] ){
       }
 
       //print results;
+      cout << w <<endl;
+
       output(L,mcs,T,avarage);
   }
 
