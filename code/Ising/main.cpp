@@ -1,12 +1,5 @@
 #include "./include/lib.h"
 
-ofstream ofile;
-
-int periodic_boundary_conditions(int i, int limit, int add)
-{
-  return (i + limit + add) % limit;
-}
-
 //Main program
 int main(int argc, char* argv[] ){
   char *outfilename;
@@ -14,10 +7,7 @@ int main(int argc, char* argv[] ){
   int L, mcs;
   vec w(17), avarage(5);
   double T, T_start, T_end, T_step, E, M;
-
-
-
-
+  ofstream ofile;
 
   //Input arguments from command line. Aborts if there are too few
   if (argc <= 1){
@@ -61,4 +51,9 @@ int main(int argc, char* argv[] ){
 
   ofile.close();
   return 0;
+}
+
+int periodic_boundary_conditions(int i, int limit, int add)
+{
+  return (i + limit + add) % limit;
 }
