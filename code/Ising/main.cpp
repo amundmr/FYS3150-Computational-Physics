@@ -7,7 +7,7 @@ int main(int argc, char* argv[] ){
   int L, mcs;
   vec w(17), avarage(5);
   double T, T_start, T_end, T_step, E, M;
-  ofstream ofile;
+
 
   //Input arguments from command line. Aborts if there are too few
   if (argc <= 1){
@@ -19,7 +19,7 @@ int main(int argc, char* argv[] ){
     outfilename = argv[1];
   }
 
-  ofile.open(outfilename);
+
   input(L, mcs, T_start, T_end, T_step);
   mat spinn(L,L);
   idum = -1; //random starting point
@@ -44,12 +44,12 @@ int main(int argc, char* argv[] ){
 
       }
 
-      //print results;
-      output(L,mcs,T,avarage);
+
   }
 
+  //print results;
+  output(L,mcs,T,avarage, outfilename);
 
-  ofile.close();
   return 0;
 }
 

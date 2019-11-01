@@ -1,8 +1,9 @@
 #include "../include/lib.h"
 
-ofstream ofile;
-void output(int L, int mcs, double T, vec ExpecationValues){
 
+ofstream ofile;
+void output(int L, int mcs, double T, vec ExpecationValues, string filename){
+  ofile.open(filename);
   double norm = 1.0/((double) (mcs));
   double E_ExpectVal    = ExpecationValues[0]*norm;
   double E2_ExpectVal   = ExpecationValues[1]*norm;
@@ -20,5 +21,5 @@ void output(int L, int mcs, double T, vec ExpecationValues){
   ofile <<   M_ExpectVal/L/L<<endl;
   ofile <<  Mvariance/T<<endl;
   ofile <<  Mabs_ExpectVal/L/L<<endl;
-
+  ofile.close();
 }
