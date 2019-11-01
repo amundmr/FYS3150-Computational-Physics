@@ -1,6 +1,7 @@
 #include "../include/lib.h"
 
 using namespace std;
+using namespace arma;
 void Metropolis(int L, long& idum, mat &spinn, double& E, double& M, double *w)
 {
 // Initialize RNG (Mersenne Twister) in our interval
