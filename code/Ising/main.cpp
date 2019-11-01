@@ -1,7 +1,6 @@
 #include "./include/lib.h"
 
-using namespace std;
-using namespace arma;
+
 ofstream ofile;
 
 
