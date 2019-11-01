@@ -76,20 +76,22 @@
 
 
     \textbf{Magnetization, $\mathcal{M}$}\\
-    In the canonical ensemble the mean magnetization can be described as
-    \[\langle \mathcal{M} \rangle = \sum_i^M \mathcal{M}_i P_i(\beta) = \frac{1}{Z} \sum_i^M \mathcal{M}_i e^{-\beta E_i}\]
+    In the canonical ensemble the absolute mean magnetization can be described as
+    \[\langle \mathcal{M} \rangle = \sum_i^M |\mathcal{M}_i| P_i(\beta) = \frac{1}{Z} \sum_i^M |\mathcal{M}_i| e^{-\beta E_i}\]
     We can now simply insert the magnetization and the energies for each respective microstate. This is found in table \ref{tab:2x2spinsEnergiesMags}.
     \begin{align*}
       \langle \mathcal{M} \rangle &= \frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \Big( 1\cdot 4 e^{-\beta (-8J)} + 4 \cdot 2  e^{-\beta\cdot 0} + 4 \cdot 0e^{-\beta\cdot 0}\\
-      &\hspace{5cm} + 2\cdot 0  e^{-\beta 8J} + 4 \cdot -2 e^{-\beta \cdot 0} + 1 \cdot -4 e^{-\beta (-8J)} \Big) \\
-      &= \frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \left(4 e^{\beta 8J} + 8e^{-\beta\cdot 0} - 8 e^{-\beta \cdot 0} -4 e^{\beta 8J} \right)\\
-      &= \frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \left( 4e^{\beta 8J} -4e^{\beta 8J} +8 -8 \right)\\
-      &=0
+      &\hspace{5cm} + 2\cdot 0  e^{-\beta 8J} + 4 \cdot |-2| e^{-\beta \cdot 0} + 1 \cdot |-4| e^{-\beta (-8J)} \Big) \\
+      &= \frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \left(4 e^{\beta 8J} + 8e^{-\beta\cdot 0} + 8 e^{-\beta \cdot 0} +4 e^{\beta 8J} \right)\\
+      &= \frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \left( 4e^{\beta 8J} +4e^{\beta 8J} +8 +8 \right)\\
+      &=\frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \left( 8e^{\beta 8J} +16 \right)\\
+      &= 4\frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6}\left( e^{\beta 8J} +2 \right)
     \end{align*}
     Since the variance of the mean magnetization ($\sigma_M$) is needed for the susceptibility later, we will calculate this here.
 
     \begin{align*}
       \sigma^2_\mathcal{M} &= \langle \mathcal{M}^2 \rangle - \langle \mathcal{M} \rangle ^2 = \frac{1}{Z}\sum \mathcal{M}^2 e^{-\beta E_i} - \left( \frac{1}{Z} \sum \mathcal{M} e^{-\beta E_i} \right)^2\\
+      \intertext{The latter term here becomes zero. This is easy to see if you remove the absolutes of the magnetization in the calculation above.}
       &= \frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \Big( 1\cdot 4^2 e^{-\beta (-8J)} + 4 \cdot 2^2  e^{-\beta\cdot 0} + 4 \cdot 0^2 e^{-\beta\cdot 0}\\
       &\hspace{4cm} + 2\cdot 0^2  e^{-\beta 8J} + 4 \cdot (-2)^2 e^{-\beta \cdot 0} + 1 \cdot (-4)^2 e^{-\beta (-8J)} \Big) - 0^2\\
       &=\frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \left(16e^{\beta 8J} + 16 + 16 + 16e^{\beta 8J} \right)\\
