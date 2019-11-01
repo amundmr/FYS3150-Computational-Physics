@@ -44,8 +44,6 @@ int main(int argc, char* argv[] ){
 
       }
 
-      //print results;
-      output(L,mcs,T,avarage);
   }
 
   //print results;
