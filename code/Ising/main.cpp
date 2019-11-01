@@ -9,7 +9,7 @@ ofstream ofile;
 int main(int argc, char* argv[] ){
   char *outfilename;
   long idum;
-  int **spinn, L, mcs;
+  int *spinn, L, mcs;
   double T, T_start, T_end, T_step, E, M,w[17], avarage[5];
 
 
@@ -25,7 +25,7 @@ int main(int argc, char* argv[] ){
 
   ofile.open(outfilename);
   input(L, mcs, T_start, T_end, T_step);
-  spinn =(int**) [L][L];
+  spinn =(int*) [L][L];
   idum = -1; //random starting point
 
   for (T = T_start; T<= T_end; T += T_step){
@@ -51,7 +51,7 @@ int main(int argc, char* argv[] ){
       output(L,mcs,T,avarage);
   }
 
-  free_matrix((void**) spinn);
+  free_matrix((void*) spinn);
   ofile.close();
   return 0;
 }
