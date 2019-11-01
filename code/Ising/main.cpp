@@ -1,11 +1,16 @@
 #include "./include/lib.h"
 
+<<<<<<< HEAD
 ofstream ofile;
 
 int periodic_boundary_conditions(int i, int limit, int add)
 {
   return (i + limit + add) % limit;
 }
+=======
+
+ofstream ofile;
+>>>>>>> 2018fdfbf10b32d7b3addb1813abfdacc5cd7965
 
 //Main program
 int main(int argc, char* argv[] ){
