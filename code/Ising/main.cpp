@@ -22,7 +22,6 @@ int main(int argc, char* argv[] ){
   ofile.open(outfilename);
   input(L, mcs, T_start, T_end, T_step);
   mat spinn(L,L);
-
   idum = -1; //random starting point
 
   for (T = T_start; T<= T_end; T += T_step){
@@ -34,6 +33,7 @@ int main(int argc, char* argv[] ){
     //Array for expectation values
     for(int i = 0; i < 5; i++) avarage[i] = 0;
     initilize(L, T, spinn, E, M);
+
 
     //Monte Carlo:
       for (int cycles = 1; cycles <= mcs; cycles++){

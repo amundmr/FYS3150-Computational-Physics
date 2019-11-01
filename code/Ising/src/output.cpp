@@ -13,12 +13,12 @@ void output(int L, int mcs, double T, vec ExpecationValues){
   double Evariance =(E2_ExpectVal-E_ExpectVal*E_ExpectVal)/L/L;
   double Mvariance =(M2_ExpectVal-Mabs_ExpectVal*Mabs_ExpectVal)/L/L;
 
-  ofile << setiosflags(ios::showpoint | ios::uppercase);
-  ofile << setw(15) << setprecision(8) << T;
-  ofile << setw(15) << setprecision(8) << E_ExpectVal/L/L;
-  ofile << setw(15) << setprecision(8) << Evariance/T/T;
-  ofile << setw(15) << setprecision(8) << M_ExpectVal/L/L;
-  ofile << setw(15) << setprecision(8) << Mvariance/T;
-  ofile << setw(15) << setprecision(8) << Mabs_ExpectVal/L/L<<endl;
+  //ofile << setiosflags(ios::showpoint | ios::uppercase);
+  ofile << T<<endl;
+  ofile <<   E_ExpectVal/L/L<<endl;
+  ofile <<  Evariance/T/T<<endl;
+  ofile <<   M_ExpectVal/L/L<<endl;
+  ofile <<  Mvariance/T<<endl;
+  ofile <<  Mabs_ExpectVal/L/L<<endl;
 
 }

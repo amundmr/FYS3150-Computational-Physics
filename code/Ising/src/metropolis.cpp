@@ -9,10 +9,8 @@ auto interval_rand = bind(uniform_real_distribution<double>(0,1),mt19937(seed));
 for (int y = 0;  y < L; y++){
   for (int x = 0; x < L; x++){
     //random position in lattice
-    int ix = (int) (interval_rand(&idum) * (double)L);
-    int iy = (int) (interval_rand(&idum) * (double)L);
-    cout <<ix <<endl;
-    cout <<iy <<endl;
+    int ix = (int) (interval_rand() * (double)L);
+    int iy = (int) (interval_rand() * (double)L);
     int deltaE = 2*spinn(iy,ix)*(spinn(iy,periodic_boundary_conditions(ix,L,-1))+
                   spinn(periodic_boundary_conditions(iy,L,-1),ix)+
                   spinn(iy,periodic_boundary_conditions(ix,L,1))+
