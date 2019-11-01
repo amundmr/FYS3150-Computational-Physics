@@ -4,12 +4,14 @@ using namespace std;
 using namespace arma;
 ofstream ofile;
 
+
 //Main program
 int main(int argc, char* argv[] ){
   char *outfilename;
   long idum;
   int L, mcs;
-  double T, T_start, T_end, T_step, E, M,w[17], avarage[5];
+  vec w(17), avarage(5);
+  double T, T_start, T_end, T_step, E, M;
 
 
   //Input arguments from command line. Aborts if there are too few
@@ -42,8 +44,8 @@ int main(int argc, char* argv[] ){
       for (int cycles = 1; cycles <= mcs; cycles++){
         Metropolis(L,idum,spinn,E,M,w);
 
-        avarage[0] += E; avarage[1] += E*E;
-        avarage[2] += M; avarage[3] += M*M; avarage[4] += fabs(M);
+        avarage(0) += E; avarage(1) += E*E;
+        avarage(2) += M; avarage(3) += M*M; avarage(4) += fabs(M);
 
       }
 
@@ -51,7 +53,7 @@ int main(int argc, char* argv[] ){
       output(L,mcs,T,avarage);
   }
 
-  free_matrix((void*) spinn);
+
   ofile.close();
   return 0;
 }

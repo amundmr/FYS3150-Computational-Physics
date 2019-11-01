@@ -17,9 +17,9 @@ using namespace std;
 using namespace arma;
 
 void input(int&, int& , double&, double&, double&);
-void initilize(int, double, int **, double&, double&);
-void Metropolis(int , long&, int **, double&, double&, double *);
-void output(int, int, double, vector<int>&);
+void initilize(int, double, mat, double&, double&);
+void Metropolis(int , long&, mat, double&, double&, vec);
+void output(int, int, double, vec);
 
  int periodic_boundary_conditions(int i, int limit, int add){
   return (i + limit + add) % limit;

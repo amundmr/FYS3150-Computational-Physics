@@ -1,6 +1,7 @@
 #include "../include/lib.h"
 
-void Metropolis(int L, long& idum, mat &spinn, double& E, double& M, double *w)
+using namespace std;
+void Metropolis(int L, long& idum, mat &spinn, double& E, double& M, vec w)
 {
 // Initialize RNG (Mersenne Twister) in our interval
 mt19937::result_type seed = time(0);//+omp_get_thread_num();  //Include last command to get different seed for each thread

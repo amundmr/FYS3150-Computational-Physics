@@ -1,6 +1,5 @@
 #include "../include/lib.h"
 
-using namespace std;
 ofstream ofile;
 
 void output(int L, int mcs, double T, vec ExpecationValues){
