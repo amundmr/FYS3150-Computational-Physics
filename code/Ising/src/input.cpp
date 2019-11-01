@@ -1,6 +1,5 @@
 #include "../include/lib.h"
 
-using namespace std;
 
 void input(int &L, int &mcs , double &T_start, double &T_end, double &T_step){
 

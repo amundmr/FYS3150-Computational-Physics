@@ -1,9 +1,11 @@
 #include "./include/lib.h"
 
-using namespace std;
-using namespace arma;
 ofstream ofile;
 
+int periodic_boundary_conditions(int i, int limit, int add)
+{
+  return (i + limit + add) % limit;
+}
 
 //Main program
 int main(int argc, char* argv[] ){
@@ -12,6 +14,9 @@ int main(int argc, char* argv[] ){
   int L, mcs;
   vec w(17), avarage(5);
   double T, T_start, T_end, T_step, E, M;
+
+
+
 
 
   //Input arguments from command line. Aborts if there are too few
