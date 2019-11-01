@@ -87,17 +87,15 @@
       &=\frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \left( 8e^{\beta 8J} +16 \right)\\
       &= 4\frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6}\left( e^{\beta 8J} +2 \right)
     \end{align*}
-    Since the variance of the mean magnetization ($\sigma_M$) is needed for the susceptibility later, we will calculate this here. ney
+    Since the variance of the mean magnetization ($\sigma_M$) is needed for the susceptibility later, we will calculate this here.
 
     \begin{align*}
-      \sigma^2_\mathcal{M} &= \langle \mathcal{M}^2 \rangle - \langle \mathcal{M} \rangle ^2 = \frac{1}{Z}\sum |\mathcal{M}|^2 e^{-\beta E_i} - \left( \frac{1}{Z} \sum |\mathcal{M}| e^{-\beta E_i} \right)^2\\
+      \sigma^2_\mathcal{M} &= \langle \mathcal{M}^2 \rangle - \langle \mathcal{M} \rangle ^2 = \frac{1}{Z}\sum \mathcal{M}^2 e^{-\beta E_i} - \left( \frac{1}{Z} \sum \mathcal{M} e^{-\beta E_i} \right)^2\\
+      \intertext{The latter term here becomes zero. This is easy to see if you remove the absolutes of the magnetization in the calculation above.}
       &= \frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \Big( 1\cdot 4^2 e^{-\beta (-8J)} + 4 \cdot 2^2  e^{-\beta\cdot 0} + 4 \cdot 0^2 e^{-\beta\cdot 0}\\
-      &\hspace{4cm} + 2\cdot 0^2  e^{-\beta 8J} + 4 \cdot |-2|^2 e^{-\beta \cdot 0} + 1 \cdot |-4|^2 e^{-\beta (-8J)} \Big)\\
-      &\hspace{5cm} - \left(4\frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6}\left( e^{\beta 8J} +2 \right)\right)^2\\
+      &\hspace{4cm} + 2\cdot 0^2  e^{-\beta 8J} + 4 \cdot (-2)^2 e^{-\beta \cdot 0} + 1 \cdot (-4)^2 e^{-\beta (-8J)} \Big) - 0^2\\
       &=\frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \left(16e^{\beta 8J} + 16 + 16 + 16e^{\beta 8J} \right)\\
-      &\hspace{5cm} - \left(4\frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6}\left( e^{\beta 8J} +2 \right)\right)^2\\
-      &=16 \frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6} \left(e^{\beta 8J} + 1\right)\\
-      &\hspace{5cm} - 16\left(\frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6}\right)^2\left( e^{\beta 8J} +2 \right)^2
+      \sigma^2_\mathcal{M} &=16 \frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6} \left(e^{\beta 8J} + 1\right)
     \end{align*}
 
 
@@ -112,7 +110,7 @@
     The susceptibilitys is defined as
     \[\chi = \frac{\sigma^2_\mathcal{M}}{k_B T^2}\]
     Insering the value $\sigma^2_\mathcal{M}$ we get
-    \[\chi = \frac{16 \frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6} \left(e^{\beta 8J} + 1\right)- 16\left(\frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6}\right)^2\left( e^{\beta 8J} +2 \right)^2}{k_B T^2}\]\\
+    \[\chi = \frac{16 \frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6} \left(e^{\beta 8J} + 1\right)}{k_B T^2}\]\\
 
     \noindent Note that these four characteristics are temperature dependent trough $\beta = \frac{1}{k_B T}$.\\
     Ref \cite{Mortenstatphys2019}.
