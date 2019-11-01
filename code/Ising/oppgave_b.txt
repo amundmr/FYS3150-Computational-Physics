@@ -1,0 +1,8 @@
+           Temperature               2
+       Expected energy        -1.99618
+       Energy variance    0.0076254076
+Expected magnetisation        0.031285
+     Magnetic variance    0.0019117487
+Absolute magnetisation        0.998725
+                    Cv    0.0076254076
+                 susep       1.9948575

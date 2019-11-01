@@ -5,7 +5,7 @@ int main(int argc, char* argv[] ){
   char *outfilename;
   long idum;
   int L, mcs;
-  vec w(17), avarage(5);
+  vec Ediff(17), avarage(5);
   double T, T_start, T_end, T_step, E, M;
 
 
@@ -26,9 +26,8 @@ int main(int argc, char* argv[] ){
 
   for (T = T_start; T<= T_end; T += T_step){
     E = M = 0.;
-
-    for (int de = -8; de <= 8 ;de++) w[de+8] = 0;
-    for (int de = -8; de <= 8 ;de+=4) w[de+8] = exp(-de/T);
+    for (int de = -8; de <= 8 ;de+=4) Ediff(de+8) = 0;
+    for (int de = -8; de <= 8 ;de+=4) Ediff(de+8) = exp(-de/T);
 
     //Array for expectation values
     for(int i = 0; i < 5; i++) avarage[i] = 0;
@@ -37,12 +36,13 @@ int main(int argc, char* argv[] ){
 
     //Monte Carlo:
       for (int cycles = 1; cycles <= mcs; cycles++){
-        Metropolis(L,idum,spinn,E,M,w);
+        Metropolis(L,idum,spinn,E,M,Ediff);
 
         avarage(0) += E; avarage(1) += E*E;
         avarage(2) += M; avarage(3) += M*M; avarage(4) += fabs(M);
 
       }
+      
 
   }
 
