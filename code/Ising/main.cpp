@@ -44,14 +44,8 @@ int main(int argc, char* argv[] ){
 
       }
 
-<<<<<<< HEAD
       //print results;
-      cout << w <<endl;
-
       output(L,mcs,T,avarage);
-=======
-
->>>>>>> 09e1a1c57895b44ef7cfd27b22b6f8053ac61e06
   }
 
   //print results;
