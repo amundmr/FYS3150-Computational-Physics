@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <cmath>
-//#include <fstream>
+#include <fstream>
 #include <random>
 #include <iomanip>
 #include <cstdlib>
@@ -16,9 +16,8 @@
 using namespace std;
 using namespace arma;
 
+void initilize(int L, double T, mat &spinn, double& E, double& M);
+void Metropolis(int L, long& idum, mat &spinn, double& E, double& M, vec w);
 void input(int&, int& , double&, double&, double&);
-void initilize(int, double, mat, double&, double&);
-void Metropolis(int , long&, mat, double&, double&, vec);
 void output(int, int, double, vec);
-
 int periodic_boundary_conditions(int, int, int);

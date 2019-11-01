@@ -1,7 +1,6 @@
 #include "../include/lib.h"
 
 ofstream ofile;
-
 void output(int L, int mcs, double T, vec ExpecationValues){
 
   double norm = 1.0/((double) (mcs));
