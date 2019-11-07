@@ -3,7 +3,7 @@
   \section{Theory}
   \subsection{The problem}
     WRITE a bit about the system we want to solve! What is it?
-
+    
   \subsection{$2 \times 2$ lattice, analytical expressions} \label{sec:theory-analy}
     To get started we will find the analytical expression for the partition function and the corresponding expectation values for the energy $E$, the mean absolute value of the magnetic moment $|M|$ (which we will refer to as magnetization), the specific heat $C_V$ and the susceptibility $\chi$ as function of T using periodic boundary conditions. These calculations will serve as benchmarks for our next steps.
 
@@ -64,11 +64,16 @@
     \sigma^2_E &= \langle E^2 \rangle - \langle E \rangle ^2 = \frac{1}{Z}\sum E_i^2 e^{-\beta E_i} - \left( \frac{1}{Z} \sum E_i e^{-\beta E_i} \right)^2\\
     &= \frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \left( 2 \cdot (-8J)^2 \cdot e^{\beta 8J} + 2 \cdot (8J)^2 \cdot e^{-\beta 8J} \right)\\
     &\hspace{3cm} - \left(8J \frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6}  \left(e^{-\beta8J} - e^{\beta 8J}\right)\right)^2\\
-    \intertext{To simplify calculations, we define $a = e^{\beta 8J}$ and $b = e^{-\beta8J}$. These terms will be precalculated in the program code. We also use the following relations: $2sinh(\beta 8J) = a-b$, $2cosh(\beta 8J) = a+b$}\\
+    \intertext{To simplify calculations, we define $a = e^{\beta 8J}$ and $b = e^{-\beta8J}$. These terms will be precalculated in the program code.}\\
     &= \frac{1}{2b + 2a + 12} \left(2 \cdot (-8J)^2 a + 2\cdot (8J)^2 b\right) - \left(8J \frac{1}{a + b + 6}(b-a)\right)^2\\
-    &= 64J^2\frac{2cosh(\beta 8 J)}{2cosh(\beta 8 J) + 6} -64J^2 \left(\frac{-2sinh(\beta 8 J)}{2cosh(\beta 8 J) + 6}\right)^2\\
-    &= 64J^2\frac{cosh(\beta 8 J)}{cosh(\beta 8 J) + 3} -64J^2 \left(\frac{-sinh(\beta 8 J)}{cosh(\beta 8 J) + 3}\right)^2  \\
-    \sigma_E^2 &= 64J^2\left(\frac{cosh(\beta 8 J)}{cosh(\beta 8 J) + 3} -\left(\frac{-sinh(\beta 8 J)}{cosh(\beta 8 J) + 3}\right)^2  \right)
+    &=64J^2 \left( \frac{1}{a + b + 6} (a + b) \right) - \left( \frac{1}{a+b+6} (b-a) \right)^2\\
+    &=64J^2 \frac{1}{a+b+6}\left((a+b) - \frac{1}{a+b+6}(b-a)^2\right)\\
+    &=64J^2 \left(\frac{1}{a+b+6}\right)^2 \left( (a+b+6)(a+b) - (b-a)^2 \right)\\
+    &= 64J^2 \left(\frac{1}{a+b+6}\right)^2 \left( a^2 + ab + ba + b^2 + 6 a + 6 b -(b^2 - 2ab + a^2) \right)\\
+    &= 64J^2 \left(\frac{1}{a+b+6}\right)^2 \left( a^2 + ab + ba + b^2 + 6 a + 6 b -b^2 + 2ab - a^2) \right)\\
+    &= 64J^2 \left(\frac{1}{a+b+6}\right)^2 \left( 6a + 6b + 4ab ) \right)\\
+    \intertext{If we now insert the terms for a and b we get the following:}\\
+    \sigma^2_E &= 64J^2 \left(\frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6}\right)^2  \left(4 + 6(e^{-\beta 8J} + e^{\beta 8J}) \right)
     \end{align*}
 
 
@@ -102,16 +107,14 @@
     The specific heat capacity is defined as
     \[C_V = \frac{\sigma_E^2}{k_B T^2}\]
     Insering the value $\sigma^2_E$ we get
-      \[C_V = \frac{1}{k_B T^2}64J^2\left(\frac{cosh(\beta 8 J)}{cosh(\beta 8 J) + 3} -\left(\frac{-sinh(\beta 8 J)}{cosh(\beta 8 J) + 3}\right)^2  \right)\]
-    This is the main function we will be comparing to the values from our computations later.
+      \[C_V = \frac{\left( 64J^2 \left(\frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6}\right)^2  \left(4 + 6(e^{-\beta 8J} + e^{\beta 8J}) \right)\right)^2}{k_B T^2}\]
+
 
     \textbf{Susceptibility, $\chi$}\\
     The susceptibilitys is defined as
     \[\chi = \frac{\sigma^2_\mathcal{M}}{k_B T^2}\]
     Insering the value $\sigma^2_\mathcal{M}$ we get
-    \[\chi = \frac{16 \frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6} \left(e^{\beta 8J} + 1\right)- 16\left(\frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6}\right)^2\left( e^{\beta 8J} +2 \right)^2}{k_B T^2}\]
-    And with a small simplification we obtain
-    \[\chi = \frac{16 \frac{1}{2cosh(\beta 8J) + 6} \left(e^{\beta 8J} + 1\right)- 16\left(\frac{1}{2cosh(\beta 8J) + 6}\right)^2\left( e^{\beta 8J} +2 \right)^2}{k_B T^2}\]\\
+    \[\chi = \frac{16 \frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6} \left(e^{\beta 8J} + 1\right)- 16\left(\frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6}\right)^2\left( e^{\beta 8J} +2 \right)^2}{k_B T^2}\]\\
 
     \noindent Note that these four characteristics are temperature dependent trough $\beta = \frac{1}{k_B T}$.\\
     Ref \cite{Mortenstatphys2019}.
