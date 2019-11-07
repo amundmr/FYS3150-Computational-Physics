@@ -18,14 +18,14 @@ void output(int L, int mcs, double T, vec ExpecationValues, string filename){
   double susep = (M2_ExpectVal-M_ExpectVal*M_ExpectVal)/T*s_norm;
 
   //ofile << setiosflags(ios::showpoint | ios::uppercase);
-  ofile <<"           Temperature "  << setw(15) << setprecision(8) << T <<endl;
-  ofile <<"       Expected energy "  << setw(15) << setprecision(8) << E_ExpectVal/L/L<<endl;
-  ofile <<"       Energy variance "  << setw(15) << setprecision(8) << Evariance/T/T<<endl;
-  ofile <<"Expected magnetisation "  << setw(15) << setprecision(8) << M_ExpectVal/L/L<<endl;
-  ofile <<"     Magnetic variance "  << setw(15) << setprecision(8) << Mvariance/T<<endl;
-  ofile <<"Absolute magnetisation "  << setw(15) << setprecision(8) << Mabs_ExpectVal/L/L<<endl;
-  ofile <<"                    Cv "  << setw(15) << setprecision(8) << Cv<< endl;
-  ofile <<"                 susep "  << setw(15) << setprecision(8) << susep<< endl;
+  ofile <<"           Temperature: "  << setw(15) << setprecision(8) << T <<endl;
+  ofile <<"       Energy variance: "  << setw(15) << setprecision(8) << Evariance/T/T<<endl;
+  ofile <<"Expected magnetisation: "  << setw(15) << setprecision(8) << M_ExpectVal/L/L<<endl;
+  ofile <<"     Magnetic variance: "  << setw(15) << setprecision(8) << Mvariance/T<<endl;
+  ofile <<"       Expected energy: "  << setw(15) << setprecision(8) << E_ExpectVal/L/L<<endl;
+  ofile <<"Absolute magnetisation: "  << setw(15) << setprecision(8) << Mabs_ExpectVal/L/L<<endl;
+  ofile <<"     Heat capacity, Cv: "  << setw(15) << setprecision(8) << Cv<< endl;
+  ofile <<"   Susceptibility, chi: "  << setw(15) << setprecision(8) << susep<< endl;
 
   ofile.close();
 }
