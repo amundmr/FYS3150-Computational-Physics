@@ -2,6 +2,7 @@
 
 //Main program
 int main(int argc, char* argv[] ){
+
   char *outfilename;
   long idum;
   int L, mcs;
@@ -43,7 +44,6 @@ int main(int argc, char* argv[] ){
 
       }
       
-
   }
 
   //print results;
