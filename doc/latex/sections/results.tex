@@ -2,20 +2,21 @@
 \begin{document}
 \section{Results}
 \subsection{$2 \times 2$ lattice, analytical expressoins}
-If we scale the value of $\beta$ from $1/k_BT$ to $1/J$ (Scaling factor $k_B T/J$) in the analytical expression from section \ref{sec:theory-analy}, we will get a good benchmark for computer computations to come. These values are listed in table \ref{tab:2x2spinsEnergiesMags} below.
+If we scale the value of $\beta$ from $1/k_BT$ to $1/J$ (Scaling factor $k_B T/J$) in the analytical expression from section \ref{sec:theory-analy}, we will get a good benchmark for computer computations to come. These values are listed in table \ref{tab:2x2spinsEnergiesMags} below. Note that all values are divided by four, since we want the values per bond, and not for the entire lattice.
 \begin{table}[!h]
 \begin{center}
   \begin{tabular}{l r}
-    Mean energy, $\langle E \rangle$: & $-7.9839J^2$  \\
-    Mean absolute magnetization, $\langle |\mathcal{M}| \rangle$: & $3.9946$ \\
-    Specific heat capacity, $C_V$: & $0.1283$\\
-    Susceptibility, $\chi$: & $15.9732$
+    Mean energy, $\langle E \rangle$: & $-1.9960$  \\
+    Mean absolute magnetization, $\langle |\mathcal{M}| \rangle$: & $0.9987$ \\
+    Specific heat capacity, $C_V$: & $0.0321$\\
+    Susceptibility, $\chi$: & $3.9933$
   \end{tabular}
-  \caption{Material characteristics benchmark for a $2 \times 2$ lattice}
+  \caption{Benchmark for material characteristics per bond for a $2 \times 2$ lattice}
   \label{tab:2x2spinsEnergiesMags}
-  No. of MC-cycles before reaching good results:
 \end{center}
 \end{table}
 \FloatBarrier
+
+No. of MC-cycles before reaching good results:
 
 \end{document}
