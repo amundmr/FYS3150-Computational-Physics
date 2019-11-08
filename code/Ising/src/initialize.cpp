@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void initilize(int L, double T, mat &spinn, double& E, double& M)
+void initialize(int L, double T, mat &spinn, double& E, double& M)
   {
     //spinn and magnetisation
   for (int y = 0; y < L; y++){
@@ -11,7 +11,7 @@ void initilize(int L, double T, mat &spinn, double& E, double& M)
       else spinn(x,y) = -1;
       M += (double)spinn(x,y);
     }}
- //energy initilize
+ //energy initialize
   for (int y = 0; y < L; y++){
     for (int x = 0; x < L; x++){
     E -= (double)spinn(x,y)
@@ -20,4 +20,4 @@ void initilize(int L, double T, mat &spinn, double& E, double& M)
     }
   }
 }
-//end initilize
+//end initialize

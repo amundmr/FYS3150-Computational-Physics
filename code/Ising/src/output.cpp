@@ -1,6 +1,5 @@
 #include "../include/lib.h"
 
-
 ofstream ofile;
 void output(int L, int mcs, double T, vec ExpecationValues, string filename){
   ofile.open(filename);

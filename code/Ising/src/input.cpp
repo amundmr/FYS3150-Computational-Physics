@@ -3,20 +3,15 @@
 
 void input(int &L, int &mcs , double &T_start, double &T_end, double &T_step){
 
-  cout << "Number(int) of spins, L: ";
+  cout << "Matrix size, L (int): ";
   cin  >> L;
-  cout << endl;
-  cout << "mcs " << endl;
+  cout << endl << "Monte Carlo Cycles: ";
   cin  >> mcs;
-  cout << endl;
-  cout << "Initial temperature : "  << endl;
+  cout << endl << "Initial temperature: "  << endl;
   cin  >> T_start;
-  cout << endl;
-  cout << "Final temperature : " << endl;
+  cout << endl << "Final temperature: " << endl;
   cin  >> T_end;
-  cout << endl;
-  cout << "Temprature steps : " << endl;
+  cout << endl << "Temperature step size: " << endl;
   cin  >> T_step;
   cout << endl;
-
 }
