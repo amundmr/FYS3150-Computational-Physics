@@ -4,7 +4,7 @@ CC = g++
 CCFLAGS = -larmadillo -lblas -llapack -std=c++11 #-fopenmp -O3
 
 # Names of files in src you want to compile: "./obj/<name>.o".
-OBJ = ./obj/initilize.o ./obj/input.o ./obj/output.o  ./obj/metropolis.o
+OBJ = ./obj/initialize.o ./obj/input.o ./obj/output.o  ./obj/metropolis.o ./obj/periodic_boundary_conditions.o
 
 # Headerfile(s) used.
 DEPS = ./include/lib.h

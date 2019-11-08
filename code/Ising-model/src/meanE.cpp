@@ -1,6 +1,7 @@
 #include "../include/isinglib.h"
 
-double meanE(double T, int L, double J){
+double meanE(double T, int L, double J)
+{
     double mean;
     
     double N = L*L; 
