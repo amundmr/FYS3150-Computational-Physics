@@ -24,7 +24,7 @@ void output(int L, int mcs, double T, vec ExpecationValues, string filename){
   ofile <<"       Expected energy: "  << setw(15) << setprecision(8) << E_ExpectVal/L/L<<endl;
   ofile <<"Absolute magnetisation: "  << setw(15) << setprecision(8) << Mabs_ExpectVal/L/L<<endl;
   ofile <<"     Heat capacity, Cv: "  << setw(15) << setprecision(8) << Cv<< endl;
-  ofile <<"   Susceptibility, chi: "  << setw(15) << setprecision(8) << susep<< endl;
+  ofile <<"   Susceptibility, chi: "  << setw(15) << setprecision(8) << susep;
 
   ofile.close();
 }
