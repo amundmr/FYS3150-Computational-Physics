@@ -1,23 +1,22 @@
 #include "../include/lib.h"
 
-using namespace std;
-
-void initialize(int L, double T, mat &spinn, double& E, double& M)
+void initialize(int L, double T, mat & spin, double & E, double & M)
+{
+  // Spin and magnetisation.
+  for (int y = 0; y < L; y++)
   {
-    //spinn and magnetisation
-  for (int y = 0; y < L; y++){
     for (int x = 0; x < L; x++){
-      if(T < 1.5 ) {spinn(x,y) = 1;} //ground state spinn
-      else spinn(x,y) = -1;
-      M += (double)spinn(x,y);
-    }}
- //energy initialize
-  for (int y = 0; y < L; y++){
+      if( T < 1.5 ) {spin(x,y) = 1;} // Ground state spin.
+      else spin(x,y) = -1;
+      M += (double) spin(x,y);
+    }
+  }
+  // Energy initialize.
+  for (int y = 0; y < L; y++)
+  {
     for (int x = 0; x < L; x++){
-    E -= (double)spinn(x,y)
-      *(spinn(periodic_boundary_conditions(x,L,-1),y)
-      + (spinn(x,periodic_boundary_conditions(y,L,-1))));
+      E = E - (double)spin(x,y) 
+            * (spin(periodic_boundary_conditions(x,L,-1),y) + (spin(x,periodic_boundary_conditions(y,L,-1))));
     }
   }
 }
-//end initialize

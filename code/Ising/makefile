@@ -21,7 +21,7 @@ main: $(OBJ) $(DEPS)
 ./obj/%.o: ./src/%.cpp obj_dir $(DEPS)
 	@$(CC) $(CCFLAGS) $< -c; \
 	mv *.o ./obj/
-	@echo "$< compiled\t\t\t \033[0;32m$(COUNTER)/$(NO_OF_FILES)\033[0m"
+	@printf "%-50s \033[0;32m$(COUNTER)/$(NO_OF_FILES)\033[0m\n" "$< compiled"
 	@$(eval COUNTER=$(shell echo $$(($(COUNTER)+1))))
 
 obj_dir:
