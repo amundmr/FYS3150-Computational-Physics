@@ -19,5 +19,5 @@ using namespace arma;
 void initialize(int, double, mat &, double&, double&);
 void Metropolis(int, long&, mat &, double&, double&, vec);
 void input(int&, int& , double&, double&, double&);
-void output(int, int, double, vec, string);
+void output(int, int, double, vec, ofstream&);
 int periodic_boundary_conditions(int, int, int);
