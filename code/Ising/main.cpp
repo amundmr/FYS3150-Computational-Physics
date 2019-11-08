@@ -20,7 +20,7 @@ int main(int argc, char * argv[])
   mat spin(L,L);
   idum = -1; // Random starting point.
 
-  for (T = T_start; T<= T_end; T += T_step)
+  for (T = T_start; T < T_end; T += T_step)
   {
     E = M = 0.;
     for (int de = -8; de <= 8; de+=4) Ediff(de+8) = 0;
