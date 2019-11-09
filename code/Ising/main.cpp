@@ -6,6 +6,7 @@ int main(int argc, char * argv[])
   char * outfilename; long idum; int L, mcs; double T, T_start, T_end, T_step, E, M;
   vec Ediff(17), average(5);
 
+
   // Input arguments from command line. Aborts if there are too few.
   if (argc <= 1){
     cout<<"Wrong" << argv[0];
@@ -17,8 +18,12 @@ int main(int argc, char * argv[])
   }
 
   input(L, mcs, T_start, T_end, T_step);
+
   mat spin(L,L);
   idum = -1; // Random starting point.
+
+  ofstream file;
+  file.open(outfilename);
 
   for (T = T_start; T < T_end; T += T_step)
   {
@@ -36,11 +41,11 @@ int main(int argc, char * argv[])
 
       average(0) += E; average(1) += E*E;
       average(2) += M; average(3) += M*M; average(4) += fabs(M);
+      // Print results to file.
+      output(L,cycles,T,average, file);
     }
   }
 
-  // Print results to file.
-  output(L,mcs,T,average, outfilename);
-
+  file.close();
   return 0;
 }
