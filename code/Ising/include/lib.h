@@ -17,7 +17,8 @@ using namespace std;
 using namespace arma;
 
 void initialize(int, double, mat &, double&, double&);
-void Metropolis(int, long&, mat &, double&, double&, vec);
+void Metropolis(int, long&, mat &, double&, double&, vec,ofstream & file2, int &mcs, int &sum);
 void input(int&, int& , double&, double&, double&);
 void output(int, int, double, vec, ofstream&);
 int periodic_boundary_conditions(int, int, int);
+void initialize_random(int L, double T, mat & spin, double & E, double & M);
