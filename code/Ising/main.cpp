@@ -37,6 +37,7 @@ int main(int argc, char * argv[])
     initialize_random(L, T, spin, E, M);
 
     file << "MC_samples M E" << endl;
+    file2 << "msc" << "accspins" << endl;
 
     int sum  = 0;
     //Monte Carlo:
@@ -46,7 +47,6 @@ int main(int argc, char * argv[])
 
       average(0) += E; average(1) += E*E;
       average(2) += M; average(3) += M*M; average(4) += fabs(M);
-
 
       // Print results to file.
       output(L,cycles,T,average, file);
