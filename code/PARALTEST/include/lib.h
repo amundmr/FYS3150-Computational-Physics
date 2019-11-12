@@ -13,7 +13,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <chrono>
-#include <omp.h>
+#include <mpi.h>
 
 
 using namespace std;

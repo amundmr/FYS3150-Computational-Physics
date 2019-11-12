@@ -8,6 +8,7 @@ void Metropolis(int L, long & idum, mat & spin, double & E, double & M, vec Edif
   auto interval_rand = bind(uniform_real_distribution<double>(0.0,1.0),mt19937_64(seed));
 */
   random_device rd; //Creates a random seed with a RNG
+
   mt19937_64 gen(rd()); //Initialize PRNG with rd as seed
   uniform_real_distribution<double> interval_rand(0.0, 1.0);
 

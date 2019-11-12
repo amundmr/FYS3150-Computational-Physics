@@ -1,90 +1,68 @@
 #include "./include/lib.h"
 
 /* Use parameters: L = 2, MCc = 1000000, Initial temp = 0.9, Final temp: 1, temp step: 0.1 */
-
+/* HOW TO FUCKING RUN THIS BS PARALELL SHITFUCK: compile med mpiCC, etter compilation kjør "mpirun -np 4 ./main.exe out" */
 int main(int argc, char * argv[])
 {
   // Variables.
   char * outfilename; long idum; int L, mcs; double T, T_start, T_end, T_step, E, M;
   vec Ediff(17);
   double E_avg, EE_avg, M_avg, MM_avg, Mfabs;
-/*
-  int nb_procs, rank;
+  double tE_avg, tEE_avg, tM_avg, tMM_avg, tMfabs;
+
+  int numprocs, my_rank;
 
   MPI_Init(&argc, &argv);
-  MPI_Comm_size(MPI_COMM_WORLD, &nb_procs);
-  MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-*/
+  MPI_Comm_size(MPI_COMM_WORLD, &numprocs);
+  MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
+
   // Input arguments from command line. Aborts if there are too few.
-  if (argc <= 1){
+  if (my_rank == 0 && argc <= 1){
     cout<<"Wrong" << argv[0];
     cout <<"Write also output filename on same line" << endl;
     exit(1);
   }
-  else {
+  if (my_rank == 0 && argc > 1) {
     outfilename = argv[1];
   }
 
-  input(L, mcs, T_start, T_end, T_step);
+  //input(L, mcs, T_start, T_end, T_step);
+  L = 2; mcs = 10000000; T_start = 1; T_end = 2; T_step = 1;
+
+
+  int no_intervals = mcs/numprocs;
+  int myloop_begin = my_rank*no_intervals + 1;
+  int myloop_end = (my_rank + 1)*no_intervals;
+  if( (my_rank == numprocs-1) && (myloop_end<mcs) ) myloop_end = mcs;
+
+  //Broadcast common variables to all nodes
+  MPI_Bcast (&L, 1, MPI_INT, 0, MPI_COMM_WORLD);
+  MPI_Bcast (&T_start, 1, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+  MPI_Bcast (&T_end, 1, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+  MPI_Bcast (&T_step, 1, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+
   mat spin(L,L);
-  idum = -1; // Random starting point.
+  //Starting with random seed for each proc
+  idum = -1-my_rank;// Random starting point.
+
+  double TimeStart, TimeEnd, TotalTime;
+  TimeStart = MPI_Wtime();
 
   for (T = T_start; T < T_end; T += T_step)
   {
     //Resetting all parametres for each temperature step
     E_avg =0.0, EE_avg = 0.0; M_avg = 0.0; MM_avg = 0.0; Mfabs = 0.0;
+    tE_avg =0.0, tEE_avg = 0.0; tM_avg = 0.0; tMM_avg = 0.0; tMfabs = 0.0;
     E = M = 0.0;
 
     for (int de = -8; de <= 8; de+=4) Ediff(de+8) = 0;
     for (int de = -8; de <= 8; de+=4) Ediff(de+8) = exp(-de/T);
 
-
     initialize(L, T, spin, E, M);
-    //Start timing
-    auto tStart = std::chrono::high_resolution_clock::now();
 
-    //Want to parallellize this loop over MC cycles
-    omp_set_num_threads(2);
-    int cycles;
-    #pragma omp parallel
-    {
-      int x, y, ix, iy, deltaE;
-      random_device rd; //Creates a random seed with a RNG
-      mt19937_64 gen(rd()+omp_get_thread_num()); //Initialize PRNG with rd as seed
-      uniform_real_distribution<double> interval_rand(0.0, 1.0);
     //Monte Carlo:
-    #pragma omp parallel for reduction(+:E_avg,EE_avg,M_avg,MM_avg,Mfabs) 
-    for (cycles = 1; cycles <= mcs; cycles++){
-
-      /*
-        // Initialize RNG (Mersenne Twister) in our interval
-        mt19937::result_type seed = time(0);//+omp_get_thread_num();  //Include last command to get different seed for each thread
-        auto interval_rand = bind(uniform_real_distribution<double>(0.0,1.0),mt19937_64(seed));
-      */
-
-
-        for (int y = 0;  y < L; y++)
-        {
-          for (int x = 0; x < L; x++)
-          {
-            // Random position in lattice.
-
-            int ix = (int) (interval_rand(gen) * (double)L);
-            int iy = (int) (interval_rand(gen) * (double)L);
-            int deltaE = 2 * spin(iy,ix)
-                           * (spin(iy,periodic_boundary_conditions(ix,L,-1))
-                           + spin(periodic_boundary_conditions(iy,L,-1),ix)
-                           + spin(iy,periodic_boundary_conditions(ix,L,1))
-                           + spin(periodic_boundary_conditions(iy,L,1),ix));
-
-            // Metropolis test:
-            if (interval_rand(gen) <= Ediff((int) deltaE +8)){
-              spin(iy,ix) *= -1;    //flipp spin
-              M += (double) 2*spin(iy,ix);
-              E += (double) deltaE;
-            }
-          }
-        }
+    for (int cycles = myloop_begin; cycles <= myloop_end; cycles++){
+      Metropolis(L,idum,spin,E,M,Ediff);
 
       E_avg += E;
       EE_avg += E*E;
@@ -92,16 +70,27 @@ int main(int argc, char * argv[])
       MM_avg += M*M;
       Mfabs += fabs(M);
     }
-    cout << "Threads used: " << omp_get_num_threads() <<endl;
-    }//this bracket ends the parallellization
 
-    //Stop timing and print time spent
-    auto tFinish = std::chrono::high_resolution_clock::now();
-    double timeSpent = std::chrono::duration_cast<std::chrono::seconds>( tFinish - tStart ).count();
-    cout << "Time spent: " << timeSpent << endl;
-    output(L,mcs,T, outfilename, E_avg, M_avg, EE_avg, MM_avg, Mfabs);
+    MPI_Reduce(&E_avg, &tE_avg, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+    MPI_Reduce(&EE_avg, &tEE_avg, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+    MPI_Reduce(&M_avg, &tM_avg, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+    MPI_Reduce(&MM_avg, &tMM_avg, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+    MPI_Reduce(&Mfabs, &tMfabs, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+
+    if(my_rank == 0){
+    output(L,mcs,T, outfilename, tE_avg, tM_avg, tEE_avg, tMM_avg, tMfabs);
+    // Print results to file.
+
+    }
   }
-  // Print results to file.
+  TimeEnd = MPI_Wtime();
+  TotalTime = TimeEnd-TimeStart;
+  if ( my_rank == 0 ){
+    cout << "Time spent: " << TotalTime << "s. Number of processors: " << numprocs << endl;
+  }
+
+  //end MPI
+  MPI_Finalize ();
 
 
   return 0;
