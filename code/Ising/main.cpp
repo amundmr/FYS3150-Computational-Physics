@@ -23,8 +23,9 @@ int main(int argc, char * argv[])
   mat spin(L,L);
   //idum = -1; // Random starting point.
 
-  ofstream file;
+  ofstream file, file2;
   file.open(outfilename);
+  file2.open("accepted_spins.csv");
 
   for (T = T_start; T < T_end; T += T_step)
   {
@@ -37,17 +38,22 @@ int main(int argc, char * argv[])
 
     file << "MC_samples M E" << endl;
 
+    int sum  = 0;
     //Monte Carlo:
     for (int cycles = 1; cycles <= mcs; cycles++){
-      Metropolis(L,idum,spin,E,M,Ediff);
+
+      Metropolis(L,idum,spin,E,M,Ediff,file2,cycles,sum);
 
       average(0) += E; average(1) += E*E;
       average(2) += M; average(3) += M*M; average(4) += fabs(M);
+
+
       // Print results to file.
       output(L,cycles,T,average, file);
     }
   }
 
   file.close();
+  file2.close();
   return 0;
 }

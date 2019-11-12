@@ -1,11 +1,11 @@
 #include "../include/lib.h"
 
-void Metropolis(int L, long & idum, mat & spin, double & E, double & M, vec Ediff)
+void Metropolis(int L, long & idum, mat & spin, double & E, double & M, vec Ediff, ofstream & file2, int &cycles, int&sum)
 {
   random_device rd;
   mt19937_64 gen(rd());
   uniform_real_distribution<double> interval_rand(0.0, 1.0);
-
+ int accspins = 0;
   for (int y = 0;  y < L; y++)
   {
     for (int x = 0; x < L; x++)
@@ -15,7 +15,7 @@ void Metropolis(int L, long & idum, mat & spin, double & E, double & M, vec Edif
       int iy = (int) (interval_rand(gen) * (double)L);
       int deltaE = 2 * spin(iy,ix)
                      * (spin(iy,periodic_boundary_conditions(ix,L,-1))
-                     + spin(periodic_boundary_conditions(iy,L,-1),ix) 
+                     + spin(periodic_boundary_conditions(iy,L,-1),ix)
                      + spin(iy,periodic_boundary_conditions(ix,L,1))
                      + spin(periodic_boundary_conditions(iy,L,1),ix));
 
@@ -24,7 +24,9 @@ void Metropolis(int L, long & idum, mat & spin, double & E, double & M, vec Edif
         spin(iy,ix) *= -1;    //flipp spin
         M += (double) 2*spin(iy,ix);
         E += (double) deltaE;
-      }
-    }
+        accspins += 1;              //number of accepted spins
+        }
+     }
   }
+  file2 << cycles << " " << accspins << endl;
 }
