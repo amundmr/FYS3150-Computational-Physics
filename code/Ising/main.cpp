@@ -35,6 +35,7 @@ int main(int argc, char * argv[])
     for (int i = 0; i < 5; i++) average(i) = 0;
     initialize(L, T, spin, E, M);
 
+    file << "MC_samples M E" << endl;
     //Monte Carlo:
     for (int cycles = 1; cycles <= mcs; cycles++){
       Metropolis(L,idum,spin,E,M,Ediff);

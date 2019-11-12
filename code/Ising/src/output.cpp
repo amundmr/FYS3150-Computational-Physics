@@ -25,6 +25,6 @@ void output(int L, int mcs, double T, vec ExpecationValues, ofstream & file){
   //file <<"     Heat capacity, Cv: "  << setw(15) << setprecision(8) << Cv<< endl;
   //file <<"   Susceptibility, chi: "  << setw(15) << setprecision(8) << susep;
 
-  file <<mcs <<" "<< Mabs_ExpectVal/L/L << " " << E_ExpectVal/L/L <<endl;
+  file << mcs << " " << Mabs_ExpectVal/L/L << " " << E_ExpectVal/L/L << endl;
 
 }
