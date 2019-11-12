@@ -3,42 +3,41 @@ import numpy as np
 import csv
 
 def fileToList():
-    print("Data file (csv):")
-    data = input()
-    title1 = "Accepted spins"
-    #title2 = "Energy"
+    data = input("Data file (csv): ")
+    name = data.split(".")
+    title = []
 
-    file = csv.reader(open(data,"r"), delimiter=" ")
+    file = open("./csv/"+data,"r")
+    reader = csv.reader(file, delimiter=" ")
+    axes = next(reader)
+    ncol = len(axes)
+    nrow = len(list(reader))
+    file.seek(0)
+    reader = csv.reader(file, delimiter=" ")
 
-    x = []; y = []; #z = []
+    for i in range(ncol-1):
+        title.append(input("Title of plot number "+str(i+1)+" (column header is \'"+axes[i+1]+"\'): "))
 
-    for row in file:
-        if file.line_num == 1:
-            axes = row
-        else:
-            x.append(float(row[0]))
-            y.append(float(row[1]))
-            #z.append(float(row[2]))
+    i = 0
+    plot_data = np.zeros((ncol,nrow-1))
+    next(reader)
+    for row in reader:
+        plot_data[:,i-1] = np.array(row)
+        i += 1
 
-    #return x,y,z,title1,title2,axes,data.split(".")
-    return x,y,title1,axes,data.split(".")
-
-#x,y,z,title1,title2,axes,data = fileToList()
-#x,y,title1,axes,data = fileToList()
+    return plot_data,title,axes,name,ncol
 
 
-plt.plot(x,y)
-plt.xlabel(axes[0])
-plt.ylabel(axes[1])
-plt.title(title1)
-plt.savefig(data[0]+"_1.png")
+plot_data,title,axes,name,ncol = fileToList()
 
-plt.close()
-"""
+x = plot_data[0,:]
 
-plt.plot(x,z)
-plt.xlabel(axes[0])
-plt.ylabel(axes[2])
-plt.title(title2)
-plt.savefig(data[0]+"_2.png")
-"""
+for i in range(ncol-1):
+    y = plot_data[i+1,:]
+
+    plt.plot(x,y)
+    plt.xlabel(axes[0])
+    plt.ylabel(axes[i+1])
+    plt.title(title[i])
+    plt.savefig("../../doc/latex/img/"+name[0]+"_"+str(i+1)+".png")
+    plt.close()
