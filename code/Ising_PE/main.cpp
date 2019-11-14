@@ -33,7 +33,7 @@ int main(int argc, char * argv[])
     outfilename = argv[1];
     //input(L, mcs, T_start, T_end, T_step);
     ofile.open(outfilename);
-    ofile << "T:    Energy variance:    Magnetization:   Energy:   AbsMagnet:   HeatCap:   Susceptibility:" << endl;
+    //ofile << "T:    Energy variance:    Magnetization:   Energy:   AbsMagnet:   HeatCap:   Susceptibility:" << endl;
 
   }
 
@@ -73,7 +73,7 @@ int main(int argc, char * argv[])
       Metropolis(L,idum,spin,E,M,Ediff);
 
       ofile << E << endl;
-      
+
       E_avg += E;
       EE_avg += E*E;
       M_avg += M;

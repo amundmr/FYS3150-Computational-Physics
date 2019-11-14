@@ -3,11 +3,13 @@ import numpy as np
 import sys
 
 #Reading file
-f1 = open("../out5","r")
-f2 = open("../out6","r")
-f3 = open("../out7","r")
-#f4 = open("../out8","r")
-#f5 = open("../out9","r")
+f1 = open("../out","r")
+
+E = np.zeros(1000000)
+
+for
+
+
 
 Allfiles = [f1, f2, f3]
 Alldata = np.zeros((3,15))
