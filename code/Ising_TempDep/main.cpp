@@ -1,6 +1,5 @@
 #include "./include/lib.h"
 
-/* Use parameters: L = 2, MCc = 1000000, Initial temp = 0.9, Final temp: 1, temp step: 0.1 */
 /* HOW TO FUCKING RUN THIS BS PARALELL SHITFUCK: compile med mpiCC, etter compilation kjør "mpirun -np 4 ./main.exe out" */
 
 ofstream ofile;

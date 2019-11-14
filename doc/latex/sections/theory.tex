@@ -133,17 +133,19 @@
       E = -J \sum  _{<kl>}^N s_ks_l \qquad s_k = \pm 1
     \end{equation}
 
-    N is the number of spins and J is a constant expressing the interaction between neighboring spins. The sum is over the nearest neighbours only, indicated by <kl> the above equation. For J > 0 it is energetically favorable for neighboring spins to align. Leading to, at low temperatures, T, spontanious magnetisation.
+    N is the number of spins and J is a constant expressing the interaction between neighboring spins. The sum is over the nearest neighbours only, indicated by $<kl>$ the above equation. For J $>$ 0 it is energetically favorable for neighboring spins to align. Leading to, at low temperatures, T, spontanious magnetisation.
 
-    A probability distribution is neede in order to calculate the mean energy <E> and magnetization <M> at a given temperature. The distribution is given by:
+    A probability distribution is needed in order to calculate the mean energy $\langle E \rangle$ and magnetization $\langle M \rangle$ at a given temperature. The distribution is given by:
 
     \begin{equation}
       P_i(\beta)=  \sum  _{i = 1}^M s_ks_l \exp{-\beta E_i},
     \end{equation}
 
-    where M is all the microstates, $P_i$ is the probability of having the system in a state/configuration i.
+    where M is all the microstates, $P_i$ is the probability of having the system in a state/configuration i.\\
 
-    CONFIGURATIONS
+    We are also utilizing the Metropolis algorithm which basically checks if we can get a lower energy for the system if we flip a spin, and if that is the case, it flips the spin.\\
+    The pseudocode looks as follows:
 
+    \lstinputlisting[language=c]{c.c}
 
 \end{document}
