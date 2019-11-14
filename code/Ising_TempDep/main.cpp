@@ -26,14 +26,14 @@ int main(int argc, char * argv[])
   }
   if (my_rank == 0 && argc > 1) {
     outfilename = argv[1];
-    input(L, mcs, T_start, T_end, T_step);
+    //input(L, mcs, T_start, T_end, T_step);
     ofile.open(outfilename);
     ofile << "T:    Energy variance:    Magnetization:   Energy:   AbsMagnet:   HeatCap:   Susceptibility:" << endl;
 
   }
 
   //input(L, mcs, T_start, T_end, T_step);
-  //L = 2; mcs = 1000000; T_start = 1; T_end = 2; T_step = 1;
+  L = 2; mcs = 10000000; T_start = 0.5; T_end = 2; T_step = 0.1;
 
 
   int no_intervals = mcs/numprocs;
