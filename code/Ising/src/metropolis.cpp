@@ -1,11 +1,11 @@
 #include "../include/lib.h"
 
-void Metropolis(int L, long & idum, mat & spin, double & E, double & M, vec Ediff, ofstream & file2, int &cycles, int&sum)
+void Metropolis(int L, long & idum, mat & spin, double & E, double & M, vec Ediff, ofstream & file2, int &cycles, int&sum, int mcs)
 {
   random_device rd;
   mt19937_64 gen(rd());
   uniform_real_distribution<double> interval_rand(0.0, 1.0);
- int accspins = 0;
+ double accspins = 0;
   for (int y = 0;  y < L; y++)
   {
     for (int x = 0; x < L; x++)
@@ -28,5 +28,5 @@ void Metropolis(int L, long & idum, mat & spin, double & E, double & M, vec Edif
         }
      }
   }
-  file2 << cycles << " " << accspins << endl;
+  file2 << cycles << " " << accspins/L/L << endl;
 }

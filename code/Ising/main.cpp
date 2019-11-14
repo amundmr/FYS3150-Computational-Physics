@@ -3,19 +3,23 @@
 int main(int argc, char * argv[])
 {
   // Variables.
-  char * outfilename; long idum; int L, mcs; double T, T_start, T_end, T_step, E, M;
+  char * outfilename, * outfilename2;
+  long idum;
+  int L, mcs;
+  double T, T_start, T_end, T_step, E, M;
   vec Ediff(17);
   vec average = zeros<vec>(5);
 
 
   // Input arguments from command line. Aborts if there are too few.
-  if (argc <= 1){
+  if (argc <= 2){
     cout<<"Wrong" << argv[0];
     cout <<"Write also output filename on same line" << endl;
     exit(1);
   }
   else {
     outfilename = argv[1];
+    outfilename2 = argv[2];
   }
 
   input(L, mcs, T_start, T_end, T_step);
@@ -25,7 +29,7 @@ int main(int argc, char * argv[])
 
   ofstream file, file2;
   file.open(outfilename);
-  file2.open("accepted_spins.csv");
+  file2.open(outfilename2);
 
   for (T = T_start; T < T_end; T += T_step)
   {
@@ -33,17 +37,17 @@ int main(int argc, char * argv[])
     for (int de = -8; de <= 8; de+=4) Ediff(de+8) = 0;
     for (int de = -8; de <= 8; de+=4) Ediff(de+8) = exp(-de/T);
 
-    //initialize(L, T, spin, E, M);
-    initialize_random(L, T, spin, E, M);
+    initialize(L, T, spin, E, M);
+    //initialize_random(L, T, spin, E, M);
 
     file << "MC_samples M E" << endl;
-    file2 << "msc" << "accspins" << endl;
+    file2 << "Monte_Carlo_Cycles" << " " << "Accepted_spins" << endl;
 
     int sum  = 0;
     //Monte Carlo:
     for (int cycles = 1; cycles <= mcs; cycles++){
 
-      Metropolis(L,idum,spin,E,M,Ediff,file2,cycles,sum);
+      Metropolis(L,idum,spin,E,M,Ediff,file2,cycles,sum, mcs);
 
       average(0) += E; average(1) += E*E;
       average(2) += M; average(3) += M*M; average(4) += fabs(M);
