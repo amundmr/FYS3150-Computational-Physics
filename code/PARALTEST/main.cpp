@@ -27,7 +27,7 @@ int main(int argc, char * argv[])
   }
 
   //input(L, mcs, T_start, T_end, T_step);
-  L = 2; mcs = 10000000; T_start = 1; T_end = 2; T_step = 1;
+  L = 2; mcs = 1000000; T_start = 1; T_end = 2; T_step = 1;
 
 
   int no_intervals = mcs/numprocs;
