@@ -1,8 +1,8 @@
            Temperature:               1
-       Energy variance:       53845.303
-Expected magnetisation:      -5.2272165
-     Magnetic variance:       24.697693
-       Expected energy:      -246.92801
-Absolute magnetisation:       5.2304885
-     Heat capacity, Cv:       53845.303
-   Susceptibility, chi:       24.834564
+       Energy variance:     0.033322311
+Expected magnetisation:       0.0114535
+     Magnetic variance:     0.004053465
+       Expected energy:       -1.995826
+Absolute magnetisation:       0.9986275
+     Heat capacity, Cv:     0.033322311
+   Susceptibility, chi:       3.9925563
