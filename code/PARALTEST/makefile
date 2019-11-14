@@ -1,7 +1,10 @@
 CC = mpiCC
 
 # Flags for compiler.
-CCFLAGS = -larmadillo -lblas -llapack -std=c++11 -O3
+CCFLAGS = -larmadillo -lblas -llapack -std=c++11 -O3 -Wall -Wextra -Wpedantic -g
+#-g is for running with valgrind later: valgrind ./test
+#Last 4 flags is for debugging
+
 
 
 # Names of files in src you want to compile: "./obj/<name>.o".
