@@ -2,6 +2,9 @@
 
 /* Use parameters: L = 2, MCc = 1000000, Initial temp = 0.9, Final temp: 1, temp step: 0.1 */
 /* HOW TO FUCKING RUN THIS BS PARALELL SHITFUCK: compile med mpiCC, etter compilation kjør "mpirun -np 4 ./main.exe out" */
+
+ofstream ofile;
+
 int main(int argc, char * argv[])
 {
   // Variables.
@@ -24,10 +27,14 @@ int main(int argc, char * argv[])
   }
   if (my_rank == 0 && argc > 1) {
     outfilename = argv[1];
+    input(L, mcs, T_start, T_end, T_step);
+    ofile.open(outfilename);
+    ofile << "T:    Energy variance:    Magnetization:   Energy:   AbsMagnet:   HeatCap:   Susceptibility:" << endl;
+
   }
 
   //input(L, mcs, T_start, T_end, T_step);
-  L = 2; mcs = 1000000; T_start = 1; T_end = 2; T_step = 1;
+  //L = 2; mcs = 1000000; T_start = 1; T_end = 2; T_step = 1;
 
 
   int no_intervals = mcs/numprocs;
@@ -78,15 +85,16 @@ int main(int argc, char * argv[])
     MPI_Reduce(&Mfabs, &tMfabs, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
 
     if(my_rank == 0){
-    output(L,mcs,T, outfilename, tE_avg, tM_avg, tEE_avg, tMM_avg, tMfabs);
+    output(L,mcs,T, ofile, tE_avg, tM_avg, tEE_avg, tMM_avg, tMfabs);
     // Print results to file.
-
+    cout << "Tempiteration: " << T << endl;
     }
   }
   TimeEnd = MPI_Wtime();
   TotalTime = TimeEnd-TimeStart;
   if ( my_rank == 0 ){
     cout << "Time spent: " << TotalTime << "s. Number of processors: " << numprocs << endl;
+    ofile.close();
   }
 
   //end MPI
