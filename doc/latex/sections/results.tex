@@ -1,15 +1,20 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \section{Results}
-\subsection{$2 \times 2$ lattice, analytical expressoins}
+\subsection{$2 \times 2$ lattice, analytical expressions}
 If we scale the value of $\beta$ from $1/k_BT$ to $1/J$ (Scaling factor $k_B T/J$) in the analytical expression from section \ref{sec:theory-analy}, we will get a good benchmark for computer computations to come. These values are listed in table \ref{tab:2x2spinsEnergiesMags} below. Note that all values are divided by four, since we want the values per bond, and not for the entire lattice.
 \begin{table}[!h]
 \begin{center}
-  \begin{tabular}{l r}
-    Mean energy, $\langle E \rangle$: & $-1.9960$  \\
-    Mean absolute magnetization, $\langle |\mathcal{M}| \rangle$: & $0.9987$ \\
-    Specific heat capacity, $C_V$: & $0.0321$\\
-    Susceptibility, $\chi$: & $3.9933$
+  \begin{tabular}{| l | r |}
+    \hline
+    \textbf{Mean energy,} $\mathbf{\langle E \rangle}$ & $-1.9960$  \\
+    \hline
+    \textbf{Mean absolute magnetization,} $\mathbf{\langle |\mathcal{M}| \rangle}$ & $0.9987$ \\
+    \hline
+    \textbf{Specific heat capacity,} $\mathbf{C_V}$ & $0.0321$\\
+    \hline
+    \textbf{Susceptibility,} $\mathbf \chi$ & $3.9933$ \\
+    \hline
   \end{tabular}
   \caption{Benchmark for material characteristics per bond for a $2 \times 2$ lattice}
   \label{tab:2x2spinsEnergiesMags}
@@ -18,71 +23,136 @@ If we scale the value of $\beta$ from $1/k_BT$ to $1/J$ (Scaling factor $k_B T/J
 \FloatBarrier
 
 \subsection{Ising model: simulation over temperature}
-We ran the program for different amounts of Monte Carlo cycles and plottet the error (analytical - simulated) in figure \ref{fig:results-MCplot} below. It seems we want to use around $10^{7}$ MC cycles or more to get a good simulation.
+We ran the program for different amounts of Monte Carlo cycles and plotted the error ($\text{analytical} - \text{simulated}$) in figure \ref{fig:results-MCplot} below. Using $10^7$ Monte Carlo cycles, we seem to be getting pretty accurate results.
 
 \begin{figure}[!h]
-\includegraphics[scale=0.7]{CyclesComparison.png}
-\caption{Shows the accuracy of different amount of MC cycles over temperature.}
-\label{fig:results-MCplot}
+  \includegraphics[scale=0.7]{CyclesComparison.png}
+  \caption{Shows the accuracy of different amount of MC cycles over temperature.}
+  \label{fig:results-MCplot}
 \end{figure}
 \FloatBarrier
 
-\subsection{$20 \times 20$ lattice, analytical expressoins}
-T = 1.0(kT/J):
-Mean energy and magnetization func of MC cycles:
-Ordnet orientering: Program initilize.cpp (For T < 1.5 så er alle spinn opp,
-ellers spinn ned)
+\subsection{$20 \times 20$ lattice}
+\subsubsection*{$T=1.0$}
+% T = 1.0(kT/J):
+% Mean energy and magnetization func of MC cycles:
+\paragraph*{Ordered spin orientation}
+% Ordnet orientering: Program initialize.cpp (For T < 1.5 så er alle spinn opp,
+% ellers spinn ned)
 
-sett inn følgende bilder fra mappe M+E under img:
-T1_1.png
-T1_2.png
-Tekst: ordnet spinn orientering for T= 1.0
+\begin{figure}[!h]
+  \includegraphics[scale=0.7]{./M+E/T1_1.png}
+  \caption{Shows the computed value for the mean magnetization, with ordered initialization, against the number of MC cycles. The scaled temperature is $T=1.0$}
+  \label{fig:results-MCplot}
+\end{figure}
+\FloatBarrier
+\begin{figure}[!h]
+  \includegraphics[scale=0.7]{./M+E/T1_2.png}
+  \caption{Shows the computed value for the mean magnetization, with ordered initialization, against the number of MC cycles. The scaled temperature is $T=1.0$}
+  \label{fig:results-MCplot}
+\end{figure}
+\FloatBarrier
+% Tekst: ordnet spinn orientering for T= 1.0
 
-Random spinn orientering: Program initilize_random (Setter spinn ned(-1)
-hvis verdien vi får mellom 0 og 1 er mindre eller lik 0.5 ).
+\paragraph*{Random spin orientation}
+% Random spinn orientering: Program initialize_random (Setter spinn ned(-1)
+% hvis verdien vi får mellom 0 og 1 er mindre eller lik 0.5 ).
 
-sett inn følgende bilder fra mappe M+E under img:
-L20T1random_1.png
-L20T1random_2.png
-Tekst: Random spinn orientering for T = 1.0
+\begin{figure}[!h]
+  \includegraphics[scale=0.7]{./M+E/L20T1random_1.png}
+  \caption{Shows the computed value for the mean magnetization, with random initialization, against the number of MC cycles. The scaled temperature is $T=1.0$}
+  \label{fig:results-MCplot}
+\end{figure}
+\FloatBarrier
+\begin{figure}[!h]
+  \includegraphics[scale=0.7]{./M+E/L20T1random_2.png}
+  \caption{Shows the computed value for the mean magnetization, with random initialization, against the number of MC cycles. The scaled temperature is $T=1.0$}
+  \label{fig:results-MCplot}
+\end{figure}
+\FloatBarrier
+% Tekst: Random spinn orientering for T = 1.0
+
+% Likevekt ved:
+\subsubsection*{$T=2.4$}
+% T = 2.4(kT/J):
+% Mean energy and magnetization func of MC cycles:
+\paragraph*{Ordered spin orientation}
+% Ordnet orientering: Program initilize.cpp (For T < 1.5 så er alle spinn opp,
+% ellers spinn ned)
+
+% sett inn følgende bilder fra mappe M+E(ligger inni img):
+\begin{figure}[!h]
+  \includegraphics[scale=0.7]{./M+E/T2_1.png}
+  \caption{Shows the computed value for the mean magnetization, with ordered initialization, against the number of MC cycles. The scaled temperature is $T=2.4$}
+  \label{fig:results-MCplot}
+\end{figure}
+\FloatBarrier
+\begin{figure}[!h]
+  \includegraphics[scale=0.7]{./M+E/T2_2.png}
+  \caption{Shows the computed value for the mean magnetization, with ordered initialization, against the number of MC cycles. The scaled temperature is $T=2.4$}
+  \label{fig:results-MCplot}
+\end{figure}
+\FloatBarrier
+% Tekst: ordnet spinn orientering for T= 2.4
+
+\paragraph*{Random spin orientation}
+% Random spinn orientering: Program initilize_random (Setter spinn ned(-1)
+% hvis verdien vi får mellom 0 og 1 er mindre eller lik 0.5 ).
+
+\begin{figure}[!h]
+  \includegraphics[scale=0.7]{./M+E/L20T2random_1.png}
+  \caption{Shows the computed value for the mean magnetization, with random initialization, against the number of MC cycles. The scaled temperature is $T=2.4$}
+  \label{fig:results-MCplot}
+\end{figure}
+\FloatBarrier
+\begin{figure}[!h]
+  \includegraphics[scale=0.7]{./M+E/L20T2random_2.png}
+  \caption{Shows the computed value for the mean magnetization, with random initialization, against the number of MC cycles. The scaled temperature is $T=2.4$}
+  \label{fig:results-MCplot}
+\end{figure}
+\FloatBarrier
+% Tekst: Random spinn orientering for T = 2.4
 
 
-Likevekt:
+% Likevekt ved:
 
-T = 2.4(kT/J):
-Mean energy and magnetization func of MC cycles:
-Ordnet orientering: Program initilize.cpp (For T < 1.5 så er alle spinn opp,
-ellers spinn ned)
+% Oversiktelig tabell med når likevekt nås ca. (antall mcs)
 
-sett inn følgende bilder fra mappe M+E(ligger inni img):
-T2_1.png
-T2_2.png
-Tekst: ordnet spinn orientering for T= 2.4
+%     Ordnet magnetisering  Random magnetisering  Ordnet energi Random energi
+% T1:
+% T2:
 
-Random spinn orientering: Program initilize_random (Setter spinn ned(-1)
-hvis verdien vi får mellom 0 og 1 er mindre eller lik 0.5 ).
-
-L20T1random_1.png
-L20T1random_2.png
-Tekst: Random spinn orientering for T = 2.4
+% Estimat av equilibration time:
 
 
-Likevekt:
+% Antall aksepterte spinn totalt etter et gitt antall mcs(100k maks):
+% Set start point
+% T = 1
+% Bilde :accepted_spinn_T1_mcs_cumsum(y)_log10.png
+% Stabiliserer seg ved mcd = 1E3.5(alle spinn blir heretter akseptert)
+%
+% T = 2.4
+% Bilde: accepted_spinn_T2_mcs_cumsum(y)_log10.png
+% Stabiliserer seg ved mcd = 1E3.5, men det er mange flere som blir akseptert(Se y aksen)
+%
+%
+%
+% Random start point:
+% T = 1:
+% Bilde: accepted_spins_T1_random_cumsum(y)_mcs_log10.png
+% T = 2.4
+% Bilde: accepted_spins_T2_random_cumsum(y)_mcs_log10.png
+%
+% Temperaturavhengighet(skal vi lage plot her også- eller holder det med kommentar i resultater?):
+% Økt temperatur gjør at mange flere spinn aksepteres ved lavere antall mcs dvs tidligere.(sjekk prosenten på y aksen)
+% Ved random vs ikke random: omtrent like mange som aksepteres, men i random så aksepteres flere spinn ved lavere mcs. Ved T1 random får man en liten økning ved 1E1.5, mens hos T1 set startpont så før vi ikke en økning i aksepterte spinn før ved 1E3.5
+%
+% For T2 så får vi økningen på samme sted dvs 1E4 på både random og satt startpunkt.
 
-Oversiktelig tabell med når likevekt nås ca. (antall mcs)
-
-    Ordnet magnetisering  Random magnetisering  Ordnet energi Random energi
-T1:
-T2:
-
-Estimat av equilibration time:
-
-Antall aksepterte spinn per montecarlocycle
-
-Diskusjon/resultater
-Aksepterte spinn som funksjon av T:
-Økt temperatur gir flere aksepterte flips.
-Setter man startpoint til random går den fortere mot likevekt ?
+% Diskusjon/resultater
+% Aksepterte spinn som funksjon av T:
+% Økt temperatur gir flere aksepterte flips.
+% Setter man startpoint til random går den fortere mot likevekt ?
 
 
 \end{document}
