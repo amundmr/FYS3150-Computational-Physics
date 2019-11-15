@@ -37,6 +37,11 @@ int main(int argc, char * argv[])
   file.open(outfilename);
   file2.open(outfilename2);
 
+  if(my_rank == 0){ //Vil bare at dette skal kjøre i thread 1 der filene er åpnet
+    file << "T M E Susceptibility Cv" << endl;
+    file2 << "Monte_Carlo_Cycles" << " " << "Accepted_spins" << endl;
+  }
+
   //Sende alle variabler fra thread 0 ut til alle andre:
   MPI_Bcast (&L, 1, MPI_INT, 0, MPI_COMM_WORLD);
   MPI_Bcast (&T_start, 1, MPI_DOUBLE, 0, MPI_COMM_WORLD);
@@ -70,10 +75,7 @@ int main(int argc, char * argv[])
     //initialize(L, T, spin, E, M);
     initialize_random(L, T, spin, E, M);
 
-    if(my_rank == 0){ //Vil bare at dette skal kjøre i thread 1 der filene er åpnet
-      file << "MC_samples M E" << endl;
-      file2 << "Monte_Carlo_Cycles" << " " << "Accepted_spins" << endl;
-    }
+
     int sum  = 0;
     //Monte Carlo:
     for (int cycles = myloop_begin; cycles <= myloop_end; cycles++){
