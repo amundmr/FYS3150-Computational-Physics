@@ -11,14 +11,14 @@ void output(int L, int mcs, double T, ofstream & file, double E_avg, double M_av
   double M2_ExpectVal   = MM_avg*norm;
   double Mabs_ExpectVal = Mfabs*norm;
 
-  double Evariance =(E2_ExpectVal-E_ExpectVal*E_ExpectVal)/L/L;
+  double Evariance =(E2_ExpectVal-E_ExpectVal*E_ExpectVal); // /L /L for per binding, but we want per lattice unit
   double Mvariance =(M2_ExpectVal-Mabs_ExpectVal*Mabs_ExpectVal)/L/L;
   double Cv = (E2_ExpectVal-E_ExpectVal*E_ExpectVal)/T/T*s_norm;
   double susep = (M2_ExpectVal-M_ExpectVal*M_ExpectVal)/T*s_norm;
 
 
   //ofile << "T:    Energy variance:    Magnetization:   Energy:   AbsMagnet:   HeatCap:   Susceptibility:" << endl;
-  file << T << " " << Evariance << " " << M_ExpectVal/L/L << " " << Mvariance/T << " " << E_ExpectVal/L/L << " " << Mabs_ExpectVal/L/L << " " << Cv << " " << susep << endl;
+  file << T << " " << Evariance/T/T << " " << M_ExpectVal/L/L << " " << Mvariance/T << " " << E_ExpectVal/L/L << " " << Mabs_ExpectVal/L/L << " " << Cv << " " << susep << endl;
   //ofile << setiosflags(ios::showpoint | ios::uppercase);
   /*
   ofile <<"           Temperature: "  << setw(15) << setprecision(8) << T <<endl;

@@ -45,7 +45,7 @@ int main(int argc, char * argv[])
 
 
   //input(L, mcs, T_start, T_end, T_step);
-  L = 20; mcs = 100000; T = 2.4;
+  L = 20; mcs = 1000000; T = 2.4;
 
 
   int no_intervals = mcs/numprocs;
@@ -79,12 +79,12 @@ int main(int argc, char * argv[])
     for (int cycles = myloop_begin; cycles <= myloop_end; cycles++){
       Metropolis(L,idum,spin,E,M,Ediff);
 
-      if (cycles > 0.2*mcs){
+      //if (cycles > 0.2*mcs){
         char buf[42];
-        snprintf(buf,42,"%f \n",E/(T*T));
+        snprintf(buf,42,"%f \n",E);
         MPI_File_write_ordered( fh, buf, strlen(buf), MPI_CHAR, &status );
 
-      }
+      //}
       /*
       E_avg += E;
       EE_avg += E*E;
