@@ -35,8 +35,10 @@
 \subfile{sections/conclusion}
 
 \section{Appendix}
+%---------------------------------------------
 \subsection{GitHub}
 
+%---------------------------------------------
 \subsection{Calculations}
 \subsubsection*{Energy expectation value, $\langle E \rangle$}
 \begin{align}\label{eq:mean_energy}
@@ -54,14 +56,29 @@
     &= 64J^2\left(\frac{cosh(\beta 8J)}{cosh(\beta 8 J) + 3} - \left(\frac{sinh(\beta 8 J)}{cosh(\beta 8 J) + 3}\right)^2\right)
 \end{align}
 
+%---------------------------------------------
 \subsubsection*{Magnetization, $\mathcal M$}
 \begin{align}\label{eq:mean_abs_mag}
     \langle \mathcal{|M|} \rangle &= \frac{1}{4cosh(\beta 8J) + 12} \left( 4 \cdot e^{\beta8J} + 4 \cdot 2 \cdot e^{0} + 4 \cdot |-2| \cdot e^{0} + |-4| \cdot e^{\beta 8J} \right)\nonumber \\
-    &= \frac{1}{cosh(\beta 8J) + 3} \left( e^{\beta 8J} + 2 +2 +e^{\beta 8J} \right)\nonumber \\
-    &=\frac{1}{cosh(\beta 8J) + 3} \left( 2e^{\beta 8J} + 4 \right)\nonumber \\
+    &= \frac{1}{cosh(\beta 8J) + 3} ( e^{\beta 8J} + 2 +2 +e^{\beta 8J})\nonumber \\
+    &=\frac{1}{cosh(\beta 8J) + 3} ( 2e^{\beta 8J} + 4)\nonumber \\
     &=\frac{ 2e^{\beta 8J} + 4}{cosh(\beta 8J) + 3}
 \end{align}
+\begin{align}\label{eq:mean_mag}
+    \langle \mathcal{M} \rangle &= \frac{1}{4\cosh(\beta 8J) + 12} \left( 4 \cdot e^{\beta8J} + 4 \cdot 2 \cdot e^{0} + 4 \cdot -2 \cdot e^{0} + -4 \cdot e^{\beta 8J} \right)\nonumber \\
+    &= \frac{1}{\cosh(\beta 8J) + 3} \left( 4e^{\beta 8J}-4e^{\beta 8J} + 8 -8  \right)\nonumber \\
+    &=\frac{1}{\cosh(\beta 8J) + 3} \left( 0 \right)\nonumber\\
+    \langle \mathcal{M} \rangle &=0
+\end{align}
+\begin{align}\label{eq:mean_mag_square}
+    \langle \mathcal{M}^2 \rangle &= \frac{1}{Z}\sum |\mathcal{M_i}|^2 e^{-\beta E_i}\nonumber \\
+    &= \frac{1}{4\cosh(\beta 8J) + 12} \left( 4^2 \cdot e^{\beta8J} + 4 \cdot 2^2 \cdot e^{0} + 4 \cdot |-2|^2 \cdot e^{0} + |-4|^2 \cdot e^{\beta 8J} \right)\nonumber \\
+    &=\frac{1}{4\cosh(\beta 8J) + 12} \left( 16 \cdot e^{\beta8J} + 16 \cdot e^{0} + 16 \cdot e^{0} + 16 \cdot e^{\beta 8J} \right)\nonumber \\
+    &=\frac{4}{\cosh(\beta 8J) + 3} \left( 2 e^{\beta8J} +  2 \right)\nonumber \\
+    &=\frac{8 e^{\beta8J} +  8}{\cosh(\beta 8J) + 3}
+\end{align}
 
+%---------------------------------------------
 \printbibliography
 
 \end{document}
