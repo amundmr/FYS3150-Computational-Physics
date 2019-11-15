@@ -72,9 +72,7 @@ We ran the program for different amounts of Monte Carlo cycles and plotted the e
 \FloatBarrier
 % Tekst: Random spinn orientering for T = 1.0
 
-Likevekt ved:
-
-% Likevekt:
+% Likevekt ved:
 \subsubsection*{$T=2.4$}
 % T = 2.4(kT/J):
 % Mean energy and magnetization func of MC cycles:
@@ -116,7 +114,7 @@ Likevekt ved:
 % Tekst: Random spinn orientering for T = 2.4
 
 
-% Likevekt:
+% Likevekt ved:
 
 % Oversiktelig tabell med når likevekt nås ca. (antall mcs)
 
@@ -127,29 +125,29 @@ Likevekt ved:
 % Estimat av equilibration time:
 
 
-Antall aksepterte spinn totalt etter et gitt antall mcs(100k maks):
-Set start point
-T = 1
-Bilde :accepted_spinn_T1_mcs_cumsum(y)_log10.png
-Stabiliserer seg ved mcd = 1E3.5(alle spinn blir heretter akseptert)
-
-T = 2.4
-Bilde: accepted_spinn_T2_mcs_cumsum(y)_log10.png
-Stabiliserer seg ved mcd = 1E3.5, men det er mange flere som blir akseptert(Se y aksen)
-
-
-
-Random start point:
-T = 1:
-Bilde: accepted_spins_T1_random_cumsum(y)_mcs_log10.png
-T = 2.4
-Bilde: accepted_spins_T2_random_cumsum(y)_mcs_log10.png
-
-Temperaturavhengighet(skal vi lage plot her også- eller holder det med kommentar i resultater?):
-Økt temperatur gjør at mange flere spinn aksepteres ved lavere antall mcs dvs tidligere.(sjekk prosenten på y aksen)
-Ved random vs ikke random: omtrent like mange som aksepteres, men i random så aksepteres flere spinn ved lavere mcs. Ved T1 random får man en liten økning ved 1E1.5, mens hos T1 set startpont så før vi ikke en økning i aksepterte spinn før ved 1E3.5
-
-For T2 så får vi økningen på samme sted. 1E4 på både random og satt startpunkt.
+% Antall aksepterte spinn totalt etter et gitt antall mcs(100k maks):
+% Set start point
+% T = 1
+% Bilde :accepted_spinn_T1_mcs_cumsum(y)_log10.png
+% Stabiliserer seg ved mcd = 1E3.5(alle spinn blir heretter akseptert)
+%
+% T = 2.4
+% Bilde: accepted_spinn_T2_mcs_cumsum(y)_log10.png
+% Stabiliserer seg ved mcd = 1E3.5, men det er mange flere som blir akseptert(Se y aksen)
+%
+%
+%
+% Random start point:
+% T = 1:
+% Bilde: accepted_spins_T1_random_cumsum(y)_mcs_log10.png
+% T = 2.4
+% Bilde: accepted_spins_T2_random_cumsum(y)_mcs_log10.png
+%
+% Temperaturavhengighet(skal vi lage plot her også- eller holder det med kommentar i resultater?):
+% Økt temperatur gjør at mange flere spinn aksepteres ved lavere antall mcs dvs tidligere.(sjekk prosenten på y aksen)
+% Ved random vs ikke random: omtrent like mange som aksepteres, men i random så aksepteres flere spinn ved lavere mcs. Ved T1 random får man en liten økning ved 1E1.5, mens hos T1 set startpont så før vi ikke en økning i aksepterte spinn før ved 1E3.5
+%
+% For T2 så får vi økningen på samme sted dvs 1E4 på både random og satt startpunkt.
 
 % Diskusjon/resultater
 % Aksepterte spinn som funksjon av T:
