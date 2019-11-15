@@ -4,11 +4,7 @@ import sys
 
 #Reading file
 f1 = open("../cold","r")
-<<<<<<< HEAD
-f2 = open("../coldsmall","r")
-=======
 f2 = open("../warm","r")
->>>>>>> af80a730ea5b3db70f4ecf4fff5b18fb82ec0871
 
 Data = f1.readlines()
 Data2 = f2.readlines()
@@ -44,15 +40,9 @@ plt.hist(Alldata2[10000:],bins = 122, density=True) #bins=30
 plt.ylabel('Probability')
 plt.xlabel('Energy')
 plt.title(r'Energy Probability distribution for $T=2.4$ with %g MC cycles' %N2)
-<<<<<<< HEAD
-plt.savefig("../ProbE_T24test.png", bbox_inches='tight')
-plt.axvline(x=-100, linestyle = "--", color ='r')
-plt.axvline(x=-108, linestyle = "--", color ='r')
-=======
 plt.savefig("../ProbE_T24.png", bbox_inches='tight')
 plt.axvline(x=-550, linestyle = "--", color ='r')
 plt.axvline(x=-430, linestyle = "--", color ='r')
->>>>>>> af80a730ea5b3db70f4ecf4fff5b18fb82ec0871
 plt.show()
 
 
