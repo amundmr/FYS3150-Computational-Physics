@@ -1,6 +1,7 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \section{Results}
+%---------------------------------------------------
 \subsection{$2 \times 2$ lattice, analytical expressions}
 If we scale the value of $\beta$ from $1/k_BT$ to $1/J$ (Scaling factor $k_B T/J$) in the analytical expression from section \ref{sec:theory-analy}, we will get a good benchmark for computer computations to come. These values are listed in table \ref{tab:2x2spinsEnergiesMags} below. Note that all values are divided by four, since we want the values per bond, and not for the entire lattice.
 \begin{table}[!h]
@@ -22,6 +23,7 @@ If we scale the value of $\beta$ from $1/k_BT$ to $1/J$ (Scaling factor $k_B T/J
 \end{table}
 \FloatBarrier
 
+%---------------------------------------------------
 \subsection{Ising model: simulation over temperature}
 We ran the program for different amounts of Monte Carlo cycles and plotted the error ($\text{analytical} - \text{simulated}$) in figure \ref{fig:results-MCplot} below. Using $10^7$ Monte Carlo cycles, we seem to be getting pretty accurate results.
 
@@ -32,85 +34,43 @@ We ran the program for different amounts of Monte Carlo cycles and plotted the e
 \end{figure}
 \FloatBarrier
 
+%---------------------------------------------------
 \subsection{$20 \times 20$ lattice}
-\subsubsection*{$T=1.0$}
-% T = 1.0(kT/J):
-% Mean energy and magnetization func of MC cycles:
-\paragraph*{Ordered spin orientation}
-% Ordnet orientering: Program initialize.cpp (For T < 1.5 så er alle spinn opp,
-% ellers spinn ned)
+%---------------------------------------------------
+\subsubsection*{Ordered spin orientation}
+Initializing the spin structure, we first set every spin up for $T<1.5$ and every spin down for $T\ge 1.5$. In figure \ref{fig:ordered}, the computed values for the mean magnetization and energy are plotted against the number of MC cycles, at $T=1.0$ and $T=2.4$:
 
 \begin{figure}[!h]
-  \includegraphics[scale=0.7]{./M+E/T1_1.png}
-  \caption{Shows the computed value for the mean magnetization, with ordered initialization, against the number of MC cycles. The scaled temperature is $T=1.0$}
-  \label{fig:results-MCplot}
+  \centering
+  \makebox[\textwidth][c]{\includegraphics[width=1.3\textwidth]{./M+E/ordered.png}}
+  \caption{Shows the computed value for the mean magnetization and energy, with ordered initialization, against the number of MC cycles. The scaled temperature is $T=1.0$ and $T=2.4$ respectively.}
+  \label{fig:ordered}
 \end{figure}
 \FloatBarrier
-\begin{figure}[!h]
-  \includegraphics[scale=0.7]{./M+E/T1_2.png}
-  \caption{Shows the computed value for the mean magnetization, with ordered initialization, against the number of MC cycles. The scaled temperature is $T=1.0$}
-  \label{fig:results-MCplot}
-\end{figure}
-\FloatBarrier
-% Tekst: ordnet spinn orientering for T= 1.0
+All the plots pretty much stabilize into a value after 8000-1000 MC cycles. For $T=1.0$, the magnetization stabilizes around the value $0.99950$ and the energy around the value $-1.997$. This corresponds pretty good with the analytically calculated values. For $T=2.4$, the magnetization stabilizes around the value $0.5$ and the energy around the value $-1.25$.
 
-\paragraph*{Random spin orientation}
-% Random spinn orientering: Program initialize_random (Setter spinn ned(-1)
-% hvis verdien vi får mellom 0 og 1 er mindre eller lik 0.5 ).
+%---------------------------------------------------
+\subsubsection*{Random spin orientation}
+Following the ordered initialisation, we also initialized the crystal randomly. In figure \ref{fig:random}, the computed values for the mean magnetization and energy are plotted against the number of MC cycles, at $T=1.0$ and $T=2.4$:
 
 \begin{figure}[!h]
-  \includegraphics[scale=0.7]{./M+E/L20T1random_1.png}
-  \caption{Shows the computed value for the mean magnetization, with random initialization, against the number of MC cycles. The scaled temperature is $T=1.0$}
-  \label{fig:results-MCplot}
+  \centering
+  \makebox[\textwidth][c]{\includegraphics[width=1.3\textwidth]{./M+E/random.png}}
+  \caption{Shows the computed value for the mean magnetization and energy, with random initialization, against the number of MC cycles. The scaled temperature is $T=1.0$ and $T=2.4$ respectively.}
+  \label{fig:random}
 \end{figure}
 \FloatBarrier
-\begin{figure}[!h]
-  \includegraphics[scale=0.7]{./M+E/L20T1random_2.png}
-  \caption{Shows the computed value for the mean magnetization, with random initialization, against the number of MC cycles. The scaled temperature is $T=1.0$}
-  \label{fig:results-MCplot}
-\end{figure}
-\FloatBarrier
+The plots for $T=1.0$ follow a clean exponential curve, while the other plots pretty much stabilize after 8000-1000 MC cycles - like the previous ones. For $T=1.0$, the magnetization ends on the value $1.0$ and the energy on the value $-2.0$. This is similar to the analytical values, but does not have the same accuracy. For $T=2.4$, the magnetization stabilizes around the value $0.45$ and the energy around the value $-1.25$.
 % Tekst: Random spinn orientering for T = 1.0
 
 % Likevekt ved:
-\subsubsection*{$T=2.4$}
 % T = 2.4(kT/J):
 % Mean energy and magnetization func of MC cycles:
-\paragraph*{Ordered spin orientation}
 % Ordnet orientering: Program initilize.cpp (For T < 1.5 så er alle spinn opp,
 % ellers spinn ned)
-
-% sett inn følgende bilder fra mappe M+E(ligger inni img):
-\begin{figure}[!h]
-  \includegraphics[scale=0.7]{./M+E/T2_1.png}
-  \caption{Shows the computed value for the mean magnetization, with ordered initialization, against the number of MC cycles. The scaled temperature is $T=2.4$}
-  \label{fig:results-MCplot}
-\end{figure}
-\FloatBarrier
-\begin{figure}[!h]
-  \includegraphics[scale=0.7]{./M+E/T2_2.png}
-  \caption{Shows the computed value for the mean magnetization, with ordered initialization, against the number of MC cycles. The scaled temperature is $T=2.4$}
-  \label{fig:results-MCplot}
-\end{figure}
-\FloatBarrier
 % Tekst: ordnet spinn orientering for T= 2.4
-
-\paragraph*{Random spin orientation}
 % Random spinn orientering: Program initilize_random (Setter spinn ned(-1)
 % hvis verdien vi får mellom 0 og 1 er mindre eller lik 0.5 ).
-
-\begin{figure}[!h]
-  \includegraphics[scale=0.7]{./M+E/L20T2random_1.png}
-  \caption{Shows the computed value for the mean magnetization, with random initialization, against the number of MC cycles. The scaled temperature is $T=2.4$}
-  \label{fig:results-MCplot}
-\end{figure}
-\FloatBarrier
-\begin{figure}[!h]
-  \includegraphics[scale=0.7]{./M+E/L20T2random_2.png}
-  \caption{Shows the computed value for the mean magnetization, with random initialization, against the number of MC cycles. The scaled temperature is $T=2.4$}
-  \label{fig:results-MCplot}
-\end{figure}
-\FloatBarrier
 % Tekst: Random spinn orientering for T = 2.4
 
 
