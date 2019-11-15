@@ -3,37 +3,41 @@ import numpy as np
 import sys
 
 #Reading file
-f1 = open("../out","r")
+f1 = open("../cold","r")
+f2 = open("../warm","r")
 
-E = np.zeros(1000000)
+Data = f1.readlines()
+Data2 = f2.readlines()
 
-for
+N =  len(Data)
+N2 = len(Data2)
+
+Alldata = np.zeros(N)
+Alldata2 = np.zeros(N2)
 
 
-
-Allfiles = [f1, f2, f3]
-Alldata = np.zeros((3,15))
 i = 0
-for file in Allfiles:
-    file.readline()
-    j=0
-    for line in file.readlines():
-        Alldata[i][j] = float(line.split()[6]) #6 IS HEAT CAP
-        j+=1
-    i+=1
+for line in Data:
+    Alldata[i] = float(line)
+    i +=1
 
-Vd = np.linspace(0.5,1.9,15)
-T = Vd
+i = 0
+for line in Data2:
+    Alldata2[i] = float(line)
+    i +=1
 
-Analytical = 0.25* 1/(T*T) * 64 * ((np.cosh(8/T))/(np.cosh(8/T)+3) - ((-np.sinh(8/T))/(np.cosh(8/T)+3))**2)
 
-AllError = [Analytical-Alldata[0], Analytical-Alldata[1], Analytical-Alldata[2]]
-#AllError = Alldata
-#Plotting read data
-for i in range(len(AllError)):
-    plt.scatter(Vd,AllError[i],s=20, label= r"$MCC = 1e($ %d $)$"%float(i+5))
-    plt.plot(Vd,AllError[i], linewidth=1)
-print(Analytical)
+
+
+#x = np.random.normal(size = 1000)
+plt.hist(Alldata,bins = 20, density=True) #bins=30
+plt.ylabel('Probability')
+plt.xlabel('Energy')
+plt.title(r'Energy Probability for $T=1$ with %d MC cycles' %N)
+plt.show()
+
+
+"""
 plt.plot(Vd, Analytical-Analytical, label = "Analytical")
 plt.ylabel("Heat Capacity Error")
 plt.xlabel("Temperature")
@@ -45,3 +49,4 @@ plt.legend(loc="upper left")
 
 plt.savefig("../CyclesComparison.png", bbox_inches='tight')
 #plt.show()
+"""
