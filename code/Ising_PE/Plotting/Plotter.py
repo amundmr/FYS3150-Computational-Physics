@@ -4,7 +4,7 @@ import sys
 
 #Reading file
 f1 = open("../cold","r")
-f2 = open("../out","r")
+f2 = open("../coldsmall","r")
 
 Data = f1.readlines()
 Data2 = f2.readlines()
@@ -42,8 +42,8 @@ plt.ylabel('Probability')
 plt.xlabel('Energy')
 plt.title(r'Energy Probability distribution for $T=2.4$ with %g MC cycles' %N2)
 plt.savefig("../ProbE_T24test.png", bbox_inches='tight')
-plt.axvline(x=-400, linestyle = "--", color ='r')
-plt.axvline(x=-600, linestyle = "--", color ='r')
+plt.axvline(x=-100, linestyle = "--", color ='r')
+plt.axvline(x=-108, linestyle = "--", color ='r')
 plt.show()
 
 

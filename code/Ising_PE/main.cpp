@@ -35,7 +35,7 @@ int main(int argc, char * argv[])
     exit(1);
   }
   if (my_rank == 0 && argc > 1) {
-    outfilename = argv[1];
+    //outfilename = argv[1];
     //input(L, mcs, T_start, T_end, T_step);
     //ofile.open(outfilename);
     //ofile << "T:    Energy variance:    Magnetization:   Energy:   AbsMagnet:   HeatCap:   Susceptibility:" << endl;
@@ -45,7 +45,7 @@ int main(int argc, char * argv[])
 
 
   //input(L, mcs, T_start, T_end, T_step);
-  L = 20; mcs = 1000000; T = 2.4;
+  L = 20; mcs = 100000; T = 2.4;
 
 
   int no_intervals = mcs/numprocs;
@@ -100,7 +100,7 @@ int main(int argc, char * argv[])
     MPI_Reduce(&Mfabs, &tMfabs, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
 */
     if(my_rank == 0){
-    output(L,mcs,T, ofile, tE_avg, tM_avg, tEE_avg, tMM_avg, tMfabs);
+    //output(L,mcs,T, ofile, tE_avg, tM_avg, tEE_avg, tMM_avg, tMfabs);
     // Print results to file.
     cout << "Tempiteration: " << T << endl;
     }

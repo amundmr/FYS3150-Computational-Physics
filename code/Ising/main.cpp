@@ -25,11 +25,12 @@ int main(int argc, char * argv[])
   input(L, mcs, T_start, T_end, T_step);
 
   mat spin(L,L);
-  //idum = -1; // Random starting point.
+
 
   ofstream file, file2;
   file.open(outfilename);
   file2.open(outfilename2);
+  file << "T M E Susceptibility Cv" << endl;
 
   for (T = T_start; T < T_end; T += T_step)
   {
@@ -40,21 +41,21 @@ int main(int argc, char * argv[])
     //initialize(L, T, spin, E, M);
     initialize_random(L, T, spin, E, M);
 
-    file << "MC_samples M E" << endl;
-    file2 << "Monte_Carlo_Cycles" << " " << "Accepted_spins" << endl;
+    //file2 << "Monte_Carlo_Cycles" << " " << "Accepted_spins" << endl;
 
     int sum  = 0;
+    int cycles = 1;
     //Monte Carlo:
-    for (int cycles = 1; cycles <= mcs; cycles++){
+    for (cycles ; cycles <= mcs; cycles++){
 
       Metropolis(L,idum,spin,E,M,Ediff,file2,cycles,sum, mcs);
 
       average(0) += E; average(1) += E*E;
       average(2) += M; average(3) += M*M; average(4) += fabs(M);
 
-      // Print results to file.
-      output(L,cycles,T,average, file);
     }
+    // Print results to file.
+    output(L,cycles,T,average, file);
   }
 
   file.close();
