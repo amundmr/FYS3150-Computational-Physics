@@ -36,7 +36,7 @@ for i in range(ncol-1):
     y = plot_data[i+1,:]
 
     #plt.plot(np.log10(x),np.cumsum(y))
-    plt.plot(np.log10(x),y)
+    plt.plot(x,np.cumsum(y))
     plt.xlabel(axes[0])
     plt.ylabel(axes[i+1])
     plt.title(title[i])

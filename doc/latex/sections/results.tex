@@ -47,7 +47,7 @@ L20T1random_2.png
 Tekst: Random spinn orientering for T = 1.0
 
 
-Likevekt:
+Likevekt ved:
 
 T = 2.4(kT/J):
 Mean energy and magnetization func of MC cycles:
@@ -67,7 +67,7 @@ L20T1random_2.png
 Tekst: Random spinn orientering for T = 2.4
 
 
-Likevekt:
+Likevekt ved:
 
 Oversiktelig tabell med når likevekt nås ca. (antall mcs)
 
@@ -77,7 +77,28 @@ T2:
 
 Estimat av equilibration time:
 
-Antall aksepterte spinn per montecarlocycle
+
+Antall aksepterte spinn totalt etter et gitt antall mcs(100k maks):
+Set start point
+T = 1
+Bilde :accepted_spinn_T1_mcs_cumsum(y)_log10.png
+Stabiliserer seg ved mcd = 1E3.5(alle spinn blir heretter akseptert)
+
+T = 2.4
+Bilde: accepted_spinn_T2_mcs_cumsum(y)_log10.png
+Stabiliserer seg ved mcd = 1E3.5, men det er mange flere som blir akseptert(Se y aksen)
+
+
+
+Random start point:
+T = 1:
+Bilde: accepted_spins_T1_random_cumsum(y)_mcs_log10.png
+T = 2.4
+Bilde: accepted_spins_T2_random_cumsum(y)_mcs_log10.png
+
+Temperaturavhengighet(skal vi lage plot her også- eller holder det med kommentar i resultater?):
+Økt temperatur gjør at mange flere spinn aksepteres ved lavere antall mcs dvs tidligere.
+
 
 Diskusjon/resultater
 Aksepterte spinn som funksjon av T:
