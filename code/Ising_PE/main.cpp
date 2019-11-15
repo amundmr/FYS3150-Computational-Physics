@@ -38,7 +38,7 @@ int main(int argc, char * argv[])
     //outfilename = argv[1];
     //input(L, mcs, T_start, T_end, T_step);
     //ofile.open(outfilename);
-    //ofile << "T:    Energy variance:    Magnetization:   Energy:   AbsMagnet:   HeatCap:   Susceptibility:" << endl;
+    ofile << "T:    Energy variance:    Magnetization:   Energy:   AbsMagnet:   HeatCap:   Susceptibility:" << endl;
 
   }
 
@@ -79,13 +79,13 @@ int main(int argc, char * argv[])
     for (int cycles = myloop_begin; cycles <= myloop_end; cycles++){
       Metropolis(L,idum,spin,E,M,Ediff);
 
-      if (cycles > 0.2*mcs){
+      //if (cycles > 0.2*mcs){
         char buf[42];
-        snprintf(buf,42,"%f \n",E/(T*T));
+        snprintf(buf,42,"%f \n",E);
         MPI_File_write_ordered( fh, buf, strlen(buf), MPI_CHAR, &status );
 
-      }
-      /*
+      //}
+/*
       E_avg += E;
       EE_avg += E*E;
       M_avg += M;
