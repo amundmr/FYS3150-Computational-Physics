@@ -18,7 +18,7 @@ void output(int L, int mcs, double T, ofstream & file, double E_avg, double M_av
 
 
   //ofile << "T:    Energy variance:    Magnetization:   Energy:   AbsMagnet:   HeatCap:   Susceptibility:" << endl;
-  file << T << " " << Evariance/T/T << " " << M_ExpectVal/L/L << " " << Mvariance/T << " " << E_ExpectVal/L/L << " " << Mabs_ExpectVal/L/L << " " << Cv << " " << susep << endl;
+  file << T << " " << Evariance << " " << M_ExpectVal/L/L << " " << Mvariance/T << " " << E_ExpectVal/L/L << " " << Mabs_ExpectVal/L/L << " " << Cv << " " << susep << endl;
   //ofile << setiosflags(ios::showpoint | ios::uppercase);
   /*
   ofile <<"           Temperature: "  << setw(15) << setprecision(8) << T <<endl;

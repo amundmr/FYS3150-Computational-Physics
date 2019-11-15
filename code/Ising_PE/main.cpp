@@ -35,7 +35,7 @@ int main(int argc, char * argv[])
     exit(1);
   }
   if (my_rank == 0 && argc > 1) {
-    //outfilename = argv[1];
+    outfilename = argv[1];
     //input(L, mcs, T_start, T_end, T_step);
     //ofile.open(outfilename);
     //ofile << "T:    Energy variance:    Magnetization:   Energy:   AbsMagnet:   HeatCap:   Susceptibility:" << endl;
@@ -45,7 +45,7 @@ int main(int argc, char * argv[])
 
 
   //input(L, mcs, T_start, T_end, T_step);
-  L = 20; mcs = 10000; T = 1;
+  L = 20; mcs = 1000000; T = 2.4;
 
 
   int no_intervals = mcs/numprocs;
@@ -79,18 +79,28 @@ int main(int argc, char * argv[])
     for (int cycles = myloop_begin; cycles <= myloop_end; cycles++){
       Metropolis(L,idum,spin,E,M,Ediff);
 
-      //if (cycles > 0.2*mcs){
+      if (cycles > 0.2*mcs){
         char buf[42];
-        snprintf(buf,42,"%f \n",E);
+        snprintf(buf,42,"%f \n",E/(T*T));
         MPI_File_write_ordered( fh, buf, strlen(buf), MPI_CHAR, &status );
 
-      //}
-
+      }
+      /*
+      E_avg += E;
+      EE_avg += E*E;
+      M_avg += M;
+      MM_avg += M*M;
+      Mfabs += fabs(M);*/
     }
-
-
+/*
+    MPI_Reduce(&E_avg, &tE_avg, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+    MPI_Reduce(&EE_avg, &tEE_avg, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+    MPI_Reduce(&M_avg, &tM_avg, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+    MPI_Reduce(&MM_avg, &tMM_avg, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+    MPI_Reduce(&Mfabs, &tMfabs, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+*/
     if(my_rank == 0){
-    //output(L,mcs,T, ofile, tE_avg, tM_avg, tEE_avg, tMM_avg, tMfabs);
+    output(L,mcs,T, ofile, tE_avg, tM_avg, tEE_avg, tMM_avg, tMfabs);
     // Print results to file.
     cout << "Tempiteration: " << T << endl;
     }
@@ -104,7 +114,6 @@ int main(int argc, char * argv[])
   MPI_File_close( &fh );
   //end MPI
   MPI_Finalize ();
-
 
   return 0;
 }
