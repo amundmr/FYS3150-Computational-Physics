@@ -3,7 +3,7 @@
 void output(int L, int mcs, double T, ofstream & file, double E_avg, double M_avg, double EE_avg, double MM_avg, double Mfabs){
 
   double norm = 1.0/((double) (mcs));
-  double s_norm = 1.0/(L*L);
+  double s_norm = 1.0/((double) (L*L));
   double E_ExpectVal    = E_avg*norm;
   double E2_ExpectVal   = EE_avg*norm;
   double M_ExpectVal    = M_avg*norm;
@@ -12,8 +12,8 @@ void output(int L, int mcs, double T, ofstream & file, double E_avg, double M_av
 
   double Evariance =(E2_ExpectVal-E_ExpectVal*E_ExpectVal)/L/L;
   double Mvariance =(M2_ExpectVal-Mabs_ExpectVal*Mabs_ExpectVal)/L/L;
-  double Cv = (E2_ExpectVal-E_ExpectVal*E_ExpectVal)/T/T*s_norm;
-  double susep2 = (Mabs_ExpectVal-fabs(M_ExpectVal)*fabs(M_ExpectVal))/T*s_norm;
+  double Cv = (E2_ExpectVal-E_ExpectVal*E_ExpectVal)/L/L/T/T;
+  double susep2 = (M2_ExpectVal-Mabs_ExpectVal*Mabs_ExpectVal)/L/L/T;
 
   file << setiosflags(ios::showpoint | ios::uppercase);
   //file <<"           Temperature: "  << setw(15) << setprecision(8) << T <<endl;
