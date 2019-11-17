@@ -116,7 +116,7 @@ The plots for $T=1.0$ follow a clean exponential curve, while the other plots pr
 % Setter man startpoint til random går den fortere mot likevekt ?
 
 \subsection{Analyzing the probability distribution}
-In figure \ref{fig:results-ProbE_T1} and \ref{fig:results-ProbE_T24} you can see the probability distribution for low and high temperature respectively. We can see that for a low temperature, the system tends to settle in the lowest energy state, while for the higher temperature the energies are a bit more spread. In table \ref{tab:results-variance} you will see the computed variance.
+In figure \ref{fig:results-ProbE_T24} you can see the probability distribution for low and high temperature respectively. We can see that for a low temperature, the system tends to settle in the lowest energy state, while for the higher temperature the energies are a bit more spread. In table \ref{tab:results-variance} you will see the computed variance. Note that we calculated standard deviation of the histogram with \textsc{numpy.std}, and took the square root of this to get the variance.
 \begin{figure}[!h]
   \centering
   \begin{minipage}{0.5\textwidth}
@@ -134,14 +134,16 @@ In figure \ref{fig:results-ProbE_T1} and \ref{fig:results-ProbE_T24} you can see
   \label{fig:results-ProbE_T24}
 \end{figure}
 \FloatBarrier
+
+
 \begin{table}[!h]
   \begin{center}
-    \begin{tabular}{l l}
+    \begin{tabular}{l l l l}
       \hline
-      Temperature & calculated variance\\
+      Temperature & calculated variance & from histogram & deviation\\
       \hline
-      1 & needsrealvalue\\
-      2.4 & needsrealvalue \\
+      1 & 9.375 & 1.752 & 81\%\\
+      2.4 & 8.053  & 7.550 & 6.2\%\\
       \hline
     \end{tabular}
     \caption{Computed variance}
