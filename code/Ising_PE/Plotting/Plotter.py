@@ -30,19 +30,20 @@ for line in Data2:
 
 #x = np.random.normal(size = 1000)
 plt.hist(Alldata[10000:],bins = 50, density=True) #bins=30
-plt.ylabel('Probability')
+plt.ylabel('Probability density')
 plt.xlabel('Energy')
 plt.title(r'Energy Probability distribution for $T=1$ with %g MC cycles' %N)
 plt.savefig("../ProbE_T1.png", bbox_inches='tight')
 plt.show()
 
-plt.hist(Alldata2[10000:],bins = 122, density=True) #bins=30
-plt.ylabel('Probability')
+plt.hist(Alldata2[10000:],bins = 120, density=True) #bins=30
+plt.ylabel('Probability density')
 plt.xlabel('Energy')
 plt.title(r'Energy Probability distribution for $T=2.4$ with %g MC cycles' %N2)
-plt.savefig("../ProbE_T24.png", bbox_inches='tight')
 plt.axvline(x=-550, linestyle = "--", color ='r')
 plt.axvline(x=-430, linestyle = "--", color ='r')
+plt.savefig("../ProbE_T24.png", bbox_inches='tight')
+
 plt.show()
 
 

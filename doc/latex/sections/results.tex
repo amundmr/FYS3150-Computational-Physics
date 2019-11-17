@@ -24,7 +24,7 @@ If we scale the value of $\beta$ from $1/k_BT$ to $1/J$ (Scaling factor $k_B T/J
 \FloatBarrier
 
 %---------------------------------------------------
-\subsection{Ising model: simulation over temperature}
+\subsection{Ising model: simulation over temperature} \label{sec:res-compareanalytical}
 We ran the program for different amounts of Monte Carlo cycles and plotted the error ($\text{analytical} - \text{simulated}$) in figure \ref{fig:results-MCplot} below. Using $10^7$ Monte Carlo cycles, we seem to be getting pretty accurate results.
 
 \begin{figure}[!h]
@@ -33,7 +33,7 @@ We ran the program for different amounts of Monte Carlo cycles and plotted the e
   \label{fig:results-MCplot}
 \end{figure}
 \FloatBarrier
-
+This shows that our computed results are quite close to our analytical results for the $20\times 20$ lattice. This is a good indication of a successfull simulation.
 %---------------------------------------------------
 \subsection{$20 \times 20$ lattice}
 %---------------------------------------------------
@@ -115,5 +115,39 @@ The plots for $T=1.0$ follow a clean exponential curve, while the other plots pr
 % Økt temperatur gir flere aksepterte flips.
 % Setter man startpoint til random går den fortere mot likevekt ?
 
+\subsection{Analyzing the probability distribution}
+In figure \ref{fig:results-ProbE_T1} and \ref{fig:results-ProbE_T24} you can see the probability distribution for low and high temperature respectively. We can see that for a low temperature, the system tends to settle in the lowest energy state, while for the higher temperature the energies are a bit more spread. In table \ref{tab:results-variance} you will see the computed variance.
+\begin{figure}[!h]
+  \centering
+  \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{ProbE_T1.png} % first figure itself
+        \caption{first figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{ProbE_T24.png} % second figure itself
+        \caption{second figure}
+    \end{minipage}
+
+  \caption{Shows probability distribution for low and high temperature.}
+  \label{fig:results-ProbE_T24}
+\end{figure}
+\FloatBarrier
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{l l}
+      \hline
+      Temperature & calculated variance\\
+      \hline
+      1 & needsrealvalue\\
+      2.4 & needsrealvalue
+      \hline
+    \end{tabular}
+    \caption{Computed variance}
+    \label{tab:results-variance}
+  \end{center}
+\end{table}
+\FloatBarrier
 
 \end{document}
