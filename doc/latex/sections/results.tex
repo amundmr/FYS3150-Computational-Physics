@@ -17,11 +17,35 @@ If we scale the value of $\beta$ from $1/k_BT$ to $1/J$ (Scaling factor $k_B T/J
     \textbf{Susceptibility,} $\mathbf \chi$ & $3.9933$ \\
     \hline
   \end{tabular}
-  \caption{Benchmark for material characteristics per bond for a $2 \times 2$ lattice}
+  \caption{Analytically calculated benchmark for material characteristics per bond for a $2 \times 2$ lattice}
   \label{tab:2x2spinsEnergiesMags}
 \end{center}
 \end{table}
 \FloatBarrier
+
+\subsection{$2 \times 2$ lattice, numerical results}
+Using $T = 1.0$, like in the analytical calculations, the program \href{https://github.com/kmaasrud/Project-4/tree/master/code/Ising}{/code/Ising/} gives the results listed in table \ref{tab:2x2computed}:
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{| l | r | r |}
+      \hline
+       & \textbf{Set initialization} & \textbf{Random initialization} \\
+      \hline
+      \textbf{Mean energy,} $\mathbf{\langle E \rangle}$ & $-1.9955$ & $-1.9958$\\
+      \hline
+      \textbf{Mean absolute magnetization,} $\mathbf{\langle |\mathcal{M}| \rangle}$ & $0.9985$ & $0.9986$ \\
+      \hline
+      \textbf{Specific heat capacity,} $\mathbf{C_v}$ & $0.0358$ & $0.0337$ \\
+      \hline
+      \textbf{Susceptibility,} $\mathbf \chi$ & $3.9925$ & $3.8237$ \\
+      \hline
+    \end{tabular}
+    \caption{Computed values of material characteristics per bond for a $2\times 2$ lattice.}
+    \label{tab:2x2computed}
+  \end{center}
+\end{table}
+\FloatBarrier
+The values correspond very well with each other and the analytical.
 
 %---------------------------------------------------
 \subsection{Ising model: simulation over temperature} \label{sec:res-compareanalytical}
