@@ -1,7 +1,9 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \section{Introduction}
-The Ising model is a statistical model of ferromagnetism. Modelling the atomic spins as discrete values ($\pm 1$), the model can identify phase transitions for a periodically repeating crystal of said spins interracting with its neighbours. In this way, the model is also relevant in other studies - modelling the way networks evolve in for example neuroscience and elections. \\
-In this report, we will study the Ising model by applying it to a two-dimensional lattice of spins, with two allowable states. Analytical values are first found for comparison, followed by numerical moddeling utilizing the Metropolis Monte Carlo algorithm. \\
-This report will first have a theory part, showing the methods we are using and the theory behind the Ising model. Results are then shown, followed by a discussion and a conclusion. Every program referenced in this report is found in the \href{https://github.com/kmaasrud/Project-4}{GitHub repository}, under \verb+/code/+.
+The Ising model is a statistical model of ferromagnetism. Modeling the atomic spins as discrete values ($\pm 1$), the model can identify phase transitions for a periodically repeating crystal of said spins interracting with its neighbours. In this way, the model is also relevant in other studies - modeling the way networks evolve in for example neuroscience and elections.
+
+\noindent In this report, we will study the Ising model by applying it to a two-dimensional ferromagnetic crystal with one electron-spin at each lattice site. We model this as an $L \times L$ matrix, where $L$ is the number of spins along one direction. To study when the most likely state is reached, we initialize the structure first with a given order, then randomly. Modeling the temperature dependence, we try to find the critical temperature at which ferromagnetism is lost. Analytical values are first found for comparison, followed by numerical modeling utilizing the Metropolis Monte Carlo algorithm.
+
+\noindent This report will first have a theory part, showing the methods we are using and the theory behind the Ising model. Results are then shown, followed by a discussion and a conclusion. Every program referenced in this report is found in the \href{https://github.com/kmaasrud/Project-4}{GitHub repository}, under \verb+/code/+.
 \end{document}
