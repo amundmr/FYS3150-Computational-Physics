@@ -5,17 +5,17 @@
 %------------------------------------------------------------
 \subsection{Ising model: simulation over temperature}
 
-As presented in Results (see table \ref{tab:2x2computed} and \ref{fig:fig:results-MCplot}), when using periodic boundary conditions and $T = 1.0(kT/J)$, $10^6$ Monte Carlo cycles gives high presition results. The energy and magnetisation have a presition of three leading digits after the desimal point, while it is a little less for susceptibility and heat capacity.
+As presented in Results (see table \ref{tab:2x2computed} and \ref{fig:results-MCplot}), when using periodic boundary conditions and $T = 1.0(kT/J)$, $10^6$ Monte Carlo cycles gives high presition results. The energy and magnetisation have a precision of three leading digits after the desimal point, while it is a little less for susceptibility and heat capacity.
 
-When using a random starting configuration the presition increases slightly compared with the spesific one for some of the parameters, especially for the susceptibility.
+When using a random starting configuration the precision increases slightly compared with the spesific one for some of the parameters, especially for the susceptibility.
 
-For further computations we have used $10^4 - 10^-7$ Montecarlo cycles in order to not have too time consuming computation.
+For further computations we have used $10^4 - 10^{-7}$ Montecarlo cycles in order to not have too time consuming computation.
 
 \subsection{$20 \times 20$ lattice}
 
 From Figure \ref{fig:ordered} and \ref{fig:random} one sees the impact of the different parameters, initlisation and temperature, before reaching equlibrium for different Monte Carlo cycles.
 
-For $T=1.0(Jk/T)$ the predetermined starting configuration, the energy and magnetisation stabilizes is already really stable after only a few Monte Carlo cycles(take a close look at the y-axis). It is easy to see that at the first Monte Carlo cycle the magnetisation is one(becauase all the spinns are pointing the same way). Then one spinn flipps and the energy changes slightly. After a while it is almost no longer energetically favourable to flipp spinns.
+For $T=1.0(kT/J)$ the predetermined starting configuration, the energy and magnetisation is already really stable after only a few Monte Carlo cycles(take a close look at the y-axis). It is easy to see that at the first Monte Carlo cycle the magnetisation is one(becauase all the spinns are pointing the same way). Then one spinn flips and the energy changes slightly. After a while it is almost no longer energetically favourable to flipp spinns.
 While for the random initlisation it takes more time/Monte Carlo cycles before stabilizing(take a look at the y-axis, it is 3 orders of magnitude larger than the predetermined).For easier comparison it would be conviniet to have the axes more alike.
 
 To summerize the ordered starting point seems to stabilize the fastes for both temperatures(energy a bit faster than magnetisation). This is expeced, because at low temperatures, which we are dealing with, one would expect a high order at equlibrium (from eg. Gibbs free energy). So when we start with a high order, we are allready close to equobrium.
