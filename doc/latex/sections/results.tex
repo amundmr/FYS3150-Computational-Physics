@@ -35,7 +35,7 @@ We ran the program for different amounts of Monte Carlo cycles and plotted the e
 \FloatBarrier
 This shows that our computed results are quite close to our analytical results for the $20\times 20$ lattice. This is a good indication of a successfull simulation.
 %---------------------------------------------------
-\subsection{$20 \times 20$ lattice}
+\subsection{$20 \times 20$ lattice} \label{sec:results-20x20lattice}
 %---------------------------------------------------
 \subsubsection*{Ordered spin orientation}
 Initializing the spin structure, we first set every spin up for $T<1.5$ and every spin down for $T\ge 1.5$. In figure \ref{fig:ordered}, the computed values for the mean magnetization and energy are plotted against the number of MC cycles, at $T=1.0$ and $T=2.4$:
@@ -117,17 +117,19 @@ The plots for $T=1.0$ follow a clean exponential curve, while the other plots pr
 
 \subsection{Analyzing the probability distribution}
 In figure \ref{fig:results-ProbE_T24} you can see the probability distribution for low and high temperature respectively. We can see that for a low temperature, the system tends to settle in the lowest energy state, while for the higher temperature the energies are a bit more spread. In table \ref{tab:results-variance} you will see the computed variance. Note that we calculated standard deviation of the histogram with \textsc{numpy.std}, and took the square root of this to get the variance.
+
 \begin{figure}[!h]
   \centering
-  \begin{minipage}{0.5\textwidth}
+  \makebox[\textwidth][c]{
+  \begin{minipage}{0.7\textwidth}
         \centering
         \includegraphics[width=1\textwidth]{ProbE_T1.png} % first figure itself
     \end{minipage}\hfill
-    \begin{minipage}{0.5\textwidth}
+    \begin{minipage}{0.7\textwidth}
         \centering
         \includegraphics[width=1\textwidth]{ProbE_T24.png} % second figure itself
     \end{minipage}
-
+}
   \caption{Shows probability distribution for low and high temperature.}
   \label{fig:results-ProbE_T24}
 \end{figure}
@@ -149,5 +151,105 @@ In figure \ref{fig:results-ProbE_T24} you can see the probability distribution f
   \end{center}
 \end{table}
 \FloatBarrier
+
+%---------------------------------------------------
+\subsection{Numerical studies of phase transitions}
+After playing around with the domain of the temperature we found that the domain used in figure \ref{fig:results-energy-magnetisation} and \ref{fig:results-heatcap-suscep} nicely presents the phase change of the material. We used $10^6$ Monte Carlo Cycles for each temperature step, which had a stepsize of $\Delta T = 0.005$. As shown in the figures we can clearly see that something is happening around $T = 0.3$.
+
+\begin{figure}[!h]
+\makebox[\textwidth][c]{
+  \begin{minipage}[t]{0.7\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{eEnergy.png}
+
+  \end{minipage}
+
+  \begin{minipage}[t]{0.7\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{eMagnetisation.png}
+
+  \end{minipage}
+  }
+  \caption{Mean energy and magnetisation over temperature interval $T \in [2.0, 2.5]$ with lattice sizes $L = {20, 40, 60, 80, 100}$.}
+  \label{fig:results-energy-magnetisation}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}[!h]
+\makebox[\textwidth][c]{
+  \begin{minipage}[t]{0.7\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{eHeatcapacity.png}
+
+  \end{minipage}
+
+  \begin{minipage}[t]{0.7\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{eSusceptibility.png}
+
+  \end{minipage}
+  }
+  \caption{Heat capacity and Susceptibility over temperature interval $T \in [2.0, 2.5]$ with lattice sizes $L = {20, 40, 60, 80, 100}$.}
+  \label{fig:results-heatcap-suscep}
+\end{figure}
+\FloatBarrier
+The simulations were run on an 16-core AMD Ryzen 1700x with 3.4GHz clock speed. It took approximately 3 hours to complete. To compare parallelized time to using a single core, we ran calculations for the 20x20 lattice with $10^6$ Monte Carlo cycles and $T \in [2.0, 2.5]$ with step size $\Delta T = 0.05$. The time is shown in table \ref{tab:results-MPI}.
+
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{|c| l|}
+      \hline
+      Cores & Time spent\\
+      \hline
+      1 & 42s\\
+      2 & 26s\\
+      \hline
+    \end{tabular}
+    \caption{Time spent on calculations for different thread-count.}
+    \label{tab:results-MPI}
+  \end{center}
+\end{table}
+\FloatBarrier
+
+%---------------------------------------------------
+
+\subsection{Extracting the critical temperature}
+The critical temperatures of the different sized arrays was found by taking the averange of the full width half maximum of the heat capacity and the susceptibility. This resulted in the critical temperatures found in table \ref{tab:results-TC-lattices}.
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{|c| l|}
+      \hline
+      Lattice size, L & $T_C$ \\
+      \hline
+      40 & 2.318\\
+      60 & 2.301\\
+      80 & 2.291\\
+      100 & 2.284\\
+      \hline
+    \end{tabular}
+    \caption{Critical temperatures of different lattice sizes.}
+    \label{tab:results-TC-lattices}
+  \end{center}
+\end{table}
+\FloatBarrier
+By using equation \eqref{eq:a}, and \eqref{eq:TC}. we find the constant a, and thereafter the critical temperature for an infinitely large lattice.
+
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{|c| l|}
+      \hline
+      Parameter & Value \\
+      \hline
+      a & 0.000567\\
+      $T_C$ & 2.2669\\
+      \hline
+    \end{tabular}
+    \caption{Numerical values for the parameter a, and the critical temperature.}
+    \label{tab:results-a-and-TC}
+  \end{center}
+\end{table}
+\FloatBarrier
+
+For reference, the exact result for the criticalt temperature for $L \rightarrow \infty$ is $kT/J = 2/ln(1 +\sqrt{2}) \approx 2.269$ after Lars Onsager.\cite{larsonsager}
 
 \end{document}

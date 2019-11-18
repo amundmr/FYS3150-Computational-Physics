@@ -122,13 +122,13 @@ To show that our code has good correspondence to analytical results, we will com
 write abit about what we will do
 %---------------------------------------------
 \subsection{Analyzing the probability distribution}
-We will also compute the probability of the energy, $P(E)$ for the system with $L = 20$ with the temperatures $T= 1$ and $T= 2.4$. This is computed by counting the number of times a given energy appears in our computation. The computation will start at a number of Monte Carlo cycles of which we know that the system is stable. We will also compare the results with the computed variance energy $\sigma_E^2$ and discuss the behavior.
+We will also compute the probability of the energy, $P(E)$ for the system with $L = 20$ with the temperatures $T= 1$ and $T= 2.4$. This is computed by counting the number of times a given energy appears in our computation. The computation will start at a number of Monte Carlo cycles of which we know that the system is stable. From the results section \ref{sec:results-20x20lattice}, we see that after the 10000th Monte Carlo cycle we are well beyond the stability limit, so this is what we will be using. We will also compare the width of the gaussian probability distribution (the standard deviation) with the computed variance energy $\sigma_E^2$ and discuss the behavior. The standard deviation and the variance should be connected through the fact that standard deviation is the square root of the variance.
 
 
 %---------------------------------------------
 \subsection{Numerical studies of phase transitions}
 We wish to study the behavior of the Ising model in two dimensions close to the critical temperature as a function of the lattice size $L \times L$.  To do this, we will be calculating the expectation values for energy, $\langle E \rangle$, and absolute magnetisation, $\langle |M| \rangle$, and also the specific heat capacity $C_V$ and the susceptibility $\chi$ as a function of the temperature in the interval $ T \in [2.0,2.5]$ with a step of $\Delta T = 0.005$. This will be done for the lattice sizes $L = {20, 40, 60, 80, 100}$. From the plots we hope to see an indication of a phase transition.\\
-The code will be paralellized using MPI, and timed using the MPI\_Time() function.
+The code will be paralellized using MPI, and timed using the \textsc{MPI\_Time()} function.
 
 
 %---------------------------------------------
@@ -136,15 +136,16 @@ The code will be paralellized using MPI, and timed using the MPI\_Time() functio
 We would like to compute the critical temperature $T_C$ in the thermodynamic limit where $L \rightarrow \infty$. This will be done using the equation below, together with the exact result of $\nu = 1$.
 \[T_C(L) - T_C(L = \infty) = aL^{-1/\nu}\]
 By using two different lattice sizes, we can calculate the factor a, and then calculate  $T_C$.
-\begin{align*}
-  T_C(L_1) - T_C(L = \infty) &= aL_1^{-1/\nu}\\
-  T_C(L_2) - T_C(L = \infty) &= aL_2^{-1/\nu}\\
+\begin{align}
+  T_C(L_1) - T_C(L = \infty) &= aL_1^{-1/\nu} \nonumber\\
+  T_C(L_2) - T_C(L = \infty) &= aL_2^{-1/\nu} \nonumber\\
   \intertext{By subtracting the equations we obtain}
-  \frac{T_C(L_1) - T_C(L_2)}{L_1^{-1/\nu} - L_2^{-1/\nu}} &= a
-\end{align*}
+  \frac{T_C(L_1) - T_C(L_2)}{L_1^{-1/\nu} - L_2^{-1/\nu}} &= a \label{eq:a}
+\end{align}
 It will now be easy to use the equation below to find the critical temperature for an infinitely large lattice.
-\[T_C(L = \infty) = T_C(L) - aL^{-1/\nu}\]
-
+\begin{align}
+T_C(L = \infty) &= T_C(L) - aL^{-1/\nu} \label{eq:TC}
+\end{align}
 
 
 \end{document}
