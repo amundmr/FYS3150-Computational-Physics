@@ -43,7 +43,7 @@ for file in Alldata:
 
 
 #Plotting read data
-for i in range(4,5):
+for i in range(3,4):
     plt.plot(Moredata[0][0],Moredata[0][i], linewidth=1, label= "L = 20")
     plt.plot(Moredata[1][0],Moredata[1][i], linewidth=1, label= "L = 40")
     plt.plot(Moredata[2][0],Moredata[2][i], linewidth=1, label= "L = 60")
