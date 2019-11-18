@@ -5,6 +5,11 @@
 \subsection{The problem}
 WRITE a bit about the system we want to solve! What is it?
 
+Study the magnetisation of a ferromagnetic matrix/crystal with one electronspinn at each lattice site. This is has been modeled as a L$\times$L matrix, where L is the number spinns in one direction. Initilizing both random and not(all spinns the same) to study when the most likely state/equlibrium is reached. Also studied the temperature dependence and have tried to find the critical temperature where ferromagnetism is lost.
+Methods used are Monte carlo and the Ising model- meaning we could study a $100 \times 100$ lattice without it taking too much time.
+
+Using boundary conditions we assume that the last spinn has the same spinn as the one on the opposite side ??? .......
+
 %---------------------------------------------
 \subsection{$2 \times 2$ lattice, analytical expressions} \label{sec:theory-analy}
 To get started we will find the analytical expression for the partition function and the corresponding expectation values for the energy $E$, the mean absolute value of the magnetic moment $|M|$ (which we will refer to as magnetization), the specific heat $C_V$ and the susceptibility $\chi$ as function of T using periodic boundary conditions. These calculations will serve as benchmarks for our next steps.
@@ -118,8 +123,8 @@ The pseudocode looks as follows:
 To show that our code has good correspondence to analytical results, we will compare calculations for a $20\times 20$ lattice with the analytical result for the same lattice. This is shown in section \ref{sec:res-compareanalytical}.
 
 %---------------------------------------------
-\subsection{When is the most likely state reached?}
-write abit about what we will do
+\subsection{Equlibrium}
+In order to find the equlibrium of the system, we study a $20\times 20$ lattice. By performing a study of time, corresponding to the number of Monte Carlo cycles, one needs to reach equlibrium
 %---------------------------------------------
 \subsection{Analyzing the probability distribution}
 We will also compute the probability of the energy, $P(E)$ for the system with $L = 20$ with the temperatures $T= 1$ and $T= 2.4$. This is computed by counting the number of times a given energy appears in our computation. The computation will start at a number of Monte Carlo cycles of which we know that the system is stable. We will also compare the results with the computed variance energy $\sigma_E^2$ and discuss the behavior.
