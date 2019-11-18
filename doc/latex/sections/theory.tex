@@ -112,11 +112,11 @@ We utilize the Metropolis algorithm, which checks if we get a lower energy for t
 The pseudocode looks as follows:
 
 \lstinputlisting[]{pseudocode}
-To show that our code has good correspondence to analytical results, we will compare calculations for a $20\times 20$ lattice with the analytical result for the same lattice. This is shown in section \ref{sec:res-compareanalytical}.
+To show that our code has good correspondence to analytical results, we will compare calculations for a $2 \times 2$ lattice with the analytical result for the same lattice. This is shown in section \ref{sec:res-compareanalytical}.
 
 %---------------------------------------------
 \subsection{Equlibrium- energy minimun}
-In order to find the equlibrium of the system($20\times 20$ lattice) we perform a study of time, corresponding to the number of Monte Carlo cycles, one needs to reach equlibrium state from where we can compute expectation values. Equlibrium is reached when the thermodynamic quantities energy and magnetization reach their steady states. Furthermore, it will not be energetically favorable to flip spins when reaching equlibrium. So the number of accepted spins per Monte Carlo cycle is at this point expected to move towards a constant value.
+In order to find the equlibrium of the system($20\times 20$ lattice) we perform a study of time, corresponding to the number of Monte Carlo cycles, one needs to reach equlibrium state from where we can compute expectation values. Equlibrium is reached when the thermodynamic quantities energy and magnetization reach their steady states. Furthermore, it will not be energetically favorable to flip spins when reaching equilibrium. So the number of accepted spins per Monte Carlo cycle is at this point expected to move towards a constant value.
 
 \noindent We will graphically plot expectation values for energy and magnetization as a function of Monte Carlo cycles for different temperatures, $T=1.0$ and $T= 2.4$ using both a random and a set starting point for the initial spin configuration.
 
@@ -126,7 +126,7 @@ We will also compute the probability of the energy, $P(E)$ for the system with $
 
 %---------------------------------------------
 \subsection{Numerical studies of phase transitions}
-We wish to study the behavior of the Ising model in two dimensions close to the critical temperature as a function of the lattice size $L \times L$.  To do this, we will be calculating the expectation values for energy, $\langle E \rangle$, and absolute magnetization, $\langle |M| \rangle$, and also the specific heat capacity $C_V$ and the susceptibility $\chi$ as a function of the temperature in the interval $ T \in [2.0,2.5]$ with a step of $\Delta T = 0.005$. This will be done for the lattice sizes $L = {20, 40, 60, 80, 100}$. From the plots we hope to see an indication of a phase transition.\\
+We wish to study the behavior of the Ising model in two dimensions close to the critical temperature as a function of the lattice size $L \times L$.  To do this, we will be calculating the expectation values for energy $\langle E \rangle$, the mean absolute magnetization $\langle |M| \rangle$, the specific heat capacity $C_V$ and the susceptibility $\chi$ as a function of the temperature in the interval $ T \in [2.0,2.5]$ with a step of $\Delta T = 0.005$. This will be done for the lattice sizes $L = {20, 40, 60, 80, 100}$. From the plots we hope to see an indication of a phase transition.\\
 The code will be parallellized using MPI, and timed using the \textsc{MPI\_Time()} function.
 
 %---------------------------------------------
