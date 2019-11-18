@@ -23,6 +23,7 @@ If we scale the value of $\beta$ from $1/k_BT$ to $1/J$ (Scaling factor $k_B T/J
 \end{table}
 \FloatBarrier
 
+%---------------------------------------------------
 \subsection{$2 \times 2$ lattice, numerical results}
 Using $T = 1.0$, like in the analytical calculations, the program \href{https://github.com/kmaasrud/Project-4/tree/master/code/Ising}{/code/Ising/} gives the results listed in table \ref{tab:2x2computed}:
 \begin{table}[!h]
@@ -86,8 +87,9 @@ Following the ordered initialisation, we also initialized the crystal randomly. 
 \FloatBarrier
 The plots for $T=1.0$ follow a clean exponential curve, while the other plots pretty much stabilize after 8000-1000 MC cycles - like the previous ones. For $T=1.0$, the magnetization ends on the value $1.0$ and the energy on the value $-2.0$. This is similar to the analytical values, but does not have the same accuracy. For $T=2.4$, the magnetization stabilizes around the value $0.45$ and the energy around the value $-1.25$.
 
+%---------------------------------------------------
 \subsection*{Number of accepted spinns}
-Another good indication for when the equlibrium is reached is when the number of spinns per Monte Carlo cycle does not increase further.  The following figures displays the number of accepted spinn configurations per Monte Carlo cycle at temperatures $T = 1.0$ and $T = 2.4$ and both a ordered and random starting point.
+Another good indication for when the equlibrium is reached is when the number of spins per Monte Carlo cycle does not increase further.  The following figures display the number of accepted spinn configurations per Monte Carlo cycle at temperatures $T = 1.0$ and $T = 2.4$, with both ordered and random initialization.
 
 \begin{figure}[!ht]
   \centering
@@ -104,7 +106,6 @@ Another good indication for when the equlibrium is reached is when the number of
   \end{figure}
 \FloatBarrier
 
-
 \begin{figure}[!ht]
   \centering
   \parbox{5cm}{
@@ -119,7 +120,6 @@ Another good indication for when the equlibrium is reached is when the number of
   \end{minipage}
   \end{figure}
 \FloatBarrier
-
 
 \begin{figure}[!ht]
   \centering
@@ -136,8 +136,7 @@ Another good indication for when the equlibrium is reached is when the number of
   \end{figure}
 \FloatBarrier
 
-
-
+%---------------------------------------------------
 \subsection{Analyzing the probability distribution}
 In figure \ref{fig:results-ProbE_T24} you can see the probability distribution for low and high temperature respectively. We can see that for a low temperature, the system tends to settle in the lowest energy state, while for the higher temperature the energies are a bit more spread. In table \ref{tab:results-variance} you will see the computed variance. Note that we calculated standard deviation of the histogram with \textsc{numpy.std}, and took the square root of this to get the variance.
 
@@ -157,7 +156,6 @@ In figure \ref{fig:results-ProbE_T24} you can see the probability distribution f
   \label{fig:results-ProbE_T24}
 \end{figure}
 \FloatBarrier
-
 
 \begin{table}[!h]
   \begin{center}
@@ -236,7 +234,6 @@ To compare parallelized time to using a single core, we ran calculations for the
 \FloatBarrier
 
 %---------------------------------------------------
-
 \subsection{Extracting the critical temperature}
 The critical temperatures of the different sized arrays was found by taking the average of the full width half maximum of the heat capacity and the susceptibility. This resulted in the critical temperatures found in table \ref{tab:results-TC-lattices}.
 \begin{table}[!h]
