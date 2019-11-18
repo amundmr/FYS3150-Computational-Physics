@@ -1,6 +1,6 @@
 #include "../include/lib.h"
 
-void Metropolis(int L, long & idum, mat & spin, double & E, double & M, vec Ediff, int &cycles, int&sum, int mcs)
+void Metropolis(int L, long & idum, mat & spin, double & E, double & M, vec Ediff, ofstream & file2, int &cycles, int&sum, int mcs)
 {
   random_device rd;
   mt19937_64 gen(rd());
@@ -28,5 +28,5 @@ void Metropolis(int L, long & idum, mat & spin, double & E, double & M, vec Edif
         }
      }
   }
-  //file2 << cycles << " " << accspins/mcs/L/L << endl;
+  file2 << cycles << " " << accspins/mcs/L/L << endl;
 }

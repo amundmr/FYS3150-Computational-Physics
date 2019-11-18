@@ -85,7 +85,7 @@ int main(int argc, char * argv[])
     //Monte Carlo:
     for (int cycles = myloop_begin; cycles <= myloop_end; cycles++){
 
-      Metropolis(L,idum,spin,E,M,Ediff,cycles,sum, mcs);
+      Metropolis(L,idum,spin,E,M,Ediff,file2,cycles,sum, mcs);
       if (cycles >= waitNspins){
       E_avg += E;
       EE_avg += E*E;

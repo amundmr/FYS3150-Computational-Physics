@@ -26,7 +26,6 @@ int main(int argc, char * argv[])
 
   mat spin(L,L);
 
-
   ofstream file, file2;
   file.open(outfilename);
   file2.open(outfilename2);
@@ -42,7 +41,7 @@ int main(int argc, char * argv[])
     //initialize(L, T, spin, E, M);
     initialize_random(L, T, spin, E, M);
 
-    //file2 << "Monte_Carlo_Cycles" << " " << "Accepted_spins" << endl;
+    file2 << "Monte_Carlo_Cycles" << " " << "Accepted_spins" << endl;
 
     int sum  = 0;
     int cycles = 1;

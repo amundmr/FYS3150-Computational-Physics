@@ -45,7 +45,7 @@ Using $T = 1.0$, like in the analytical calculations, the program \href{https://
   \end{center}
 \end{table}
 \FloatBarrier
-The values correspond very well with each other and the analytical.
+The values correspond very well with each other and the analytical, this is further discussed in section \ref{discussion}
 
 %---------------------------------------------------
 \subsection{Ising model: simulation over temperature} \label{sec:res-compareanalytical}
@@ -85,59 +85,58 @@ Following the ordered initialisation, we also initialized the crystal randomly. 
 \end{figure}
 \FloatBarrier
 The plots for $T=1.0$ follow a clean exponential curve, while the other plots pretty much stabilize after 8000-1000 MC cycles - like the previous ones. For $T=1.0$, the magnetization ends on the value $1.0$ and the energy on the value $-2.0$. This is similar to the analytical values, but does not have the same accuracy. For $T=2.4$, the magnetization stabilizes around the value $0.45$ and the energy around the value $-1.25$.
-% Tekst: Random spinn orientering for T = 1.0
 
-% Likevekt ved:
-% T = 2.4(kT/J):
-% Mean energy and magnetization func of MC cycles:
-% Ordnet orientering: Program initilize.cpp (For T < 1.5 så er alle spinn opp,
-% ellers spinn ned)
-% Tekst: ordnet spinn orientering for T= 2.4
-% Random spinn orientering: Program initilize_random (Setter spinn ned(-1)
-% hvis verdien vi får mellom 0 og 1 er mindre eller lik 0.5 ).
-% Tekst: Random spinn orientering for T = 2.4
+\subsection*{Number of accepted spinns}
+Another good indication for when the equlibrium is reached is when the number of spinns per Monte Carlo cycle does not increase further.  The following figures displays the number of accepted spinn configurations per Monte Carlo cycle at temperatures $T = 1.0$ and $T = 2.4$ and both a ordered and random starting point.
 
-
-% Likevekt ved:
-
-% Oversiktelig tabell med når likevekt nås ca. (antall mcs)
-
-%     Ordnet magnetisering  Random magnetisering  Ordnet energi Random energi
-% T1:
-% T2:
-
-% Estimat av equilibration time:
+\begin{figure}[!ht]
+  \centering
+  \parbox{5cm}{
+  \includegraphics[width=5cm]{./accepted_spin/accepted_spinn_T1_1.png}
+  \caption{Number of accepted spinns for 100 000 monte carlo cycles per lattice site$L\times L$ for $T= 1.0(Jk/T)$ ordered}
+  \label{fig:accepted_spinnT1}} 
+  \qquad
+  \begin{minipage}{5cm}
+    \includegraphics[width=5cm]{./accepted_spin/accepted_spinn_T2_1.png}
+    \caption{Number of accepted spinns for 100 000 monte carlo cycles per lattice site$L\times L$ for $T= 2.4(Jk/T)$ ordered}
+    \label{fig:accepted_spinnT2}
+  \end{minipage}
+  \end{figure}
+\FloatBarrier
 
 
-% Antall aksepterte spinn totalt etter et gitt antall mcs(100k maks):
-% Set start point
-% T = 1
+\begin{figure}[!ht]
+  \centering
+  \parbox{5cm}{
+  \includegraphics[width=5cm]{./accepted_spin/accepted_spinn_T1_random_1.png}
+  \caption{Number of accepted spinns for 100 000 monte carlo cycles per lattice site$L\times L$ for $T= 1.0(Jk/T)$ random}
+  \label{fig:accepted_spinnT1_random}}
+  \qquad
+  \begin{minipage}{5cm}
+    \includegraphics[width=5cm]{./accepted_spin/accepted_spinn_T2_random_1.png}
+    \caption{Number of accepted spinns for 100 000 monte carlo cycles per lattice site$L\times L$ for $T= 2.4(Jk/T)$ random}
+    \label{fig:accepted_spinnT2_random}
+  \end{minipage}
+  \end{figure}
+\FloatBarrier
 
-% Bilde :accepted_spinn_T1_mcs_cumsum(y)_log10.png
-% Stabiliserer seg ved mcd = 1E3.5(alle spinn blir heretter akseptert)
-%
-% T = 2.4
-% Bilde: accepted_spinn_T2_mcs_cumsum(y)_log10.png
-% Stabiliserer seg ved mcd = 1E3.5, men det er mange flere som blir akseptert(Se y aksen)
-%
-%
-%
-% Random start point:
-% T = 1:
-% Bilde: accepted_spins_T1_random_cumsum(y)_mcs_log10.png
-% T = 2.4
-% Bilde: accepted_spins_T2_random_cumsum(y)_mcs_log10.png
-%
-% Temperaturavhengighet(skal vi lage plot her også- eller holder det med kommentar i resultater?):
-% Økt temperatur gjør at mange flere spinn aksepteres ved lavere antall mcs dvs tidligere.(sjekk prosenten på y aksen)
-% Ved random vs ikke random: omtrent like mange som aksepteres, men i random så aksepteres flere spinn ved lavere mcs. Ved T1 random får man en liten økning ved 1E1.5, mens hos T1 set startpont så før vi ikke en økning i aksepterte spinn før ved 1E3.5
-%
-% For T2 så får vi økningen på samme sted dvs 1E4 på både random og satt startpunkt.
 
-% Diskusjon/resultater
-% Aksepterte spinn som funksjon av T:
-% Økt temperatur gir flere aksepterte flips.
-% Setter man startpoint til random går den fortere mot likevekt ?
+\begin{figure}[!ht]
+  \centering
+  \parbox{5cm}{
+  \includegraphics[width=5cm]{./accepted_spin/accepted_spinn_T1_random_zoom.png}
+  \caption{Number of accepted spinns for 100 000 monte carlo cycles per lattice site$L\times L$ for $T= 1.0(Jk/T)$ random}
+  \label{fig:accepted_spinnT1_random_zoom}}
+  \qquad
+  \begin{minipage}{5cm}
+    \includegraphics[width=5cm]{./accepted_spin/accepted_spinn_T2_random_zoom.png}
+    \caption{Number of accepted spinns for 100 000 monte carlo cycles per lattice site$L\times L$ for $T= 2.4(Jk/T)$ random}
+    \label{fig:accepted_spinnT2_random_zoom}
+  \end{minipage}
+  \end{figure}
+\FloatBarrier
+
+
 
 \subsection{Analyzing the probability distribution}
 In figure \ref{fig:results-ProbE_T24} you can see the probability distribution for low and high temperature respectively. We can see that for a low temperature, the system tends to settle in the lowest energy state, while for the higher temperature the energies are a bit more spread. In table \ref{tab:results-variance} you will see the computed variance. Note that we calculated standard deviation of the histogram with \textsc{numpy.std}, and took the square root of this to get the variance.

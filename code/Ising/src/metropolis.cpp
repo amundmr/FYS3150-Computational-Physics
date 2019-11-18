@@ -24,9 +24,9 @@ void Metropolis(int L, long & idum, mat & spin, double & E, double & M, vec Edif
         spin(iy,ix) *= -1;    //flipp spin
         M += (double) 2*spin(iy,ix);
         E += (double) deltaE;
-        //accspins += 1;              //number of accepted spins
+        accspins += 1;              //number of accepted spins
         }
      }
   }
-  //file2 << cycles << " " << accspins/mcs/L/L << endl;
+  file2 << cycles << " " << accspins/mcs/L/L << endl;
 }
