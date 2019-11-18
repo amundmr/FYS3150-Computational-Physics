@@ -5,10 +5,10 @@
 \subsection{The problem}
 WRITE a bit about the system we want to solve! What is it?
 
-Study the magnetisation of a ferromagnetic matrix/crystal with one electronspinn at each lattice site. This is has been modeled as a L$\times$L matrix, where L is the number spinns in one direction. Initilizing both random and not(all spinns the same) to study when the most likely state/equlibrium is reached. Also studied the temperature dependence and have tried to find the critical temperature where ferromagnetism is lost.
+Study a ferromagnetic matrix/crystal with one electronspinn at each lattice site. This is has been modeled as a L$\times$L matrix, where L is the number spinns in one direction. Initilizing both random and not(all spinns the same) to study when the most likely state/equlibrium is reached. Also studied the temperature dependence and have tried to find the critical temperature where ferromagnetism is lost.
 Methods used are Monte carlo and the Ising model- meaning we could study a $100 \times 100$ lattice without it taking too much time.
 
-Using boundary conditions we assume that the last spinn has the same spinn as the one on the opposite side ??? .......
+Using boundary conditions we assume that the lattice is infinite in all directions. By simply setting the spinn on one edge to the same as the spinn of the neighbour to the spinn on the opposite side, the boundary will not affect the lattice.
 
 %---------------------------------------------
 \subsection{$2 \times 2$ lattice, analytical expressions} \label{sec:theory-analy}
@@ -123,8 +123,11 @@ The pseudocode looks as follows:
 To show that our code has good correspondence to analytical results, we will compare calculations for a $20\times 20$ lattice with the analytical result for the same lattice. This is shown in section \ref{sec:res-compareanalytical}.
 
 %---------------------------------------------
-\subsection{Equlibrium}
-In order to find the equlibrium of the system, we study a $20\times 20$ lattice. By performing a study of time, corresponding to the number of Monte Carlo cycles, one needs to reach equlibrium
+\subsection{Equlibrium- energy minimun}
+In order to find the equlibrium of the system($20\times 20$ lattice) we perform a study of time, corresponding to the number of Monte Carlo cycles, one needs to reach equlibrium state from where we can compute expectation values. Equlibrium is reached when energy and magnetisation- the thermodynamical quanteties - reach their stady states. Further it will not be energetically favorable to flip spins when reaching equlibrium. So the number of accepted spinns per Monte Carlo cycle is at this point expected to move towards a constant value.
+
+We will graphically plot expectation values for energy and magnetisation as a function of Monte Carlo cycles for different temperatures, $T=1.0$ and $T= 2.4$ using both a random and a set starting point for the initial spinn configuration.
+
 %---------------------------------------------
 \subsection{Analyzing the probability distribution}
 We will also compute the probability of the energy, $P(E)$ for the system with $L = 20$ with the temperatures $T= 1$ and $T= 2.4$. This is computed by counting the number of times a given energy appears in our computation. The computation will start at a number of Monte Carlo cycles of which we know that the system is stable. From the results section \ref{sec:results-20x20lattice}, we see that after the 10000th Monte Carlo cycle we are well beyond the stability limit, so this is what we will be using. We will also compare the width of the gaussian probability distribution (the standard deviation) with the computed variance energy $\sigma_E^2$ and discuss the behavior. The standard deviation and the variance should be connected through the fact that standard deviation is the square root of the variance.
