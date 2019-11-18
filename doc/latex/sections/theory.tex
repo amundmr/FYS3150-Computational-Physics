@@ -130,7 +130,7 @@ We wish to study the behavior of the Ising model in two dimensions close to the 
 The code will be parallellized using MPI, and timed using the \textsc{MPI\_Time()} function.
 
 %---------------------------------------------
-\subsection{Extracting the critical temperature}
+\subsection{Extracting the critical temperature} \label{sec:theory-extractingTC}
 We would like to compute the critical temperature $T_C$ in the thermodynamic limit where $L \rightarrow \infty$. This will be done using the equation below, together with the exact result of $\nu = 1$.
 \[T_C(L) - T_C(L = \infty) = aL^{-1/\nu}\]
 By using two different lattice sizes, we can calculate the factor a, and then calculate  $T_C$.

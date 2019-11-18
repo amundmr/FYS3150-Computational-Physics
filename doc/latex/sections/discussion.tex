@@ -21,12 +21,16 @@ On the flipside, the variance of the higher temperature has a good correspondenc
 
 
 \subsection{Numerical studies of phase transitions}
-From the plots \ref{fig:results-energy-magnetisation} and \ref{fig:results-heatcap-suscep} it is clear that something is happening around $T = 2.3$. You can also see that a bigger lattice reacts more to the temperature than the smaller lattice.\\
+From the plots \ref{fig:results-energy-magnetisation} and \ref{fig:results-heatcap-suscep} it is clear that something is happening around $T = 2.3$. You can also see that a bigger lattice reacts more to the temperature than the smaller lattice, giving higher peaks, with a smaller width for the heat capacity and susceptibility. Also for the mean energy and absolute mean magnetisation, the larger lattices \say{reacts} more to temperature, giving steeper plots.\\
+This is to be expected as the boundary conditions limit the simulations. The larger the lattice, the less of an issue the boundary conditions become.
+
 
 
 
 \subsection{Extracting the critical temperature}
 The most difficult part was to set the critical temperatures for the different lattice sizes. As explained, we used the FWHM technique, but this is also prone to error. However with this technique we got within $0.3\%$ of Lars Onsager's exact result, which is quite good.
+
+From theory section \ref{sec:theory-extractingTC} we see that the temperature shift converges to zero when $L \rightarrow \infty$, and this is the limit we found.
 
 
 
