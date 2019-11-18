@@ -3,6 +3,7 @@
 \section{Discussion}
 
 \subsection{Ising model: simulation over temperature}
+Comparison with analyical values from a) with periodic boundary conditions
 
 
 
@@ -13,17 +14,19 @@
 
 
 \subsection{Analyzing the probability distribution}
-
-
+While the probability distribution for the higher temperature was really good, the probability distribution for the lower temperature seems a bit odd. One would think that since most energies are at the lowest energy, the histogram would take the shape of an inverse exponential curve. And while this is the case we still have large gaps between the energies. For example from -800 to -794 it looks like there isnt a single lattice observed. \\
+This must be because the energy change when flipping a spin can be 4, or 8. Which correlates to the histogram beautifully. Another thing to mention is that at lower temperatures, the spins are having a harder time to flip without causing higher energy, thus the flip will happen more seldom, and trap the lattice in the energy state.\\
+It is also worth noticing that the standard deviation for the low temperature histogram is rubbish. It only works for a gaussian curve, much like the one seen for the higher temperature. Thus it is in reality irrelevant to compare this standard deviation to the calculated variance.\\
+On the flipside, the variance of the higher temperature has a good correspondence to the calculated variance, with a deviation of about $6.2\%$.
 
 
 \subsection{Numerical studies of phase transitions}
-
+From the plots \ref{fig:results-energy-magnetisation} and \ref{fig:results-heatcap-suscep} it is clear that something is happening around $T = 2.3$. You can also see that a bigger lattice reacts more to the temperature than the smaller lattice.\\
 
 
 
 \subsection{Extracting the critical temperature}
-
+The most difficult part was to set the critical temperatures for the different lattice sizes. As explained, we used the FWHM technique, but this is also prone to error. However with this technique we got within $0.3\%$ of Lars Onsager's exact result, which is quite good.
 
 
 
