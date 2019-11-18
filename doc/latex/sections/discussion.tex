@@ -4,12 +4,35 @@
 
 %------------------------------------------------------------
 \subsection{Ising model: simulation over temperature}
+<<<<<<< HEAD
+As presented in Results (see table \ref{tab:2x2computed} and \ref{fig:fig:results-MCplot}), when using periodic boundary conditions and $T = 1.0(kT/J)$, $10^6$ Monte Carlo cycles gives high presition results. The energy and magnetisation have a presition of three leading digits after the desimal point, while it is a little less for susceptibility and heat capacity.
+
+When using a random starting configuration the presition increases slightly compared with the spesific one for some of the parameters, especially for the susceptibility.
+
+For further computations we have used $10^4 - 10^-7$ Montecarlo cycles in order to not have too time consuming computation.
+
+\subsection{$20 \times 20$ lattice}
+
+From Figure \ref{fig:ordered} and \ref{fig:random} one sees the impact of the different parameters, initlisation and temperature, before reaching equlibrium for different Monte Carlo cycles.
+
+For $T=1.0(Jk/T)$ the predetermined starting configuration, the energy and magnetisation stabilizes is already really stable after only a few Monte Carlo cycles(take a close look at the y-axis). It is easy to see that at the first Monte Carlo cycle the magnetisation is one(becauase all the spinns are pointing the same way). Then one spinn flipps and the energy changes slightly. After a while it is almost no longer energetically favourable to flipp spinns.
+While for the random initlisation it takes more time/Monte Carlo cycles before stabilizing(take a look at the y-axis, it is 3 orders of magnitude larger than the predetermined).For easier comparison it would be conviniet to have the axes more alike.
+
+To summerize the ordered starting point seems to stabilize the fastes for both temperatures(energy a bit faster than magnetisation). This is expeced, because at low temperatures, which we are dealing with, one would expect a high order at equlibrium (from eg. Gibbs free energy). So when we start with a high order, we are allready close to equobrium.
+
+There is also a difference between the different temperatures, which is also expected from thermodynamics. A system of higher temperature is expected to reach equlibrium at a less ordered state. This is quite evident in both the ordered and the random initalisation.
+
+When studying the accepted spinn configurations per Monte Carlo cycle(see Figure \ref{fig:??} ) the same trend as above occurs. At low temperature and ordered starting point we are allready close to equlibrium and therefore the number of accepted spins increases steadily with the number of Monte Carlo cycles.
+
+
+=======
 Comparison with analyical values from a) with periodic boundary conditions
 
 %------------------------------------------------------------
 \subsection{$20 \times 20$ lattice}
 
 %------------------------------------------------------------
+>>>>>>> 621fe4e1f61fdeb4d161fda0fc2465697dfbad53
 \subsection{Analyzing the probability distribution}
 While the probability distribution for the higher temperature was really good, it seemed rather odd for the low temperature. One would think that since most energies are at their lowest, the histogram would take the shape of an inverse exponential curve, and while this is the case we still have large gaps between the energies. For example, when the energy is between -800 and -794, it looks like there isnt a single lattice observed. \\
 This must be because the energy change when flipping a spin can be either 4J or 8J. This correlates well with the histogram. Another thing to mention is that at lower temperatures, the flipping spins could very well cause higher energy, resulting in less flips, which locks the lattice in its state. \\
