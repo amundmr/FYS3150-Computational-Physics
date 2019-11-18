@@ -2,32 +2,24 @@
 \begin{document}
 \section{Discussion}
 
+%------------------------------------------------------------
 \subsection{Ising model: simulation over temperature}
 Comparison with analyical values from a) with periodic boundary conditions
 
-
-
-
+%------------------------------------------------------------
 \subsection{$20 \times 20$ lattice}
 
-
-
-
+%------------------------------------------------------------
 \subsection{Analyzing the probability distribution}
-While the probability distribution for the higher temperature was really good, it seemed rather odd for the low temperature. One would think that since most energies are at their lowest, the histogram would take the shape of an inverse exponential curve. And while this is the case we still have large gaps between the energies. For example from -800 to -794 it looks like there isnt a single lattice observed. \\
-This must be because the energy change when flipping a spin can be 4J, or 8J. This correlates to the histogram beautifully. Another thing to mention is that at lower temperatures, the spins are having a harder time to flip without causing higher energy, thus the flip will happen more seldom and trap the lattice in the allready set energy state.\\
-The standard deviation for the low temperature histogram does not give us anything. It is only relevant for a gaussian curve, like the one for the higher temperature. Thus it is irrelevant to compare the standard deviation to the calculated variance.\\
-On the flipside, the variance of the higher temperature has a good correspondence to the calculated variance, with a deviation of about $6.2\%$.
+While the probability distribution for the higher temperature was really good, it seemed rather odd for the low temperature. One would think that since most energies are at their lowest, the histogram would take the shape of an inverse exponential curve, and while this is the case we still have large gaps between the energies. For example, when the energy is between -800 and -794, it looks like there isnt a single lattice observed. \\
+This must be because the energy change when flipping a spin can be either 4J or 8J. This correlates well with the histogram. Another thing to mention is that at lower temperatures, the flipping spins could very well cause higher energy, resulting in less flips, which locks the lattice in its state. \\
+The standard deviation for the low temperature histogram does not give us much information. It would only be relevant, had it followed a gaussian curve, like the one for the higher temperature. Thus it is irrelevant to compare the standard deviation to the calculated variance. On the flipside, the variance of the higher temperature has a good correspondence to the calculated variance, with a deviation of about $6.2\%$.
 
-
+%------------------------------------------------------------
 \subsection{Numerical studies of phase transitions}
-From the plots \ref{fig:results-energy-magnetisation} and \ref{fig:results-heatcap-suscep} it is clear that something is happening around $T = 2.3$. You can also see that a bigger lattice reacts more to the temperature than the smaller lattice.\\
+From the plots \ref{fig:results-energy-magnetisation} and \ref{fig:results-heatcap-suscep} it is clear that something is happening around $T = 2.3$. You can also see that a bigger lattice reacts more to the temperature than the smaller lattice. \\
 
-
-
+%------------------------------------------------------------
 \subsection{Extracting the critical temperature}
 The most difficult part was to set the critical temperatures for the different lattice sizes. As explained, we used the FWHM technique, but this is also prone to error. However with this technique we got within $0.3\%$ of Lars Onsager's exact result, which is quite good.
-
-
-
 \end{document}
