@@ -9,7 +9,7 @@ To get started we will find the analytical expression for the partition function
 
 %---------------------------------------------
 \subsubsection*{Partition function, $Z$}
-The partition function in the canonical ensemble is defined as:
+The partition function is used as a dividend when finding the mean of the energy and magnetisation, to keep it on a per spin basis. In the canonical ensemble is defined as:
 \[ Z = \sum_{i=1}^M e^{-\beta E_i}\]
 Where $\beta =\frac{1}{k_B T}$ and $E_i$ is the energy of the system in the microstate $i$ and $M$ is the number of microstates ($=2^N$ if $N$ is number of electrons).
 \\
@@ -130,7 +130,7 @@ We wish to study the behavior of the Ising model in two dimensions close to the 
 The code will be parallellized using MPI, and timed using the \textsc{MPI\_Time()} function.
 
 %---------------------------------------------
-\subsection{Extracting the critical temperature}
+\subsection{Extracting the critical temperature} \label{sec:theory-extractingTC}
 We would like to compute the critical temperature $T_C$ in the thermodynamic limit where $L \rightarrow \infty$. This will be done using the equation below, together with the exact result of $\nu = 1$.
 \[T_C(L) - T_C(L = \infty) = aL^{-1/\nu}\]
 By using two different lattice sizes, we can calculate the factor a, and then calculate  $T_C$.
