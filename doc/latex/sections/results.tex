@@ -72,7 +72,7 @@ Initializing the spin structure, we first set every spin up for $T<1.5$ and ever
   \label{fig:ordered}
 \end{figure}
 \FloatBarrier
-All the plots pretty much stabilize into a value after 8000-1000 MC cycles. For $T=1.0$, the magnetization stabilizes around the value $0.99950$ and the energy around the value $-1.997$. This corresponds pretty good with the analytically calculated values. For $T=2.4$, the magnetization stabilizes around the value $0.5$ and the energy around the value $-1.25$.
+All the plots pretty much stabilize into a value after 8000-10000 MC cycles. For $T=1.0$, the magnetization stabilizes around the value $0.99950$ and the energy around the value $-1.997$. This corresponds pretty good with the analytically calculated values. For $T=2.4$, the magnetization stabilizes around the value $0.5$ and the energy around the value $-1.25$.
 
 %---------------------------------------------------
 \subsubsection*{Random spin orientation}
@@ -85,22 +85,22 @@ Following the ordered initialisation, we also initialized the crystal randomly. 
   \label{fig:random}
 \end{figure}
 \FloatBarrier
-The plots for $T=1.0$ follow a clean exponential curve, while the other plots pretty much stabilize after 8000-1000 MC cycles - like the previous ones. For $T=1.0$, the magnetization ends on the value $1.0$ and the energy on the value $-2.0$. This is similar to the analytical values, but does not have the same accuracy. For $T=2.4$, the magnetization stabilizes around the value $0.45$ and the energy around the value $-1.25$.
+The plots for $T=1.0$ follow a clean exponential curve, while the other plots pretty much stabilize after 8000-10000 MC cycles - like the previous ones. For $T=1.0$, the magnetization ends on the value $1.0$ and the energy on the value $-2.0$. This is similar to the analytical values, but does not have the same accuracy. For $T=2.4$, the magnetization stabilizes around the value $0.45$ and the energy around the value $-1.25$.
 
 %---------------------------------------------------
-\subsection*{Number of accepted spinns}
-Another good indication for when the equlibrium is reached is when the number of spins per Monte Carlo cycle does not increase further.  The following figures display the number of accepted spinn configurations per Monte Carlo cycle at temperatures $T = 1.0$ and $T = 2.4$, with both ordered and random initialization.
+\subsection*{Number of accepted spins}
+Another good indication for when the equlibrium is reached is when the number of spins per Monte Carlo cycle does not increase further.  The following figures display the number of accepted spin configurations per Monte Carlo cycle at temperatures $T = 1.0$ and $T = 2.4$, with both ordered and random initialization.
 
 \begin{figure}[!ht]
   \centering
   \parbox{5cm}{
   \includegraphics[width=5cm]{./accepted_spin/accepted_spinn_T1_1.png}
-  \caption{Number of accepted spinns for 100 000 monte carlo cycles per lattice site$L\times L$ for $T= 1.0(Jk/T)$ ordered}
+  \caption{Number of accepted spins for 100 000 monte carlo cycles per lattice site$L\times L$ for $T= 1.0(Jk/T)$ ordered}
   \label{fig:accepted_spinnT1}}
   \qquad
   \begin{minipage}{5cm}
     \includegraphics[width=5cm]{./accepted_spin/accepted_spinn_T2_1.png}
-    \caption{Number of accepted spinns for 100 000 monte carlo cycles per lattice site$L\times L$ for $T= 2.4(Jk/T)$ ordered}
+    \caption{Number of accepted spins for 100 000 monte carlo cycles per lattice site$L\times L$ for $T= 2.4(Jk/T)$ ordered}
     \label{fig:accepted_spinnT2}
   \end{minipage}
   \end{figure}
@@ -110,12 +110,12 @@ Another good indication for when the equlibrium is reached is when the number of
   \centering
   \parbox{5cm}{
   \includegraphics[width=5cm]{./accepted_spin/accepted_spinn_T1_random_1.png}
-  \caption{Number of accepted spinns for 100 000 monte carlo cycles per lattice site$L\times L$ for $T= 1.0(Jk/T)$ random}
+  \caption{Number of accepted spins for 100 000 monte carlo cycles per lattice site$L\times L$ for $T= 1.0(Jk/T)$ random}
   \label{fig:accepted_spinnT1_random}}
   \qquad
   \begin{minipage}{5cm}
     \includegraphics[width=5cm]{./accepted_spin/accepted_spinn_T2_random_1.png}
-    \caption{Number of accepted spinns for 100 000 monte carlo cycles per lattice site$L\times L$ for $T= 2.4(Jk/T)$ random}
+    \caption{Number of accepted spins for 100 000 monte carlo cycles per lattice site$L\times L$ for $T= 2.4(Jk/T)$ random}
     \label{fig:accepted_spinnT2_random}
   \end{minipage}
   \end{figure}
@@ -125,18 +125,18 @@ Another good indication for when the equlibrium is reached is when the number of
   \centering
   \parbox{5cm}{
   \includegraphics[width=5cm]{./accepted_spin/accepted_spinn_T1_random_zoom.png}
-  \caption{Number of accepted spinns for 100 000 monte carlo cycles per lattice site$L\times L$ for $T= 1.0(Jk/T)$ random}
+  \caption{Number of accepted spins for 100 000 monte carlo cycles per lattice site$L\times L$ for $T= 1.0(Jk/T)$ random}
   \label{fig:accepted_spinnT1_random_zoom}}
   \qquad
   \begin{minipage}{5cm}
     \includegraphics[width=5cm]{./accepted_spin/accepted_spinn_T2_random_zoom.png}
-    \caption{Number of accepted spinns for 100 monte carlo cycles per lattice site$L\times L$ for $T= 2.4(Jk/T)$ random}
+    \caption{Number of accepted spins for 100 monte carlo cycles per lattice site$L\times L$ for $T= 2.4(Jk/T)$ random}
     \label{fig:accepted_spinnT2_random_zoom}
   \end{minipage}
   \end{figure}
 \FloatBarrier
 
-The number of accepted spinns behave, as expected, the same way as the energies and magnetisation when increasing the number of Monte Carlo cycles. This is further discussed in \ref{discussion}.
+The number of accepted spins behave, as expected, the same way as the energies and magnetisation when increasing the number of Monte Carlo cycles. This is further discussed in \ref{discussion}.
 
 \subsection{Analyzing the probability distribution}
 In figure \ref{fig:results-ProbE_T24} you can see the probability distribution for low and high temperature respectively. We can see that for a low temperature, the system tends to settle in the lowest energy state, while for the higher temperature the energies are a bit more spread. In table \ref{tab:results-variance} you will see the computed variance. Note that we calculated standard deviation of the histogram with \textsc{numpy.std}, and took the square root of this to get the variance.
