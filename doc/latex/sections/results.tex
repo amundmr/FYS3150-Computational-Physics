@@ -142,10 +142,10 @@ Another good indication for when the equlibrium is reached is when the number of
 \end{figure}
 \FloatBarrier
 
-The number of accepted spins behave, as expected, the same way as the energies and magnetisation when increasing the number of Monte Carlo cycles. This is further discussed in \ref{discussion}.
+The number of accepted spins behave - as expected - the same way as the energies and magnetization when increasing the number of Monte Carlo cycles. This is further discussed in section \ref{discussion}.
 
 \subsection{Analyzing the probability distribution}
-In figure \ref{fig:results-ProbE_T24} you can see the probability distribution for low and high temperature respectively. We can see that for a low temperature, the system tends to settle in the lowest energy state, while for the higher temperature the energies are a bit more spread. In table \ref{tab:results-variance} you will see the computed variance. Note that we calculated standard deviation of the histogram with \textsc{numpy.std}, and took the square root of this to get the variance.
+In figure \ref{fig:results-ProbE_T24} you can see the probability distribution for low and high temperature respectively. We can see that for a low temperature, the system tends to settle in the lowest energy state, while for the higher temperature the energies are a bit more spread. In table \ref{tab:results-variance} you will see the computed variance. Note that we calculated standard deviation of the histogram with \verb+numpy.std+, and took the square root of this to get the variance.
 
 \begin{figure}[!h]
   \centering
@@ -182,7 +182,7 @@ In figure \ref{fig:results-ProbE_T24} you can see the probability distribution f
 
 %---------------------------------------------------
 \subsection{Numerical studies of phase transitions}
-After playing around with the domain of the temperature we found that the domain used in figure \ref{fig:results-energy-magnetisation} and \ref{fig:results-heatcap-suscep} nicely presents the phase change of the material. We used $10^6$ Monte Carlo Cycles for each temperature step, which had a stepsize of $\Delta T = 0.005$. As shown in the figures we can clearly see that something is happening around $T = 2.3$.
+After playing around with the domain of the temperature we found that the domain used in figure \ref{fig:results-energy-magnetization} and \ref{fig:results-heatcap-suscep} nicely presents the phase change of the material. We used $10^6$ Monte Carlo Cycles for each temperature step, which had a stepsize of $\Delta T = 0.005$. As shown in the figures we can clearly see that something is happening around $T = 2.3$.
 
 \begin{figure}[!h]
 \makebox[\textwidth][c]{
@@ -194,12 +194,12 @@ After playing around with the domain of the temperature we found that the domain
 
   \begin{minipage}[t]{0.7\textwidth}
     \centering
-    \includegraphics[width=1\textwidth]{eMagnetisation.png}
+    \includegraphics[width=1\textwidth]{emagnetisation.png}
 
   \end{minipage}
   }
-  \caption{Mean energy and magnetisation over temperature interval $T \in [2.0, 2.5]$ with lattice sizes $L = {20, 40, 60, 80, 100}$.}
-  \label{fig:results-energy-magnetisation}
+  \caption{Mean energy and magnetization over temperature interval $T \in [2.0, 2.5]$ with lattice sizes $L = {20, 40, 60, 80, 100}$.}
+  \label{fig:results-energy-magnetization}
 \end{figure}
 \FloatBarrier
 
@@ -234,7 +234,7 @@ To compare parallelized time to using a single core, we ran calculations for the
       2 & 26s\\
       \hline
     \end{tabular}
-    \caption{Time spent on calculations for different thread-count.}
+    \caption{Time spent on calculations for different thread-counts.}
     \label{tab:results-MPI}
   \end{center}
 \end{table}
@@ -278,6 +278,5 @@ By using equation \eqref{eq:a}, and \eqref{eq:TC}. we find the constant a, and t
 \end{table}
 \FloatBarrier
 
-For reference, the exact result for the criticalt temperature for $L \rightarrow \infty$ is $kT/J = 2/ln(1 +\sqrt{2}) \approx 2.269$ after Lars Onsager.\cite{larsonsager}
-
+For reference, the exact result for the critical temperature for $L \rightarrow \infty$ is $kT/J = 2/ln(1 +\sqrt{2}) \approx 2.269$ after Lars Onsager. \cite{larsonsager}
 \end{document}

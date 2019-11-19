@@ -5,19 +5,19 @@ Using periodic boundary conditions we assume that the lattice is infinite in all
 
 %---------------------------------------------
 \subsection{$2 \times 2$ lattice, analytical expressions} \label{sec:theory-analy}
-To get started we will find the analytical expression for the partition function and the corresponding expectation values for the energy $E$, the mean absolute value of the magnetic moment $|\mathcal M|$ (which we will refer to as magnetization), the specific heat $C_V$ and the susceptibility $\chi$ as function of T using periodic boundary conditions. These calculations will serve as benchmarks for our next steps.
+To get started we will find the analytical expression for the partition function and the corresponding expectation values for the energy $E$, the mean absolute value of the magnetic moment $|\mathcal M|$ (which we will refer to as magnetization), the specific heat $C_V$ and the susceptibility $\chi$ as function of $T$ using periodic boundary conditions. These calculations will serve as benchmarks for our next steps.
 
 %---------------------------------------------
 \subsubsection*{Partition function, $Z$}
-The partition function is used as a dividend when finding the mean of the energy and magnetisation, to keep it on a per spin basis. In the canonical ensemble is defined as:
-\[ Z = \sum_{i=1}^M e^{-\beta E_i}\]
-Where $\beta =\frac{1}{k_B T}$ and $E_i$ is the energy of the system in the microstate $i$ and $M$ is the number of microstates ($=2^N$ if $N$ is number of electrons).
+The partition function is used as a dividend when finding the mean of the energy and magnetization, to keep it on a per spin basis. In the canonical ensemble it is defined as:
+\[ Z = \sum_{i=1}^M e^{-\beta E_i},\]
+where $\beta =\frac{1}{k_B T}$ and $E_i$ is the energy of the system in the microstate $i$ and $M$ is the number of microstates ($=2^N$ if $N$ is the number of electrons).
 \\
 We therefore have to find $E_i$ which is defined as:
-\[E_i = -J \sum_{<kl>}^N s_k s_l\]
-Where $<kl>$ indicates that we sum only over the nearest neighbors and $J$ is a constant for the bonding strenght. For our two dimensional system the equation reads:
-\[E_{i,2D} = -J \sum_i^N \sum_j^N \left(s_{i,j}s_{i,j+1} + s_{i,j}s_{i+1,j}\right)\]
-Four our two-spin-state system with two dimensions we get the following table if we use periodic boundary conditions:
+\[E_i = -J \sum_{<kl>}^N s_k s_l,\]
+where $<kl>$ indicates that we sum only over the nearest neighbors and $J$ is a constant for the bonding strenght. For our two dimensional system the equation reads:
+\[E_{i,2D} = -J \sum_i^N \sum_j^N \left(s_{i,j}s_{i,j+1} + s_{i,j}s_{i+1,j}\right).\]
+For our two-spin-state system in two dimensions we get the following table if we use periodic boundary conditions:
 \begin{table}[!h]
   \begin{center}
     \begin{tabular}{| c | c | c | c |}
@@ -37,25 +37,25 @@ Four our two-spin-state system with two dimensions we get the following table if
   \end{center}
 \end{table}
 \FloatBarrier
-Where the magnetization is found by subtracting the number of spins down from the number of spins up, or in other words the sum of the spins:
-\[\mathcal{M} = \sum_{j=1}^N s_j\]
-Getting back to the partition function, we insert all $16$ of the $E_i$ respectively. For the degeneracies, we just multiply one iteration of the respecitve $E_i$ with the amount of degeneracies. When the energy $E_i$ is zero, we will just add one to the sum since $e^0 = 1$. Thus we get the following:
+where the magnetization is found by subtracting the number of spins down from the number of spins up, or in other words the sum of the spins:
+\[\mathcal{M} = \sum_{j=1}^N s_j.\]
+Getting back to the partition function, we insert all $16$ of the $E_i$'s respectively. For the degeneracies, we just multiply one iteration of the respecitve $E_i$ with the amount of degeneracies. When the energy $E_i$ is zero, we will just add one to the sum since $e^0 = 1$. Thus we get the following:
 
-\[Z = e^{-\beta (-8J)} + 2 \cdot e^{-\beta (8J)} + e^{-\beta (-8J)} + 12 = 2e^{-\beta 8J} + 2e^{\beta 8J} + 12\]
-\[Z = 4\cosh(\beta 8J) + 12\]
+\[Z = e^{-\beta (-8J)} + 2 \cdot e^{-\beta (8J)} + e^{-\beta (-8J)} + 12 = 2e^{-\beta 8J} + 2e^{\beta 8J} + 12,\]
+\[Z = 4\cosh(\beta 8J) + 12.\]
 
 %---------------------------------------------
 \subsubsection*{Energy expectation value, $\langle E \rangle$}
 The expectation value of the energy is defined as:
 
-\[\langle E \rangle = \sum_{i=1}^M E_i P_i(\beta) = \frac{1}{Z}\sum_{i=1}^M E_i e^{-\beta E_i}\]
-Where $M$ is the sum over all microstates. $P_i$ is the Boltzmann probability distribution which reads:
+\[\langle E \rangle = \sum_{i=1}^M E_i P_i(\beta) = \frac{1}{Z}\sum_{i=1}^M E_i e^{-\beta E_i},\]
+where $M$ is the sum over all microstates. $P_i$ is the Boltzmann probability distribution which reads:
 
-\[P_i(\beta) = \frac{e^{-\beta E_i}}{Z}\]
+\[P_i(\beta) = \frac{e^{-\beta E_i}}{Z}.\]
 For our system, this is easily calculated by inserting the partition function and the microstate energy $E_i$. The mean energy is then (calculations are shown in appendix, equation (\ref{eq:mean_energy})):
 
 \begin{equation*}
-  \langle E \rangle = -8J\frac{\sinh(\beta 8 J)}{\cosh(\beta 8 J) + 3}
+  \langle E \rangle = -8J\frac{\sinh(\beta 8 J)}{\cosh(\beta 8 J) + 3}.
 \end{equation*}
 Since the variance of the mean energy ($\sigma_E$) is needed for the heat capacity later, we will calculate this as well. Full calculation is found in the appendix, equation (\ref{eq:mean_energy_var}).
 
@@ -66,11 +66,11 @@ Since the variance of the mean energy ($\sigma_E$) is needed for the heat capaci
 %---------------------------------------------
 \subsubsection*{Magnetization expectation value, $\mathcal{M}$}
 In the canonical ensemble the mean absolute magnetization can be described as
-\[\langle |\mathcal{M}| \rangle = \sum_i^M |\mathcal{M}_i| P_i(\beta) = \frac{1}{Z} \sum_i^M |\mathcal{M}_i| e^{-\beta E_i}\]
-We can now simply insert the magnetization and the energies for each respective microstate. This is found in table \ref{tab:2x2spinsEnergiesMags}. Using this, we find (shown in the appendix, equation (\ref{eq:mean_abs_mag})):
+\[\langle |\mathcal{M}| \rangle = \sum_i^M |\mathcal{M}_i| P_i(\beta) = \frac{1}{Z} \sum_i^M |\mathcal{M}_i| e^{-\beta E_i}.\]
+We can now simply insert the magnetization and the energies for each respective microstate. This is found in table \ref{tab:2x2spinsEnergiesMags}. Using this, we find (as shown in the appendix, equation (\ref{eq:mean_abs_mag})):
 
 \begin{equation*}
-  \langle \mathcal{|M|} \rangle = \frac{ 2e^{\beta 8J} + 4}{\cosh(\beta 8J) + 3}
+  \langle \mathcal{|M|} \rangle = \frac{ 2e^{\beta 8J} + 4}{\cosh(\beta 8J) + 3}.
 \end{equation*}
 Since the variance of the mean magnetization ($\sigma_M$) is needed for the susceptibility later, we will calculate this here. For this we will need the mean magnetization square $\langle \mathcal{M}^2 \rangle$, and the mean magnetization $\langle \mathcal{M} \rangle$. $\langle \mathcal{M} \rangle$ is shown to be $0$ in the appendix, equation (\ref{eq:mean_mag}), and  $\langle \mathcal{M}^2 \rangle = \frac{8 e^{\beta8J} +  8}{\cosh(\beta 8J) + 3}$ (shown in the appendix, equation (\ref{eq:mean_mag_square})). Thus, the variance is:
 \begin{equation*}
@@ -80,16 +80,16 @@ Since the variance of the mean magnetization ($\sigma_M$) is needed for the susc
 %---------------------------------------------
 \subsubsection*{Specific heat capacity, $C_V$}
 The specific heat capacity is defined as
-\[C_V = \frac{\sigma_E^2}{k_B T^2}\]
+\[C_V = \frac{\sigma_E^2}{k_B T^2}.\]
 Insering the value $\sigma^2_E$ we get
-\[C_V = \frac{1}{k_B T^2}64J^2\left(\frac{\cosh(\beta 8 J)}{\cosh(\beta 8 J) + 3} -\left(\frac{-\sinh(\beta 8 J)}{\cosh(\beta 8 J) + 3}\right)^2  \right)\]
+\[C_V = \frac{1}{k_B T^2}64J^2\left(\frac{\cosh(\beta 8 J)}{\cosh(\beta 8 J) + 3} -\left(\frac{-\sinh(\beta 8 J)}{\cosh(\beta 8 J) + 3}\right)^2  \right).\]
 This is the main function we will be comparing to the values from our computations later.
 
 \subsubsection*{Susceptibility, $\chi$}
 The susceptibility is defined as
-\[\chi = \frac{\sigma^2_\mathcal{M}}{k_B T^2}\]
-Insering the value of $\sigma^2_\mathcal{M}$, we get
-\[\chi = \frac{1}{k_B T^2}\frac{8 e^{\beta8J} +  8}{\cosh(\beta 8J) + 3}\]
+\[\chi = \frac{\sigma^2_\mathcal{M}}{k_B T^2}.\]
+Inserting the value of $\sigma^2_\mathcal{M}$, we get
+\[\chi = \frac{1}{k_B T^2}\frac{8 e^{\beta8J} +  8}{\cosh(\beta 8J) + 3}.\]
 
 \noindent Note that all the four abovementioned characteristics ($\langle E\rangle$, $\langle |\mathcal M|\rangle$, $C_V$ and $\chi$) are temperature dependent, through the variable $\beta = \frac{1}{k_B T}$. \cite{Mortenstatphys2019}.
 
@@ -99,7 +99,7 @@ The Ising model is applied for the study of phase transistions at finite tempera
 for magnetic systems. Energy is expressed as:
 
 \begin{equation}
-  E = -J \sum  _{<kl>}^N s_ks_l \qquad s_k = \pm 1
+  E = -J \sum  _{<kl>}^N s_ks_l,\qquad s_k = \pm 1.
 \end{equation}
 $N$ is the number of spins and $J$ is a constant expressing the interaction between neighboring spins. The sum is over the nearest neighbours only, indicated by $<kl>$ in the above equation. For $J>0$ it is energetically favorable for neighboring spins to align. Leading to - at low temperatures $T$ - spontaneous magnetization.\\
 A probability distribution is needed in order to calculate the mean energy $\langle E \rangle$ and magnetization $\langle \mathcal M \rangle$ at a given temperature. The distribution is given by:
@@ -115,8 +115,8 @@ The pseudocode looks as follows:
 To show that our code has good correspondence to analytical results, we will compare calculations for a $2 \times 2$ lattice with the analytical result for the same lattice. This is shown in section \ref{sec:res-compareanalytical}.
 
 %---------------------------------------------
-\subsection{Equlibrium- energy minimun}
-In order to find the equlibrium of the system($20\times 20$ lattice) we perform a study of time, corresponding to the number of Monte Carlo cycles, one needs to reach equlibrium state from where we can compute expectation values. Equlibrium is reached when the thermodynamic quantities energy and magnetization reach their steady states. Furthermore, it will not be energetically favorable to flip spins when reaching equilibrium. So the number of accepted spins per Monte Carlo cycle is at this point expected to move towards a constant value.
+\subsection{Equlibrium - energy minimum}
+In order to find the equilibrium of the system ($20\times 20$ lattice) we perform a study of the time - corresponding to the number of Monte Carlo cycles - one needs to reach the equilibrium state from where we can compute expectation values. Equilibrium is reached when the thermodynamic quantities energy and magnetization reach their steady states. Furthermore, it will not be energetically favorable to flip spins when reaching equilibrium. So the number of accepted spins per Monte Carlo cycle is at this point expected to move towards a constant value.
 
 \noindent We will graphically plot expectation values for energy and magnetization as a function of Monte Carlo cycles for different temperatures, $T=1.0$ and $T= 2.4$ using both a random and a set starting point for the initial spin configuration.
 
@@ -126,19 +126,19 @@ We will also compute the probability of the energy, $P(E)$ for the system with $
 
 %---------------------------------------------
 \subsection{Numerical studies of phase transitions}
-We wish to study the behavior of the Ising model in two dimensions close to the critical temperature as a function of the lattice size $L \times L$.  To do this, we will be calculating the expectation values for energy $\langle E \rangle$, the mean absolute magnetization $\langle |M| \rangle$, the specific heat capacity $C_V$ and the susceptibility $\chi$ as a function of the temperature in the interval $ T \in [2.0,2.5]$ with a step of $\Delta T = 0.005$. This will be done for the lattice sizes $L = {20, 40, 60, 80, 100}$. From the plots we hope to see an indication of a phase transition.\\
-The code will be parallellized using MPI, and timed using the \textsc{MPI\_Time()} function.
+We wish to study the behavior of the Ising model in two dimensions close to the critical temperature as a function of the lattice size $L \times L$.  To do this, we will be calculating the expectation values for energy $\langle E \rangle$, the mean absolute magnetization $\langle |M| \rangle$, the specific heat capacity $C_V$ and the susceptibility $\chi$ as a function of the temperature in the interval $ T \in [2.0,2.5]$ with a step size of $\Delta T = 0.005$. This will be done for the lattice sizes $L = {20, 40, 60, 80, 100}$. From the plots we hope to see an indication of a phase transition.\\
+The code will be parallellized using MPI, and timed using the \verb+MPI\_Time()+ function.
 
 %---------------------------------------------
 \subsection{Extracting the critical temperature} \label{sec:theory-extractingTC}
 We would like to compute the critical temperature $T_C$ in the thermodynamic limit where $L \rightarrow \infty$. This will be done using the equation below, together with the exact result of $\nu = 1$.
 \[T_C(L) - T_C(L = \infty) = aL^{-1/\nu}\]
-By using two different lattice sizes, we can calculate the factor a, and then calculate  $T_C$.
+By using two different lattice sizes, we can calculate the factor $a$, and then calculate  $T_C$.
 \begin{align}
   T_C(L_1) - T_C(L = \infty) &= aL_1^{-1/\nu} \nonumber\\
   T_C(L_2) - T_C(L = \infty) &= aL_2^{-1/\nu} \nonumber\\
   \intertext{By subtracting the equations we obtain}
-  \frac{T_C(L_1) - T_C(L_2)}{L_1^{-1/\nu} - L_2^{-1/\nu}} &= a \label{eq:a}
+  \frac{T_C(L_1) - T_C(L_2)}{L_1^{-1/\nu} - L_2^{-1/\nu}} &= a. \label{eq:a}
 \end{align}
 It will now be easy to use the equation below to find the critical temperature for an infinitely large lattice.
 \begin{align}
