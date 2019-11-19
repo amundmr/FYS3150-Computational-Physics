@@ -91,49 +91,55 @@ The plots for $T=1.0$ follow a clean exponential curve, while the other plots pr
 \subsection*{Number of accepted spins}
 Another good indication for when the equlibrium is reached is when the number of spins per Monte Carlo cycle does not increase further.  The following figures display the number of accepted spin configurations per Monte Carlo cycle at temperatures $T = 1.0$ and $T = 2.4$, with both ordered and random initialization.
 
-\begin{figure}[!ht]
+\begin{figure}[!h]
   \centering
-  \parbox{5cm}{
-  \includegraphics[width=5cm]{./accepted_spin/accepted_spinn_T1_1.png}
-  \caption{Number of accepted spins for 100 000 monte carlo cycles per lattice site$L\times L$ for $T= 1.0(Jk/T)$ ordered}
-  \label{fig:accepted_spinnT1}}
-  \qquad
-  \begin{minipage}{5cm}
-    \includegraphics[width=5cm]{./accepted_spin/accepted_spinn_T2_1.png}
-    \caption{Number of accepted spins for 100 000 monte carlo cycles per lattice site$L\times L$ for $T= 2.4(Jk/T)$ ordered}
-    \label{fig:accepted_spinnT2}
-  \end{minipage}
-  \end{figure}
+  \makebox[\textwidth][c]{
+  \begin{minipage}{0.7\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{./accepted_spin/accepted_spinn_T1_1.png} % first figure itself
+    \end{minipage}\hfill
+    \begin{minipage}{0.7\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{./accepted_spin/accepted_spinn_T2_1.png} % second figure itself
+    \end{minipage}
+}
+  \caption{Number of accepted spins for $10^5$ MC cycles per lattice size $L\times L$ for ordered initialization at $T= 1.0(Jk/T)$ and $T= 2.4(Jk/T)$ respectively.}
+  \label{fig:results-ProbE_T24}
+\end{figure}
 \FloatBarrier
 
-\begin{figure}[!ht]
+\begin{figure}[!h]
   \centering
-  \parbox{5cm}{
-  \includegraphics[width=5cm]{./accepted_spin/accepted_spinn_T1_random_1.png}
-  \caption{Number of accepted spins for 100 000 monte carlo cycles per lattice site$L\times L$ for $T= 1.0(Jk/T)$ random}
-  \label{fig:accepted_spinnT1_random}}
-  \qquad
-  \begin{minipage}{5cm}
-    \includegraphics[width=5cm]{./accepted_spin/accepted_spinn_T2_random_1.png}
-    \caption{Number of accepted spins for 100 000 monte carlo cycles per lattice site$L\times L$ for $T= 2.4(Jk/T)$ random}
-    \label{fig:accepted_spinnT2_random}
-  \end{minipage}
-  \end{figure}
+  \makebox[\textwidth][c]{
+  \begin{minipage}{0.7\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{./accepted_spin/accepted_spinn_T1_random_1.png} % first figure itself
+    \end{minipage}\hfill
+    \begin{minipage}{0.7\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{./accepted_spin/accepted_spinn_T2_random_1.png} % second figure itself
+    \end{minipage}
+}
+  \caption{Number of accepted spins for $10^5$ MC cycles per lattice size $L\times L$ for random initialization at $T= 1.0(Jk/T)$ and $T= 2.4(Jk/T)$ respectively.}
+  \label{fig:results-ProbE_T24}
+\end{figure}
 \FloatBarrier
 
-\begin{figure}[!ht]
+\begin{figure}[!h]
   \centering
-  \parbox{5cm}{
-  \includegraphics[width=5cm]{./accepted_spin/accepted_spinn_T1_random_zoom.png}
-  \caption{Number of accepted spins for 100 000 monte carlo cycles per lattice site$L\times L$ for $T= 1.0(Jk/T)$ random}
-  \label{fig:accepted_spinnT1_random_zoom}}
-  \qquad
-  \begin{minipage}{5cm}
-    \includegraphics[width=5cm]{./accepted_spin/accepted_spinn_T2_random_zoom.png}
-    \caption{Number of accepted spins for 100 monte carlo cycles per lattice site$L\times L$ for $T= 2.4(Jk/T)$ random}
-    \label{fig:accepted_spinnT2_random_zoom}
-  \end{minipage}
-  \end{figure}
+  \makebox[\textwidth][c]{
+  \begin{minipage}{0.7\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{./accepted_spin/accepted_spinn_T1_random_zoom.png} % first figure itself
+    \end{minipage}\hfill
+    \begin{minipage}{0.7\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{./accepted_spin/accepted_spinn_T2_random_zoom.png} % second figure itself
+    \end{minipage}
+}
+  \caption{Number of accepted spins for $100$ MC cycles per lattice size $L\times L$ for random initialization at $T= 1.0(Jk/T)$ and $T= 2.4(Jk/T)$ respectively.}
+  \label{fig:results-ProbE_T24}
+\end{figure}
 \FloatBarrier
 
 The number of accepted spins behave, as expected, the same way as the energies and magnetisation when increasing the number of Monte Carlo cycles. This is further discussed in \ref{discussion}.
