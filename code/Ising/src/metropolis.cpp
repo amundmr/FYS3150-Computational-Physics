@@ -13,7 +13,7 @@ void Metropolis(int L, long & idum, mat & spin, double & E, double & M, vec Edif
       // Random position in lattice.
       int ix = (int) (interval_rand(gen) * (double)L);
       int iy = (int) (interval_rand(gen) * (double)L);
-      int deltaE = 2 * spin(iy,ix)
+      int deltaE = 2 * spin(iy,ix)  //energy difference
                      * (spin(iy,periodic_boundary_conditions(ix,L,-1))
                      + spin(periodic_boundary_conditions(iy,L,-1),ix)
                      + spin(iy,periodic_boundary_conditions(ix,L,1))
