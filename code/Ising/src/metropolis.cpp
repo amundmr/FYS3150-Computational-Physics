@@ -28,5 +28,5 @@ void Metropolis(int L, long & idum, mat & spin, double & E, double & M, vec Edif
         }
      }
   }
-  file2 << cycles << " " << accspins/mcs/L/L << endl;
+  file2 << cycles << " " << accspins/L/L << endl;
 }

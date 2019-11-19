@@ -38,8 +38,8 @@ int main(int argc, char * argv[])
     for (int de = -8; de <= 8; de+=4) Ediff(de+8) = 0;
     for (int de = -8; de <= 8; de+=4) Ediff(de+8) = exp(-de/T);
 
-    //initialize(L, T, spin, E, M);
-    initialize_random(L, T, spin, E, M);
+    initialize(L, T, spin, E, M);
+    //initialize_random(L, T, spin, E, M);
 
     file2 << "Monte_Carlo_Cycles" << " " << "Accepted_spins" << endl;
 
