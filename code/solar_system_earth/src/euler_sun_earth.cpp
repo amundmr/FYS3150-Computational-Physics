@@ -1,7 +1,4 @@
-#include <cmath>
-#include <iostream>
-#include <fstream>
-#include <iomanip>
+#include "../include/lib.h"
 using namespace std;
 
 // output file as global variable
@@ -41,7 +38,7 @@ vx -= Step*FourPi2*x/(r*r*r);
 vy -= Step*FourPi2*y/(r*r*r);
 r = sqrt(x*x+y*y);
 time += Step;
-output(time, x, y, vx, vy); // write to file
+output(time, x, y, vx, vy,ofile); // write to file
 }
 ofile.close(); // close output file
 return 0;

@@ -1,4 +1,6 @@
-void output(double time, double x, double y, double vx, double vy)
+#include "../include/lib.h"
+
+void output(double time, double x, double y, double vx, double vy,ofstream & ofile)
 {
 ofile << setiosflags(ios::showpoint | ios::uppercase);
 ofile << setw(15) << setprecision(8) << time;
