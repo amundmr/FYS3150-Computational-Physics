@@ -1,10 +1,14 @@
 CC = g++
 
 # Flags for compiler.
-CCFLAGS = -larmadillo -lblas -llapack -std=c++11 #-fopenmp -O3
+CCFLAGS = -larmadillo -lblas -llapack -std=c++11 -Wall -Wpedantic -Wextra #-fopenmp -O3
 
 # Names of files in src you want to compile: "./obj/<name>.o".
+<<<<<<< HEAD
 OBJ = ./obj/output.o #./obj/euler.o ./obj/verlet.o ./obj/input.o ./obj/output.o 
+=======
+OBJ = ./obj/euler.o ./obj/verlet.o ./obj/input.o #./obj/output.o
+>>>>>>> dae580c248020a5750f550375d02c07c6f101393
 
 # Headerfile(s) used.
 DEPS = ./include/lib.h
