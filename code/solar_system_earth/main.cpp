@@ -1,6 +1,18 @@
 #include "./include/lib.h"
 #include <armadillo>
 //global file variable
+
+double a(double r) //Making func for acceleration of earth for use in verlet!
+{
+  double pi = acos(-1.0);         //define pi
+  double GM_sun = 4 * pi * pi; //In units of AU^3/yr^2
+  //double F_g = GM_sun * M_earth/(r*r);
+  double a = GM_sun / (r*r);
+  return a;
+}
+
+
+
 int main(int argc, char * argv[]){
 
   char * filename;
@@ -22,12 +34,26 @@ int main(int argc, char * argv[]){
   double pi = acos(-1.0);         //define pi
   double t=0.0, t_end = 2.0,x = 1.0, y = 0.0, vx = 1.0, vy = 2.0*pi;
   double r = sqrt(x*x+y*y);
-  double N = 10;
+  double N = 1000;
   double dN = t_end/((double) N);   //stepsize
   arma::mat position, velocity;
 
-  position = arma::zeros<arma::mat>(N);
-  velocity = arma::zeros<arma::mat>(N);
+  position = arma::zeros<arma::mat>(N,2);
+  velocity = arma::zeros<arma::mat>(N,2);
+
+
+  //Running verlet!
+  verlet(position, velocity, *a, x, vx, dN, N);
+  ofile << setiosflags(ios::showpoint | ios::uppercase);
+  for (int i = 0; i<N-1; i++){
+
+    ofile << setprecision(8) << i;
+    ofile << " " << setprecision(8) << position(i,0);
+    ofile << " " << setprecision(8) << position(i,1);
+    ofile << " " << setprecision(8) << velocity(i,0);
+    ofile << " " << setprecision(8) << velocity(i,1) << endl;
+  }
+
 
 
 // while(t<=t_end){
