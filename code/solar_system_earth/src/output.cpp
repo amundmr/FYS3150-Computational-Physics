@@ -1,12 +1,11 @@
-#include "../include/lib.h"
-#include <armadillo>
 
-void output(double t, arma::mat&position, arma::mat&velocity, ofstream & ofile, int &i)
+
+void output(double t,double x, double y, double vx, double vy, ofstream & ofile)
 {
   ofile << setiosflags(ios::showpoint | ios::uppercase);
   ofile << setprecision(8) << t;
-  ofile << " " << setprecision(8) << position(0,i);
-  ofile << " " << setprecision(8) << position(1,i);
-  ofile << " " << setprecision(8) << velocity(0,i);
-  ofile << " " << setprecision(8) << velocity(1,i) << endl;
+  ofile << " " << setprecision(8) << x;
+  ofile << " " << setprecision(8) << y;
+  ofile << " " << setprecision(8) << vx;
+  ofile << " " << setprecision(8) << vy << endl;
 }

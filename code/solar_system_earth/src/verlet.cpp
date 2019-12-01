@@ -1,5 +1,4 @@
-#include <armadillo>
-
+#include "../include/lib.h"
 // Function takes in empty position and velocity vectors.
 // In addition to this, it takes the force affecting the object, as well as some initial conditions and the time-step characteristics.
 void verlet(arma::vec & r, arma::vec & v, double (*a)(double), double init_r, double init_v, double dt, int N) // void for now, but will have some return type.

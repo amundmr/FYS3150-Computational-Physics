@@ -1,6 +1,6 @@
 #include "../include/lib.h"
-#include<armadillo>
-void input(int &N, int &t_end, arma::mat&position, arma::mat&velocity){
+
+void input(int &N, double &t_end, arma::mat&position, arma::mat&velocity){
 
   cout << "Number of steps: ";
   cin  >> N;
@@ -12,7 +12,5 @@ void input(int &N, int &t_end, arma::mat&position, arma::mat&velocity){
   cin  >> position(1,0);
   cout << endl << "Initial velocity in x-dir: " << endl;
   cin  >> velocity(0,0);
-  cout << endl << "Initial velocity in y-dir " << endl;
-  cin  >> velocity(1,0);
   cout << endl;
 }
