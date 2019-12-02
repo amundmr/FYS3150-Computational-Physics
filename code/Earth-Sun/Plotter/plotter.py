@@ -4,7 +4,7 @@ import numpy as np
 import sys
 
 #Reading file
-f1 = open("../earthorbit.dat","r")
+f1 = open("./earthorbit.dat","r")
 f1.readline()
 data = f1.readlines()
 x = np.zeros(len(data))
@@ -25,10 +25,10 @@ for line in data:
 
 
 #Plotting read data
-c = cm.rainbow(np.linspace(0,1,len(y)))
-print(c)
-plt.scatter(x,y,s=2, label= "Earth Orbit", color = c)
-#plt.plot(Vd,AllError[i], linewidth=1)
+cm = cm.get_cmap('rainbow')
+z = range(len(x))
+sc = plt.scatter(x,y,s=2, label= "Earth Orbit", c = z, cmap = cm)
+plt.colorbar(sc)
 
 plt.ylabel("Y Position")
 plt.xlabel("X Position")
