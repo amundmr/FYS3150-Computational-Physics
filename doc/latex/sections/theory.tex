@@ -1,56 +1,71 @@
 \documentclass[../main.tex]{subfiles}
+
 \begin{document}
 \section{Theory}\label{theory}
-
+\subsection{The Earth-Sun system}
 %oppgave 5a)
-Earth- Sun in two dimensions
+Before starting coding with object orientation, we will look at the problem by simply using Eulers forward method and something starting with V..
+In two dimensions we will have the following for the Earth-Sun system \\
 
-gravitational force $\text{F}_G$
-
-\begin{equation}
-  F = \frac{GM_0M_E}{r^2}\\
-  M_E = 6\times 10^{24}\text{Kg}\\
-  M_0 = 2\times 10^{30}\text{Kg}\\
-  r = 1.5\times 10^{11}\text{m}\\
-\end{equation}
-
-Astronomical units AU(bold) defined by r.(avg distance)
-
-Newtons 2.law:
+The gravitational force  $\text{F}_G$
 
 \begin{equation}
-  \frac{d^2x}{dt^2} = \frac{F_x}{M_E}\\
-  \frac{d^2y}{dt^2} = \frac{F_y}{M_E}\\
+  F = \frac{GM_0M_E}{r^2}
 \end{equation}
 
-$x = r \cos(\theta) \text{and} y = r\sin(\theta), \quad r = \sqrt{x^2 +y^2}$:
+where,\\
+
+$M_E = 6\times 10^{24}\text{Kg},  M_0 = 2\times 10^{30}\text{Kg} \quad \text{and}\quad  r = 1.5\times 10^{11}\text{m}$\\
+
+
+The force acting on Earth is given by Newtons 2. law, here given in x- and y- direction
+
+$$ \frac{d^2x}{dt^2} = \frac{F_x}{M_E}, \quad \frac{d^2y}{dt^2} = \frac{F_y}{M_E}$$
+
+by using the following equalities $$x = r \cos(\theta),\quad  y = r\sin(\theta), \quad \text{and}\quad r = \sqrt{x^2 +y^2}$$
+
+we obtain\\
 
 \begin{equation}
-  F_x = - frac{GM_0M_E}{r^2}\cos(\theta) =- frac{GM_0M_E}{r^3}x,
-  y = - frac{GM_0M_E}{r^2}\sin(\theta) =- frac{GM_0M_E}{r^3}y,
+  F_x = - \frac{GM_0M_E}{r^2} \cos(\theta) =- \frac{GM_0M_E}{r^3}x
 \end{equation}
-
-First order  coupled differential equations:
 \begin{equation}
-  \frac{dv_x}{dt} = - frac{GM_0}{r^3}x\\
-  \frac{dx}{dt} = v_x,\\
-  \frac{dv_y}{dt} = - frac{GM_0}{r^3}y\\
-  \frac{dy}{dt} = v_y,\\
+  F_y = - \frac{GM_0M_E}{r^2}\sin(\theta) =- \frac{GM_0M_E}{r^3}y,
 \end{equation}
 
-Introducing astronomical units: 1 AU = $1.5 \times 10^{11}$, r = 1AU
-$\frac{M_ev^2}{r} = F = frac{GM_0M_E}{r^2}$,\\
-have that
-$GM_=  v^2r$
+This gives the following first order  coupled differential equations:
+\begin{equation}
+  \frac{dv_x}{dt} = - \frac{GM_0}{r^3}x
+\end{equation}
+\begin{equation}
+  \frac{dx}{dt} = v_x
+\end{equation}
+\begin{equation}
+  \frac{dv_y}{dt} = - \frac{GM_0}{r^3}y
+\end{equation}
+\begin{equation}
+  \frac{dy}{dt} = v_y,
+\end{equation}
 
-Velocity of Earth, assuming it moves in circular motion: $v = 2\pir/years= 2\pi AU/years$
+In order to simplify we will use Astronomical units AU defined by $r$, which is the avarage distance between Earth and the sun.
 
-$GM_0 = v^2r = 4\pi^2 \frac{(AU)^2}{yars^2}$
+Introducing astronomical units: 1 $\text{AU = r} = 1.5 \times 10^{11}$
+
+\begin{equation}
+  \frac{M_ev^2}{r} = F = \frac{GM_0M_E}{r^2}
+\end{equation}
+
+Since $GM_=  v^2r$ and the velocity of Earth, assuming it moves in circular motion: $$v = 2\pi \text{r/years}= 2\pi \text{AU/years}$$
+
+Then we have the following relationship
+
+$$GM_0 = v^2r = 4\pi^2 \frac{(\text{AU})^2}{\text{years}^2}$$
 
 Bulding code- discretized equations:
-$v_{x,i+1} = v_{x,i} - h \frac{4\pi^2}{r_i^3}x_i$,\\
-$x_{i+1} = x_{i} + hv_{x,i}$,\\
-$v_{y,i+1} = v_{xy,i} - h \frac{4\pi^2}{r_i^3}y_i$,\\
-$y_{i+1} = y_{i} + hv_{y,i}$,\\
+$$v_{x,i+1} = v_{x,i} - h \frac{4\pi^2}{r_i^3}x_i$$
+$$x_{i+1} = x_{i} + hv_{x,i}$$
+$$v_{y,i+1} = v_{xy,i} - h \frac{4\pi^2}{r_i^3}y_i$$
+$$y_{i+1} = y_{i} + hv_{y,i}$$
+
 
 \end{document}
