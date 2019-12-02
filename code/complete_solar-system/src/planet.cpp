@@ -2,11 +2,10 @@
 
 class Planet
 {
-private:
+public:
     arma::vec r;
     arma::vec v;
     double m;
-public:
     // Default constructor
     Planet()
     {
@@ -20,18 +19,18 @@ public:
     // Distance between two planets.
     double d(Planet & planet)
     {
-        double x = this->r(0)-planet.r(0);
-        double y = this->r(1)-planet.r(1);
-        double z = this->r(2)-planet.r(2);
-        return sqrt(x*x+y*y+z*z);
+        double x = this->r(0) - planet.r(0);
+        double y = this->r(1) - planet.r(1);
+        double z = this->r(2) - planet.r(2);
+        return sqrt(x*x + y*y + z*z);
     };
     
     // Acceleration
     double a(Planet & planet)
     {
         double d = d(planet);
-        if (d!=0){
-            return G*planet.m/(d*d);
+        if (d != 0){
+            return G * planet.m / (d*d);
         }
     };
 };
