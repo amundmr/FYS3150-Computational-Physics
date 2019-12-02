@@ -1,5 +1,5 @@
-TimeEnd:  1000
-StepSize: 0.2
+TimeEnd:  10
+StepSize: 0.0001
 Earth_x:  1
 Earth_y:  0
 Earth_vx: 0

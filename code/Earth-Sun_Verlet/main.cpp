@@ -1,12 +1,13 @@
 #include "./include/lib.h"
-#include <vector>
 
 using namespace std;
 using namespace arma;
 
+/*NOTES:
+It is assumed that the sun is stationary in origo due to its great mass.
+Initial Conditions are set in InitialConditions.dat.
 
-
-//It is assumed that the sun is stationary in origo due to its great mass.
+*/
 ofstream ofile;
 ifstream initFile;
 
@@ -26,20 +27,20 @@ int main()
   ofile.open("earthorbit.dat");
   ofile << "Time, X-pos, Y-pos" << endl;
 
-  int tEnd = 1000;// (int) Conditions[0];
-  double step = 0.2; //Conditions[1];
-  double t;
+  int tEnd =  (int) Conditions[0];
+  double step = Conditions[1];
+  double t = 0.0;
   int N = (int) tEnd/step + 1;
   cout << "Int points N: "<< N << endl;
   //Initial condish
   vec x(N), y(N), vx(N), vy(N);
-/*
+
   x(0) = Conditions[2]; y(0) = Conditions[3]; //AU
   vx(0) = Conditions[4]; vy(0) = Conditions[5]; //AU/day
-  */
+/*
   x(0) = 1; y(0) = 0; //AU
   vx(0) = 0; vy(0) = 2*M_PI; //AU/day
-
+*/
   double half_dt = 0.5*step;
   double half_dt_sqr = 0.5*step*step;
 
