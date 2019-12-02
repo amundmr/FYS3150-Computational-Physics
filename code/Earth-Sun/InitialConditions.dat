@@ -1,6 +1,6 @@
-TimeStart:
-StepSize:
-Earth_x:
-Earth_y:
-Earth_vx:
-Earth_vy:
+TimeEnd:  1000
+StepSize: 0.2
+Earth_x:  1
+Earth_y:  0
+Earth_vx: 0
+Earth_vy: 6.28318530718
