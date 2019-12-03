@@ -26,11 +26,23 @@ public:
     };
     
     // Acceleration
-    double a(Planet & planet)
+    arma::vec a(Planet planet)
     {
-        double d = d(planet);
+        // Storing the relative distance and the returned acceleration
+        arma::vec rel_d(3); arma::vec acc(3);
+        // Setting the relative distance in each dimension between the planets.
+        for(int i=0; i<3; i++) rel_d(i) = this->r(i) - planet.r(i);
+        // Setting the actual distance between the planets.
+        double d = this->d(planet);
+        // Smoothing??
+
+        // If distance is not zero, return calculated acceleration, else return 0 vector.
         if (d != 0){
-            return G * planet.m / (d*d);
+            for(int i=0; i<3; i++){
+                acc(i) = G * planet.m * rel_d(i) / (d*d*d);
+            };
+            return acc;
         }
+        else{acc.fill(0); return acc;}
     };
 };

@@ -1,22 +1,18 @@
 #include "../include/lib.h"
 
-// Function takes in empty position and velocity vectors.
-// In addition to this, it takes the force affecting the object, as well as some initial conditions and the time-step characteristics.
-void verlet(arma::vec & r, arma::vec & v, double (*a)(double), double init_r, double init_v, double dt, int N) // void for now, but will have some return type.
+// Function takes in position and velocity vectors. In addition to this, it takes the force affecting the object
+// and the time step. From this, it returns the next time-step of the two vectors.
+auto verlet(arma::vec r, arma::vec v, arma::vec a, arma::vec a_next, double dt)
 {
-    double ai;
-    // Pre-calculated values to save some FLOPs
-    double half_dt = 0.5*dt;
-    double half_dt_sqr = 0.5 * dt * dt;
-    
-    r = arma::zeros<arma::vec>(N); r(0) = init_r; // Filling the position vector with initial condition and zeros.
-    v = arma::zeros<arma::vec>(N); v(0) = init_v; // Filling the velocity vector with initial condition and zeros.
+    // Initializing memory for next values.
+    arma::vec r_next(3); arma::vec v_next(3);
 
-    // Velocity Verlet method
-    for(int i=0; i<N-1; i++)
-    {
-        ai = a(r(i));
-        r(i+1) = r(i) + v(i)*dt + ai*half_dt_sqr;
-        v(i+1) = v(i) + (ai+a(r(i+1)))*half_dt;
-    }
+    // Verlet method over all three dimensions.
+    for (int i=0; i<3; i++){
+        r_next(i) = r(i) + v(i)*dt + a(i)*0.5*dt*dt;
+        v_next(i) = v(i) + (a(i) + a_next(i))*0.5*dt;
+    };
+
+    struct next {arma::vec r_next; arma::vec v_next;};
+    return next {r_next, v_next};
 }

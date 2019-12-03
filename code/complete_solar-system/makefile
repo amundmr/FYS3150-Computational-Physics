@@ -1,7 +1,7 @@
 CC = g++
 
 # Flags for compiler.
-CCFLAGS = -larmadillo -lblas -llapack -std=c++11 -Wall -Wpedantic -Wextra #-fopenmp -O3
+CCFLAGS = -larmadillo -lblas -llapack -std=c++17 -Wall -Wpedantic -Wextra #-fopenmp -O3
 
 # Names of files in src you want to compile: "./obj/<name>.o".
 OBJ = ./obj/verlet.o
