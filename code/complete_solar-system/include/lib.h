@@ -4,10 +4,14 @@
 #include <cmath>
 #include <vector>
 #include <tuple>
+#include <iostream>
+#include <fstream>
 
-class Planet;
-class System;
+#include "./planet.h"
+#include "./system.h"
 
-void verlet(arma::vec &, arma::vec &, double (*a)(double), double, double, double, int);
+arma::vec verlet_r(arma::vec, arma::vec, arma::vec, double);
+arma::vec verlet_v(arma::vec, arma::vec, arma::vec, double);
+System initialize();
 
 static const double G = 4*M_PI*M_PI; // AU^3/(yr^2*Msun)
