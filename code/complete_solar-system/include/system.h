@@ -4,6 +4,8 @@ class System
 {
 private:
     std::vector<Planet> planets;
+    std::vector<std::shared_ptr<std::ofstream>> writefiles; //Vector for storing the ofstream objects for writing to file
+    std::vector<std::string> filenames;
     int no_planets;
 
     // Printing planet position to file

@@ -4,12 +4,12 @@
 Planet::Planet()
 {
     m = 1; r = arma::zeros(3); v = arma::zeros(3); name = "Unnamed planet";
-};
+}
 
 // Constructor with init values.
 Planet::Planet(std::string name, double mass, arma::vec init_r, arma::vec init_v){
     m = mass; r = init_r; v = init_v * 365.2442; name = name;
-};
+}
 
 // Distance between two planets.
 double Planet::d(Planet & planet)
@@ -18,7 +18,7 @@ double Planet::d(Planet & planet)
     double y = this->r(1) - planet.r(1);
     double z = this->r(2) - planet.r(2);
     return sqrt(x*x + y*y + z*z);
-};
+}
 
 // Acceleration
 arma::vec Planet::a(Planet planet)
@@ -39,4 +39,4 @@ arma::vec Planet::a(Planet planet)
         return acc;
     }
     else{acc.fill(0); return acc;}
-};
+}

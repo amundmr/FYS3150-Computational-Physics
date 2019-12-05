@@ -4,17 +4,24 @@
 System::System()
 {
     no_planets = 0;
-};
+}
 
 // Adding planets to system
 void System::add(Planet planet){
     no_planets += 1;
     planets.push_back(planet);
-};
+    writefiles.push_back( std::make_shared<std::ofstream> (planet.name) );  //Adding ofstream object to vector
+    filenames.push_back( planet.name );
+}
 
 // Solve for whole system using Velocity Verlet method.
 void System::solve(int N, double tot_years) // Takes in no. integration points and no. years to solve.
 {
+    //Opening all the writefiles
+    for (int i=0; i < (signed int) writefiles.size(); i++){
+      writefiles[i]->open(filenames[i]);
+    }
+
     double dt = tot_years/N;
 
     arma::mat acc(no_planets, 3); // Arrays for storing the planets' accelerations.
@@ -30,7 +37,7 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
                 Planet & other = planets[j];
                 a -= current.a(other);
             };
-            
+
             current.r = verlet_r(current.r, current.v, a, dt);
 
             // Update acceleration
@@ -45,18 +52,24 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
         // Printing current position of whole solar system to files.
         print();
     }
-};
+
+    //Closing all open writefiles
+    for (int i=0; i < (signed int) writefiles.size(); i++){
+      writefiles[i]->close();
+    }
+}
 
 // Printing planets' position to their own separate files.
 void System::print()
 {
-    for (int i=0; i<no_planets; i++)
+    for (int p=0; p<no_planets; p++)
     {
-        Planet & current = planets[i];
+      Planet & current = planets[p];
+      /*
         std::ofstream file ("./output/" + current.name + ".txt");
-
-        for (i=0; i<3; i++){
-            file << current.r(i) << "\t";
+      */
+        for (int i=0; i<3; i++){
+            (*writefiles[p]) << current.r(i) << "\t";
         }
     }
-};
+}

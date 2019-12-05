@@ -6,6 +6,7 @@
 #include <tuple>
 #include <iostream>
 #include <fstream>
+#include <memory> //Used for building vector of shared pointers and use make_shared to allocate ofstream objects.
 
 #include "./planet.h"
 #include "./system.h"

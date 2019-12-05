@@ -4,7 +4,7 @@ int main()
 {
     System system = initialize();
 
-    int N = 1000;
-    double tot_years = 10;
+    int N = 1;
+    double tot_years = 0.1;
     system.solve(N, tot_years);
 }
