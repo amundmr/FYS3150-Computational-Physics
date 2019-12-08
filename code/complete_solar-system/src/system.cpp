@@ -10,16 +10,18 @@ System::System()
 void System::add(Planet planet){
     no_planets += 1;
     planets.push_back(planet);
-    writefiles.push_back( std::make_shared<std::ofstream> (planet.name) );  //Adding ofstream object to vector
-    filenames.push_back( planet.name );
 }
 
 // Solve for whole system using Velocity Verlet method.
 void System::solve(int N, double tot_years) // Takes in no. integration points and no. years to solve.
 {
-    //Opening all the writefiles
-    for (int i=0; i < (signed int) writefiles.size(); i++){
-      writefiles[i]->open(filenames[i]);
+    std::vector<std::ofstream> writefiles;
+    //Opening all the files
+    for (int p=0; p<no_planets; p++){
+        std::string name = std::to_string(p);
+        std::ofstream file;
+        file.open(name + ".txt");
+        writefiles.push_back(file);
     }
 
     double dt = tot_years/N;
@@ -50,26 +52,20 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
         };
 
         // Printing current position of whole solar system to files.
-        print();
-    }
-
-    //Closing all open writefiles
-    for (int i=0; i < (signed int) writefiles.size(); i++){
-      writefiles[i]->close();
-    }
-}
-
-// Printing planets' position to their own separate files.
-void System::print()
-{
-    for (int p=0; p<no_planets; p++)
-    {
-      Planet & current = planets[p];
-      /*
-        std::ofstream file ("./output/" + current.name + ".txt");
-      */
-        for (int i=0; i<3; i++){
-            (*writefiles[p]) << current.r(i) << "\t";
+        for (int p=0; p<no_planets; p++)
+        {
+            Planet & current = planets[p];
+            
+            for (int i=0; i<3; i++){
+                writefiles[p] << current.r(i) << "\t";
+            }
+            writefiles[p] << std::endl;
         }
+
+        t += dt;
+    }
+
+    for (int p=0; p<no_planets; p++){
+        writefiles[p].close();
     }
 }

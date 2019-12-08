@@ -5,6 +5,7 @@
 #include <vector>
 #include <tuple>
 #include <iostream>
+#include <string>
 #include <fstream>
 #include <memory> //Used for building vector of shared pointers and use make_shared to allocate ofstream objects.
 
