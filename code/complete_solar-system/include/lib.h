@@ -9,7 +9,7 @@
 #include <fstream>
 #include <memory> //Used for building vector of shared pointers and use make_shared to allocate ofstream objects.
 
-#include "./planet.h"
+#include "./body.h"
 #include "./system.h"
 
 arma::vec verlet_r(arma::vec, arma::vec, arma::vec, double);
