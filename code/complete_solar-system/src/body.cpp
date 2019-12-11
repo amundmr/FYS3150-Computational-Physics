@@ -29,7 +29,6 @@ arma::vec Body::a(Body body)
 
     // Setting the relative distance in each dimension between the bodies.
     rel_d = (body.r - this->r)/d;
-    //Tested: the distance and relative direction(Unit vector) gived the correct results as of 11dec
 
     // Smoothing??
 
@@ -38,5 +37,5 @@ arma::vec Body::a(Body body)
         acc = G * body.m * rel_d / (d*d);
         return acc;
     }
-    else{acc.fill(0); return acc; std::cout << "distance=0"<< std::endl;} //Tested: this case does not exist as of 11 dec. which is good
+    else{acc.fill(0); return acc;}
 }
