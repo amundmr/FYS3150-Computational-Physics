@@ -70,16 +70,17 @@ with open('../complete_solar-system/output/Neptune.txt', 'r') as f:
         neptune_x.append(float(l[0])); neptune_y.append(float(l[1])); neptune_z.append(float(l[2]))
 
 Plotskip = 100 #Plot only N'th point in the vectors
+dotsize = 1
 
-ax.scatter(sun_x[::Plotskip], sun_y[::Plotskip], sun_z[::Plotskip], label = "Sun", color = "yellow")
-ax.scatter(mercury_x[::Plotskip], mercury_y[::Plotskip], mercury_z[::Plotskip], label = "Mercury", color = "#7f838a")
-ax.scatter(venus_x[::Plotskip], venus_y[::Plotskip], venus_z[::Plotskip], label = "Venus", color = "#a68b62")
-ax.scatter(earth_x[::Plotskip], earth_y[::Plotskip], earth_z[::Plotskip], label = "Earth", color = "blue")
-ax.scatter(mars_x[::Plotskip], mars_y[::Plotskip], mars_z[::Plotskip], label = "Mars", color = "orange")
-ax.scatter(jupiter_x[::Plotskip], jupiter_y[::Plotskip], jupiter_z[::Plotskip], label = "Jupiter", color = "#9e8367")
-ax.scatter(saturn_x[::Plotskip], saturn_y[::Plotskip], saturn_z[::Plotskip], label = "Saturn", color = "#96642f")
-ax.scatter(uranus_x[::Plotskip], uranus_y[::Plotskip], uranus_z[::Plotskip], label = "Uranus", color = "#86a7b5")
-ax.scatter(neptune_x[::Plotskip], neptune_y[::Plotskip], neptune_z[::Plotskip], label = "Neptune", color = "#0086bf")
+ax.scatter(sun_x[::Plotskip], sun_y[::Plotskip], sun_z[::Plotskip], s=dotsize, label = "Sun", color = "yellow")
+ax.scatter(mercury_x[::Plotskip], mercury_y[::Plotskip], mercury_z[::Plotskip], s=dotsize, label = "Mercury", color = "#7f838a")
+ax.scatter(venus_x[::Plotskip], venus_y[::Plotskip], venus_z[::Plotskip], s=dotsize, label = "Venus", color = "#a68b62")
+ax.scatter(earth_x[::Plotskip], earth_y[::Plotskip], earth_z[::Plotskip], s=dotsize, label = "Earth", color = "blue")
+ax.scatter(mars_x[::Plotskip], mars_y[::Plotskip], mars_z[::Plotskip], s=dotsize, label = "Mars", color = "orange")
+ax.scatter(jupiter_x[::Plotskip], jupiter_y[::Plotskip], jupiter_z[::Plotskip], s=dotsize, label = "Jupiter", color = "#9e8367")
+ax.scatter(saturn_x[::Plotskip], saturn_y[::Plotskip], saturn_z[::Plotskip], s=dotsize, label = "Saturn", color = "#96642f")
+ax.scatter(uranus_x[::Plotskip], uranus_y[::Plotskip], uranus_z[::Plotskip], s=dotsize, label = "Uranus", color = "#86a7b5")
+ax.scatter(neptune_x[::Plotskip], neptune_y[::Plotskip], neptune_z[::Plotskip], s=dotsize, label = "Neptune", color = "#0086bf")
 
 axisEqual3D(ax)
 plt.xlabel("Xpos")
