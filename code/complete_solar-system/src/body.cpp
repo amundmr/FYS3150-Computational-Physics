@@ -30,16 +30,14 @@ arma::vec Body::a(Body body)
     double d = this->d(body);
 
     // Setting the relative distance in each dimension between the bodies.
-    for(int i=0; i<3; i++) rel_d(i) = (body.r(i) - this->r(i))/d;
+    rel_d = (body.r - this->r)/d;
     //Tested: the distance and relative direction(Unit vector) gived the correct results as of 11dec
 
     // Smoothing??
 
     // If distance is not zero, return calculated acceleration, else return 0 vector.
     if (d != 0){
-        for(int i=0; i<3; i++){
-            acc(i) = G * body.m * rel_d(i) / (d*d); //
-        };
+        acc = G * body.m * rel_d / (d*d);
         return acc;
     }
     else{acc.fill(0); return acc; std::cout << "distance=0"<< std::endl;} //Tested: this case does not exist as of 11 dec. which is good
