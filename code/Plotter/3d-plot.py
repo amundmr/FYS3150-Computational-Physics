@@ -81,9 +81,13 @@ ax.scatter(saturn_x[::Plotskip], saturn_y[::Plotskip], saturn_z[::Plotskip], lab
 ax.scatter(uranus_x[::Plotskip], uranus_y[::Plotskip], uranus_z[::Plotskip], label = "Uranus", color = "#86a7b5")
 ax.scatter(neptune_x[::Plotskip], neptune_y[::Plotskip], neptune_z[::Plotskip], label = "Neptune", color = "#0086bf")
 
+<<<<<<< HEAD
 axisEqual3D(ax)
 plt.xlabel("Xpos")
 plt.ylabel("Ypos")
 plt.legend()
+=======
+ax.plot3D(earth_x, earth_y, earth_z)
+>>>>>>> 3797ce059e5fa751c0b3c0f35ff4f66d355a52a6
 plt.show()
 plt.savefig('fig1.png')
