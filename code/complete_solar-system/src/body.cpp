@@ -14,10 +14,8 @@ Body::Body(std::string name_in, double mass, arma::vec init_r, arma::vec init_v)
 // Distance between two bodies.
 double Body::d(Body & body)
 {
-    double x = body.r(0) - this->r(0);
-    double y = body.r(1) - this->r(1);
-    double z = body.r(2) - this->r(2);
-    return sqrt(x*x + y*y + z*z);
+    arma::vec dv = body.r - this->r;
+    return sqrt(dv(0)*dv(0) + dv(1)*dv(1) + dv(2)*dv(2));
 }
 
 // Acceleration
