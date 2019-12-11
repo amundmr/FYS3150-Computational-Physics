@@ -35,17 +35,18 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
             Body & current = bodies[i];
             arma::vec a = arma::zeros<arma::vec>(3); arma::vec a_next = arma::zeros<arma::vec>(3);
 
-            for (int j=i+1; j<no_bodies; j++){ // Loops over body +1 the current. Might need just i!=j.
+            for (int j=0; j<no_bodies; j++){ // Loops over body +1 the current. Might need just i!=j.
                 Body & other = bodies[j];
-                a -= current.a(other);
+                a += current.a(other);
+
             };
 
             current.r = verlet_r(current.r, current.v, a, dt);
 
             // Update acceleration
-            for (int j=i+1; j<no_bodies; j++){ // Loops over body +1 the current. Might need just i!=j.
+            for (int j=0; j<no_bodies; j++){ // Loops over body +1 the current. Might need just i!=j.
                 Body & other = bodies[j];
-                a_next -= current.a(other);
+                a_next += current.a(other);
             };
 
             current.v = verlet_v(current.v, a, a_next, dt);
@@ -55,7 +56,7 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
         for (int p=0; p<no_bodies; p++)
         {
             Body & current = bodies[p];
-            
+
             for (int i=0; i<3; i++){
                 writefiles[p] << current.r(i) << "\t";
             }
