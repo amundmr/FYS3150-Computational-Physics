@@ -1,0 +1,8 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\section{Introduction}\label{introduction}
+The Verlet method is a widely used method for solving coupled ordinary differential equations. This method will be implemented  in order to make a simulation of our solarsystem. Due to several coupled ordinary differential equations it is nessecary to use object oriented code where the planets orbit is calculated using the Verlet method with different initial conditions for the different planets. This way of coding makes it easier to expand the algoritm if it is desirble to add more planets, moons og astronomical objects in the system. The equations used to calculate the movement of the planets is simply Newtons low of gravity and Newtons second law. Due to the suns enourmus mass, its moiton will be negligible compared with the other planets.
+First we wil look at the discretized differential equations before making an algorithm to solve the Sun-Earth motion with bot Euler's forward and the velocity Verlet method. Thereafter we will solve the same problem using object oriented code, thus for the whole solar system. We will test the stability of our code using different time steps $\delta t$, as well as checking that the total energy(potential and kinetic) and the angular momentum is conserved. By trail end error we will try to figure out one of the planets escape velocity.
+Jupiter, the planet with the greates mass, has somewhat an inpact on the orbit of Earth, which we will try to figure out. 
+\end{document}

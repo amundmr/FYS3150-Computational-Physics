@@ -12,4 +12,5 @@ with open('../complete_solar-system/output/Mercury.txt', 'r') as f:
 
 
 ax.plot3D(earth_x, earth_y, earth_z)
+plt.show()
 plt.savefig('fig1.png')
