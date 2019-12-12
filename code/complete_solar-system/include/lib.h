@@ -2,6 +2,7 @@
 
 #include <armadillo>
 #include <cmath>
+#include <chrono>
 #include <vector>
 #include <tuple>
 #include <iostream>

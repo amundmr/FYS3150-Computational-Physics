@@ -28,6 +28,10 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
 
     arma::mat acc(no_bodies, 3); // Arrays for storing the bodies' accelerations.
     double t = 0;
+    
+    //Begin timer
+    std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
+
     while (t < tot_years) // Loop over total years.
     {
         for (int i=0; i<no_bodies; i++) // Loop over all bodies.
@@ -41,17 +45,18 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
 
             };
 
-            //current.r = verlet_r(current.r, current.v, a, dt);
-            current.r = euler_r(current.r, current.v, a, dt);
+            current.r = verlet_r(current.r, current.v, a, dt);
+            //current.r = euler_r(current.r, current.v, a, dt);
 
-            // Update acceleration
+            // Update acceleration, NOT needed for Euler
+
             for (int j=0; j<no_bodies; j++){ // Loops over body +1 the current. Might need just i!=j.
                 Body & other = bodies[j];
                 a_next += current.a(other);
             };
 
-            //current.v = verlet_v(current.v, a, a_next, dt);
-            current.v = euler_v(current.v, a, a_next, dt);
+            current.v = verlet_v(current.v, a, a_next, dt);
+            //current.v = euler_v(current.v, a, a_next, dt);
         };
 
         // Printing current position of whole solar system to files.
@@ -67,6 +72,9 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
 
         t += dt;
     }
+    //End timer
+    std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+    std::cout << "Time Spent = " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << "[ms]" << std::endl;
 
     for (int p=0; p<no_bodies; p++){
         writefiles[p].close();
