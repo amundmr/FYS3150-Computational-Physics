@@ -60,7 +60,7 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
             for (int i=0; i<3; i++){
                 writefiles[p] << current.r(i) << "\t";
             }
-            writefiles[p] << std::endl;
+            writefiles[p] << current.Ek(bodies[0]) << "\t" << current.Ep(bodies[0]) << std::endl;
         }
 
         t += dt;
