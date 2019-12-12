@@ -14,6 +14,10 @@
 
 arma::vec verlet_r(arma::vec, arma::vec, arma::vec, double);
 arma::vec verlet_v(arma::vec, arma::vec, arma::vec, double);
+
+arma::vec euler_r(arma::vec, arma::vec, arma::vec, double);
+arma::vec euler_v(arma::vec, arma::vec, arma::vec, double);
+
 System initialize();
 
 static const double G = 4*M_PI*M_PI; // AU^3/(yr^2*Msun)

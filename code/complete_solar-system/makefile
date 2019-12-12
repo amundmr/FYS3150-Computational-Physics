@@ -4,7 +4,7 @@ CC = g++
 CCFLAGS = -larmadillo -lblas -llapack -std=c++17 -Wall -Wpedantic -Wextra #-fopenmp -O3
 
 # Names of files in src you want to compile: "./obj/<name>.o".
-OBJ = ./obj/verlet.o ./obj/body.o ./obj/system.o ./obj/initialize.o
+OBJ = ./obj/euler.o ./obj/verlet.o ./obj/body.o ./obj/system.o ./obj/initialize.o
 
 # Headerfile(s) used.
 DEPS = ./include/lib.h ./include/body.h ./include/system.h
