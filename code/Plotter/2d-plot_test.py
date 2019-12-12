@@ -17,7 +17,7 @@ with open('../complete_solar-system/output/Sun.txt', 'r') as f:
         l = line.split("\t")
         sun_x.append(float(l[0])); sun_y.append(float(l[1])); sun_z.append(float(l[2]))
 
-Plotskip = 5 #Plot only N'th point in the vectors
+Plotskip = 10 #Plot only N'th point in the vectors
 dotsize = 3
 
 #plt.scatter(sun_x[::Plotskip], sun_y[::Plotskip], s=dotsize, label = "Sun", color = "orange")
@@ -40,7 +40,7 @@ cb.set_label("Years after simulation start.")
 plt.ylabel("Y Position, [AU]")
 plt.xlabel("X Position, [AU]")
 plt.tick_params(direction='in', top = 'true', right = 'true')
-plt.title(r"Earth Orbit using Euler method and $\Delta t = %g yr$"%dt)
+plt.title(r"Earth Orbit using Verlet method and $\Delta t = %g yr$"%dt)
 #plt.ylim(0,13.5)
 #plt.yscale('log')
 #plt.legend(loc="upper left")

@@ -16,7 +16,7 @@ System initialize()
 
     // Earth
     arma::vec init_r_Earth = { 0 , 1 , 0 };
-    arma::vec init_v_Earth = { 2*M_PI/365.2442 , 0 , 0 }; //2pi is divided by days in a year to get the speed in AU/day
+    arma::vec init_v_Earth = { 2.2*M_PI/365.2442 , 0 , 0 }; //2pi is divided by days in a year to get the speed in AU/day
     name = "Earth";
     Body Earth(name, 3.04043263333E-6, init_r_Earth, init_v_Earth);
     system.add(Earth);

@@ -34,8 +34,8 @@ arma::vec Body::a(Body body)
 
     // If distance is not zero, return calculated acceleration, else return 0 vector.
     if (d != 0){
-        acc = G * body.m * rel_d / (d*d);
-        return acc;
+        acc = G * body.m * rel_d / (d*d); //use pow(d,beta) for changing beta.
+                return acc;
     }
     else{acc.fill(0); return acc;}
 }
