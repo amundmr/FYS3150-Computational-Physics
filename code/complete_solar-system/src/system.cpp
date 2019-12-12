@@ -41,7 +41,8 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
 
             };
 
-            current.r = verlet_r(current.r, current.v, a, dt);
+            //current.r = verlet_r(current.r, current.v, a, dt);
+            current.r = euler_r(current.r, current.v, a, dt);
 
             // Update acceleration
             for (int j=0; j<no_bodies; j++){ // Loops over body +1 the current. Might need just i!=j.
@@ -49,7 +50,8 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
                 a_next += current.a(other);
             };
 
-            current.v = verlet_v(current.v, a, a_next, dt);
+            //current.v = verlet_v(current.v, a, a_next, dt);
+            current.v = euler_v(current.v, a, a_next, dt);
         };
 
         // Printing current position of whole solar system to files.
@@ -60,7 +62,7 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
             for (int i=0; i<3; i++){
                 writefiles[p] << current.r(i) << "\t";
             }
-            writefiles[p] << current.Ek(bodies[0]) << "\t" << current.Ep(bodies[0]) << std::endl;
+            writefiles[p] << std::endl; //for Energy Printing: << current.Ek(bodies[0]) << "\t" << current.Ep(bodies[0])
         }
 
         t += dt;
