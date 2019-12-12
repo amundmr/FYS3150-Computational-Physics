@@ -8,13 +8,17 @@ As we can se from section \ref{sec:results-test-timestep}, the Verlet method is 
 
 From results \ref{sec:results-test-conservation} we see that both the kinetic and potential energy is constant over time, thus it is conserved. Since these values are constant, the angular momentum must also be constant, since it only depends on distance, speed and mass.
 
+DIFFERENCES using Euler vs. Verlet.
 
-Verlet vs. Euler
-Flops involved with equal timing
+When comparing the Verlet method with Euler(section \ref{ sec:Verlet_VS_Euler}), we see that Euler uses approximately 10N FLOPs, while Verlet only uses 6N FLOPs thus using slightly longer time for the same time interval(10 years).
+V
+erlet is, as we have seen, more stable and this method will be used in the rest of this study.
 
 %oppgave 5e)
 Discuss the stability of the solotiuns using your Verlet solver.  + stability when altering the mass of Jupiter.
 
+The numerical calculated escape velocity for planet Earth compared with the analytical:
 
+With increasing $\beta$ Earth escapes earlier with the same initial velocity. This is simply beacuse the gravitational force from the Sun is decreasing with increasing $\beta$ and therefore it is easier for Earth to escape from its orbit.
 
 \end{document}
