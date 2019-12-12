@@ -14,7 +14,13 @@ public:
 
     // Distance between two bodys.
     double d(Body & body);
-    
+
     // Acceleration
     arma::vec a(Body body);
+
+    //Potential energy
+    double Ep(Body body);
+
+    //Kinetic Energy
+    double Ek(Body body);
 };

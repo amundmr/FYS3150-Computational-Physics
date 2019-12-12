@@ -23,6 +23,7 @@ In order to make sure that our algorithm is running correctly, we will start sol
 %skriv litt om programflow
 
 %oppgave 5c)
+<<<<<<< HEAD
 The stability is tested using different timesteps
 \begin{figure}[!h]
   \centering
@@ -38,11 +39,54 @@ The stability is tested using different timesteps
   \end{minipage}
   \end{figure}
 \FloatBarrier
+=======
+\subsection{Testing}
+\subsubsection{Stability with varying timestep} \label{sec:results-test-timestep}
+In the figures below we plotted Earths orbit over a thousand years with different timesteps.
+>>>>>>> d837c80f9fcefc8a34ae2b4815514a7747e59447
 
-Initial value for velocity giving circular orbits.
-Stability as function of different timesteps- plots of earths position.
+\begin{figure}[!h]
+  \centering
+  \makebox[\textwidth][c]{
+  \begin{minipage}{0.7\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{/test/Earth-Sun_Test0-01.png} % first figure itself
+    \end{minipage}\hfill
+    \begin{minipage}{0.7\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{/test/Earth-Sun_Test0-02.png} % second figure itself
+    \end{minipage}
+}
+  \caption{Earth orbit with time steps $\Delta t = 0.01$year and $0.02$year respectively }
+  \label{fig:results-Timestep1}
+\end{figure}
+\FloatBarrier
+\begin{figure}[!h]
+  \centering
+  \makebox[\textwidth][c]{
+  \begin{minipage}{0.7\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{/test/Earth-Sun_Test0-05.png} % first figure itself
+    \end{minipage}\hfill
+    \begin{minipage}{0.7\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{/test/Earth-Sun_Test0-1.png} % second figure itself
+    \end{minipage}
+}
+  \caption{Earth orbit with time steps $\Delta t = 0.05$year and $0.1$year respectively }
+  \label{fig:results-Timestep2}
+\end{figure}
+\FloatBarrier
 
-Concercation of energy- kinetic + potential
+\subsubsection{Energy and angular momentum conservation}\label{sec:results-test-conservation}
+In the figures below, kinetic energy and potential energy is plotted as a function of time in the system. We chose to simulate over a thousand years, with a timestep of $\Delta t = 0.01$.
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=1\textwidth]{/test/Energy_Test.png} % first figure itself
+  \caption{Kinetic and Potential energy with timestep $\Delta t = 0.01$year.}
+  \label{fig:results-Energies}
+\end{figure}
+\FloatBarrier
 
 %oppgave 5f)
 Sammenlign resultetene med de tidligere.

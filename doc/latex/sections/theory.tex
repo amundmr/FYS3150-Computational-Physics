@@ -4,10 +4,10 @@
 \section{Theory}\label{theory}
 \subsection{The Earth-Sun system}
 %oppgave 5a og b)
-Before starting coding with object orientation, we will look at the problem by simply using Eulers forward method and something starting with V..
+Before starting coding with object orientation, we will look at the problem by simply using Eulers forward method and the Verlet method.
 In two dimensions we will have the following for the Earth-Sun system \\
 
-The gravitational force  $\text{F}_G$
+The gravitational force  $\text{F}$
 
 \begin{equation}
   F_G= \frac{GM_0M_E}{r^2}
@@ -125,18 +125,35 @@ and
 
 %oppgave 5c)
 \subsection{Testing of the algorithm}
-The sum of kinetic enad potential energy in a system is the totalt mechanical energy. As long as the forces acting on the system are conservative the total energy is conserved. In space there is no air resistance, therefore the only force acting is gravitation, which is concervative.
+Before inserting all the planets in the solar system, we would like to thoroughly test the simple Sun-Earth case. This is done by finding initial values for a perfectly circular orbit, and then test stability with different stepsizes and check for conservation of energy. We will also compare the performance of Eulers forward method to the Verlet method.
+\subsubsection{Initial values}
+When using astronomical units the radius between the Sun and Earth is quite easily set to $1AU$. The mass of the Sun is also set to $1$, and the Earth mass is relative to this mass. For the orbit to be circular we set the centripetal force equal and opposite to the gravitational force. For finding the velocity, the equations are formulated as the following:
+\begin{align}
+  F_g &= \frac{\gamma M_\odot M_E}{r^2}\nonumber \\
+  F_c &= \frac{M_E v^2}{r}\nonumber \\
+  \frac{\gamma M_\odot M_E}{r^2} &= \frac{M_E v^2}{r}\nonumber \\
+  v &= \sqrt{\frac{\gamma M_\odot}{r}}\nonumber \\
+  \intertext{Where $\gamma$ is the gravitational constant commonly set to $4\pi^2$ for solar system computations. Since $M_\odot$ and $r$ is $1$, we get:}
+  v &= 2\pi \frac{AU}{yr}
+\end{align}
+Thus our initial value for the velocity of Earth should be $2\pi$. This is achieved setting x-position to $0$, x-velocity to $2\pi$, y-position to $1$ and y-velocity to $0$.
 
-$$E_{tot} = E_k + E_p = \frac{1}{2} mv^2 + mGr$$
+\subsubsection{Stability with varying timestep}
+Changing the timestep $\Delta t$ is crucial for finding a good balance between calculation speed and accuracy. We simulated over a period of a thousand years. The timesteps simulated was $\Delta t = \{0.01, 0.02, 0.05, 0.1\}$ years. The results are shown in section \ref{sec:results-test-timestep}.
+\subsubsection{Energy and angular momentum conservation}
+As we have a circular orbit, we would expect the potential and kinetic energy to be conserved since the velocity is the same, and the distance from the sun should also be the same. These energies should be conserved since the only forces acting on the system is conservative forces, namely the gravitational force.
 
-Conservation of angular momentum, L, is true if a circular motion is not interupted by torque giving a constant speed of rotation. The only force acting on our planets is still just the gravitational force from the sun. The angular momentum of a point partical can be written as
+$$E_{tot} = E_k + E_p = \frac{1}{2} M_E v^2 + M_E \gamma r$$
 
-$$\textbf l = m \textbf r \times \textbf r$$
+Conservation of angular momentum is true if the system is not acted upon by a torque. Since the only force acting on the system is the gravitational pull of the sun, the angular momentum must be conserved. This can be shown by the following:
 
-The torque is given as
-
-$$\vec \tau = \frac{d\vec l}{dt}$$ wich is zero, meaning that the angular momentum is constant.
-
+\begin{align*}
+  L &= I \omega \\
+  I &= r^2m, \hspace{5mm} \omega = \frac{v}{r} \\
+  L &= r^2m \frac{v}{r} \\
+  L &= rmv 
+\end{align*}
+Thus the angular momentum is conserved as long as the orbit velocity is constant, which it is if the kinetic energy is conserved.
 
 \subsection{Escape velocity}
 The escape velocity is the minimum veocity needed by an object to be projected to overcome the pull from the gravitational force in order to escape the gravitanonal field and the orbit.
@@ -174,7 +191,7 @@ When a planet is the closest the sun, called, perihelion, it is a good measurmen
 We will here study the orbit of Mercury around the sund with a slightly adjusted gravita force where the general relativistic correction is added to the Newtonian gravitational force
 
 \begin{equation}
-  F_G = \frac{GM_{Sum}M_{Mercury}}{r^2}\left[1+\frac  {3l^2}{(rc)^2}}]\right
+  F_G = \frac{GM_{Sum}M_{Mercury}}{r^2} \left[ 1+\frac {3l^2}{(rc)^2} \right]
 \end{equation}
 
  with the distance r to the Sun and with angular momentum $l = \vec r \times \vec v$ of Mercery per unit mass and c is the speed of light. The perihelion angle $\phi_p$ is given by

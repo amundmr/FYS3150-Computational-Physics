@@ -39,3 +39,19 @@ arma::vec Body::a(Body body)
     }
     else{acc.fill(0); return acc;}
 }
+
+//Potential Energy
+double Body::Ep(Body body)
+{
+    double r = this->d(body);
+    return this->m * G * r;
+
+}
+
+//Kinetic Energy
+double Body::Ek(Body body)
+{
+    arma::vec vv = this->v;
+    double v = sqrt(vv(0)*vv(0) + vv(1)*vv(1) + vv(2)*vv(2));
+    return 0.5 * this->m * v * v;
+}
