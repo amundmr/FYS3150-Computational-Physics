@@ -33,7 +33,7 @@ colors = {
 
 
 # Storing paths, names and color to all the output files.
-path = "../complete_solar-system/output/"
+path = "../complete_solar-system/output/allPlanets/"
 outputs = {
     'path': [],
     'name': [],
@@ -54,13 +54,14 @@ for i in range(len(outputs['path'])):
         for line in f:
             l = line.split('\t')
             x.append(float(l[0])); y.append(float(l[1])); z.append(float(l[2]))
-        
+
         ax.scatter(x[::Plotskip], y[::Plotskip], z[::Plotskip], s=dotsize, label = outputs['name'][i], color = outputs['color'][i])
 
 axisEqual3D(ax)
 ax.set_xlabel('x (AU)')
 ax.set_ylabel('y (AU)')
-ax.set_zlabel('x (AU)')
+ax.set_zlabel('z (AU)')
 ax.view_init(60, 35)
 plt.legend()
+plt.savefig('allPlanets.png', bbox_inches='tight')
 plt.show()
