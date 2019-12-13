@@ -3,7 +3,7 @@
 \section{Results}\label{results}
 %oppgave 5b)
 \subsection{Euler and Verlet without oo}
-In order to make sure that our algorithm is running correctly, we will start solving the differential equation using both Euler's and Verlet's method without using object oriented(oo) code. The algorithms used to calculate the two are located in the following folders (\href{https://github.com/kmaasrud/Project-5/tree/master/code/Earth-Sun_Euler-FWD}{(Euler)} and \href{https://github.com/kmaasrud/Project-5/tree/master/code/Earth-Sun_Verlet}{(Verlet)}
+In order to make sure that our algorithm is running correctly, we will start solving the differential equation using both Euler's and Verlet's method without using object oriented(oo) code. The algorithms used to calculate the two are located in the following folders (\href{https://github.com/kmaasrud/Project-5/tree/master/code/Earth-Sun_Euler-FWD}{(Euler)} and \href{https://github.com/kmaasrud/Project-5/tree/master/code/Earth-Sun_Verlet}{(Verlet)})
 
 \begin{figure}[!h]
   \centering
@@ -41,7 +41,7 @@ In the figures below we plotted Earths orbit over a thousand years with differen
         \includegraphics[width=1\textwidth]{/test/Earth-Sun_Test0-02.png} % second figure itself
     \end{minipage}
 }
-  \caption{Earth orbit with time steps $\Delta t = 0.01$year and $0.02$year respectively }
+  \caption{Earth orbit with time steps $\Delta t = 0.01$years and $0.02$years respectively }
   \label{fig:results-Timestep1}
 \end{figure}
 \FloatBarrier
@@ -63,7 +63,7 @@ In the figures below we plotted Earths orbit over a thousand years with differen
 \FloatBarrier
 
 \subsubsection{Energy and angular momentum conservation}\label{sec:results-test-conservation}
-In the figures below, kinetic energy and potential energy is plotted as a function of time in the system. We chose to simulate over a thousand years, with a timestep of $\Delta t = 0.01$.
+In the figures below, kinetic energy and potential energy is plotted as a function of time in the system. We chose to simulate over a thousand years with a timestep of $\Delta t = 0.01$, as this gives the most stable results.
 \begin{figure}[!h]
   \centering
   \includegraphics[width=1\textwidth]{/test/Energy_Test.png} % first figure itself
@@ -72,10 +72,68 @@ In the figures below, kinetic energy and potential energy is plotted as a functi
 \end{figure}
 \FloatBarrier
 
-Initial value for velocity giving circular orbits 2pi
-Stability as function of different timesteps- plots of earths position.
+\subsubsection{Verlet vs. Euler}\label{sec:Verlet_VS_Euler}
+\begin{table}[!h]
+  \caption{Comparison of flops and time for the Verlet and Euler method for 100000 iterations over a period of 10 years}
+  \centering
+  \begin{tabular}{l r r}
+                            &\textbf{Flops}&\textbf{Timing}\\
+    Euler's method:          &10N&2580 ms\\
+    Verlet's method:          &6N&2875 ms\\
+  \end{tabular}
+  \label{tab:EulervsVerlet}
+  \end{table}
+\FloatBarrier
 
-Concercation of energy- kinetic + potential
+%oppgave 5 d)
+\subsection{Escape velocity}
+By trail and error the escape velocity of planet Earth is:
+From section \ref{sec:theory} using equation \ref{eq:escapevelocity} to calculate the  theoretical value $$v_{esc-theoretical} = \sqrt{\frac{2\cdot4\pi^2\cdot1}{1}} = 2.83 \pi$$\
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=6cm]{Earth-Sun_escape.png}
+  \caption{Escape velocity of planet Earth}
+  \label{fig:v_esc}
+\end{figure}
+
+We also looked at what happens when changing the exponent of the denominator the force of gravity from 2 towards 3 with initial velocity $v_{initial,x} = 2.2\pi$. This is shown in the following plots.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=6cm]{Earth-Sun_beta.png}
+  \caption{Escape velocity with increasing exponent of denominator}
+  \label{fig:v_esc_beta}
+\end{figure}
+
+%oppgave 5e)
+\subsection{Three-body problem- Sun, Earth and Jupiter.}
+
+% \begin{figure}
+%   \includegraphics{}
+%   \caption{Positions of Earth and Jupiter using the velocity Verlet method}
+%   \label{fig:SunEarthJupiter}
+% \end{figure}
+%
+% Stability Verlet solver
+%
+% \begin{figure}[!h]
+%   \centering
+%   \makebox[\textwidth][c]{
+%   \begin{minipage}{0.7\textwidth}
+%         \centering
+%         \includegraphics[width=1\textwidth]{} % first figure itself
+%     \end{minipage}\hfill
+%     \begin{minipage}{0.7\textwidth}
+%         \centering
+%         \includegraphics[width=1\textwidth]{} % second figure itself
+%     \end{minipage}
+% }
+%   \caption{Positions of Earth and Jupiter using the velocity Verlet method with an increase of mass of a factor 10 and 100 respectively}
+%   \label{fig:jupiterincreasedM}
+% \end{figure}
+
+Stability Verlet solver with increased mass:
 
 %oppgave 5f)
 Sammenlign resultetene med de tidligere.
