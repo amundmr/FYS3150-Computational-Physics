@@ -18,6 +18,9 @@ public:
     // Acceleration
     arma::vec a(Body body);
 
+    // Acceleration with relativistiv correction
+    arma::vec a_relcor(Body body);
+
     //Potential energy
     double Ep(Body body);
 

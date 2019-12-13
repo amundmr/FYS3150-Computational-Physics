@@ -21,4 +21,5 @@ arma::vec euler_v(arma::vec, arma::vec, arma::vec, double);
 
 System initialize();
 
-static const double G = 4*M_PI*M_PI; // AU^3/(yr^2*Msun)
+static const double G = 4*M_PI*M_PI; // Grav const in units of AU^3/(yr^2*Msun)
+static const double c = 63240.0755211; // Speed of light in units of AU/yr

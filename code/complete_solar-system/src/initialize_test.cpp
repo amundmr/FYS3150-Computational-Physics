@@ -16,7 +16,7 @@ System initialize()
     system.add(Sun);
 
     // Earth
-    arma::vec init_r_Earth = { 0, 1, 0};
+    arma::vec init_r_Earth = { 1, 0, 0};
     arma::vec init_v_Earth = { 0,2*M_PI/365.2442, 0 }; //The 2 in front of M_PI was changed intil the earth escaped. 2.282 was found as the lowest escape velocity
     name = "Earth";
     Body Earth(name, 3.04043263333E-6, init_r_Earth, init_v_Earth);

@@ -40,6 +40,29 @@ arma::vec Body::a(Body body)
     else{acc.fill(0); return acc;}
 }
 
+// Acceleration with relativistic correction
+arma::vec Body::a_relcor(Body body)
+{
+    // Storing the relative distance and the returned acceleration
+    arma::vec rel_d(3); arma::vec acc(3);
+
+    // Setting the actual distance between the bodies.
+    double d = this->d(body);
+
+    // Setting the relative distance in each dimension between the bodies.
+    rel_d = (body.r - this->r)/d;
+
+    //Angular momentum l
+    arma::vec l = arma::cross((body.r - this->r), this->v);
+
+    // If distance is not zero, return calculated acceleration, else return 0 vector.
+    if (d != 0){
+        acc = G * body.m * rel_d / (d*d) * (1 + 3*l*l/(d*d*c*c)); //use pow(d,beta) for changing beta.
+                return acc;
+    }
+    else{acc.fill(0); return acc;}
+}
+
 //Potential Energy
 double Body::Ep(Body body)
 {

@@ -28,13 +28,13 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
 
     arma::mat acc(no_bodies, 3); // Arrays for storing the bodies' accelerations.
     double t = 0;
-    
+
     //Begin timer
     std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
 
     while (t < tot_years) // Loop over total years.
     {
-        for (int i=0; i<no_bodies; i++) // Loop over all bodies.
+        for (int i=1; i<no_bodies; i++) // Loop over all bodies.
         {
             Body & current = bodies[i];
             arma::vec a = arma::zeros<arma::vec>(3); arma::vec a_next = arma::zeros<arma::vec>(3);
