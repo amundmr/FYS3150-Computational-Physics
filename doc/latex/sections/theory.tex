@@ -107,7 +107,7 @@ Since our error goes as $O(h^3)$ we only use the terms up to the second derivati
 Rewriting the Taylor expansions for the velocity:
 
 \begin{equation}
-  x_{i+1} = x_i + hv_i + \frac{h^2}{2} v_i^{(1)} + + O(h^3)
+  x_{i+1} = x_i + hv_i + \frac{h^2}{2} v_i^{(1)} + O(h^3)
 \end{equation}
 
 and
@@ -115,6 +115,18 @@ and
 \begin{equation}
   v_{i+1} = v_i + \frac{h}{2} \left(v_{i+1}^{(1)} + v_i^{(1)}\right) + O(h^3)
 \end{equation}
+The implementation of the Verlet algorithm can be seen on line 54 in the non object oriented code: \href{https://github.com/kmaasrud/Project-5/blob/master/code/Earth-Sun_Verlet/main.cpp}{\textsc{/Earth-Sun\_Verlet/main.cpp}} or in the object oriented code: \href{https://github.com/kmaasrud/Project-5/blob/master/code/complete_solar-system/src/verlet.cpp}{\textsc{/complete\_solar-system/src/verlet.cpp}}.
+
+
+%Oppgave 5b)
+%------------------------------------------------------------------------------------
+\subsection{Code development and object orientation}
+In order to have full control over our implementation of these methods, we first implemented them in a non-object oriented code. This is found in these folders found on our github repository\cite{repository}: \href{https://github.com/kmaasrud/Project-5/blob/master/code/Earth-Sun_Verlet/}{\textsc{/code/Earth-Sun\_Verlet/}} and \href{https://github.com/kmaasrud/Project-5/blob/master/code/Earth-Sun_Euler-FWD/}{\textsc{/code/Earth-Sun\_Euler-FWD/}}. When this was done, we were ready to move on to an object oriented approach which would be of great benefit when adding more planets to our system.
+The object oriented code is found in \href{https://github.com/kmaasrud/Project-5/blob/master/code/complete_solar-system/}{\textsc{/code/complete\_solar-system/}} and has most different functions split into its respective files located in \href{https://github.com/kmaasrud/Project-5/blob/master/code/complete_solar-system/src/}{\textsc{/complete\_solar-system/src/}}.
+
+The gist of our approach is having a \verb+Body+ object containing the mass, position, name and velocity of a specific body, as well as methods to calculate the distance to other bodies and the gravitational acceleration due to the presence of other bodies. \\
+In addition, we also have a \verb+System+ object that contains all of the system's bodies. This also has a \verb+solve+-method that applies the specified algorithm on all the bodies based on its current acceleration (that is calculated firsthand). \\
+
 
 %oppgave 5c)
 %------------------------------------------------------------------------------------
@@ -208,10 +220,7 @@ The new gravitational force including the relativistic correction is as follows:
 
 Where $y_p$ and $x_p$ is the position of Mercury at perihelion. Our simulation will run over a century, where we choose our $y_p$ and $x_p$ values as the last time in the simulation where Mercury reaches perihelion. The speed of Mercury at perihelion is set to $12.44 AU/yr$ and the distance to the Sun is set to $0.3075 AU$ for our calculations.
 
-%------------------------------------------------------------------------------------
-\subsection{Approach to object orientation}
-Object orienting our solver makes solving a system of an arbitrary number of bodies a lot more simple. The gist of our approach is having a \verb+Body+ object containing the mass, position, name and velocity of a specific body, as well as methods to calculate the distance to other bodies and the gravitational acceleration due to the presence of other bodies. \\
-In addition, we also have a \verb+System+ object that contains all of the system's bodies. This also has a \verb+solve+-method that applies the Velocity Verlet algorithm on all the bodies based on its current acceleration (that is calculated firsthand). \\
-The source code to the program as explained here can be found \href{https://github.com/kmaasrud/Project-5/tree/master/code/complete_solar-system}{here}.
+
+
 
 \end{document}
