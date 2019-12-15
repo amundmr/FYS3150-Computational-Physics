@@ -64,7 +64,7 @@ In the figures below we plotted Earths orbit over a thousand years with differen
 \FloatBarrier
 
 \subsubsection{Energy and angular momentum conservation}\label{sec:results-test-conservation}
-In the figures below, kinetic energy and potential energy is plotted as a function of time in the system. We chose to simulate over a thousand years with a timestep of $\Delta t = 0.01$, as this gives the most stable results.
+In the figures below, kinetic energy and potential energy is plotted as a function of time in the system. We chose to simulate over a thousand years with a timestep of $\Delta t = 0.01$, as this timestep is sufficient.
 \begin{figure}[!h]
   \centering
   \includegraphics[width=1\textwidth]{/test/Energy_Test.png} % first figure itself
@@ -88,8 +88,8 @@ In the figures below, kinetic energy and potential energy is plotted as a functi
 
 %oppgave 5 d)
 \subsection{Escape velocity}
-By trail and error the escape velocity of planet Earth is somewhere between $2.8 \pi$ and $2.85 \pi$, which is pretty close to the theoretical value calculated below.
-From section \ref{sec:theory} using equation \ref{eq:escapevelocity} to calculate the  theoretical value $$v_{esc-theoretical} = \sqrt{\frac{2\cdot4\pi^2\cdot1}{1}} = 2.83 \pi$$\
+By trail and error the escape velocity of planet Earth is somewhere around $2.828 \pi$, which is pretty close to the theoretical value calculated below.
+From section \ref{sec:theory-EscapeVelocityr} using equation \ref{eq:escapevelocity} to calculate the  theoretical value $$v_{esc-theoretical} = \sqrt{\frac{2\cdot4\pi^2\cdot1}{1}} \approx 2.8284 \pi$$\
 
 We also looked at what happens when changing the exponent of the denominator the force of gravity from 2 towards 3 with initial velocity $v_{initial,x} = 2.2\pi$. This is shown in the following plot.
 
@@ -101,7 +101,7 @@ We also looked at what happens when changing the exponent of the denominator the
 \end{figure}
 
 %oppgave 5e)
-\subsection{Three-body problem- Sun, Earth and Jupiter.}
+\subsection{Three-body problem: Sun, Earth and Jupiter.}
 \begin{figure}[!h]
   \centering
   \makebox[\textwidth][c]{
@@ -128,17 +128,17 @@ We also looked at what happens when changing the exponent of the denominator the
         \centering
         \includegraphics[width=1\textwidth]{jupiter-1000_Closeup.png} % second figure itself
     \end{minipage}}
-  \caption{Positions of Earth and Jupiter using the velocity Verlet method with an increase of mass with a factor of 1000. The Sun starts at approximately (0,0)???, Jupiter starts at (0.0,-5)??? and Earth starts at (??????????). After som time, t$\approx 7$years Earth escapes the system. Picture to the right is a zoomed version of the first plot.}
+  \caption{Positions of Earth and Jupiter using the velocity Verlet method with an increase of mass with a factor of 1000. The The initial conditions are from NASA's HORIZONS web interface at December 4. After approximately 7 years, Earth escapes the system. The illustration to the right is a magnified version of the first plot and shows the beautiful interaction between two equally heavy objects.}
   \label{fig:SunEarthJupiter10000}
 \end{figure}
-
+\FloatBarrier
 Stability Verlet solver with increased mass:
 
 
 
 %oppgave 5f)
 \subsection{The Solar system}
-Finally we will add all the other planets to make the Solar system complete, still using the Verlet solver. Both the Earht, Jupiter and the Sun are in motion. Rather than having the origin in the postion of the sun, we set the center-off-mass of the three-body system in the origin. The inital velocity of the Sun is set to ?? in order to have the total momentum of the system to exactly zero.
+Finally we will add all the other planets to make the Solar system complete, still using the Verlet solver. Rather than having the origin in the postion of the sun, we are using the Barycenter of our solar system. All initial conditions were taken from NASA's HORIZONS web interface with a date of December 4.
 
 \begin{figure}[!h]
   \includegraphics[width=0.7\textwidth]{allPlanets.png}

@@ -13,7 +13,7 @@ The gravitational force $F_G$:
   F_G= \frac{GM_0M_E}{r^2}
 \end{equation}
 
-where $M_E = 6\times 10^{24}\text{ kg}$,  $ M_0 = 2\times 10^{30}\text{ kg}$, and  $r = 1.5\times 10^{11}\text{ m}$\\ 
+where $M_E = 6\times 10^{24}\text{ kg}$,  $ M_0 = 2\times 10^{30}\text{ kg}$, and  $r = 1.5\times 10^{11}\text{ m}$\\
 The force acting on Earth is given by Newtons 2. law, here given in x- and y- direction
 
 $$ \frac{d^2x}{dt^2} = \frac{F_x}{M_E}, \quad \frac{d^2y}{dt^2} = \frac{F_y}{M_E}$$
@@ -155,7 +155,7 @@ Conservation of angular momentum is true if the system is not acted upon by a to
 Thus the angular momentum is conserved as long as the orbit velocity is constant, which it is if the kinetic energy is conserved.
 
 %------------------------------------------------------------------------------------
-\subsection{Escape velocity}
+\subsection{Escape velocity}\label{sec:theory-EscapeVelocity}
 The escape velocity is the minimum veocity needed by an object to be projected to overcome the pull from the gravitational force in order to escape the gravitanonal field and the orbit.
 
 \begin{equation}\label{eq:escapevelocity}
@@ -164,7 +164,7 @@ The escape velocity is the minimum veocity needed by an object to be projected t
 
 where G is the unversal gravitatonal constant, $6.673\times 10^{-11} m^2kg^{-2}$, M is the mass of the sun and R is the radius of the sun.
 
-We will also look at what will happen if the gravitational force is change to the following
+We will also look at what will happen if the gravitational force is changed to the following:
 
 $$F_G = \frac{GM_0M_E}{r^{\beta}}$$
 
@@ -172,21 +172,24 @@ with $\beta \in [2,3]$, e.g. changing the exponetial from 2 towards 3 and study 
 
 %------------------------------------------------------------------------------------
 \subsection{The three-body problem}
-In order to find out how much the planet with the greatest mass, Jupiter, alters the motion of the Earth. Without Jupiter the motion will remain unchanged with time and  will be stable.
+In order to find out how much the planet with the greatest mass, Jupiter, alters the motion of the Earth, we will include the planet in our solar system.
 
 This is done by simply adding the magnitude of the force between Earth and Jupiter,
 
 \begin{equation}
-  F_{Earth-Jupiter} = \frac{GM_{Jupiter}}{r^2_{Earth-Jupiter}}
+  F_{Earth-Jupiter} = \frac{GM_{Jupiter}}{r^2_{Earth-Jupiter}} \label{eq:theory-3bp-Force}
 \end{equation}
 
-Where $M_Jupiter$ is the mass of Jupiter, and $M_Earth$ is the mass of Eart. $r$ is the distance between the two planets, and G is the gravitational constant.
+Where $M_{Jupiter}$ is the mass of Jupiter, and $M_{Earth}$ is the mass of Earth, $r$ is the distance between the two planets, and G is the gravitational constant.
 
-The problem is calculated by modifying the first order differential equations to accomodate the motion of Earth and Jupiter by taking into account the distance between them, x,y and z with the Verlet algorithm. We will also study the effect of altering the masss of Jupiter by a factor of 10 and 100.
+The problem is solved by modifying the first order differential equations to accomodate the motion of Earth and Jupiter. The way we do this is to also consider the force \eqref{eq:theory-3bp-Force} when calculating the acceleration of Earth. We will also study the effect of altering the mass of Jupiter by a factor of 10 and 1000, which gives Jupiter roughly the same mass as the Sun.
+
+Finally we would like to check if the fixed-sun approximation was a good approximation. To check this, will see what changes when we let the sun also be a free body. The initial velocity of the sun is set such that the total momentum of the system is zero, and thus the center of mass is fixed.
 
 %------------------------------------------------------------------------------------
 \subsection{All planets}
- Finally we will assemble all of our previus systems, Earth, Jupiter and the Sun in motion, using the Verlet solver. Instead of setting the center of mass at the position of the Sun, it will be set at the origin. The initial velocity will be such that the total momentum of the system is zero so the center of mass is fixed. Thereafter we will include all the other planets in our system as well as moons if there is time. The initial velocities and positons are taken from NASA's webpage \cite{HorizonsNASA}
+After testing what timestep is needed for the Velocity Verlet algorithm, as well as testing our solver thoroughly for borth conservation of energy, and angular momentum, and figuring out if it is really necessary to let the sun move as a free body, we will run our computations with all planets of the solar system present.
+The initial velocities and positons are taken from NASA's webpage \cite{HorizonsNASA} which means that we are using the solar systems Barycenter as our origin.
 
 %------------------------------------------------------------------------------------
 \subsection{The perihelion precession of Mercury}
