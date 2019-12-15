@@ -4,16 +4,17 @@
 \section{Theory}\label{theory}
 \subsection{The Earth-Sun system}
 %oppgave 5a og b)
-Before starting coding with object orientation, we will look at the problem by simply using Eulers forward method and the Verlet method.
-In two dimensions we will have the following for the Earth-Sun system \\
+We beging by looking at the problem simply using the Eulers Forward and the Velocity Verlet method.
+In two dimensions we have the following for the Earth-Sun system \\
 
-The gravitational force  $\text{F}$
+The gravitational force $F_G$:
 
 \begin{equation}
   F_G= \frac{GM_0M_E}{r^2}
 \end{equation}
 
-where $M_E = 6\times 10^{24}\text{Kg}$,  $ M_0 = 2\times 10^{30}\text{Kg}$, and  $r = 1.5\times 10^{11}\text{m}$\\ The force acting on Earth is given by Newtons 2. law, here given in x- and y- direction
+where $M_E = 6\times 10^{24}\text{ kg}$,  $ M_0 = 2\times 10^{30}\text{ kg}$, and  $r = 1.5\times 10^{11}\text{ m}$\\ 
+The force acting on Earth is given by Newtons 2. law, here given in x- and y- direction
 
 $$ \frac{d^2x}{dt^2} = \frac{F_x}{M_E}, \quad \frac{d^2y}{dt^2} = \frac{F_y}{M_E}$$
 
@@ -28,37 +29,29 @@ By using the following equalities $x = r \cos(\theta)$,  $y = r\sin(\theta)$ and
 
 This gives the following first order  coupled differential equations:
 \begin{equation}
-  \frac{dv_x}{dt} = - \frac{GM_0}{r^3}x
+  \frac{dv_x}{dt} = - \frac{GM_0}{r^3}x,\qquad \frac{dv_y}{dt} = - \frac{GM_0}{r^3}y
 \end{equation}
 \begin{equation}
-  \frac{dx}{dt} = v_x
-\end{equation}
-\begin{equation}
-  \frac{dv_y}{dt} = - \frac{GM_0}{r^3}y
-\end{equation}
-\begin{equation}
-  \frac{dy}{dt} = v_y,
+  \frac{dx}{dt} = v_x,\qquad \frac{dy}{dt} = v_y,
 \end{equation}
 
-In order to simplify we will use Astronomical units AU defined by $r$, which is the avarage distance between Earth and the sun.
+In order to simplify we will use astronomical units (AU) defined by $r$, which is the avarage distance between Earth and the sun.
 
-Introducing astronomical units: 1 $\text{AU = r} = 1.5 \times 10^{11}$
+Introducing astronomical units: $1\text{ AU}= r = 1.5 \times 10^{11}$
 
 \begin{equation}
   \frac{M_ev^2}{r} = F = \frac{GM_0M_E}{r^2}
 \end{equation}
 
-Since $GM_=  v^2r$ and the velocity of Earth, assuming it moves in circular motion: $$v = 2\pi \text{r/years}= 2\pi \text{AU/years}$$
+Since $GM_0 = v^2r$ and the velocity of Earth, assuming it moves in circular motion: $$v = 2\pi \text{r/years}= 2\pi \text{AU/years}$$
 
 Then we have the following relationship
 
 $$GM_0 = v^2r = 4\pi^2 \frac{(\text{AU})^2}{\text{years}^2}$$
 
 Bulding code- discretized equations:
-$$v_{x,i+1} = v_{x,i} - h \frac{4\pi^2}{r_i^3}x_i$$
-$$x_{i+1} = x_{i} + hv_{x,i}$$
-$$v_{y,i+1} = v_{xy,i} - h \frac{4\pi^2}{r_i^3}y_i$$
-$$y_{i+1} = y_{i} + hv_{y,i}$$
+$$v_{x,i+1} = v_{x,i} - h \frac{4\pi^2}{r_i^3}x_i,\qquad x_{i+1} = x_{i} + hv_{x,i}$$
+$$v_{y,i+1} = v_{xy,i} - h \frac{4\pi^2}{r_i^3}y_i,\qquad y_{i+1} = y_{i} + hv_{y,i}$$
 
 \subsection{The Verlet method}
 Another numerical method to be used to evalute the motion of planets in our solarsystem is the Verlet method. This is a method pretty easy to implment as well as it gives stable results. When calculating molecular dynamics, this method is one of the first choises to implement.
@@ -124,8 +117,11 @@ and
 \end{equation}
 
 %oppgave 5c)
+%------------------------------------------------------------------------------------
 \subsection{Testing of the algorithm}
 Before inserting all the planets in the solar system, we would like to thoroughly test the simple Sun-Earth case. This is done by finding initial values for a perfectly circular orbit, and then test stability with different stepsizes and check for conservation of energy. We will also compare the performance of Eulers forward method to the Verlet method.
+
+%------------------------------------------------------------------------------------
 \subsubsection{Initial values}
 When using astronomical units the radius between the Sun and Earth is quite easily set to $1AU$. The mass of the Sun is also set to $1$, and the Earth mass is relative to this mass. For the orbit to be circular we set the centripetal force equal and opposite to the gravitational force. For finding the velocity, the equations are formulated as the following:
 \begin{align}
@@ -138,8 +134,11 @@ When using astronomical units the radius between the Sun and Earth is quite easi
 \end{align}
 Thus our initial value for the velocity of Earth should be $2\pi$. This is achieved setting x-position to $0$, x-velocity to $2\pi$, y-position to $1$ and y-velocity to $0$.
 
+%------------------------------------------------------------------------------------
 \subsubsection{Stability with varying timestep}
 Changing the timestep $\Delta t$ is crucial for finding a good balance between calculation speed and accuracy. We simulated over a period of a thousand years. The timesteps simulated was $\Delta t = \{0.01, 0.02, 0.05, 0.1\}$ years. The results are shown in section \ref{sec:results-test-timestep}.
+
+%------------------------------------------------------------------------------------
 \subsubsection{Energy and angular momentum conservation}
 As we have a circular orbit, we would expect the potential and kinetic energy to be conserved since the velocity is the same, and the distance from the sun should also be the same. These energies should be conserved since the only forces acting on the system is conservative forces, namely the gravitational force.
 
@@ -155,6 +154,7 @@ Conservation of angular momentum is true if the system is not acted upon by a to
 \end{align*}
 Thus the angular momentum is conserved as long as the orbit velocity is constant, which it is if the kinetic energy is conserved.
 
+%------------------------------------------------------------------------------------
 \subsection{Escape velocity}
 The escape velocity is the minimum veocity needed by an object to be projected to overcome the pull from the gravitational force in order to escape the gravitanonal field and the orbit.
 
@@ -170,6 +170,7 @@ $$F_G = \frac{GM_0M_E}{r^{\beta}}$$
 
 with $\beta \in [2,3]$, e.g. changing the exponetial from 2 towards 3 and study the difference.
 
+%------------------------------------------------------------------------------------
 \subsection{The three-body problem}
 In order to find out how much the planet with the greatest mass, Jupiter, alters the motion of the Earth. Without Jupiter the motion will remain unchanged with time and  will be stable.
 
@@ -183,10 +184,12 @@ Where $M_Jupiter$ is the mass of Jupiter, and $M_Earth$ is the mass of Eart. $r$
 
 The problem is calculated by modifying the first order differential equations to accomodate the motion of Earth and Jupiter by taking into account the distance between them, x,y and z with the Verlet algorithm. We will also study the effect of altering the masss of Jupiter by a factor of 10 and 100.
 
+%------------------------------------------------------------------------------------
 \subsection{All planets}
- Finally we will assamble all of our previus systems, Earth, Jupiter and the Sun in motion, using the Verlet solver. Instead of setting the center of mass at the position of the Sun, it will be set at the origin. The initial velocity will be such that the total momentum of the system is zero so the center of mass is fixed. Thereafter we will include all the other planets in our system as well as moons if there is time. The initial velocities and positons are taken from NASA's webpage \href{http://ssd.jpl.nasa.gov/horizons.cgi#top}{(link)}
+ Finally we will assemble all of our previus systems, Earth, Jupiter and the Sun in motion, using the Verlet solver. Instead of setting the center of mass at the position of the Sun, it will be set at the origin. The initial velocity will be such that the total momentum of the system is zero so the center of mass is fixed. Thereafter we will include all the other planets in our system as well as moons if there is time. The initial velocities and positons are taken from NASA's webpage \cite{HorizonsNASA}
 
-\subsection{The perihelion precession of Mercury }
+%------------------------------------------------------------------------------------
+\subsection{The perihelion precession of Mercury}
 When a planet is the closest the sun, called, perihelion, it is a good measurment/test of general relativity theory by calculating the theoretical value and compare it with observations. For Mercury, after substracting all the classical effects, the observed time is 43 seconds per century.
 
 ...
@@ -200,5 +203,11 @@ We will here study the orbit of Mercury around the sund with a slightly adjusted
 $$\tan \phi_p = \frac{y_p}{x_p}$$
 
 where $y_p$ and $x_p$ is the position of Mercury at perihelion. The speed of Mercery at perihelion is 12.44 AU/yr and the distance to the Sun is 0.3075 AU
+
+%------------------------------------------------------------------------------------
+\subsection{Approach to object orientation}
+Object orienting our solver makes solving a system of an arbitrary number of bodies a lot more simple. The gist of our approach is having a \verb+Body+ object containing the mass, position, name and velocity of a specific body, as well as methods to calculate the distance to other bodies and the gravitational acceleration due to the presence of other bodies. \\
+In addition, we also have a \verb+System+ object that contains all of the system's bodies. This also has a \verb+solve+-method that applies the Velocity Verlet algorithm on all the bodies based on its current acceleration (that is calculated firsthand). \\
+The source code to the program as explained here can be found \href{https://github.com/kmaasrud/Project-5/tree/master/code/complete_solar-system}{here}.
 
 \end{document}
