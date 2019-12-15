@@ -48,12 +48,14 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
             current.r = verlet_r(current.r, current.v, a, dt);
             //current.r = euler_r(current.r, current.v, a, dt);
 
-            // Update acceleration, NOT needed for Euler
 
+            // Update acceleration, NOT needed for Euler
             for (int j=0; j<no_bodies; j++){ // Loops over body +1 the current. Might need just i!=j.
                 Body & other = bodies[j];
                 a_next += current.a(other);
             };
+
+
 
             current.v = verlet_v(current.v, a, a_next, dt);
             //current.v = euler_v(current.v, a, a_next, dt);
