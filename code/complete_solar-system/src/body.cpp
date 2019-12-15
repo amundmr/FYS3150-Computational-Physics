@@ -11,12 +11,16 @@ Body::Body(std::string name_in, double mass, arma::vec init_r, arma::vec init_v)
     m = mass; r = init_r; v = init_v * 365.2442 ; name = name_in; //The factor on velocity transforms input unit of AU/day to AU/year
 }
 
+
+
 // Distance between two bodies.
 double Body::d(Body & body)
 {
     arma::vec dv = body.r - this->r;
     return sqrt(dv(0)*dv(0) + dv(1)*dv(1) + dv(2)*dv(2));
 }
+
+
 
 // Acceleration
 arma::vec Body::a(Body body)
@@ -30,7 +34,6 @@ arma::vec Body::a(Body body)
     // Setting the relative distance in each dimension between the bodies.
     rel_d = (body.r - this->r)/d;
 
-    // Smoothing??
 
     // If distance is not zero, return calculated acceleration, else return 0 vector.
     if (d != 0){
@@ -39,6 +42,8 @@ arma::vec Body::a(Body body)
     }
     else{acc.fill(0); return acc;}
 }
+
+
 
 // Acceleration with relativistic correction
 arma::vec Body::a_relcor(Body body)
@@ -64,6 +69,8 @@ arma::vec Body::a_relcor(Body body)
     else{acc.fill(0); return acc;}
 }
 
+
+
 //Potential Energy
 double Body::Ep(Body body)
 {
@@ -71,6 +78,8 @@ double Body::Ep(Body body)
     return this->m * G * r;
 
 }
+
+
 
 //Kinetic Energy
 double Body::Ek(Body body)

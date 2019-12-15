@@ -41,7 +41,7 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
 
             for (int j=0; j<no_bodies; j++){ // Loops over all other bodies
                 Body & other = bodies[j];
-                a += current.a_relcor(other);
+                a += current.a(other); //Use a_relcor for the relativistic correction
 
             };
 
@@ -50,9 +50,9 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
 
 
             // Update acceleration, NOT needed for Euler
-            for (int j=0; j<no_bodies; j++){ // Loops over body +1 the current. Might need just i!=j.
+            for (int j=0; j<no_bodies; j++){ // Loops over all other bodies
                 Body & other = bodies[j];
-                a_next += current.a_relcor(other);
+                a_next += current.a(other); //Use a_relcor for the relativistic correction
             };
 
 
@@ -62,7 +62,8 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
         };
 
         // Printing current position of whole solar system to files.
-        if (t > 0.99*tot_years) {
+
+        //if (t > 0.99*tot_years) { //This if statement is used for Mercury perihelion testing where we need high(2E8) stepcount.
         for (int p=0; p<no_bodies; p++)
         {
             Body & current = bodies[p];
@@ -72,7 +73,8 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
             }
             writefiles[p] << std::endl; //for Energy Printing: << current.Ek(bodies[0]) << "\t" << current.Ep(bodies[0])
         }
-        }
+        //} End if t>0.99*tot_years statement
+
         t += dt;
     }
     //End timer
