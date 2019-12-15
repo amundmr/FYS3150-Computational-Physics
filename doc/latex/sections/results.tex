@@ -87,9 +87,9 @@ In the figures below, kinetic energy and potential energy is plotted as a functi
 \FloatBarrier
 
 %oppgave 5 d)
-\subsection{Escape velocity}
-By trail and error the escape velocity of planet Earth is somewhere around $2.828 \pi$, which is pretty close to the theoretical value calculated below.
-From section \ref{sec:theory-EscapeVelocityr} using equation \ref{eq:escapevelocity} to calculate the  theoretical value $$v_{esc-theoretical} = \sqrt{\frac{2\cdot4\pi^2\cdot1}{1}} \approx 2.8284 \pi$$\
+\subsection{Escape velocity} \label{sec:results-esc-vel}
+By trail and error we found that the escape velocity of planet Earth is somewhere around $2.828 \pi$, which is pretty close to the theoretical value calculated below.
+From section \ref{sec:theory-EscapeVelocity} using equation \eqref{eq:escapevelocity} to calculate the  theoretical value $$v_{esc-theoretical} = \sqrt{\frac{2\cdot4\pi^2\cdot1}{1}} \approx 2.8284 \pi$$\
 
 We also looked at what happens when changing the exponent of the denominator the force of gravity from 2 towards 3 with initial velocity $v_{initial,x} = 2.2\pi$. This is shown in the following plot.
 
@@ -99,6 +99,8 @@ We also looked at what happens when changing the exponent of the denominator the
   \caption{Escape velocity with increasing exponent of denominator of the gravitational force.}
   \label{fig:v_esc_beta}
 \end{figure}
+\FloatBarrier
+All this was found using the initializer found in \href{https://github.com/kmaasrud/Project-5/blob/master/code/complete_solar-system/src/initialize_test.cpp}{\textsc{/src/initializer\_test.cpp}} inside our \textsc{complete\_solar-system} code folder by changeing the initial velocity of the Earth, and changing the exponent of the distance $r$ on line $40$ in our body-code found in \href{https://github.com/kmaasrud/Project-5/blob/master/code/complete_solar-system/src/body.cpp}{\textsc{/src/body.cpp}}. Then the plotter found in \href{https://github.com/kmaasrud/Project-5/blob/master/code/Plotter/2d-plot_beta.py}{\textsc{/Plotter/2d-plot\_beta.py}} was used to plot the figure above.
 
 %oppgave 5e)
 \subsection{Three-body problem: Sun, Earth and Jupiter.}
@@ -138,7 +140,7 @@ Stability Verlet solver with increased mass:
 
 %oppgave 5f)
 \subsection{The Solar system}
-Finally we will add all the other planets to make the Solar system complete, still using the Verlet solver. Rather than having the origin in the postion of the sun, we are using the Barycenter of our solar system. All initial conditions were taken from NASA's HORIZONS web interface with a date of December 4.
+Finally we will add all the other planets to make the Solar system complete, still using the Verlet solver. Rather than having the origin in the postion of the sun, we are using the Barycenter of our solar system. All initial conditions were taken from NASA's HORIZONS web interface\cite{HorizonsNASA} with a date of December 4.
 
 \begin{figure}[!h]
   \includegraphics[width=0.7\textwidth]{allPlanets.png}
@@ -148,6 +150,21 @@ Finally we will add all the other planets to make the Solar system complete, sti
 
 
 Sammenlign resultetene med de tidligere.
+
+\subsection{The perihelion precession of Mercury}
+By using initial conditions of $2 \cdot 10^8$ integration points over a century, we are using a timestep $\Delta t = 5\cdot 10^{-7}$, which is really small. We also changed the code to only save the position of Mercury to file in the last year of simulation to save space. The initializer used is found in \href{https://github.com/kmaasrud/Project-5/blob/master/code/complete_solar-system/src/initialize_perihelion.cpp}{\textsc{/src/initializer\_perihelion.cpp}} inside our \textsc{complete\_solar-system} code folder.
+
+\begin{table}[!h]
+  \centering
+  \begin{tabular}{c c}
+    & $\theta_p$(Degrees)\\
+    \hline
+    Newtonian &  $-0.000426^\circ$\\
+    Relativistic$ &  $0.0117318^\circ$\\
+  \end{tabular}
+  \caption{Table of Mercury's calculated perihelion precession with and without relativistic correction.}
+\end{table}
+\FloatBarrier
 
 
 \end{document}
