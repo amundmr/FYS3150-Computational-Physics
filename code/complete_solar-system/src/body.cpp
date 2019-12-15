@@ -8,7 +8,7 @@ Body::Body()
 
 // Constructor with init values.
 Body::Body(std::string name_in, double mass, arma::vec init_r, arma::vec init_v){
-    m = mass; r = init_r; v = init_v * 365.2442 ; name = name_in; //
+    m = mass; r = init_r; v = init_v * 365.2442 ; name = name_in; //The factor on velocity transforms input unit of AU/day to AU/year
 }
 
 // Distance between two bodies.
@@ -44,7 +44,7 @@ arma::vec Body::a(Body body)
 arma::vec Body::a_relcor(Body body)
 {
     // Storing the relative distance and the returned acceleration
-    arma::vec rel_d(3); arma::vec acc(3);
+    arma::vec rel_d(3); arma::vec acc(3); arma::vec l_vec(3);
 
     // Setting the actual distance between the bodies.
     double d = this->d(body);
@@ -53,11 +53,12 @@ arma::vec Body::a_relcor(Body body)
     rel_d = (body.r - this->r)/d;
 
     //Angular momentum l
-    arma::vec l = arma::cross((body.r - this->r), this->v);
+    l_vec = arma::cross((body.r - this->r),this->v);
+    double l = sqrt(l_vec(0)*l_vec(0) + l_vec(1)*l_vec(1) + l_vec(2)*l_vec(2));
 
     // If distance is not zero, return calculated acceleration, else return 0 vector.
     if (d != 0){
-        acc = G * body.m * rel_d / (d*d) * (1 + 3*l*l/(d*d*c*c)); //use pow(d,beta) for changing beta.
+        acc = G * body.m * rel_d / (d*d) * ( 1 + 3*l*l / (d*d*c*c) );
                 return acc;
     }
     else{acc.fill(0); return acc;}
