@@ -148,7 +148,7 @@ Thus our initial value for the velocity of Earth should be $2\pi$. This is achie
 
 %------------------------------------------------------------------------------------
 \subsubsection{Stability with varying timestep}
-Changing the timestep $\Delta t$ is crucial for finding a good balance between calculation speed and accuracy. We simulated over a period of a thousand years. The timesteps simulated was $\Delta t = \{0.01, 0.02, 0.05, 0.1\}$ years. The results are shown in section \ref{sec:results-test-timestep}.
+Changing the timestep $\Delta t$ is crucial for finding a good balance between calculation speed and accuracy. We simulated over a period of a millennium. The timesteps simulated was $\Delta t = \{0.01, 0.02, 0.05, 0.1\}$ years. The results are shown in section \ref{sec:results-test-timestep}.
 
 %------------------------------------------------------------------------------------
 \subsubsection{Energy and angular momentum conservation}
@@ -165,6 +165,9 @@ Conservation of angular momentum is true if the system is not acted upon by a to
   L &= rmv
 \end{align*}
 Thus the angular momentum is conserved as long as the orbit velocity and radius is constant, which it is if the kinetic and potential energy is conserved.
+
+\subsubsection{Velocity Verlet versus Euler's forward algorithm}
+The last test is to check whether we want to use the velocity Verlet algorithm, or Eulers forward algorithm. As we've seen, in resuts section \ref{sec:results-euler-verlet}, the accuracy of our Verlet solver is superior. However it also takes more time. We tested our algorithms with $10^6$ integration points, with and without saving the data to files. The results are shown in section \ref{sec:Verlet_VS_Euler}.
 
 %------------------------------------------------------------------------------------
 \subsection{Escape velocity}\label{sec:theory-EscapeVelocity}
@@ -201,7 +204,7 @@ Finally we would like to check if the fixed-sun approximation was a good approxi
 %------------------------------------------------------------------------------------
 \subsection{All planets}
 After testing what timestep is needed for the Velocity Verlet algorithm, as well as testing our solver thoroughly for borth conservation of energy, and angular momentum, and figuring out if it is really necessary to let the sun move as a free body, we will run our computations with all planets of the solar system present.
-The initial velocities and positons are taken from NASA's webpage \cite{HorizonsNASA} which means that we are using the solar systems Barycenter as our origin.
+The initial velocities and positons are taken from NASA's webpage \cite{HorizonsNASA} which means that we are using the solar systems Barycenter as our origin. The result is shown in section \ref{sec:results-entire-solar-system}.
 
 %------------------------------------------------------------------------------------
 \subsection{The perihelion precession of Mercury}

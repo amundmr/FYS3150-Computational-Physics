@@ -62,7 +62,7 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
         };
 
         // Printing current position of whole solar system to files.
-
+        /*
         //if (t > 0.99*tot_years) { //This if statement is used for Mercury perihelion testing where we need high(2E8) stepcount.
         for (int p=0; p<no_bodies; p++)
         {
@@ -74,7 +74,7 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
             writefiles[p] << std::endl; //for Energy Printing: << current.Ek(bodies[0]) << "\t" << current.Ep(bodies[0])
         }
         //} End if t>0.99*tot_years statement
-
+*/
         t += dt;
     }
     //End timer

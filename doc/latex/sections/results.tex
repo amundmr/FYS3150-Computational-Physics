@@ -2,7 +2,7 @@
 \begin{document}
 \section{Results}\label{results}
 %oppgave 5b)
-\subsection{Euler and Verlet without object orientation}
+\subsection{Euler and Verlet without object orientation}\label{sec:results-euler-verlet}
 In order to make sure that our algorithm is running correctly, we started by solving the differential equation using both Euler's and Verlet's method without using object oriented(oo) code. The algorithms used to calculate the two are located in the following folders: \href{https://github.com/kmaasrud/Project-5/tree/master/code/Earth-Sun_Euler-FWD}{\textsc{/code/Earth-Sun\_Euler-FWD}} and \href{https://github.com/kmaasrud/Project-5/tree/master/code/Earth-Sun_Verlet}{\textsc{/code/Earth-Sun\_Verlet}}.
 
 \begin{figure}[!h]
@@ -75,12 +75,18 @@ In the figures below, kinetic energy and potential energy is plotted as a functi
 
 \subsubsection{Verlet vs. Euler}\label{sec:Verlet_VS_Euler}
 \begin{table}[!h]
-  \caption{Comparison of flops and time for the Verlet and Euler method for 100000 iterations over a period of 10 years}
+  \caption{Comparison of flops and time for the Verlet and Euler method for $10^6$ iterations over a period of 100 years simulating all planets}
   \centering
   \begin{tabular}{l r r}
-                            &\textbf{Flops}&\textbf{Timing}\\
-    Euler's method:          &10N&2580 ms\\
-    Verlet's method:          &6N&2875 ms\\
+                            &\textbf{Flops}&\textbf{Time spent}\\
+                            \hline
+    \textit{With filesave} & & \\
+    Euler's method:          &  10N & 126 s\\
+    Verlet's method:          & 6N  & 119 s\\
+    \hline
+    \textit{Without filesave} & & \\
+    Euler's method:          &  10N & 67 s\\
+    Verlet's method:          & 6N  & 71 s\\
   \end{tabular}
   \label{tab:EulervsVerlet}
   \end{table}
@@ -104,6 +110,41 @@ All this was found using the initializer found in \href{https://github.com/kmaas
 
 %oppgave 5e)
 \subsection{Three-body problem: Sun, Earth and Jupiter.}
+The first four plots below show the three-body simulation when the sun is fixed, with varying masses of Jupiter.
+
+\begin{figure}[!h]
+  \centering
+  \makebox[\textwidth][c]{
+  \begin{minipage}{0.7\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{jupiter-1_fixed.png} % first figure itself
+    \end{minipage}\hfill
+    \begin{minipage}{0.7\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{jupiter-10_fixed.png} % second figure itself
+    \end{minipage}}
+  \caption{Positions of Sun in the middle, Earth second and outermost Jupiter calculated using the velocity Verlet method with with original mass of Jupiter and an increase of mass of a factor of 10 respectively. The sun is in a fixed position.}
+  \label{fig:SunEarthJupiter10fixed}
+\end{figure}
+
+\begin{figure}[!h]
+  \centering
+  \makebox[\textwidth][c]{
+  \begin{minipage}{0.7\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{jupiter-1000_fixed.png} % first figure itself
+    \end{minipage}\hfill
+    \begin{minipage}{0.7\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{jupiter-1000_Closeup_fixed.png} % second figure itself
+    \end{minipage}}
+  \caption{Positions of Earth and Jupiter using the velocity Verlet method with an increase of mass with a factor of 1000. After approximately 5 years, Earth escapes the system. The illustration to the right is a magnified version of the first plot and shows the three body interaction when the sun is fixed.}
+  \label{fig:SunEarthJupiter10000fixed}
+\end{figure}
+\FloatBarrier
+
+In order to test the fixed sun approximation, we also calculated this scenario for a dynamic Sun, shown below.
+
 \begin{figure}[!h]
   \centering
   \makebox[\textwidth][c]{
@@ -130,7 +171,7 @@ All this was found using the initializer found in \href{https://github.com/kmaas
         \centering
         \includegraphics[width=1\textwidth]{jupiter-1000_Closeup.png} % second figure itself
     \end{minipage}}
-  \caption{Positions of Earth and Jupiter using the velocity Verlet method with an increase of mass with a factor of 1000. The The initial conditions are from NASA's HORIZONS web interface at December 4. After approximately 7 years, Earth escapes the system. The illustration to the right is a magnified version of the first plot and shows the beautiful interaction between two equally heavy objects.}
+  \caption{Positions of Earth and Jupiter using the velocity Verlet method with an increase of mass with a factor of 1000. After approximately 7 years, Earth escapes the system. The illustration to the right is a magnified version of the first plot and shows the beautiful interaction between two equally heavy objects.}
   \label{fig:SunEarthJupiter10000}
 \end{figure}
 \FloatBarrier
@@ -139,17 +180,16 @@ Stability Verlet solver with increased mass:
 
 
 %oppgave 5f)
-\subsection{The Solar system}
+\subsection{The Solar system} \label{sec:results-entire-solar-system}
 Finally we will add all the other planets to make the Solar system complete, still using the Verlet solver. Rather than having the origin in the postion of the sun, we are using the Barycenter of our solar system. All initial conditions were taken from NASA's HORIZONS web interface\cite{HorizonsNASA} with a date of December 4.
 
 \begin{figure}[!h]
+\centering
   \includegraphics[width=0.7\textwidth]{allPlanets.png}
   \caption{All planets in The Solar System. Due to the large orbits of the outer planets, it is hard to plot the orbit of the inner planets, the Sun, Venus and Mercury without loosing information from the outermost planets.}
   \label{fig:allPlanets}
 \end{figure}
 
-
-Sammenlign resultetene med de tidligere.
 
 \subsection{The perihelion precession of Mercury}
 By using initial conditions of $2 \cdot 10^8$ integration points over a century, we are using a timestep $\Delta t = 5\cdot 10^{-7}$, which is really small. We also changed the code to only save the position of Mercury to file in the last year of simulation to save space. The initializer used is found in \href{https://github.com/kmaasrud/Project-5/blob/master/code/complete_solar-system/src/initialize_perihelion.cpp}{\textsc{/src/initializer\_perihelion.cpp}} inside our \textsc{complete\_solar-system} code folder.
