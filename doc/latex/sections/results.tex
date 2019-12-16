@@ -21,11 +21,8 @@ In order to make sure that our algorithm is running correctly, we started by sol
   \label{fig:EarthOrbit_Euler_Verlet}
 \end{figure}
 \FloatBarrier
-%skriv litt om programflow
 
 %oppgave 5c)
-
-
 \subsection{Testing}
 \subsubsection{Stability with varying timestep} \label{sec:results-test-timestep}
 In the figures below we plotted Earths orbit over a thousand years with different timesteps.
@@ -178,21 +175,9 @@ In order to test the fixed sun approximation, we also calculated this scenario f
 Stability Verlet solver with increased mass:
 
 
-
 %oppgave 5f)
-<<<<<<< HEAD
-\subsection{The Solar system}
-\subsubsection{Real three body problem}
-
-In the previous section we studied the three body problem with the Sun fixed. In reality ? this is not the case. The Sun moves thogheter with all the other planets. Now, rather than having the origin in the position of the Sun, we set the center-off-mass of the three-body system(Sun, Earth and Jupiter) in the origion. The inital velocity of the Sun is set to ?? in order to have the total momentum of the system to exactly zero.
-
-
-\subsubsection{All planets in our Solar system}
-Finally we want to study the inpackt from all of the planets in our solar system on each other. This is simply done by adding the rest of the planets in our class and to set an initial velocity and position.  
-=======
 \subsection{The Solar system} \label{sec:results-entire-solar-system}
 Finally we will add all the other planets to make the Solar system complete, still using the Verlet solver. Rather than having the origin in the postion of the sun, we are using the Barycenter of our solar system. All initial conditions were taken from NASA's HORIZONS web interface\cite{HorizonsNASA} with a date of December 4.
->>>>>>> 9f09a007397a1f72f67d12f2ca0135f0df118db0
 
 \begin{figure}[!h]
 \centering
@@ -207,17 +192,14 @@ By using initial conditions of $2 \cdot 10^8$ integration points over a century,
 
 \begin{table}[!h]
   \centering
+  \caption{Table of Mercury's calculated perihelion precession with and without relativistic correction.}
   \begin{tabular}{c c}
     & $\theta_p$(Degrees)\\
     \hline
     Newtonian &  $-0.000426^\circ$\\
-    Relativistic$ &  $0.0117318^\circ$\\
+    Relativistic &  $0.0117318^\circ$\\
   \end{tabular}
-  \caption{Table of Mercury's calculated perihelion precession with and without relativistic correction.}
 \end{table}
 \FloatBarrier
-
-\subsection{The perihelion precession of Mercury}
-
 
 \end{document}

@@ -3,7 +3,7 @@
 \section{Discussion}\label{sec:discussion}
 
 \subsection{Euler and Verlet without object orientation}
-As we can see from figure \ref{fig:EarthOrbit_Euler_Verlet}, both methods works just fine. However, we can see that the amount of error in the Euler method is quite a bit larger than in the Verlet method since orbit of Earth in the Euler plot is expanding faster.
+Comparing The Verlet and Eulers method, as seen in figure \ref{fig:EarthOrbit_Euler_Verlet}, both methods works just fine. However, we can see that the amount of error in the Euler method is a bit larger than in the Verlet method since orbit of Earth in the Euler plot is expanding faster.
 
 %oppgave 5c)
 \subsection{Testing}
@@ -23,15 +23,14 @@ As shown in section \ref{sec:results-esc-vel}, the escape velocity found by trai
 When modifying the exponent of the distance in the force formula, we get the expected result in figure \ref{fig:v_esc_beta}. When $\beta$ increases we would expect all objects with orbit radius greater than $1AU$ to feel a weaker force, which the trajectories in the mentioned figure clearly shows.
 
 \subsection{Three-body problem.}
-As we see in figure \ref{fig:SunEarthJupiter10fixed}, even after adding Jupiter, Earths orbit is not altered much. Even with Jupiter ten times its mass, the orbit is virtually unchanged. However when we bump the mass up until it is close to the suns mass, we see that Earths orbit gets unstable, and slingshots out of the system after around 5 years.
-We also found that the fixed Sun approximation is quite good. This can be seen from figure \ref{fig:SunEarthJupiter10}, where we see that for its original mass, Jupiter does not distort the orbits in any impactful way. However we see that when Jupiter becomes 10 times its mass, the sun starts to change position, which in turns affect the Earths orbit also. We also plotted the scenario when Jupiter and the Sun is approximately the same masses, where all three bodies are free to move. This resulted in the beautiful plot in figure \ref{fig:SunEarthJupiter1000}, where we can see the Sun and Jupiter beautifully dancing around each other while the Earth violently moves between the two strong gravitational fields.
+In figure \ref{fig:SunEarthJupiter10fixed},after adding Jupiter, Earth's orbit is not altered much. Even with Jupiter ten times its mass, the orbit is virtually unchanged. However, increasing Jupiter's mass close to the suns mass, we see that Earths orbit gets unstable, and slingshots out of the system after around 5 years.
+We also found that the fixed Sun approximation is quite good. This can be seen from figure \ref{fig:SunEarthJupiter10}, where we see that for its original mass, Jupiter does not distort the orbits in any impactful way. However we see that when Jupiter becomes 10 times its mass, the sun starts to change position, which in turns affect the Earths orbit also. We also plotted the scenario when Jupiter and the Sun has approximately the same mass, where all three bodies are free to move. This resulted in the beautiful plot in figure \ref{fig:SunEarthJupiter1000}, where we can see the Sun and Jupiter beautifully dancing around each other while the Earth violently moves between the two strong gravitational fields.
 
-
+\subsection{The Solar system}
+When making a simulation of the different planets in our Solar system, it would be strange if we did not look at the whole system together. The orbit of all the planets in The Solar system is plotted in figure \ref{fig:allPlanets}. As expected(studied in real life) they all move around the Sun in a somewhat circular/elliptical orbit during our simulation.
 
 \subsection{The perihelion precession of Mercury}
 In order to test the general theory of relativity, we found the perihelion precession of Mercury with and without the relative correction. We found or non-corrected force to result in zero perihelion precession, which is expected, and we found the corrected force to result in a value very close to the observed perihelion precession. This means that our calculations, and the general theory of relativity holds true for this scenario.
 This means that the perihelion precession of Mercury can indeed be explained by the general theory of relativity.
-
-
 
 \end{document}
