@@ -17,7 +17,7 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
 {
     std::vector<std::ofstream> writefiles (no_bodies);
 
-    //Opening all the files
+    //Open output files
     for (int p=0; p<no_bodies; p++){
         Body & current = bodies[p];
         std::string name = current.name;
@@ -34,14 +34,14 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
 
     while (t < tot_years) // Loop over total years.
     {
-        for (int i=1; i<no_bodies; i++) // Loop over all bodies.
+        for (int i=1; i<no_bodies; i++) // Loop over all bodies. Starting at i = 1 excludes the sun as a dynamic object
         {
             Body & current = bodies[i];
             arma::vec a = arma::zeros<arma::vec>(3); arma::vec a_next = arma::zeros<arma::vec>(3);
 
-            for (int j=0; j<no_bodies; j++){ // Loops over body +1 the current. Might need just i!=j.
+            for (int j=0; j<no_bodies; j++){ // Loops over all other bodies
                 Body & other = bodies[j];
-                a += current.a(other);
+                a += current.a(other); //Use a_relcor for the relativistic correction
 
             };
 
@@ -50,9 +50,9 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
 
 
             // Update acceleration, NOT needed for Euler
-            for (int j=0; j<no_bodies; j++){ // Loops over body +1 the current. Might need just i!=j.
+            for (int j=0; j<no_bodies; j++){ // Loops over all other bodies
                 Body & other = bodies[j];
-                a_next += current.a(other);
+                a_next += current.a(other); //Use a_relcor for the relativistic correction
             };
 
 
@@ -62,22 +62,26 @@ void System::solve(int N, double tot_years) // Takes in no. integration points a
         };
 
         // Printing current position of whole solar system to files.
+        /*
+        //if (t > 0.99*tot_years) { //This if statement is used for Mercury perihelion testing where we need high(2E8) stepcount.
         for (int p=0; p<no_bodies; p++)
         {
             Body & current = bodies[p];
 
             for (int i=0; i<3; i++){
-                writefiles[p] << current.r(i) << "\t";
+                writefiles[p] << std::setprecision(15) << current.r(i) << "\t";
             }
             writefiles[p] << std::endl; //for Energy Printing: << current.Ek(bodies[0]) << "\t" << current.Ep(bodies[0])
         }
-
+        //} End if t>0.99*tot_years statement
+*/
         t += dt;
     }
     //End timer
     std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
     std::cout << "Time Spent = " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << "[ms]" << std::endl;
 
+    //Close files
     for (int p=0; p<no_bodies; p++){
         writefiles[p].close();
     }

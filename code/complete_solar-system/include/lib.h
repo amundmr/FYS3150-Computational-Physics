@@ -9,6 +9,7 @@
 #include <string>
 #include <fstream>
 #include <memory> //Used for building vector of shared pointers and use make_shared to allocate ofstream objects.
+#include <iomanip>
 
 #include "./body.h"
 #include "./system.h"

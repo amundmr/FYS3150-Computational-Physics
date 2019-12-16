@@ -1,6 +1,9 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
-\section{Discussion}\label{results}
+\section{Discussion}\label{sec:discussion}
+
+\subsection{Euler and Verlet without object orientation}
+As we can see from figure \ref{fig:EarthOrbit_Euler_Verlet}, both methods works just fine. However, we can see that the amount of error in the Euler method is quite a bit larger than in the Verlet method since orbit of Earth in the Euler plot is expanding faster.
 
 %oppgave 5c)
 \subsection{Testing}
@@ -8,17 +11,27 @@ As we can se from section \ref{sec:results-test-timestep}, the Verlet method is 
 
 From results \ref{sec:results-test-conservation} we see that both the kinetic and potential energy is constant over time, thus it is conserved. Since these values are constant, the angular momentum must also be constant, since it only depends on distance, speed and mass.
 
-DIFFERENCES using Euler vs. Verlet.
 
-When comparing the Verlet method with Euler(section \ref{ sec:Verlet_VS_Euler}), we see that Euler uses approximately 10N FLOPs, while Verlet only uses 6N FLOPs thus using slightly longer time for the same time interval(10 years).
-V
-erlet is, as we have seen, more stable and this method will be used in the rest of this study.
+When comparing the performance between the Euler and Verlet algorithm in results section \ref{sec:Verlet_VS_Euler} it is not clear which is the best. This is because of all the other things going on in our program. For example we illustrated that saving the file to disk is what is both the biggest uncertainty, and the biggest time taker. This is because the write speed is dependent on how much the rest of the system wants to access the harddrive. Due to this uncertainty, the Euler run with writing to disk actually took longer than the same Verlet run. We also see without filesave, that the time saved by the Euler algorithm is not substantial, and not worth the accuracy loss.
 
-%oppgave 5e)
-Discuss the stability of the solotiuns using your Verlet solver.  + stability when altering the mass of Jupiter.
+For this reason, the velocity Verlet algorithm is used in the rest of this project.
 
-The numerical calculated escape velocity for planet Earth compared with the analytical:
+%oppgave 5d)
+\subsection{Escape velocity}
+As shown in section \ref{sec:results-esc-vel}, the escape velocity found by trail and error on the initial conditions resulted in an incredibly good value compared to our analytical expression. This is yet another proof that our code is solid.
 
-With increasing $\beta$ Earth escapes earlier with the same initial velocity. This is simply beacuse the gravitational force from the Sun is decreasing with increasing $\beta$ and therefore it is easier for Earth to escape from its orbit.
+When modifying the exponent of the distance in the force formula, we get the expected result in figure \ref{fig:v_esc_beta}. When $\beta$ increases we would expect all objects with orbit radius greater than $1AU$ to feel a weaker force, which the trajectories in the mentioned figure clearly shows.
+
+\subsection{Three-body problem.}
+As we see in figure \ref{fig:SunEarthJupiter10fixed}, even after adding Jupiter, Earths orbit is not altered much. Even with Jupiter ten times its mass, the orbit is virtually unchanged. However when we bump the mass up until it is close to the suns mass, we see that Earths orbit gets unstable, and slingshots out of the system after around 5 years.
+We also found that the fixed Sun approximation is quite good. This can be seen from figure \ref{fig:SunEarthJupiter10}, where we see that for its original mass, Jupiter does not distort the orbits in any impactful way. However we see that when Jupiter becomes 10 times its mass, the sun starts to change position, which in turns affect the Earths orbit also. We also plotted the scenario when Jupiter and the Sun is approximately the same masses, where all three bodies are free to move. This resulted in the beautiful plot in figure \ref{fig:SunEarthJupiter1000}, where we can see the Sun and Jupiter beautifully dancing around each other while the Earth violently moves between the two strong gravitational fields.
+
+
+
+\subsection{The perihelion precession of Mercury}
+In order to test the general theory of relativity, we found the perihelion precession of Mercury with and without the relative correction. We found or non-corrected force to result in zero perihelion precession, which is expected, and we found the corrected force to result in a value very close to the observed perihelion precession. This means that our calculations, and the general theory of relativity holds true for this scenario.
+This means that the perihelion precession of Mercury can indeed be explained by the general theory of relativity.
+
+
 
 \end{document}
