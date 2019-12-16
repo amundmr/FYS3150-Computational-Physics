@@ -138,7 +138,13 @@ Stability Verlet solver with increased mass:
 
 %oppgave 5f)
 \subsection{The Solar system}
-Finally we will add all the other planets to make the Solar system complete, still using the Verlet solver. Both the Earht, Jupiter and the Sun are in motion. Rather than having the origin in the postion of the sun, we set the center-off-mass of the three-body system in the origin. The inital velocity of the Sun is set to ?? in order to have the total momentum of the system to exactly zero.
+\subsubsection{Real three body problem}
+
+In the previous section we studied the three body problem with the Sun fixed. In reality ? this is not the case. The Sun moves thogheter with all the other planets. Now, rather than having the origin in the position of the Sun, we set the center-off-mass of the three-body system(Sun, Earth and Jupiter) in the origion. The inital velocity of the Sun is set to ?? in order to have the total momentum of the system to exactly zero.
+
+
+\subsubsection{All planets in our Solar system}
+Finally we want to study the inpackt from all of the planets in our solar system on each other. This is simply done by adding the rest of the planets in our class and to set an initial velocity and position.  
 
 \begin{figure}[!h]
   \includegraphics[width=0.7\textwidth]{allPlanets.png}
@@ -148,6 +154,8 @@ Finally we will add all the other planets to make the Solar system complete, sti
 
 
 Sammenlign resultetene med de tidligere.
+
+\subsection{The perihelion precession of Mercury}
 
 
 \end{document}
