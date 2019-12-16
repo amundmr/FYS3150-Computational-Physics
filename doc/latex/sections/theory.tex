@@ -8,46 +8,38 @@ We beging by looking at the problem simply using the Eulers Forward and the Velo
 In two dimensions we have the following for the Earth-Sun system \\
 
 The gravitational force $F_G$:
+$$F_G= \frac{GM_{\odot}M_E}{r^2}$$
 
-\begin{equation}
-  F_G= \frac{GM_0M_E}{r^2}
-\end{equation}
-
-where $M_E = 6\times 10^{24}\text{ kg}$,  $ M_0 = 2\times 10^{30}\text{ kg}$, and  $r = 1.5\times 10^{11}\text{ m}$\\
+where $M_E = 6\times 10^{24}\text{ kg}$,  $ M_{\odot} = 2\times 10^{30}\text{ kg}$, and  $r = 1.5\times 10^{11}\text{ m}$\\
 The force acting on Earth is given by Newtons 2. law, here given in x- and y- direction
 
 $$ \frac{d^2x}{dt^2} = \frac{F_x}{M_E}, \quad \frac{d^2y}{dt^2} = \frac{F_y}{M_E}$$
 
 By using the following equalities $x = r \cos(\theta)$,  $y = r\sin(\theta)$ and $r = \sqrt{x^2 +y^2}$ we obtain
 
-\begin{equation}
-  F_x = - \frac{GM_0M_E}{r^2} \cos(\theta) =- \frac{GM_0M_E}{r^3}x
-\end{equation}
-\begin{equation}
-  F_y = - \frac{GM_0M_E}{r^2}\sin(\theta) =- \frac{GM_0M_E}{r^3}y,
-\end{equation}
+$$F_x = - \frac{GM_{\odot}M_E}{r^2} \cos(\theta) =- \frac{GM_{\odot}M_E}{r^3}x$$
+
+$$F_y = - \frac{GM_{\odot}M_E}{r^2}\sin(\theta) =- \frac{GM_{\odot}M_E}{r^3}y$$
+
 
 This gives the following first order  coupled differential equations:
-\begin{equation}
-  \frac{dv_x}{dt} = - \frac{GM_0}{r^3}x,\qquad \frac{dv_y}{dt} = - \frac{GM_0}{r^3}y
-\end{equation}
-\begin{equation}
-  \frac{dx}{dt} = v_x,\qquad \frac{dy}{dt} = v_y,
-\end{equation}
+$$ \frac{dv_x}{dt} = - \frac{GM_{\odot}}{r^3}x,\qquad \frac{dv_y}{dt} = - \frac{GM_{\odot}}{r^3}y$$
+
+  $$\frac{dx}{dt} = v_x,\qquad \frac{dy}{dt} = v_y$$
 
 In order to simplify we will use astronomical units (AU) defined by $r$, which is the avarage distance between Earth and the sun.
 
 Introducing astronomical units: $1\text{ AU}= r = 1.5 \times 10^{11}$
 
-\begin{equation}
-  \frac{M_ev^2}{r} = F = \frac{GM_0M_E}{r^2}
-\end{equation}
 
-Since $GM_0 = v^2r$ and the velocity of Earth, assuming it moves in circular motion: $$v = 2\pi \text{r/years}= 2\pi \text{AU/years}$$
+$$ \frac{M_ev^2}{r} = F = \frac{GM_{\odot}M_E}{r^2}$$
+
+
+Since $GM_{\odot} = v^2r$ and the velocity of Earth, assuming it moves in circular motion: $$v = 2\pi \text{r/years}= 2\pi \text{AU/years}$$
 
 Then we have the following relationship
 
-$$GM_0 = v^2r = 4\pi^2 \frac{(\text{AU})^2}{\text{years}^2}$$
+$$GM_{\odot} = v^2r = 4\pi^2 \frac{(\text{AU})^2}{\text{years}^2}$$
 
 Bulding code- discretized equations:
 $$v_{x,i+1} = v_{x,i} - h \frac{4\pi^2}{r_i^3}x_i,\qquad x_{i+1} = x_{i} + hv_{x,i}$$
@@ -58,9 +50,9 @@ Another numerical method to be used to evalute the motion of planets in our sola
 
 If we again look at Newtons second law in the form of a second order differential equation in one dimension.
 
-\begin{equation}
- m \frac{d^2x}{dt^2} = F(x,t)
-\end{equation}
+
+ $$m \frac{d^2x}{dt^2} = F(x,t)$$
+
 
 In coupled diffenretial equations one obtain
 
@@ -68,53 +60,34 @@ $$\frac{dx}{dt} = v(x,t)$$    and     $$\frac{dv}{dt} = F(x,t)/m = a(x,t)$$
 
 Using a Taylor expansion:
 
-\begin{equation}
- x(t,h) = x(t) + hc^{(1)}(t) + \frac{h^2}{2}x^{(2)}(t) + O(h^3).
-\end{equation}
+ $$x(t,h) = x(t) + hc^{(1)}(t) + \frac{h^2}{2}x^{(2)}(t) + O(h^3).$$
+
 
 From Newtons second law we allready have obtained the second derivative, $x^{(2)}(t) = a(x,t)$.
 
 Using Taylor for $x(t-h)$ and the discretized expressions $x(t_i,\pm h) = x_{i \pm 1}$ and $x_i = x(t_i)$ we obtain
 
-\begin{equation}
-  x_{i+1} = 2x_i - x_{i-1} + h^2 x_i^{(2)} + O(h^4)
-\end{equation}
+$$x_{i+1} = 2x_i - x_{i-1} + h^2 x_i^{(2)} + O(h^4)$$
 
 Corresponding velocity Taylor expansion is
 
-\begin{equation}
-  v_{i+1} = v_i + hv_{(1)} + \frac{h^2}{2} v_i^{(2)} + O(h^3)
-\end{equation}
+$$v_{i+1} = v_i + hv_{(1)} + \frac{h^2}{2} v_i^{(2)} + O(h^3)$$
 
 With Newtons second law:
-
-\begin{equation}
-  v_i^{(1)} = \frac{d^2x}{dt^2} = \frac{F(x_i, t_i)}{m},
-\end{equation}
+$$v_i^{(1)} = \frac{d^2x}{dt^2} = \frac{F(x_i, t_i)}{m},$$
 
 Adding the expansion of the derivative of the velocity
-
-\begin{equation}
-  v_{i+1} = v_i + \frac{h}{2}\left(v_{i+1}^{(1)} + v_i^{(1)}\right) + O(h^3)
-\end{equation}
+$$v_{i+1} = v_i + \frac{h}{2}\left(v_{i+1}^{(1)} + v_i^{(1)}\right) + O(h^3)$$
 
 Since our error goes as $O(h^3)$ we only use the terms up to the second derivative of the velocity.
 
-\begin{equation}
-  hv_i^{(2)}\approx v_{i+1}^{(1)} - v_i^{(1)}
-\end{equation}
+$$hv_i^{(2)}\approx v_{i+1}^{(1)} - v_i^{(1)}$$
 
 Rewriting the Taylor expansions for the velocity:
-
-\begin{equation}
-  x_{i+1} = x_i + hv_i + \frac{h^2}{2} v_i^{(1)} + O(h^3)
-\end{equation}
-
+$$x_{i+1} = x_i + hv_i + \frac{h^2}{2} v_i^{(1)} + O(h^3)$$
 and
+$$v_{i+1} = v_i + \frac{h}{2} \left(v_{i+1}^{(1)} + v_i^{(1)}\right) + O(h^3)$$
 
-\begin{equation}
-  v_{i+1} = v_i + \frac{h}{2} \left(v_{i+1}^{(1)} + v_i^{(1)}\right) + O(h^3)
-\end{equation}
 The implementation of the Verlet algorithm can be seen on line 54 in the non object oriented code: \href{https://github.com/kmaasrud/Project-5/blob/master/code/Earth-Sun_Verlet/main.cpp}{\textsc{/Earth-Sun\_Verlet/main.cpp}} or in the object oriented code: \href{https://github.com/kmaasrud/Project-5/blob/master/code/complete_solar-system/src/verlet.cpp}{\textsc{/complete\_solar-system/src/verlet.cpp}}.
 
 
@@ -213,17 +186,12 @@ The observed perihelion precession of Mercury is 43 arc seconds per century, whi
 As closed elliptical orbits is a special feature of the Newtonian $\frac{1}{r^2}$ force, we would assume the perihelion precession of the Sun-Mercury scenario is zero when we only use this force. However, by adding a general relativistic correction to the Newtonian gravitational force, we would expect our computed perihelion precession of Mercury to be very close to the observed 43 arc seconds per century. This is a good test of the general theory of relativity. In this case we will look at the system with no other bodies than the Sun and Mercury itself.
 
 The new gravitational force including the relativistic correction is as follows:
+$$F_G = \frac{GM_{Sun}M_{Mercury}}{r^2} \left[ 1+\frac {3l^2}{r^2c^2} \right]$$
 
-\begin{equation}
-  F_G = \frac{GM_{Sun}M_{Mercury}}{r^2} \left[ 1+\frac {3l^2}{r^2c^2} \right]
-\end{equation}
 
  Where $l = |\vec r \times \vec v|$ is the absolute angular momentum of Mercury and $c$ is the speed of light. The perihelion angle $\theta_p$ is given by
 \[\tan \theta_p = \frac{y_p}{x_p}\]
 
 Where $y_p$ and $x_p$ is the position of Mercury at perihelion. Our simulation will run over a century, where we choose our $y_p$ and $x_p$ values as the last time in the simulation where Mercury reaches perihelion. The speed of Mercury at perihelion is set to $12.44 AU/yr$ and the distance to the Sun is set to $0.3075 AU$ for our calculations.
-
-
-
 
 \end{document}
