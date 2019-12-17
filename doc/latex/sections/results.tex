@@ -136,7 +136,7 @@ The first four plots below show the three-body simulation when the sun is fixed,
         \includegraphics[width=1\textwidth]{jupiter-1000_Closeup_fixed.png} % second figure itself
     \end{minipage}}
   \caption{Positions of Earth and Jupiter using the velocity Verlet method with an increase of mass with a factor of 1000. After approximately 5 years, Earth escapes the system. The illustration to the right is a magnified version of the first plot and shows the three body interaction when the sun is fixed.}
-  \label{fig:SunEarthJupiter10000fixed}
+  \label{fig:SunEarthJupiter1000fixed}
 \end{figure}
 \FloatBarrier
 
@@ -169,26 +169,33 @@ In order to test the fixed sun approximation, we also calculated this scenario f
         \includegraphics[width=1\textwidth]{jupiter-1000_Closeup.png} % second figure itself
     \end{minipage}}
   \caption{Positions of Earth and Jupiter using the velocity Verlet method with an increase of mass with a factor of 1000. After approximately 7 years, Earth escapes the system. The illustration to the right is a magnified version of the first plot and shows the beautiful interaction between two equally heavy objects.}
-  \label{fig:SunEarthJupiter10000}
+  \label{fig:SunEarthJupiter1000}
 \end{figure}
 \FloatBarrier
-Stability Verlet solver with increased mass:
 
 
 %oppgave 5f)
 \subsection{The Solar system} \label{sec:results-entire-solar-system}
-Finally we will add all the other planets to make the Solar system complete, still using the Verlet solver. Rather than having the origin in the postion of the sun, we are using the Barycenter of our solar system. All initial conditions were taken from NASA's HORIZONS web interface\cite{HorizonsNASA} with a date of December 4.
+In figure \ref{fig:allPlanets} we see the entire solar system plotted. The origin is set as the solar systems Barycenter and all initial conditions were taken from NASA's HORIZONS Web-interface \cite{HorizonsNASA} with a date of December 4.
 
 \begin{figure}[!h]
-\centering
-  \includegraphics[width=0.7\textwidth]{allPlanets.png}
-  \caption{All planets in The Solar System. Due to the large orbits of the outer planets, it is hard to plot the orbit of the inner planets, the Sun, Venus and Mercury without loosing information from the outermost planets.}
+  \centering
+  \makebox[\textwidth][c]{
+  \begin{minipage}{0.7\textwidth}
+      \centering
+      \includegraphics[width=1\textwidth]{allPlanets.png} % first figure itself
+  \end{minipage}\hfill
+  \begin{minipage}{0.7\textwidth}
+      \centering
+      \includegraphics[width=1\textwidth]{innerPlanets.png} % second figure itself
+  \end{minipage}}
+  \caption{All planets in The Solar System.}
   \label{fig:allPlanets}
 \end{figure}
 
 
 \subsection{The perihelion precession of Mercury}
-By using initial conditions of $2 \cdot 10^8$ integration points over a century, we are using a timestep $\Delta t = 5\cdot 10^{-7}$, which is really small. We also changed the code to only save the position of Mercury to file in the last year of simulation to save space. The initializer used is found in \href{https://github.com/kmaasrud/Project-5/blob/master/code/complete_solar-system/src/initialize_perihelion.cpp}{\textsc{/src/initializer\_perihelion.cpp}} inside our \textsc{complete\_solar-system} code folder.
+By using initial conditions of $2 \cdot 10^8$ integration points over a century, we are using a timestep $\Delta t = 5\cdot 10^{-7}yr$. We also changed the code to only save the position of Mercury to file in the last year of simulation to save space. The initializer used is found in \href{https://github.com/kmaasrud/Project-5/blob/master/code/complete_solar-system/src/initialize_perihelion.cpp}{\textsc{/src/initializer\_perihelion.cpp}} inside our \textsc{complete\_solar-system} code folder, and the results is found in table \ref{tab:perihelion}.
 
 \begin{table}[!h]
   \centering
@@ -199,6 +206,7 @@ By using initial conditions of $2 \cdot 10^8$ integration points over a century,
     Newtonian &  $-0.000426^\circ$\\
     Relativistic &  $0.0117318^\circ$\\
   \end{tabular}
+  \label{tab:perihelion}
 \end{table}
 \FloatBarrier
 
