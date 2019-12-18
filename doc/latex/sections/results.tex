@@ -3,7 +3,7 @@
 \section{Results}\label{results}
 %oppgave 5b)
 \subsection{Euler and Verlet without object orientation}\label{sec:results-euler-verlet}
-In order to make sure that our algorithm is running correctly, we started by solving the differential equation using both Euler's and Verlet's method without using object oriented(oo) code. The results are seen in Figure \ref{fig:EarthOrbit_Euler_Verlet}, calculated by the algorithms located in the following folders: \href{https://github.com/kmaasrud/Project-5/tree/master/code/Earth-Sun_Euler-FWD}{\textsc{/code/Earth-Sun\_Euler-FWD}} and \href{https://github.com/kmaasrud/Project-5/tree/master/code/Earth-Sun_Verlet}{\textsc{/code/Earth-Sun\_Verlet}}.
+In order to make sure that our algorithm is running correctly, we started by solving the differential equation using both Euler's and Verlet's method without using object oriented(oo) code. The results are seen in Figure \ref{fig:EarthOrbit_Euler_Verlet}, calculated by the algorithms located in the following folders: \href{https://github.com/kmaasrud/Project-5/tree/master/code/Earth-Sun_Euler-FWD}{\texttt{/code/Earth-Sun\_Euler-FWD}} and \href{https://github.com/kmaasrud/Project-5/tree/master/code/Earth-Sun_Verlet}{\texttt{/code/Earth-Sun\_Verlet}}.
 
 \begin{figure}[!h]
   \centering
@@ -61,7 +61,7 @@ The figures \ref{fig:results-Timestep1} and \ref{fig:results-Timestep2} show Ear
 \FloatBarrier
 
 \subsubsection{Energy and angular momentum conservation}\label{sec:results-test-conservation}
-In the figures below, kinetic energy and potential energy is plotted as a function of time in the system. We chose to simulate over a thousand years with a timestep of $\Delta t = 0.01$, as this timestep is sufficient.
+In figure \ref{fig:results-Energies} below, kinetic energy and potential energy is plotted as a function of time in the system. We chose to simulate over a millennium with a timestep of $\Delta t = 0.01$, as this timestep is sufficient.
 \begin{figure}[!h]
   \centering
   \includegraphics[width=1\textwidth]{/test/Energy_Test.png} % first figure itself
@@ -71,7 +71,7 @@ In the figures below, kinetic energy and potential energy is plotted as a functi
 \FloatBarrier
 
 \subsubsection{Verlet vs. Euler}\label{sec:Verlet_VS_Euler}
-The table \ref{tab:EulervsVerlet} shows the efficiency of the different methods compared:
+Table \ref{tab:EulervsVerlet} shows the efficiency of the different methods compared.
 \begin{table}[!h]
   \centering
   \begin{tabular}{l r r}
@@ -92,10 +92,20 @@ The table \ref{tab:EulervsVerlet} shows the efficiency of the different methods 
 
 %oppgave 5 d)
 \subsection{Escape velocity} \label{sec:results-esc-vel}
-By trial and error we found that the escape velocity of planet Earth is somewhere around $2.828 \pi$, which is pretty close to the theoretical value calculated below.
-From section \ref{sec:theory-EscapeVelocity} using equation \eqref{eq:escapevelocity} to calculate the  theoretical value $$v_{esc-theoretical} = \sqrt{\frac{2\cdot4\pi^2\cdot1}{1}} \approx 2.8284 \pi$$\
+By trial and error we found the escape velocity of planet Earth.
+We found the same value from section \ref{sec:theory-EscapeVelocity} using equation \eqref{eq:escapevelocity}, which is the calculated value shown in table \ref{tab:results-EscapeVelocity}.
+\begin{table}[!h]
+  \centering
+  \caption{Escape velocities of Earth, found by trail and error, and calculations respectively.}
+  \begin{tabular}{r l}
+  Experimental value: & $2.828\pi$\\
+  Calculated value: & $2.8284\pi$
+  \end{tabular}
 
-We also looked at what happens when changing the exponent of the denominator the force of gravity from 2 towards 3 with initial velocity $v_{initial,x} = 2.2\pi$. This is shown in the following plot.
+  \label{tab:results-EscapeVelocity}
+\end{table}
+
+We also looked at what happens when changing the exponent of the denominator the force of gravity from 2 towards 3 with initial velocity $v_{initial,x} = 2.2\pi$. This is shown in figure \ref{fig:v_esc_beta}.
 
 \begin{figure}[h!]
   \centering
@@ -104,7 +114,7 @@ We also looked at what happens when changing the exponent of the denominator the
   \label{fig:v_esc_beta}
 \end{figure}
 \FloatBarrier
-All this was found using the initializer found in \href{https://github.com/kmaasrud/Project-5/blob/master/code/complete_solar-system/src/initialize_test.cpp}{\textsc{/src/initializer\_test.cpp}} inside our \textsc{complete\_solar-system} code folder by changing the initial velocity of the Earth and the exponent of the distance $r$ on line $40$ in our body-code found in \href{https://github.com/kmaasrud/Project-5/blob/master/code/complete_solar-system/src/body.cpp}{\textsc{/src/body.cpp}}. Then the plotter found in \href{https://github.com/kmaasrud/Project-5/blob/master/code/Plotter/2d-plot_beta.py}{\textsc{/Plotter/2d-plot\_beta.py}} was used to plot the figure above.
+All this was found using the initializer found in \href{https://github.com/kmaasrud/Project-5/blob/master/code/complete_solar-system/src/initialize_test.cpp}{\texttt{/src/initializer\_test.cpp}} inside our \texttt{complete\_solar-system} code folder by changing the initial velocity of the Earth and the exponent of the distance $r$ on line $40$ in our body-code found in \href{https://github.com/kmaasrud/Project-5/blob/master/code/complete_solar-system/src/body.cpp}{\texttt{/src/body.cpp}}. Then the plotter found in \href{https://github.com/kmaasrud/Project-5/blob/master/code/Plotter/2d-plot_beta.py}{\texttt{/Plotter/2d-plot\_beta.py}} was used to plot the figure above.
 
 %oppgave 5e)
 \subsection{Three-body problem: Sun, Earth and Jupiter.}
@@ -121,7 +131,7 @@ The first four plots below (figures \ref{fig:SunEarthJupiter10fixed} and \ref{fi
         \centering
         \includegraphics[width=1\textwidth]{jupiter-10_fixed.png} % second figure itself
     \end{minipage}}
-  \caption{Positions of Sun in the middle, Earth second and outermost Jupiter calculated using the velocity Verlet method with with original mass of Jupiter and an increase of mass of a factor of 10 respectively. The sun is in a fixed position.}
+  \caption{Positions of Sun in the middle, Earth second and outermost Jupiter, calculated using the velocity Verlet method with with original mass of Jupiter and an increase of mass of a factor of 10 respectively. The sun is in a fixed position.}
   \label{fig:SunEarthJupiter10fixed}
 \end{figure}
 
@@ -141,7 +151,7 @@ The first four plots below (figures \ref{fig:SunEarthJupiter10fixed} and \ref{fi
 \end{figure}
 \FloatBarrier
 
-In order to test the fixed sun approximation, we also calculated this scenario for a dynamic Sun, shown below. in figures \ref{fig:SunEarthJupiter10} and \ref{fig:SunEarthJupiter1000}.
+In order to test the fixed sun approximation, we also calculated this scenario for a dynamic Sun, shown below in figures \ref{fig:SunEarthJupiter10} and \ref{fig:SunEarthJupiter1000}.
 
 \begin{figure}[!h]
   \centering
@@ -154,7 +164,7 @@ In order to test the fixed sun approximation, we also calculated this scenario f
         \centering
         \includegraphics[width=1\textwidth]{jupiter-10.png} % second figure itself
     \end{minipage}}
-  \caption{Positions of Sun in the middle, Earth second and outermost Jupiter calculated using the velocity Verlet method with with original mass of Jupiter and an increase of mass of a factor of 10 respectively}
+  \caption{Positions of Sun in the middle, Earth second and outermost Jupiter, calculated using the velocity Verlet method with with original mass of Jupiter and an increase of mass of a factor of 10 respectively}
   \label{fig:SunEarthJupiter10}
 \end{figure}
 
@@ -196,17 +206,18 @@ In figure \ref{fig:allPlanets} we see the entire solar system plotted. The origi
 
 
 \subsection{The perihelion precession of Mercury}
-By using initial conditions of $2 \cdot 10^8$ integration points over a century, we are using a timestep $\Delta t = 5\cdot 10^{-7}yr$. We also changed the code to only save the position of Mercury to file in the last year of simulation to save space. The initializer used is found in \href{https://github.com/kmaasrud/Project-5/blob/master/code/complete_solar-system/src/initialize_perihelion.cpp}{\textsc{/src/initializer\_perihelion.cpp}} inside our \textsc{complete\_solar-system} code folder, and the results is found in table \ref{tab:perihelion}.
+By using initial conditions of $2 \cdot 10^8$ integration points over a century, we are using a timestep $\Delta t = 5\cdot 10^{-7}yr$. We also changed the code to only save the position of Mercury to file in the last year of simulation to save space. The initializer used is found in \href{https://github.com/kmaasrud/Project-5/blob/master/code/complete_solar-system/src/initialize_perihelion.cpp}{\texttt{/src/initializer\_perihelion.cpp}} inside our \texttt{complete\_solar-system} code folder, and the results is found in table \ref{tab:perihelion}.
 
 \begin{table}[!h]
   \centering
+  \caption{Table of Mercury's calculated perihelion precession with and without relativistic correction.}
   \begin{tabular}{c c}
     & $\theta_p$(Degrees)\\
     \hline
     Newtonian &  $-0.000426^\circ$\\
     Relativistic &  $0.0117318^\circ$\\
   \end{tabular}
-  \caption{Table of Mercury's calculated perihelion precession with and without relativistic correction.}
+
   \label{tab:perihelion}
 \end{table}
 \FloatBarrier
