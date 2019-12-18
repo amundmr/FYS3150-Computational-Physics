@@ -4,10 +4,10 @@
 \section{Theory}\label{theory}
 \subsection{The Earth-Sun system}
 %oppgave 5a og b)
-We beging by looking at the problem simply using the Eulers Forward and the Velocity Verlet method.
-In two dimensions we have the following for the Earth-Sun system \\
+We begin by looking at the problem simply using the Euler Forward and the Velocity Verlet method.
+In two dimensions we have the following for the Earth-Sun system: \\
 
-The gravitational force $F_G$:
+\noindent The gravitational force $F_G$:
 $$F_G= \frac{GM_{\odot}M_E}{r^2}$$
 
 where $M_E = 6\times 10^{24}\text{ kg}$,  $ M_{\odot} = 2\times 10^{30}\text{ kg}$, and  $r = 1.5\times 10^{11}\text{ m}$\\
@@ -15,7 +15,7 @@ The force acting on Earth is given by Newtons 2. law, here given in x- and y- di
 
 $$ \frac{d^2x}{dt^2} = \frac{F_x}{M_E}, \quad \frac{d^2y}{dt^2} = \frac{F_y}{M_E}$$
 
-By using the following equalities $x = r \cos(\theta)$,  $y = r\sin(\theta)$ and $r = \sqrt{x^2 +y^2}$ we obtain
+By using the equalities $x = r \cos(\theta)$,  $y = r\sin(\theta)$ and $r = \sqrt{x^2 +y^2}$ we obtain
 
 $$F_x = - \frac{GM_{\odot}M_E}{r^2} \cos(\theta) =- \frac{GM_{\odot}M_E}{r^3}x$$
 
@@ -37,16 +37,16 @@ $$ \frac{M_ev^2}{r} = F = \frac{GM_{\odot}M_E}{r^2}$$
 
 Since $GM_{\odot} = v^2r$ and the velocity of Earth, assuming it moves in circular motion: $$v = 2\pi \text{r/years}= 2\pi \text{AU/years}$$
 
-Then we have the following relationship
+Then we have the following relationship:
 
 $$GM_{\odot} = v^2r = 4\pi^2 \frac{(\text{AU})^2}{\text{years}^2}$$
 
-Bulding code- discretized equations:
+With the mathematical relations established, we can discretize the equations for use in the code.
 $$v_{x,i+1} = v_{x,i} - h \frac{4\pi^2}{r_i^3}x_i,\qquad x_{i+1} = x_{i} + hv_{x,i}$$
 $$v_{y,i+1} = v_{xy,i} - h \frac{4\pi^2}{r_i^3}y_i,\qquad y_{i+1} = y_{i} + hv_{y,i}$$
 
 \subsection{The Verlet method}
-Another numerical method to be used to evalute the motion of planets in our solarsystem is the Verlet method. This is a method pretty easy to implment as well as it gives stable results. When calculating molecular dynamics, this method is one of the first choises to implement.
+Another numerical method to be used to evalute the motion of planets in our solarsystem is the Verlet method. This is a method pretty easy to implement, as well as it gives stable results. When calculating molecular dynamics, this method is one of the most used methods.
 
 If we again look at Newtons second law in the form of a second order differential equation in one dimension.
 
@@ -56,7 +56,7 @@ If we again look at Newtons second law in the form of a second order differentia
 
 In coupled diffenretial equations one obtain
 
-$$\frac{dx}{dt} = v(x,t)$$    and     $$\frac{dv}{dt} = F(x,t)/m = a(x,t)$$
+\[\frac{dx}{dt} = v(x,t)\hspace{5mm} \textrm{and} \hspace{5mm} \frac{dv}{dt} = F(x,t)/m = a(x,t)\]
 
 Using a Taylor expansion:
 
