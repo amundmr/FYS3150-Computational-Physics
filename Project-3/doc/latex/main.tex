@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\graphicspath{{img/}{../img/}}
+\usepackage{subfiles}
+\usepackage{blindtext}
+\usepackage{hyperref}   % Nice referencing with clickable links
+\usepackage{amsmath}    % Math
+\usepackage{placeins}   % Use /FloatBarrier for limiting figure float
+\usepackage{multirow}   % Multi-row in tabular
+\usepackage{biblatex}   % Citations
+\usepackage{csquotes}
+\addbibresource{./bib/references.bib}
+
+\title{Project 3}
+\author{Anna Stray Rongve \\ Knut Magnus Aasrud \\ Amund Midtgard Raniseth}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\subfile{sections/abstract}
+
+\subfile{sections/introduction}
+
+\subfile{sections/theory}
+
+\subfile{sections/results}
+
+\subfile{sections/discussion}
+
+\subfile{sections/conclusion}
+
+\printbibliography
+
+\end{document}
