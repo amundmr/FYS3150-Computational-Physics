@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\graphicspath{{img/}{../img/}}
+\usepackage{subfiles}
+\usepackage{blindtext}
+\usepackage{hyperref}   % Nice referencing with clickable links
+\usepackage{amsmath}    % Math
+\usepackage{placeins}   % Use /FloatBarrier for limiting figure float
+\usepackage{multirow}   % Multi-row in tabular
+\usepackage{biblatex}   % Citations
+\usepackage{csquotes}
+\usepackage{listings} %for pseudocode
+\usepackage{ifoddpage}
+\usepackage{lipsum}
+\usepackage{dirtytalk}  % With \say{text} gives nice quotes
+\addbibresource{./bib/references.bib}
+
+\title{Project 3}
+\author{Anna Stray Rongve \\ Knut Magnus Aasrud \\ Amund Midtgard Raniseth}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\subfile{sections/abstract}
+
+\subfile{sections/introduction}
+
+\subfile{sections/theory}
+
+\subfile{sections/results}
+
+\subfile{sections/discussion}
+
+\subfile{sections/conclusion}
+
+\section{Appendix}
+%---------------------------------------------
+\subsection{GitHub}
+\href{https://github.com/kmaasrud/Project-4}{GitHub repository: https://github.com/kmaasrud/Project-4}
+%---------------------------------------------
+\subsection{Calculations}
+\subsubsection*{Energy expectation value, $\langle E \rangle$}
+\begin{align}\label{eq:mean_energy}
+    \langle E \rangle &= \frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \left(2 \cdot -8J \cdot e^{\beta 8J} + 2\cdot 8J \cdot e^{-\beta8J}\right)\nonumber \\
+    &= \frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \left(-16J e^{\beta8J} + 16Je^{-\beta 8J}\right)\nonumber \\
+    &= 8J \frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6}  \left(e^{-\beta8J} - e^{\beta 8J}\right)\nonumber \\
+    &= -8J\frac{sinh(\beta 8 J)}{cosh(\beta 8 J) + 3}
+\end{align}
+\begin{align}\label{eq:mean_energy_var}
+    \sigma^2_E &= \langle E^2 \rangle - \langle E \rangle ^2 = \frac{1}{Z}\sum E_i^2 e^{-\beta E_i} - \left( \frac{1}{Z} \sum E_i e^{-\beta E_i} \right)^2\nonumber \\
+    &= \frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \left( 2 \cdot (-8J)^2 \cdot e^{\beta 8J} + 2 \cdot (8J)^2 \cdot e^{-\beta 8J} \right)\nonumber \\
+    &\hspace{7cm} - \left(-8J\frac{sinh(\beta 8 J)}{cosh(\beta 8 J) + 3}\right)^2\nonumber \\
+    &=128J^2\frac{2cosh(\beta 8J)}{4cosh(\beta 8 J) + 12} - \left(-8J\frac{sinh(\beta 8 J)}{cosh(\beta 8 J) + 3}\right)^2\nonumber \\
+    &=64J^2\frac{cosh(\beta 8J)}{cosh(\beta 8 J) + 3} - \left(-8J\frac{sinh(\beta 8 J)}{cosh(\beta 8 J) + 3}\right)^2\nonumber \\
+    &= 64J^2\left(\frac{cosh(\beta 8J)}{cosh(\beta 8 J) + 3} - \left(\frac{sinh(\beta 8 J)}{cosh(\beta 8 J) + 3}\right)^2\right)
+\end{align}
+
+%---------------------------------------------
+\subsubsection*{Magnetization, $\mathcal M$}
+\begin{align}\label{eq:mean_abs_mag}
+    \langle \mathcal{|M|} \rangle &= \frac{1}{4cosh(\beta 8J) + 12} \left( 4 \cdot e^{\beta8J} + 4 \cdot 2 \cdot e^{0} + 4 \cdot |-2| \cdot e^{0} + |-4| \cdot e^{\beta 8J} \right)\nonumber \\
+    &= \frac{1}{cosh(\beta 8J) + 3} ( e^{\beta 8J} + 2 +2 +e^{\beta 8J})\nonumber \\
+    &=\frac{1}{cosh(\beta 8J) + 3} ( 2e^{\beta 8J} + 4)\nonumber \\
+    &=\frac{ 2e^{\beta 8J} + 4}{cosh(\beta 8J) + 3}
+\end{align}
+\begin{align}\label{eq:mean_mag}
+    \langle \mathcal{M} \rangle &= \frac{1}{4\cosh(\beta 8J) + 12} \left( 4 \cdot e^{\beta8J} + 4 \cdot 2 \cdot e^{0} + 4 \cdot -2 \cdot e^{0} + -4 \cdot e^{\beta 8J} \right)\nonumber \\
+    &= \frac{1}{\cosh(\beta 8J) + 3} \left( 4e^{\beta 8J}-4e^{\beta 8J} + 8 -8  \right)\nonumber \\
+    &=\frac{1}{\cosh(\beta 8J) + 3} \left( 0 \right)\nonumber\\
+    \langle \mathcal{M} \rangle &=0
+\end{align}
+\begin{align}\label{eq:mean_mag_square}
+    \langle \mathcal{M}^2 \rangle &= \frac{1}{Z}\sum |\mathcal{M_i}|^2 e^{-\beta E_i}\nonumber \\
+    &= \frac{1}{4\cosh(\beta 8J) + 12} \left( 4^2 \cdot e^{\beta8J} + 4 \cdot 2^2 \cdot e^{0} + 4 \cdot |-2|^2 \cdot e^{0} + |-4|^2 \cdot e^{\beta 8J} \right)\nonumber \\
+    &=\frac{1}{4\cosh(\beta 8J) + 12} \left( 16 \cdot e^{\beta8J} + 16 \cdot e^{0} + 16 \cdot e^{0} + 16 \cdot e^{\beta 8J} \right)\nonumber \\
+    &=\frac{4}{\cosh(\beta 8J) + 3} \left( 2 e^{\beta8J} +  2 \right)\nonumber \\
+    &=\frac{8 e^{\beta8J} +  8}{\cosh(\beta 8J) + 3}
+\end{align}
+
+%---------------------------------------------
+\printbibliography
+
+\end{document}

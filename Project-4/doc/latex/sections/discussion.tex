@@ -1,0 +1,36 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\section{Discussion}\label{discussion}
+
+%------------------------------------------------------------
+\subsection{Ising model: simulation over temperature}
+As presented in Results (see table \ref{tab:2x2computed} and \ref{fig:results-MCplot}), using periodic boundary conditions, $T = 1.0(kT/J)$ and $10^6$ Monte Carlo cycles gives results with a high precision. The energy and magnetization have a precision of three leading digits after the decimal point, and a little less for susceptibility and heat capacity. \\
+When using a random starting configuration, the precision increases slightly compared with the spesific one for some of the parameters, especially for the susceptibility. \\
+For further computations we have used $10^4 - 10^7$ Monte Carlo cycles in order to avoid time consuming computations.
+
+%------------------------------------------------------------
+\subsection{$20 \times 20$ lattice}
+From Figure \ref{fig:ordered} and \ref{fig:random} one sees the impact of the different parameters, initialization and temperature, before reaching equilibrium for different Monte Carlo cycles. \\
+For $T=1.0(kT/J)$ the predetermined starting configuration, the energy and magnetization are already stable after only a few Monte Carlo cycles(take a close look at the y-axis). It is easy to see that at the first Monte Carlo cycle, the magnetization is one (because all the spins are pointing the same way). Then one spin flips and the energy changes slightly. After a while it is almost no longer energetically favourable to flip spins. \\
+For the random initialization it takes more time/Monte Carlo cycles before reaching a steady state (take a look at the y-axis, it is 3 orders of magnitude larger than the predetermined). For easier comparison it would be convenient to have the axes be more similar. \\
+To summarize, the ordered starting point seems to stabilize the fastest for both temperatures (energy a bit faster than magnetization). This is expected, because at low temperatures - which we are dealing with - one would expect a high order at equilibrium (from eg. Gibbs free energy). So when we start with a high order, we are already close to equilibrium. \\
+There is also a difference between the different temperatures, which is also expected from thermodynamics. A system of higher temperature is expected to reach equilibrium at a less ordered state. This is quite evident in both the ordered and the random initialization. \\
+When studying the accepted spin configurations per Monte Carlo cycle (see figures \ref{fig:results-AccSpin-Ordered},\ref{fig:results-AccSpin-Unordered} and \ref{fig:results-AccSpin-Unordered-smallMCc} ) the same trend as above occurs. At low temperature and ordered starting point we are already close to equilibrium and therefore the number of accepted spins does not increase further with the increased number of Monte Carlo cycles. The same goes for the high temperature, except that the number of accepted spins is significantly higher. This is expected, as explained before, at this point the system has a lower order and higher energy due to higher temperature. Therefore the system accepts flipping of spins more often.
+
+When initalizing randomly for $T = 1.0$(see figure \ref{fig:results-AccSpin-Unordered}) the number of accepted spins increases rapidly in the beginning. This is because the system is far from equilibrium, so many spins are flipped to reduce the total energy. At about 60 Monte Carlo cycles (see figure \ref{fig:results-AccSpin-Unordered-smallMCc}) the number of accepted spins decreases and the system reaches equilibrium. The random start configuration at high temperature behaves much like the ordered one with a high number of accepted spins, compared to low temperature.
+%------------------------------------------------------------
+\subsection{Analyzing the probability distribution}
+While the probability distribution for the higher temperature was really good, it seemed rather odd for the low temperature. One would think that since most energies are at their lowest, the histogram would take the shape of an inverse exponential curve, and while this is the case we still have large gaps between the energies. For example, when the energy is between -800 and -794, it looks like there isnt a single lattice observed. \\
+This must be because the energy change when flipping a spin can be either 4J or 8J. This correlates well with the histogram. Another thing to mention is that at lower temperatures, the flipping spins could very well cause higher energy, resulting in less flips, which locks the lattice in its state. \\
+The standard deviation for the low temperature histogram does not give us much information. It would only be relevant, had it followed a gaussian curve, like the one for the higher temperature. Thus it is irrelevant to compare the standard deviation to the calculated variance. On the flipside, the variance of the higher temperature has a good correspondence to the calculated variance, with a deviation of about $6.2\%$.
+
+%------------------------------------------------------------
+\subsection{Numerical studies of phase transitions}
+From the plots \ref{fig:results-energy-magnetisation} and \ref{fig:results-heatcap-suscep} it is clear that something is happening around $T = 2.3$. You can also see that a bigger lattice reacts more to the temperature than the smaller lattice, giving higher peaks, with a smaller width for the heat capacity and susceptibility. Also for the mean energy and absolute mean magnetisation, the larger lattices \say{reacts} more to temperature, giving steeper plots.\\
+This is to be expected as the boundary conditions limit the simulations. The larger the lattice, the less of an issue the boundary conditions become.
+
+%------------------------------------------------------------
+\subsection{Extracting the critical temperature}
+The most difficult part was to set the critical temperatures for the different lattice sizes. As explained, we used the FWHM technique, but this is also prone to error. However with this technique we got within $0.3\%$ of Lars Onsager's exact result, which is quite good.
+
+\end{document}

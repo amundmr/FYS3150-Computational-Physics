@@ -1,0 +1,144 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+  \section{Theory}
+  \subsection{The problem}
+    WRITE a bit about the system we want to solve! What is it?
+    
+  \subsection{$2 \times 2$ lattice, analytical expressions} \label{sec:theory-analy}
+    To get started we will find the analytical expression for the partition function and the corresponding expectation values for the energy $E$, the mean absolute value of the magnetic moment $|M|$ (which we will refer to as magnetization), the specific heat $C_V$ and the susceptibility $\chi$ as function of T using periodic boundary conditions. These calculations will serve as benchmarks for our next steps.
+
+    \textbf{Partition function, $Z$}\\
+    The partition function in the canonical ensemble is defined as:
+    \[ Z = \sum_{i=1}^M e^{-\beta E_i}\]
+    Where $\beta =\frac{1}{k_B T}$ and $E_i$ is the energy of the system in the microstate $i$ and $M$ is the number of microstates ($=2^N$ if $N$ is number of electrons).
+    \\
+    We therefore have to find $E_i$ which is defined as:
+    \[E_i = -J \sum_{<kl>}^N s_k s_l\]
+    Where $<kl>$ indicates that we sum only over the nearest neighbors and J is a constant for the bonding strenght. For our two dimensional system the equation reads:
+    \[E_{i,2D} = -J \sum_i^N \sum_j^N \left(s_{i,j}s_{i,j+1} + s_{i,j}s_{i+1,j}\right)\]
+    Four our two-spin-state system with two dimensions we get the following table if we use periodic boundary conditions:
+    \begin{table}[!h]
+    \begin{center}
+      \begin{tabular}{c c c c}
+        Number of spins up & Degeneracy & Energy & Magnetization\\
+        \hline\\
+        4 & 1 & -8J & 4\\
+        3 & 4 & 0 & 2 \\
+        2 & 4 & 0 & 0\\
+        2 & 2 & 8J & 0 \\
+        1 & 4 & 0 & -2 \\
+        0 & 1 & -8J & -4
+      \end{tabular}
+      \caption{Number of spins up, degeneracy, energy and magnetization of the two-dimensional benchmark scenario.}
+      \label{tab:2x2spinsEnergiesMags}
+    \end{center}
+    \end{table}
+    \FloatBarrier
+    Where the magnetization is found by subtracting the number of spin downs from the number of spin up, or in other words the sum of the spins:
+    \[\mathcal{M} = \sum_{j=1}^N s_j\]
+
+    Getting back to the partition function, we insert all $16$ of the $E_i$ respectively. For the degeneracies, we just multiply one iteration of the respecitve $E_i$ with the amount of degeneracies. When the energy $E_i$ is zero, we will just add one to the sum since $e^0 = 1$. Thus we get the following:
+
+    \[Z = e^{-\beta (-8J)} + 2 \cdot e^{-\beta (8J)} + e^{-\beta (-8J)} + 12 = 2e^{-\beta 8J} + 2e^{\beta 8J} + 12\]
+
+    \textbf{Energy expectation value, $\langle E \rangle$}\\
+    The expectation value of the energy is defined as:
+
+    \[\langle E \rangle = \sum_{i=1}^M E_i P_i(\beta) = \frac{1}{Z}\sum_{i=1}^M E_i e^{-\beta E_i}\]
+
+    Where $M$ is the sum over all microstates. $P_i$ is the Boltzmann probability distribution which reads:
+
+    \[P_i(\beta) = \frac{e^{\beta E_i}}{Z}\]
+
+    For our system, this is easily calculated by inserting the partition function and the microstate energy $E_i$.
+
+    \begin{align*}
+      \langle E \rangle &= \frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \left(2 \cdot -8J \cdot e^{\beta 8J} + 2\cdot 8J \cdot e^{-\beta8J}\right)\\
+        &= \frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \left(-16J e^{\beta8J} + 16Je^{-\beta 8J}\right)\\
+        &= 8J \frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6}  \left(e^{-\beta8J} - e^{\beta 8J}\right)
+    \end{align*}
+
+    Since the variance of the mean energy ($\sigma_E$) is needed for the heat capacity later, we will calculate this here.
+
+    \begin{align*}
+    \sigma^2_E &= \langle E^2 \rangle - \langle E \rangle ^2 = \frac{1}{Z}\sum E_i^2 e^{-\beta E_i} - \left( \frac{1}{Z} \sum E_i e^{-\beta E_i} \right)^2\\
+    &= \frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \left( 2 \cdot (-8J)^2 \cdot e^{\beta 8J} + 2 \cdot (8J)^2 \cdot e^{-\beta 8J} \right)\\
+    &\hspace{3cm} - \left(8J \frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6}  \left(e^{-\beta8J} - e^{\beta 8J}\right)\right)^2\\
+    \intertext{To simplify calculations, we define $a = e^{\beta 8J}$ and $b = e^{-\beta8J}$. These terms will be precalculated in the program code.}\\
+    &= \frac{1}{2b + 2a + 12} \left(2 \cdot (-8J)^2 a + 2\cdot (8J)^2 b\right) - \left(8J \frac{1}{a + b + 6}(b-a)\right)^2\\
+    &=64J^2 \left( \frac{1}{a + b + 6} (a + b) \right) - \left( \frac{1}{a+b+6} (b-a) \right)^2\\
+    &=64J^2 \frac{1}{a+b+6}\left((a+b) - \frac{1}{a+b+6}(b-a)^2\right)\\
+    &=64J^2 \left(\frac{1}{a+b+6}\right)^2 \left( (a+b+6)(a+b) - (b-a)^2 \right)\\
+    &= 64J^2 \left(\frac{1}{a+b+6}\right)^2 \left( a^2 + ab + ba + b^2 + 6 a + 6 b -(b^2 - 2ab + a^2) \right)\\
+    &= 64J^2 \left(\frac{1}{a+b+6}\right)^2 \left( a^2 + ab + ba + b^2 + 6 a + 6 b -b^2 + 2ab - a^2) \right)\\
+    &= 64J^2 \left(\frac{1}{a+b+6}\right)^2 \left( 6a + 6b + 4ab ) \right)\\
+    \intertext{If we now insert the terms for a and b we get the following:}\\
+    \sigma^2_E &= 64J^2 \left(\frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6}\right)^2  \left(4 + 6(e^{-\beta 8J} + e^{\beta 8J}) \right)
+    \end{align*}
+
+
+    \textbf{Magnetization, $\mathcal{M}$}\\
+    In the canonical ensemble the absolute mean magnetization can be described as
+    \[\langle \mathcal{M} \rangle = \sum_i^M |\mathcal{M}_i| P_i(\beta) = \frac{1}{Z} \sum_i^M |\mathcal{M}_i| e^{-\beta E_i}\]
+    We can now simply insert the magnetization and the energies for each respective microstate. This is found in table \ref{tab:2x2spinsEnergiesMags}.
+    \begin{align*}
+      \langle \mathcal{M} \rangle &= \frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \Big( 1\cdot 4 e^{-\beta (-8J)} + 4 \cdot 2  e^{-\beta\cdot 0} + 4 \cdot 0e^{-\beta\cdot 0}\\
+      &\hspace{5cm} + 2\cdot 0  e^{-\beta 8J} + 4 \cdot |-2| e^{-\beta \cdot 0} + 1 \cdot |-4| e^{-\beta (-8J)} \Big) \\
+      &= \frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \left(4 e^{\beta 8J} + 8e^{-\beta\cdot 0} + 8 e^{-\beta \cdot 0} +4 e^{\beta 8J} \right)\\
+      &= \frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \left( 4e^{\beta 8J} +4e^{\beta 8J} +8 +8 \right)\\
+      &=\frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \left( 8e^{\beta 8J} +16 \right)\\
+      &= 4\frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6}\left( e^{\beta 8J} +2 \right)
+    \end{align*}
+    Since the variance of the mean magnetization ($\sigma_M$) is needed for the susceptibility later, we will calculate this here. ney
+
+    \begin{align*}
+      \sigma^2_\mathcal{M} &= \langle \mathcal{M}^2 \rangle - \langle \mathcal{M} \rangle ^2 = \frac{1}{Z}\sum |\mathcal{M}|^2 e^{-\beta E_i} - \left( \frac{1}{Z} \sum |\mathcal{M}| e^{-\beta E_i} \right)^2\\
+      &= \frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \Big( 1\cdot 4^2 e^{-\beta (-8J)} + 4 \cdot 2^2  e^{-\beta\cdot 0} + 4 \cdot 0^2 e^{-\beta\cdot 0}\\
+      &\hspace{4cm} + 2\cdot 0^2  e^{-\beta 8J} + 4 \cdot |-2|^2 e^{-\beta \cdot 0} + 1 \cdot |-4|^2 e^{-\beta (-8J)} \Big)\\
+      &\hspace{5cm} - \left(4\frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6}\left( e^{\beta 8J} +2 \right)\right)^2\\
+      &=\frac{1}{2e^{-\beta 8J} + 2e^{\beta 8J} + 12} \left(16e^{\beta 8J} + 16 + 16 + 16e^{\beta 8J} \right)\\
+      &\hspace{5cm} - \left(4\frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6}\left( e^{\beta 8J} +2 \right)\right)^2\\
+      &=16 \frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6} \left(e^{\beta 8J} + 1\right)\\
+      &\hspace{5cm} - 16\left(\frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6}\right)^2\left( e^{\beta 8J} +2 \right)^2
+    \end{align*}
+
+
+    \textbf{Specific heat capacity, $C_V$}\\
+    The specific heat capacity is defined as
+    \[C_V = \frac{\sigma_E^2}{k_B T^2}\]
+    Insering the value $\sigma^2_E$ we get
+      \[C_V = \frac{\left( 64J^2 \left(\frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6}\right)^2  \left(4 + 6(e^{-\beta 8J} + e^{\beta 8J}) \right)\right)^2}{k_B T^2}\]
+
+
+    \textbf{Susceptibility, $\chi$}\\
+    The susceptibilitys is defined as
+    \[\chi = \frac{\sigma^2_\mathcal{M}}{k_B T^2}\]
+    Insering the value $\sigma^2_\mathcal{M}$ we get
+    \[\chi = \frac{16 \frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6} \left(e^{\beta 8J} + 1\right)- 16\left(\frac{1}{e^{-\beta 8J} + e^{\beta 8J} + 6}\right)^2\left( e^{\beta 8J} +2 \right)^2}{k_B T^2}\]\\
+
+    \noindent Note that these four characteristics are temperature dependent trough $\beta = \frac{1}{k_B T}$.\\
+    Ref \cite{Mortenstatphys2019}.
+
+
+    \subsection{Ising model}
+    The Ising model is applied for the study of phase transistions at finite temperatures
+    for magnetic systems. Energy is expressed as:
+
+    \begin{equation}
+      E = -J \sum  _{<kl>}^N s_ks_l \qquad s_k = \pm 1
+    \end{equation}
+
+    N is the number of spins and J is a constant expressing the interaction between neighboring spins. The sum is over the nearest neighbours only, indicated by <kl> the above equation. For J > 0 it is energetically favorable for neighboring spins to align. Leading to, at low temperatures, T, spontanious magnetisation.
+
+    A probability distribution is neede in order to calculate the mean energy <E> and magnetization <M> at a given temperature. The distribution is given by:
+
+    \begin{equation}
+      P_i(\beta)=  \sum  _{i = 1}^M s_ks_l \exp{-\beta E_i},
+    \end{equation}
+
+    where M is all the microstates, $P_i$ is the probability of having the system in a state/configuration i.
+
+    CONFIGURATIONS
+
+
+\end{document}
