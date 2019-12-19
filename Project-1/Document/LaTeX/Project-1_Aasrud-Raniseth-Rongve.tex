@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{dirtytalk}
+
+\title{FYS3150 - Project 1}
+\author{Aasrud, Raniseth, Rongve}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Project 1 a)}
+
+For $i = 0$ and $i = n$ the boundary conditions gives us
+$v(0) = v(1) = 0$.
+
+For $i = 1$
+\[-\frac{v_2+v_0-2v_1}{h^2} = f_1\]
+
+For $i = 2$\\
+\[-\frac{v_3+v_1-2v_2}{h^2}{} = f_2\]
+
+For $i = n-1$
+\[-\frac{v_n+v_{n-2}-2v_{n-1}}{h^2}{} = f_{n-1}\]
+
+If you multiply both sides by $h^2$
+
+\[-{v_2+v_0-2v_1} = h^2\cdot{f_1}\]
+
+\[-{v_3+v_1-2v_2} = {h^2}\cdot{f_2}\]
+
+\[-v_n+v_{n-2}-2v_{n-1} = {h^2}\cdot{f_{n-1}}\]
+
+Which you can rewrite as a linear set of equations on the form $A\hat{v} = \tilde{b}_i$ where
+
+\[ A = \begin{bmatrix}
+2 & -1 & 0 & 0 & \hdots & 0\\
+-1 & 2 & -1 & 0 & \hdots & 0\\
+\vdots & \vdots & \vdots & \ddots & & \vdots\\
+0 & 0 & 0 & \hdots & -1 & 2
+ \end{bmatrix}\hspace{1cm}
+ \hat{v} = \begin{bmatrix}
+ v_1\\
+v_2\\
+\vdots\\
+v_{n-1}
+ \end{bmatrix}\hspace{1cm}
+ \tilde{b_i} = \begin{bmatrix}
+ \tilde{b_1}\\
+\tilde{b_2}\\
+\vdots\\
+\tilde{b_{n-1}}
+ \end{bmatrix}
+ \]
+
+And $\tilde{b_i} = h^2 \cdot f_i$
+
+\section*{Project 1 b)}
+Den generelle algoritmen blir som følgende:
+\begin{align*}
+  \tilde{c}[i] &= \frac{c[i]}{b[i]-a[i]*\tilde{c}[i-1]}\\
+  \vspace{1cm}\\
+  \tilde{d}[i] &= \frac{d[i]-a[i]*\tilde{d}[i-1]}{b[i]-a[i]*\tilde{c}[i-1]}
+\end{align*}
+Siden nevneren er lik i begge brøker kan vi regne ut den først for hver $i$.
+Da får vi $6$ floating point operations per n, altså $6n$ FLOPS.
+
+\end{document}
