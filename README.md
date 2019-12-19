@@ -1,5 +1,5 @@
 # FYS3150-Computational-Physics
-Course on University of Oslo.\
+Course on University of Oslo.[Link](https://www.uio.no/studier/emner/matnat/fys/FYS3150/)\
 Introduction to numerical methods used in chemistry and physics.\
 Languages: English, LaTeX, C++, Python.\
 In our group of 3 students we completed the 5 mandatory projects in the course. These projects are cloned into this repository for easy viewing.
