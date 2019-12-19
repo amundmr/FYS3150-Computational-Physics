@@ -1,0 +1,11 @@
+Files named _newtonian is ran with only regular newtonian force.
+The initial conditions are N = 2E8, tot_years = 100
+We only write output for the last year to reduce filesize
+
+Result for the newtonian force only: Perihelion precession: -0.000426 degrees.
+Where the perihelical point after 100 years is (0.3075, -2.28879e-06)
+
+Result when relativistic effect is included: Perihelion precession: 0.0117318 degrees.
+Where the perihelical point after 100 years is (0.3075, 6.29635e-05)
+
+The observed perihelion precession is 43 arcs seconds, which translates to 0.0119444.. degrees.
